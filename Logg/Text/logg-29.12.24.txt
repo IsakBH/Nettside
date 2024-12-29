@@ -1,0 +1,37 @@
+    <h3>
+    Hva har jeg gjort i dag?
+    </h3>
+
+    <p>
+    I dag har jeg laget en dropdown meny for bedre navigering og oversikt på siden. Jeg tenkte ikke det var så viktig før jeg lagde den, men nå som jeg har den der innser jeg at det hjelper veldig med navigeringen.
+    </p>
+
+    <br> <br>
+
+    <h3>
+    Hvordan jeg har jobbet
+    </h3>
+
+    <p>
+    Har jobbet ganske bra, gikk "straight to the point", og ble ferdig raskt.
+    </p>
+
+    <br> <br>
+
+    <h3>
+    Utfordringer
+    </h3>
+
+    <p>
+    Ingen utfordringer i dag.
+    </p>
+
+    <br> <br>
+
+    <h3>
+    Hvordan jeg har hentet informasjonen min
+    </h3>
+
+    <p>
+    Har ikke hentet informasjon fra kilder i dag (annet enn megselv).
+    </p>
