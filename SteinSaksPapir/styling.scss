@@ -1,0 +1,120 @@
+@import "../Include/Styling/farger.scss"; // importer farger fra farger.scss
+@import "../Include/Styling/lightdarkmode.scss"; // importer light og dark mode styling
+@import "../Include/Styling/navbar.scss"; // importer nav-bar styling
+@import "../Include/Styling/base.scss"; // importerer base styling
+
+* {
+    font-family: HackFont, Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    background: linear-gradient(90deg, darken(#8ac8ff, 0%), darken(#8ac8ff, 5%));
+    background-clip: text;
+    color: transparent;
+}
+
+.choices {
+    margin-bottom: 20px;
+    button {
+        background: linear-gradient(45deg, #8ac8ff, lighten(#8ac8ff, 15%));
+        transition: 0.1s;
+        font-size: 5rem;
+        padding: 20px;
+        width: 150px;
+        height: auto;
+        border: none;
+        border-radius: 20px;
+        text-decorations: none;
+        &:hover {
+            background-color: #8ac8ff;
+            transform: translateY(-5px);
+        }
+        &:active {
+            background-image: radial-gradient(
+                150% 150% at 100% 0,
+                #8ac8ff 0,
+                lighten(#8ac8ff, 15%) 100%
+            );
+            transform: translateY(5px);
+        }
+    }
+}
+
+#playerDisplay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 3.5rem;
+    font-size: 1.5rem;
+}
+
+#computerDisplay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 3.5rem;
+    font-size: 1.5rem;
+}
+
+#resultDisplay {
+    position: flex;
+    text-align: center;
+    font-size: 10rem !important;
+    margin-top: 3.5rem;
+    visibility: hidden;
+}
+
+.scoreDisplay {
+    font-size: 1.5rem;
+    text-align: start;
+}
+
+#mainContent {
+    background-color: aliceblue;
+    justify-content: center !important;
+    text-align: center;
+    margin: 10px 10px;
+    border-radius: 20px;
+    width: 50%;
+    padding: 10px;
+    overflow: hidden;
+    max-height: 1000px;
+    border: 2px solid rgba(144, 203, 255, 0.5); // lager et border med 0.5 opacity
+    &:hover {
+        border: 2px solid rgba(144, 203, 255, 1); // endrer border opacity-en til 1
+    }
+}
+
+#secondaryContent {
+    background-color: aliceblue;
+    justify-content: center !important;
+    text-align: start;
+    border-radius: 20px;
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    border: 2px solid rgba(144, 203, 255, 0.5); // lager et border med 0.5 opacity
+    &:hover {
+        border: 2px solid rgba(144, 203, 255, 1); // endrer border opacity-en til 1
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1.25rem;
+    }
+}
+
+/* Hack font */
+@font-face {
+    font-family: HackFont;
+    src: url("../Stylesheets/Hack-v3.003-ttf/ttf/Hack-Regular.ttf");
+}
