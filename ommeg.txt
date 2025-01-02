@@ -1,0 +1,21 @@
+<div id="biography">
+        <div id="bio">
+            <p id="bio2">
+                Informasjonsteknologi og Medieproduksjon elev på Amalieskram VGs, Linux bruker.
+            </p>
+        </div>
+    </div>
+
+    <div id="isak">
+        <p>
+            Jeg er interresert i alt som handler om data/IT, og har drevet med det på fritiden ganske lenge. Jeg har laget et par små prosjekter, som for eksempel en <a href="https://www.github.com/isakbh/Ord-text-editor">offline tekst editor</a>, og en <a href="https://isak.brunhenriksen.no/Texteditor">online tekst editor</a>. Akkurat nå holder jeg på å lære meg programmeringsspråket <a href="https://rust-lang.org" target="_blank">Rust</a>. Grunnen til at jeg valgte IM-linjen er at jeg har vært veldig interessert i IT hele livet. Språkene jeg har erfaring i er Javascript, PHP, Rust, Python, og litt C++, men jeg foretrekker PHP og Rust. Jeg kommer fra Bergen, og har bodd her hele livet mitt.
+        </p>
+    </div>
+
+    <div id="kontakt">
+        <ul>
+            <li> <ion-icon name="mail"></ion-icon>isak@brunhenriksen.net </li>
+            <li> 📞 458 48 234 </li>
+            <li> <ion-icon name="logo-discord"></ion-icon> isakbh </li>
+        </ul>
+    </div>
