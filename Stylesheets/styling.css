@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Sist oppdatert: 6. Desember  2024 09:58 | Av: isakbh */
+/* Sist oppdatert: 29. Desember  2024 09:58 | Av: isakbh */
 /* Sist oppdatert: 27. November 2024 | Av: isakbh */
 .lightmode {
   background-color: #F0F8FF;
@@ -465,6 +465,11 @@ button:active {
   .meny_topp_høyre button:active {
     background-color: rgb(90.5660377358, 125.0188679245, 170.4339622642);
   }
+}
+/* Hack font */
+@font-face {
+  font-family: HackFont;
+  src: url(Hack-v3.003-ttf/ttf/Hack-Regular.ttf);
 }
 
 /*# sourceMappingURL=styling.css.map */

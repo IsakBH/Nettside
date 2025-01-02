@@ -1,0 +1,37 @@
+    <h3>
+    Hva har jeg gjort i dag?
+    </h3>
+
+    <p>
+    I dag lastet jeg opp Stein, saks, papir og tekst editoren min. Jeg har jobbet på tekst editoren ganske lenge nå, og liker den veldig godt. De ligger inni dropdown navigerings meny greien (hva no enn du skal kalle det)
+    </p>
+
+    <br> <br>
+
+    <h3>
+    Hvordan jeg har jobbet
+    </h3>
+
+    <p>
+    Det var ikke så mye jeg skulle gjøre, skulle bare laste opp et par filer og legge til et par elementer til dropdown menyen, så jeg har jobbet ganske effektivt.
+    </p>
+
+    <br> <br>
+
+    <h3>
+    Utfordringer
+    </h3>
+
+    <p>
+    Største utfordringen var å huske at det er 2024 og ikke 2025 😂 Satt i sikkert 30 min og debugget noe kode, og problemet var bare at jeg hadde skrevet 2025 et sted og 2024 på det andre stedet 😐
+    </p>
+
+    <br> <br>
+
+    <h3>
+    Hvordan jeg har hentet informasjonen min
+    </h3>
+
+    <p>
+    Mye Stackoverflow og Reddit (mest for tekst editoren)
+    </p>
