@@ -1,12 +1,13 @@
 //----------***STYLING.SCSS***----------//
-/* Sist oppdatert: 29. Desember  2024 09:58 | Av: isakbh */
+// Sist oppdatert: 3. Januar  2025 11:31 | Av: isakbh //
 
 @import "../Include/Styling/farger.scss"; // importer farger fra farger.scss
 @import "../Include/Styling/lightdarkmode.scss"; // importer light og dark mode styling
 @import "../Include/Styling/navbar.scss"; // importer nav-bar styling
 @import "../Include/Styling/base.scss"; // importerer base styling
 
-/* Essentials */
+///////////////////////// BASIC STYLING  ////////////////////////////////
+
 * {
     font-family: HackFont, Helvetica, Arial, sans-serif;
     transition: 0.25s !important;
@@ -117,7 +118,6 @@ button {
     transition: 0.5s ease-out;
     width: 100%;
     border-radius: 5px;
-    filter: drop-shadow(10px 10px 10px #ccc);
 }
 
 #millie-bilde:hover {
@@ -130,7 +130,7 @@ button {
     aspect-ratio: 16 / 9;
     width: 90%;
     border-radius: 12px;
-    margin: 5px 0 5px 0;
+    margin: 30px 0 5px 0;
     filter: drop-shadow(0px 0px 20px black);
     &:hover {
         transform: scale(1.025);
@@ -138,6 +138,8 @@ button {
         cursor: none;
     }
 }
+
+///////////////////////// HVIS SKJERMSTØRRELSEN ER (skjermstørrelsen) ////////////////////////////////
 
 @media only screen and (max-width: 1000px) {
     #about {
@@ -193,7 +195,9 @@ button {
     }
 }
 
-// automatisk sjekk på den foretrukne fargetema
+///////////////////////// AUTOMATISK SJEKK ETTER FORETRUKNE FARGETEMA I NETTLESER ////////////////////////////////
+
+// hvis det er lyst
 @media (prefers-color-scheme: light) {
     body {
         background-color: aliceblue;
@@ -201,6 +205,7 @@ button {
     }
 }
 
+// hvis det er mørkt
 @media (prefers-color-scheme: dark) {
     body {
         background-color: $base-color-dark;
@@ -250,7 +255,7 @@ button {
         }
 }
 
-/* Hack font */
+// Hack font
 @font-face {
     font-family: HackFont;
     src: url(Hack-v3.003-ttf/ttf/Hack-Regular.ttf);

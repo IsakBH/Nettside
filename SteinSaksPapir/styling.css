@@ -270,10 +270,13 @@ h1 {
 .choices button:hover {
   background-color: #8ac8ff;
   transform: translateY(-5px);
+  filter: drop-shadow(0 5px rgb(204.3243243243, 224.5945945946, 243.1756756757));
 }
 .choices button:active {
   background-image: radial-gradient(150% 150% at 100% 0, #8ac8ff 0, rgb(214.5, 235.9615384615, 255) 100%);
+  filter: none;
   transform: translateY(5px);
+  filter: drop-shadow(0 -5px rgb(204.3243243243, 224.5945945946, 243.1756756757));
 }
 
 #playerDisplay {

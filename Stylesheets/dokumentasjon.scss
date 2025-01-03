@@ -5,12 +5,14 @@
 @import "../Include/Styling/lightdarkmode.scss"; // importer light og dark mode styling
 @import "../Include/Styling/navbar.scss"; // importer nav-bar styling
 
-@charset "UTF-8";
+// Hack font
 @font-face {
     font-family: HackFont;
     src: url(Hack-v3.003-ttf/ttf/Hack-Regular.ttf);
 }
-/* Essentials */
+
+///////////////////////// BASIC STYLING  ////////////////////////////////
+
 * {
     font-family: HackFont, Helvetica, Arial, sans-serif !important;
     transition: 0.25s !important;
@@ -58,7 +60,7 @@ button {
     }
 }
 
-/* CSS Fade In Animation*/
+// CSS Fade In Animation
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -73,7 +75,7 @@ button {
     align-items: flex-start;
 }
 
-/* Teksten til loggen */
+// Teksten til loggen
 #logg {
     flex: 1;
     top: 0;
@@ -98,7 +100,7 @@ button {
     padding: 8px 0;
 }
 
-/* The navigation menu links */
+// sidebar links (anchor links)
 .sidebar a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
@@ -110,7 +112,9 @@ button {
     }
 }
 
-// automatisk sjekk på den foretrukne fargetema
+///////////////////////// AUTOMATISK SJEKK ETTER FORETRUKNE FARGETEMA I NETTLESER ////////////////////////////////
+
+// hvis det er lyst
 @media (prefers-color-scheme: light) {
     body {
         background-color: aliceblue;
@@ -118,6 +122,7 @@ button {
     }
 }
 
+// hvis det er mørkt
 @media (prefers-color-scheme: dark) {
     body {
         background-color: $base-color-dark;

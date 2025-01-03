@@ -30,6 +30,7 @@ const initializer = () => {
     fontName.appendChild(option);
   });
 
+  // font size
   for (let i = 1; i <= 7; i++) {
     let option = document.createElement("option");
     option.value = i;
@@ -63,10 +64,9 @@ advancedOptionButton.forEach((button) => {
 //link
 linkButton.addEventListener("click", () => {
   let userLink = prompt("Enter a URL");
-  //if link has http then pass directly else add https
-  if (/http/i.test(userLink)) {
+  if (/http/i.test(userLink)) { // hvis linken har http, bruk den
     modifyText(linkButton.id, false, userLink);
-  } else {
+  } else { // hvis den ikke har http, legg det til og så bruk den
     userLink = "http://" + userLink;
     modifyText(linkButton.id, false, userLink);
   }
@@ -103,6 +103,25 @@ const highlighterRemover = (className) => {
   className.forEach((button) => {
     button.classList.remove("active");
   });
+};
+
+// eksperimentering med tastatur snarveier
+window.onkeydown = function(e) {
+    if (e.ctrlKey) { // sjekker etter ctrl og e
+        if (e.key === 'b') { // ctrl + b for fet skrift
+            e.preventDefault(); // stopper default action
+            modifyText('bold', false, null);
+        } else if (e.key === 'i') { // ctrl + i for kursiv skrift
+            e.preventDefault(); // stopper default action
+            modifyText('italic', false, null);
+        } else if (e.key === 'u') { // ctrl + u for understrek
+            e.preventDefault(); // stopper default action
+            modifyText('underline', false, null);
+        } else if (e.key === 'k') { // ctrl + k for hyprlink
+            e.preventDefault(); // stopper default action
+            linkButton.click(); // link knapp click
+        }
+    }
 };
 
 window.onload = initializer();

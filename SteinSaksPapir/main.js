@@ -33,7 +33,7 @@ function playGame(playerChoice) {
         }
     }
 
-    playerDisplay.textContent = `Spiller: ${playerChoice}`;
+    playerDisp|lay.textContent = `Spiller: ${playerChoice}`;
     computerDisplay.textContent = `Maskin: ${computerChoice}`;
 
     resultDisplay.textContent = result;
