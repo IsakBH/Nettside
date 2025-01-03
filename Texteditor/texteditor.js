@@ -16,7 +16,7 @@ let fontList = [
 ];
 
 const initializer = () => {
-  //function calls for highlighting buttons
+  // function calls som legger til bakgrunnsfarge / highlighter knappene som er toggled
   highlighter(alignButtons, true);
   highlighter(spacingButtons, true);
   highlighter(formatButtons, false);
@@ -41,20 +41,19 @@ const initializer = () => {
   fontSizeRef.value = 3;
 };
 
-//main logic
+// hoved logikken
 const modifyText = (command, defaultUi, value) => {
-  //execCommand executes command on selected text
-  document.execCommand(command, defaultUi, value);
+  document.execCommand(command, defaultUi, value); // kjører kommandoene på teksten som er selected
 };
 
-//For basic operations which don't need value parameter
+// basic operasjoner
 optionsButtons.forEach((button) => {
   button.addEventListener("click", () => {
     modifyText(button.id, false, null);
   });
 });
 
-//options that require value parameter (e.g colors, fonts)
+// valg som trenger options parameters, som for eksempel farger
 advancedOptionButton.forEach((button) => {
   button.addEventListener("change", () => {
     modifyText(button.id, false, button.value);
