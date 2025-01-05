@@ -1,4 +1,4 @@
-const choices = ["stein", "papir", "saks"];
+const choices = ["stein", "saks", "papir"];
 const playerDisplay = document.getElementById("playerDisplay");
 const computerDisplay = document.getElementById("computerDisplay");
 const resultDisplay = document.getElementById("resultDisplay");
@@ -8,7 +8,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 function playGame(playerChoice) {
-    const computerChoice = choices[Math.floor(Math.random() * 3)]; // * 3 sikrer at random indexen dekker hele rekkevidden av arrayen. hadde du byttet størrelsen på arrayen måtte du byttet denne også. (eller så kunne du bare skrevet choices.length)
+    const computerChoice = choices[Math.floor(Math.random() * choices.length)]; // * 3 sikrer at random indexen dekker hele rekkevidden av arrayen. hadde du byttet størrelsen på arrayen måtte du byttet denne også. (eller så kunne du bare skrevet choices.length)
 
     let result = "";
 
@@ -33,7 +33,7 @@ function playGame(playerChoice) {
         }
     }
 
-    playerDisp|lay.textContent = `Spiller: ${playerChoice}`;
+    playerDisplay.textContent = `Spiller: ${playerChoice}`;
     computerDisplay.textContent = `Maskin: ${computerChoice}`;
 
     resultDisplay.textContent = result;
@@ -41,13 +41,11 @@ function playGame(playerChoice) {
         case "Du vant! :)":
             playerScore++;
             playerScoreDisplay.textContent = playerScore;
-
             break;
 
         case "Du tapte :(":
             computerScore++;
             computerScoreDisplay.textContent = computerScore;
-
             break;
     }
 }

@@ -45,6 +45,7 @@ const initializer = () => {
 // hoved logikken
 const modifyText = (command, defaultUi, value) => {
   document.execCommand(command, defaultUi, value); // kjører kommandoene på teksten som er selected
+  // basically, command er det den skal gjøre med teksten (f.eks bold, italic, etc), defaultUi er en sjekk for hvis nettleseren har en UI til det den skal gjøre, og value er info som fontSize = arial, fontSize = 3, bold = true, etc.
 };
 
 // basic operasjoner
@@ -61,7 +62,7 @@ advancedOptionButton.forEach((button) => {
   });
 });
 
-//link
+// link
 linkButton.addEventListener("click", () => {
   let userLink = prompt("Enter a URL");
   if (/http/i.test(userLink)) { // hvis linken har http, bruk den
@@ -72,28 +73,26 @@ linkButton.addEventListener("click", () => {
   }
 });
 
-//Highlight clicked button
+// highlight knapper når de er trykket inn (og vice versa)
 const highlighter = (className, needsRemoval) => {
   className.forEach((button) => {
     button.addEventListener("click", () => {
-      //needsRemoval = true means only one button should be highlight and other would be normal
+      // needsRemoval = true betyr at bare en knapp skal være highlighted og andre skal være vanlig (ikke highlghted)
       if (needsRemoval) {
         let alreadyActive = false;
 
-        //If currently clicked button is already active
+        // hvis knappen brukeren trykket på allerede er aktiv, deaktiver den
         if (button.classList.contains("active")) {
           alreadyActive = true;
         }
 
-        //Remove highlight from other buttons
+        // fjern highlight fra andre knapper
         highlighterRemover(className);
-        if (!alreadyActive) {
-          //highlight clicked button
+        if (!alreadyActive) { // highlight knappen brukeren trykket på
           button.classList.add("active");
         }
       } else {
-        //if other buttons can be highlighted
-        button.classList.toggle("active");
+        button.classList.toggle("active"); // toggler highlight
       }
     });
   });

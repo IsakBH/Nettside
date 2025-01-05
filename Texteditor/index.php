@@ -13,7 +13,7 @@
     <!-- layouten av toolbaren er direkte kopiert fra Google Docs for "familiarity" -->
 
     <div class="container"> <!--  containeren for toolbaren -->
-    <h1>Ord Online v1.2</h1>
+    <h1>Ord Online v1.4</h1>
       <div class="options"> <!--  Toolbaren-->
 
         <!-- undo og redo -->
@@ -28,12 +28,12 @@
 
         <!-- overskrift / heading størrelse dropdown -->
         <select id="formatBlock" class="adv-option-button">
-          <option value="H1" title="Overskrift 1 (heading 1)">H1</option>
-          <option value="H2" title="Overskrift 2 (heading 2)">H2</option>
-          <option value="H3" title="Overskrift 3 (heading 3)">H3</option>
-          <option value="H4" title="Overskrift 4 (heading 4)">H4</option>
-          <option value="H5" title="Overskrift 5 (heading 5)">H5</option>
-          <option value="H6" title="Overskrift 6 (heading 6)">H6</option>
+          <option value="H1" title="Overskrift 1 (heading 1)">Overskrift 1</option>
+          <option value="H2" title="Overskrift 2 (heading 2)">Overskrift 2</option>
+          <option value="H3" title="Overskrift 3 (heading 3)">Overskrift 3</option>
+          <option value="H4" title="Overskrift 4 (heading 4)">Overskrift 4</option>
+          <option value="H5" title="Overskrift 5 (heading 5)">Overskrift 5</option>
+          <option value="H6" title="Overskrift 6 (heading 6)">Overskrift 6</option>
         </select>
 
         <hr>
@@ -108,7 +108,7 @@
           <i class="fa-solid fa-align-right"></i>
         </button>
 
-        <!-- indent knapper  -->
+        <!-- KNAPPER SOM IKKE FUNGERER (FIKS EN ELLER ANNEN GANG)
         <hr>
         <button id="indent" class="option-button spacing">
           <i class="fa-solid fa-indent"></i>
@@ -116,6 +116,7 @@
         <button id="outdent" class="option-button spacing">
           <i class="fa-solid fa-outdent"></i>
         </button>
+        -->
       </div>
 
       <!-- input boksen der du faktisk skriver teksten-->
@@ -123,7 +124,6 @@
       <br>
       <a href="https://www.github.com/isakbh/Ord-text-editor" id="reklame" target="_blank">Skaff deg Ord nå!</a>
     </div>
-
 
     <!-- javascript link-->
     <script src="texteditor.js"></script>
