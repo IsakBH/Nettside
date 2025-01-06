@@ -110,7 +110,7 @@ input[type=color] {
   margin-top: 10px;
   border: 1px solid #CCD4DB;
   padding: 10px;
-  height: 85%;
+  min-height: 85%;
   border-radius: 5px;
 }
 
