@@ -11,9 +11,8 @@
 
     <style>
         #forms {
-            border-radius: 20px;
-            height: 700px;
-            width: 900px;
+            height: 50%;
+            width: 80%;
             text-decoration: none;
             filter: sepia(30%);
             border: 2px solid black;
