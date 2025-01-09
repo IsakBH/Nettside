@@ -117,13 +117,13 @@
             text-decoration: none;
             display: block;
             color: $text-color-dark;
-            t        }
+                    }
     }
 
     .dropdown-content a:hover {
-        background-color: rgb(204, 212, 219);
+        background-color: lighten($navbar-button-dark, 20%);
         &:active {
-            background-color: darken($navbar-button-light, 20%);
+            background-color: lighten($navbar-button-dark, 10%);
         }
     }
 
@@ -132,6 +132,6 @@
     }
 
     .dropdown:hover .dropbtn {
-        background-color: rgb(204, 212, 219);
+        background-color: lighten($navbar-button-dark, 20%);
     }
 }

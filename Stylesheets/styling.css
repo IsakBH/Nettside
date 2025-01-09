@@ -107,16 +107,16 @@
   color: #f8f8f8;
 }
 .darkmode .dropdown-content a:hover {
-  background-color: rgb(204, 212, 219);
+  background-color: rgb(90.5660377358, 125.0188679245, 170.4339622642);
 }
 .darkmode .dropdown-content a:hover:active {
-  background-color: rgb(138, 200.4, 255);
+  background-color: rgb(71.320754717, 100.3773584906, 138.679245283);
 }
 .darkmode .dropdown:hover .dropdown-content {
   display: block;
 }
 .darkmode .dropdown:hover .dropbtn {
-  background-color: rgb(204, 212, 219);
+  background-color: rgb(90.5660377358, 125.0188679245, 170.4339622642);
 }
 
 /* Navigation bar */
@@ -354,7 +354,7 @@ button:active {
 #galleribilde:hover {
   transform: scale(1.1);
   filter: brightness(1.2);
-  z-index: 100000000000000000;
+  z-index: 1;
 }
 
 .advarsel {
