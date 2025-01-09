@@ -1,0 +1,9 @@
+#mainContent {
+    background-color: aliceblue;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    text-align: center;
+}
