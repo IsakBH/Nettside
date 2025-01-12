@@ -1,3 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", sans-serif;
+}
 
+body {
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+li {
+  margin-left: 20px;
+}
+
+a {
+  color: rgb(133.9158878505, 197.4112149533, 218.0841121495);
+}
+a:visited {
+  color: rgb(94.8317757009, 178.8224299065, 206.1682242991);
+}
+a:hover {
+  color: rgb(192.5420560748, 225.2943925234, 235.9579439252);
+}
+a:active {
+  color: rgb(212.0841121495, 234.5887850467, 241.9158878505);
+}
+
+span {
+  color: rgb(247.45, 111.55, 111.55);
+}
+
+header {
+  margin: 4rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.bio {
+  margin: 0;
+}
+
+#biopic {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.headercontact {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: transparent;
+  text-decoration: none;
+  border: 2px solid #333;
+  border-radius: 10px;
+}
+
+nav {
+  margin: 1rem 0;
+}
+nav a:link {
+  color: #333 !important;
+  text-decoration: none;
+  margin-right: 2rem;
+  padding: 10px;
+}
+nav a:link:hover {
+  text-decoration: underline;
+  background-color: #eee;
+}
+
+section {
+  margin: 4rem 0;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.project-card {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2rem;
+}
+
+.contact {
+  margin-top: 4rem;
+}
+.contact a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  margin: 0.5rem 0;
+}
+.contact a:hover {
+  text-decoration: underline;
+}
+
+#om {
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+hr {
+  height: 1px;
+  text-decoration: none;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+}
 
 /*# sourceMappingURL=testing.css.map */
