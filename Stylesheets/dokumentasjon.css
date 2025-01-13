@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Sist oppdatert: 22. November 2024 | Av: isakbh */
+/* Sist oppdatert: 29. Desember 2024 | Av: isakbh */
 /* Sist oppdatert: 27. November 2024 | Av: isakbh */
 .lightmode {
   background-color: #F0F8FF;
@@ -184,11 +184,26 @@
   background-color: rgb(204, 212, 219);
 }
 
+@media screen and (max-width: 768px) {
+  .meny_topp {
+    flex-direction: column;
+    padding: 15px;
+    height: auto;
+  }
+  .dropdown-content {
+    display: none;
+  }
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
+  #galleriknapp {
+    display: none;
+  }
+}
 @font-face {
   font-family: HackFont;
   src: url(Hack-v3.003-ttf/ttf/Hack-Regular.ttf);
 }
-/* Essentials */
 * {
   font-family: HackFont, Helvetica, Arial, sans-serif !important;
   transition: 0.25s !important;
@@ -236,7 +251,6 @@ button:active {
   transition: 0.5s;
 }
 
-/* CSS Fade In Animation*/
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -250,7 +264,6 @@ button:active {
   align-items: flex-start;
 }
 
-/* Teksten til loggen */
 #logg {
   flex: 1;
   top: 0;
@@ -274,7 +287,6 @@ button:active {
   padding: 8px 0;
 }
 
-/* The navigation menu links */
 .sidebar a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
