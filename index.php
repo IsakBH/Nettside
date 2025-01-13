@@ -36,7 +36,9 @@ include("Logg/Text/ommeg.txt");
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <br>
 
-<iframe id="maps" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d150.92522395422816!2d5.233279111964471!3d60.3660681255376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sno!4v1734516022151!5m2!1sen!2sno" width="800" height="650" style="border:0;" allowfullscreen="yes" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div id="embedwrapper">
+    <iframe id="maps" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d150.92522395422816!2d5.233279111964471!3d60.3660681255376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sno!4v1734516022151!5m2!1sen!2sno" style="border:0;" allowfullscreen="yes" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 
 </body>
 
