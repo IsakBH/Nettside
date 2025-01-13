@@ -108,3 +108,24 @@
 .dropdown:hover .dropbtn {
     background-color: rgb(204, 212, 219);
 }
+
+// Mobile-specific styles
+@media screen and (max-width: 768px) {
+    .meny_topp {
+        flex-direction: column;
+        padding: 15px;
+        height: auto;
+    }
+
+    .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+
+    #galleriknapp {
+        display: none;
+    }
+}

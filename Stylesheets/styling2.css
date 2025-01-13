@@ -184,6 +184,22 @@
   background-color: rgb(204, 212, 219);
 }
 
+@media screen and (max-width: 768px) {
+  .meny_topp {
+    flex-direction: column;
+    padding: 15px;
+    height: auto;
+  }
+  .dropdown-content {
+    display: none;
+  }
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
+  #galleriknapp {
+    display: none;
+  }
+}
 /* Sist oppdatert: 6. Desember  2024 10:04 | Av: isakbh */
 /* CSS Fade In Animation*/
 @keyframes fadeIn {

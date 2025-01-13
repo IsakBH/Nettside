@@ -1,5 +1,5 @@
 //----------***STYLING.SCSS***----------//
-// Sist oppdatert: 9. Januar  2025 10:24 | Av: isakbh //
+// Sist oppdatert: 3. Januar  2025 11:31 | Av: isakbh //
 
 @import "../Include/Styling/farger.scss"; // importer farger fra farger.scss
 @import "../Include/Styling/lightdarkmode.scss"; // importer light og dark mode styling
@@ -14,7 +14,7 @@
     scroll-behavior: smooth;
 }
 
-html {
+html { // color: #f5f5f5
     text-align: center;
     margin: 0;
     padding: 0;
@@ -81,7 +81,7 @@ button {
 #galleribilde:hover {
     transform: scale(1.1);
     filter: brightness(1.2);
-    z-index: 1;
+    z-index: 100000000000000000;
 }
 
 .advarsel {
