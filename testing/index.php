@@ -6,14 +6,15 @@
     <title>Isak Henriksen</title>
     <link rel="stylesheet" href="testing.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="icon" href="../Pictures/Tux.svg.png">
 </head>
 <body>
     <header>
         <img class="bio"src="isakbilde.jpg" alt="Bilde av meg" id="biopic">
         <h1 class="bio">Isak Henriksen</h1>
         <p class="bio">Svært kul utvikler basert i Bergen</p>
-        <button class="headercontact"><i class="fa-solid fa-phone"></i> +47 458 48 234</button>
-        <button class="headercontact"><i class="fa-solid fa-envelope-circle-check"></i> isak@brunhenriksen.net</button>
+        <button class="headercontact">+47 458 48 234</button>
+        <button class="headercontact">isak@brunhenriksen.net</button>
     </header>
 
     <nav>

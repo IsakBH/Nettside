@@ -1,0 +1,37 @@
+    <h3>
+    Hva har jeg gjort i dag?
+    </h3>
+
+    <p>
+    I dag har jeg jobbet med en liten testing side, som en gang kommer til å erstatte landingssiden. Jeg liker veldig godt stilen til testing siden, og kommer sikkert til å bruke den i flere undersider. <a href="/testing/index.php/">Her er en link til den</a>. Endelig kan jeg lukke Github issue #1, som handlet om å gjøre side 1 litt mer attraktiv. 😎 Vet ikke helt enda hva jeg skal gjøre med nav-baren, men jeg skal finne ut av det. Akkurat nå kommer jeg bare til å bruke nav-baren jeg har på de andre undersidene, men jeg har veldig lyst til å lage en ny en som passer mer med den nye stylingen. Det har ikke vært 2 uker siden sist jeg jobbet, forresten, jeg har bare glemt å skrive logg 😅
+    </p>
+
+    <br> <br>
+
+    <h3>
+    Hvordan jeg har jobbet
+    </h3>
+
+    <p>
+    Har jobbet veldig effektivt. Kom i gang raskt med å finne en ny stil og layout, og fant det nesten med en gang.
+    </p>
+
+    <br> <br>
+
+    <h3>
+    Utfordringer
+    </h3>
+
+    <p>
+    Det vanskeligste i dag var å finne på et nytt layout, men jeg klarte det til slutt. For å finne ut av det gikk jeg bare inn på en haug med random nettsider, og blandet sikkert 200 forskjellige layouts inn i ett, som nå er den jeg har inne på <a href="/testing/index.php/">testing siden</a>.
+    </p>
+
+    <br> <br>
+
+    <h3>
+    Hvordan jeg har hentet informasjonen min
+    </h3>
+
+    <p>
+    Megselv, og alt for mange helt tilfeldige sider.
+    </p>

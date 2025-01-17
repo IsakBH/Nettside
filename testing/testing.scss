@@ -1,13 +1,19 @@
+//----------***TESTING.SCSS***----------//
+// Sist oppdatert: 17. Januar  2025 15:51 | Av: isakbh //
+
+@import "../Include/Styling/farger.scss"; // importer farger fra farger.scss
+@import "../Include/Styling/lightdarkmode.scss"; // importer light og dark mode styling
+@import "../Include/Styling/navbar.scss"; // importer nav-bar styling
+@import "../Include/Styling/base.scss"; // importerer base styling
+
+///////////////////////// BASIC STYLING  ////////////////////////////////
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Helvetica Neue', sans-serif;
     scroll-behavior: smooth;
-}
-
-html {
-    background-color: aliceblue;
 }
 
 body {
@@ -26,6 +32,9 @@ a {
     color: darken(lightblue, 10%);
     &:visited {
         color: darken(lightblue, 20%);
+    }
+    &:hover {
+        color: lighten(lightblue, 5%);
     }
     &:active {
         color: lighten(lightblue, 10%);
@@ -76,9 +85,6 @@ nav {
         text-decoration: none;
         margin-right: 2rem;
         padding: 10px;
-        &:visited {
-            color: #333 !important;
-        }
         &:hover {
             text-decoration: underline;
             background-color: #eee;
