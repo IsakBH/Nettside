@@ -265,6 +265,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+  background-color: aliceblue;
 }
 
 li {
@@ -364,7 +365,7 @@ section {
 }
 
 #om {
-  background-color: #eee;
+  background-color: #ACBDD1;
   padding: 20px;
   border-radius: 15px;
 }
