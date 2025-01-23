@@ -114,6 +114,12 @@ input[type=color] {
   border-radius: 5px;
 }
 
+#text-input ul,
+#text-input ol {
+  padding-left: 40px;
+  margin: 0;
+}
+
 .active {
   background-color: #8AC8FF;
 }

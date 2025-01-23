@@ -113,6 +113,11 @@ input[type="color"] {
     padding: 10px;
     min-height: 85%;
     border-radius: 5px;
+    // fikser at liste punktene går utenfor tekst boksen
+    ul, ol{
+        padding-left: 40px;
+        margin: 0;
+    }
 }
 
 .active {
