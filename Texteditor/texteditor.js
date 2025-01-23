@@ -15,10 +15,10 @@ let fontList = [
   "Cursive",
 ];
 
-// Add these new functions
+// lagre tekst som fil
 function saveTextAsFile() {
     const textContent = document.getElementById("text-input").innerHTML;
-    // Convert HTML content to plain text
+    // konverter HTML innhold til ren tekst
     const plainText = textContent.replace(/<[^>]*>/g, '\n');
 
     const blob = new Blob([plainText], { type: 'text/plain' });
@@ -32,6 +32,7 @@ function saveTextAsFile() {
     window.URL.revokeObjectURL(url);
 }
 
+// last inn tekst fra fil
 function loadTextFile() {
     const input = document.createElement('input');
     input.type = 'file';
@@ -52,13 +53,13 @@ function loadTextFile() {
     input.click();
 }
 
-// Function to save content to cookie
+// funksjon for å lagre innholdet til cookie
 const saveContentToCookie = () => {
     const content = writingArea.innerHTML;
     document.cookie = `textEditorContent=${encodeURIComponent(content)}; expires=${new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString()}; path=/`;
 };
 
-// Function to load content from cookie
+// funksjon for å laste inn innholdet fra cookie
 const loadContentFromCookie = () => {
     const cookies = document.cookie.split(';');
     for (let cookie of cookies) {
@@ -71,13 +72,12 @@ const loadContentFromCookie = () => {
 };
 
 const initializer = () => {
-    // Existing initialization code...
     highlighter(alignButtons, true);
     highlighter(spacingButtons, true);
     highlighter(formatButtons, false);
     highlighter(scriptButtons, true);
 
-    // Create font options...
+    // valg av fonts
     fontList.map((value) => {
         let option = document.createElement("option");
         option.value = value;
@@ -85,7 +85,7 @@ const initializer = () => {
         fontName.appendChild(option);
     });
 
-    // Create font size options...
+    // valg av fontstørrelse
     for (let i = 1; i <= 7; i++) {
         let option = document.createElement("option");
         option.value = i;
@@ -95,10 +95,10 @@ const initializer = () => {
 
     fontSizeRef.value = 3;
 
-    // Load saved content
+    // last inn lagret innhold fra cookie
     loadContentFromCookie();
 
-    // Add event listener to save content when typing
+    // legg til en eventlistener for å lagre innholdet mens man skriver
     writingArea.addEventListener('input', () => {
         saveContentToCookie();
     });
@@ -166,7 +166,7 @@ const highlighterRemover = (className) => {
   });
 };
 
-// Add these event listeners in your initializer function or at the bottom of your script
+// legg til event listeners til lagre og upload knapper
 document.getElementById("saveFile").addEventListener("click", saveTextAsFile);
 document.getElementById("loadFile").addEventListener("click", loadTextFile);
 
