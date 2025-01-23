@@ -108,6 +108,15 @@
           <i class="fa-solid fa-align-right"></i>
         </button>
 
+        <!-- Add this where you want the save/load buttons to appear in your toolbar -->
+        <hr>
+        <button id="saveFile" class="option-button" title="Save as Text File">
+            <i class="fa-solid fa-download"></i>
+        </button>
+        <button id="loadFile" class="option-button" title="Load Text File">
+            <i class="fa-solid fa-upload"></i>
+        </button>
+
         <!-- KNAPPER SOM IKKE FUNGERER (FIKS EN ELLER ANNEN GANG)
         <hr>
         <button id="indent" class="option-button spacing">

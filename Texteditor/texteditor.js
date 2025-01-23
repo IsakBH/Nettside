@@ -15,31 +15,93 @@ let fontList = [
   "Cursive",
 ];
 
+// Add these new functions
+function saveTextAsFile() {
+    const textContent = document.getElementById("text-input").innerHTML;
+    // Convert HTML content to plain text
+    const plainText = textContent.replace(/<[^>]*>/g, '\n');
+
+    const blob = new Blob([plainText], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'ord-document.txt';
+    a.click();
+
+    window.URL.revokeObjectURL(url);
+}
+
+function loadTextFile() {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.txt';
+
+    input.onchange = function(e) {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function() {
+            const text = reader.result;
+            document.getElementById("text-input").innerHTML = text;
+        };
+
+        reader.readAsText(file);
+    };
+
+    input.click();
+}
+
+// Function to save content to cookie
+const saveContentToCookie = () => {
+    const content = writingArea.innerHTML;
+    document.cookie = `textEditorContent=${encodeURIComponent(content)}; expires=${new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString()}; path=/`;
+};
+
+// Function to load content from cookie
+const loadContentFromCookie = () => {
+    const cookies = document.cookie.split(';');
+    for (let cookie of cookies) {
+        const [name, value] = cookie.trim().split('=');
+        if (name === 'textEditorContent') {
+            writingArea.innerHTML = decodeURIComponent(value);
+            return;
+        }
+    }
+};
+
 const initializer = () => {
-  // function calls som legger til bakgrunnsfarge / highlighter knappene som er toggled
-  highlighter(alignButtons, true);
-  highlighter(spacingButtons, true);
-  highlighter(formatButtons, false);
-  highlighter(scriptButtons, true);
+    // Existing initialization code...
+    highlighter(alignButtons, true);
+    highlighter(spacingButtons, true);
+    highlighter(formatButtons, false);
+    highlighter(scriptButtons, true);
 
-  // lag valg av fonts
-  fontList.map((value) => {
-    let option = document.createElement("option");
-    option.value = value;
-    option.innerHTML = value;
-    fontName.appendChild(option);
-  });
+    // Create font options...
+    fontList.map((value) => {
+        let option = document.createElement("option");
+        option.value = value;
+        option.innerHTML = value;
+        fontName.appendChild(option);
+    });
 
-  // font size
-  for (let i = 1; i <= 7; i++) {
-    let option = document.createElement("option");
-    option.value = i;
-    option.innerHTML = i;
-    fontSizeRef.appendChild(option);
-  }
+    // Create font size options...
+    for (let i = 1; i <= 7; i++) {
+        let option = document.createElement("option");
+        option.value = i;
+        option.innerHTML = i;
+        fontSizeRef.appendChild(option);
+    }
 
-  // default størrelsen på tekst
-  fontSizeRef.value = 3;
+    fontSizeRef.value = 3;
+
+    // Load saved content
+    loadContentFromCookie();
+
+    // Add event listener to save content when typing
+    writingArea.addEventListener('input', () => {
+        saveContentToCookie();
+    });
 };
 
 // hoved logikken
@@ -103,6 +165,10 @@ const highlighterRemover = (className) => {
     button.classList.remove("active");
   });
 };
+
+// Add these event listeners in your initializer function or at the bottom of your script
+document.getElementById("saveFile").addEventListener("click", saveTextAsFile);
+document.getElementById("loadFile").addEventListener("click", loadTextFile);
 
 // eksperimentering med tastatur snarveier
 window.onkeydown = function(e) {
