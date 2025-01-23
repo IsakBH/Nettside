@@ -113,9 +113,7 @@ input[type=color] {
   min-height: 85%;
   border-radius: 5px;
 }
-
-#text-input ul,
-#text-input ol {
+#text-input ul, #text-input ol {
   padding-left: 40px;
   margin: 0;
 }
