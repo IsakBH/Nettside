@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Ord Online V1</title>
+    <title>Ord Online v2.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="texteditor.css"/>
     <link rel="icon" href="../Pictures/ordlogo.png"/>
     <!-- ikoner fra font awesome og google fonts-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+
+    <!-- Open Graph meta-tagger -->
+    <meta property="og:title" content="Ord Online v2.0">
+    <meta property="og:description" content="Nå med funksjonalitet for både lagring og lasting av filer!">
+    <meta property="og:image" content="https://isak.brunhenriksen.no/Pictures/ordlogo.png">
+    <meta property="og:url" content="https://isak.brunhenriksen.no/Ord_online">
+    <meta property="og:type" content="website">
   </head>
   <body>
 
     <!-- layouten av toolbaren er direkte kopiert fra Google Docs for "familiarity" -->
 
     <div class="container"> <!--  containeren for toolbaren -->
-    <h1>Ord Online v1.4</h1>
+    <h1>Ord Online v2.0</h1>
       <div class="options"> <!--  Toolbaren-->
 
         <!-- undo og redo -->
