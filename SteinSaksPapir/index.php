@@ -4,8 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Stein saks papir</title>
+        <link rel="icon" href="../Pictures/isak.jpg"
         <link rel="stylesheet" href="styling.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+        <!-- Open Graph meta-tagger -->
+        <meta property="og:title" content="Stein Saks Papir">
+        <meta property="og:description" content="Den beste online versjonen av Stein, Saks, Papir noensinne!!">
+        <meta property="og:image" content="../Pictures/milliefin.jpg">
+        <meta property="og:url" content="https://isak.brunhenriksen.no/SteinSaksPapir">
+        <meta property="og:type" content="website">
     </head>
 
     <body>
