@@ -33,6 +33,7 @@ hr {
   top: 50%;
   border-radius: 0px;
   filter: drop-shadow(0 0 15px grey);
+  overflow: hidden;
 }
 
 #reklame {
@@ -110,8 +111,10 @@ input[type=color] {
   margin-top: 10px;
   border: 1px solid #CCD4DB;
   padding: 10px;
-  min-height: 85%;
+  height: calc(100% - 180px); /* Fixed height, adjusting for toolbar */
   border-radius: 5px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 #text-input ul, #text-input ol {
   padding-left: 40px;

@@ -31,10 +31,11 @@ hr {
     padding: 50px 30px;
     position: absolute;
     transform: translate(-50%, -50%);
-    left: 50%; // sentrerer containeren horisontalt i midten av siden
-    top: 50%; // sentrerer containeren vertikalt i midten av siden
+    left: 50%;
+    top: 50%;
     border-radius: 0px;
     filter: drop-shadow(0 0 15px grey);
+    overflow: hidden; // sånn at brukeren ikke kan scrolle i containeren
 }
 
 #reklame {
@@ -107,12 +108,15 @@ input[type="color"] {
     filter: drop-shadow(0px 3px 3px grey);
 }
 
+
 #text-input {
     margin-top: 10px;
     border: 1px solid #CCD4DB;
     padding: 10px;
-    min-height: 85%;
+    height: calc(100% - 180px); /* Fixed height, adjusting for toolbar */
     border-radius: 5px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     // fikser at liste punktene går utenfor tekst boksen
     ul, ol{
         padding-left: 40px;
