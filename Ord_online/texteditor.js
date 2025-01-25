@@ -14,6 +14,19 @@ let fontList = [
   "Times New Roman",
   "Cursive",
 ];
+let filename = prompt("Skriv inn navn på dokumentet", "eksempel.txt")
+
+function sjekkFilNavn(filename){
+    return filename.toLowerCase().endsWith('.txt');
+}
+
+if(sjekkFilNavn(filename)){
+    console.log("Filnavnet er gyldig, har .txt extension");
+}
+else {
+    filename = filename + '.txt';
+    console.log("Filnavnet hadde ikke .txt, og har nå blitt lagt til.");
+}
 
 // lagre tekst som fil
 function saveTextAsFile() {
@@ -26,7 +39,7 @@ function saveTextAsFile() {
 
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'ord-document.txt';
+    a.download = filename;
     a.click();
 
     window.URL.revokeObjectURL(url);
