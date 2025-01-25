@@ -170,6 +170,72 @@ const highlighterRemover = (className) => {
 document.getElementById("saveFile").addEventListener("click", saveTextAsFile);
 document.getElementById("loadFile").addEventListener("click", loadTextFile);
 
+// Table insertion functionality
+document.getElementById("insertTable").addEventListener("click", () => {
+    const rows = prompt("Enter number of rows:", "2");
+    const cols = prompt("Enter number of columns:", "2");
+
+    if (rows && cols) {
+        // Create table container div
+        const tableContainer = document.createElement('div');
+        tableContainer.className = 'table-container';
+
+        // Create delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
+        deleteButton.className = 'table-delete-btn';
+        deleteButton.title = 'Delete Table';
+        deleteButton.onclick = function() {
+            if (confirm('Are you sure you want to delete this table?')) {
+                tableContainer.remove();
+            }
+        };
+
+        const table = document.createElement('table');
+        table.style.width = '100%';
+        table.style.borderCollapse = 'collapse';
+        table.style.marginBottom = '10px';
+
+        // Create rows and cells
+        for (let i = 0; i < rows; i++) {
+            const row = table.insertRow();
+            for (let j = 0; j < cols; j++) {
+                const cell = row.insertCell();
+                cell.contentEditable = true;
+                cell.style.border = '1px solid #ccc';
+                cell.style.padding = '8px';
+                cell.style.minWidth = '50px';
+                cell.innerHTML = 'Cell';
+            }
+        }
+
+        // Add table and delete button to container
+        tableContainer.appendChild(deleteButton);
+        tableContainer.appendChild(table);
+
+        // Insert table container at cursor position or at the end
+        const selection = window.getSelection();
+        if (selection.getRangeAt && selection.rangeCount) {
+            const range = selection.getRangeAt(0);
+            range.deleteContents();
+            range.insertNode(tableContainer);
+        } else {
+            writingArea.appendChild(tableContainer);
+        }
+    }
+});
+
+// Add this to your texteditor.js file
+document.addEventListener('contextmenu', function(e) {
+    const tableElement = e.target.closest('table');
+    if (tableElement) {
+        e.preventDefault();
+        if (confirm('Delete this table?')) {
+            tableElement.closest('.table-container').remove();
+        }
+    }
+});
+
 // eksperimentering med tastatur snarveier
 window.onkeydown = function(e) {
     if (e.ctrlKey) { // sjekker etter ctrl og e

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Ord Online v2.1</title>
+    <title>Ord Online v2.2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="texteditor.css"/>
-    <link rel="icon" href="../Pictures/ordlogo2.png"/>
+    <link rel="icon" href="../Pictures/ordlogo.png"/>
     <!-- ikoner fra font awesome og google fonts-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
 
     <!-- Open Graph meta-tagger -->
-    <meta property="og:title" content="Ord Online v2.1">
-    <meta property="og:description" content="Nå med funksjonalitet for både lagring og lasting av filer!">
+    <meta property="og:title" content="Ord Online v2.2">
+    <meta property="og:description" content="Nå med tabeller!">
     <meta property="og:image" content="https://isak.brunhenriksen.no/Pictures/ordlogo.png">
     <meta property="og:url" content="https://isak.brunhenriksen.no/Ord_online">
     <meta property="og:type" content="website">
@@ -21,7 +21,7 @@
     <!-- layouten av toolbaren er direkte kopiert fra Google Docs for "familiarity" -->
 
     <div class="container"> <!--  containeren for toolbaren -->
-    <h1>Ord Online v2.1</h1>
+    <h1>Ord Online v2.2</h1>
       <div class="options"> <!--  Toolbaren-->
 
         <!-- undo og redo -->
@@ -114,6 +114,11 @@
         </button>
         <button id="justifyRight" class="option-button align">
           <i class="fa-solid fa-align-right"></i>
+        </button>
+
+        <hr>
+        <button id="insertTable" class="option-button" title="Insert Table">
+            <i class="fa-solid fa-table"></i>
         </button>
 
         <!-- Add this where you want the save/load buttons to appear in your toolbar -->

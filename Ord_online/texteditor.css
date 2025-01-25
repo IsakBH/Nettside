@@ -125,4 +125,60 @@ input[type=color] {
   background-color: #8AC8FF;
 }
 
+#text-input table {
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#text-input td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  min-width: 50px;
+}
+
+#text-input td:focus {
+  background-color: #f0f0f0;
+  outline: 2px solid #8AC8FF;
+}
+
+.table-container {
+  position: relative;
+  margin: 20px 0;
+}
+
+.table-delete-btn {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.table-delete-btn:hover {
+  background-color: #cc0000;
+}
+
+#text-input .table-container table {
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#text-input .table-container td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  min-width: 50px;
+}
+
+#text-input .table-container td:focus {
+  background-color: #f0f0f0;
+  outline: 2px solid #8AC8FF;
+}
+
 /*# sourceMappingURL=texteditor.css.map */
