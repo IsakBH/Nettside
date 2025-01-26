@@ -14,6 +14,7 @@ let fontList = [
   "Times New Roman",
   "Cursive",
 ];
+let seenEasterEgg = false;
 
 function sjekkFilNavn(filename){
     return filename.toLowerCase().endsWith('.txt');
@@ -273,8 +274,11 @@ function checkForMKX(){
     const content = writingArea.innerText.toLowerCase();
 
     if (content.includes('mkx')) {
-        const music = new Audio('../Include/Musikk/mkx-10-20-30-40.mp3');
-        music.play();
+        if(seenEasterEgg === false){
+            const music = new Audio('../Include/Musikk/mkx-10-20-30-40.mp3');
+            music.play();
+            seenEasterEgg = true;
+        }
     }
 }
 
