@@ -9,6 +9,8 @@ let fontName = document.getElementById("fontName");
 let fontSizeRef = document.getElementById("fontSize");
 let writingArea = document.getElementById("text-input");
 let linkButton = document.getElementById("createLink");
+let olButton = document.getElementById("insertOrderedList");
+let ulButton = document.getElementById("insertUnorderedList");
 let fontList = [
   "Arial",
   "Times New Roman",
@@ -22,25 +24,25 @@ function sjekkFilNavn(filename){
 
 // lagre tekst som fil
 function saveTextAsFile() {
-    let filename = prompt("Skriv inn navn på dokumentet", "ord.txt")
+    // gjør turndownService klar til bruk og sånn (hvordan skal jeg forklare dette på en bedre måte?????????)
+    const turndownService = new TurndownService();
 
-    //sjekker om filnavnet har .txt extension
-    if(sjekkFilNavn(filename)){
-        console.log("Filnavnet er gyldig, har .txt extension");
+    // hent html dataen brukeren har skrevet inn i tekst boksen
+    const htmlContent = document.getElementById("text-input").innerHTML;
+    const markdownContent = turndownService.turndown(htmlContent);
+
+    let filename = prompt("Skriv inn navn på dokumentet", "ord.md");
+
+    // sjekker hvis filnavnet slutter med .md (akkurat det samme som det jeg hadde før med .txt, men bare med .md)
+    if (!filename.toLowerCase().endsWith('.md')) {
+        filename = filename + '.md';
+        console.log("Filnavnet hadde ikke .md, og det har nå blitt lagt til.");
     }
-    else {
-        filename = filename + '.txt';
-        console.log("Filnavnet hadde ikke .txt, og har nå blitt lagt til.");
-    }
 
-    const textContent = document.getElementById("text-input").innerHTML;
-    // konverter HTML innhold til ren tekst
-    const plainText = textContent.replace(/<[^>]*>/g, '\n');
-
-    const blob = new Blob([plainText], { type: 'text/plain' });
+    const blob = new Blob([markdownContent], { type: 'text/markdown' });
     const url = window.URL.createObjectURL(blob);
-
     const a = document.createElement('a');
+
     a.href = url;
     a.download = filename;
     a.click();
@@ -48,19 +50,20 @@ function saveTextAsFile() {
     window.URL.revokeObjectURL(url);
 }
 
-// last inn tekst fra fil
 function loadTextFile() {
     const input = document.createElement('input');
     input.type = 'file';
-    input.accept = '.txt';
+    input.accept = '.md';
 
     input.onchange = function(e) {
         const file = e.target.files[0];
         const reader = new FileReader();
 
         reader.onload = function() {
-            const text = reader.result;
-            document.getElementById("text-input").innerHTML = text;
+            const markdownContent = reader.result;
+            // konverter markdown til html
+            const htmlContent = marked.parse(markdownContent);
+            document.getElementById("text-input").innerHTML = htmlContent;
         };
 
         reader.readAsText(file);
@@ -252,13 +255,14 @@ document.addEventListener('contextmenu', function(e) {
     }
 });
 
-// EASTER EGGS
+////////////////// EASTER EGGS ////////////////////
 writingArea.addEventListener('input', () => {
     saveContentToCookie();
     checkForGud();
     checkForMKX();
 });
 
+// sjekker om det står "gud" i tekst boksen der brukeren skriver
 function checkForGud() {
     const content = writingArea.innerText.toLowerCase();
     const crossSymbol = document.getElementById('cross-symbol');
@@ -270,6 +274,7 @@ function checkForGud() {
     }
 }
 
+// sjekker om det står "mkx" i tekst boksen der brukeren skriver
 function checkForMKX(){
     const content = writingArea.innerText.toLowerCase();
 
@@ -284,7 +289,7 @@ function checkForMKX(){
 
 // eksperimentering med tastatur snarveier
 window.onkeydown = function(e) {
-    if (e.ctrlKey) { // sjekker etter ctrl og e
+    if (e.ctrlKey) { // sjekker etter ctrl og bokstav
         if (e.key === 'b') { // ctrl + b for fet skrift
             e.preventDefault(); // stopper default action
             modifyText('bold', false, null);
@@ -297,6 +302,21 @@ window.onkeydown = function(e) {
         } else if (e.key === 'k') { // ctrl + k for hyprlink
             e.preventDefault(); // stopper default action
             linkButton.click(); // link knapp click
+        } else if (e.key == 's') {
+            e.preventDefault();
+            saveTextAsFile();
+        } else if (e.key == 'o') {
+            e.preventDefault();
+            loadTextFile();
+        } else if (e.key == '-') {
+            e.preventDefault();
+            modifyText('strikethrough', false, null);
+        } else if (e.key == '*') {
+            e.preventDefault();
+            ulButton.click();
+        } else if (e.key == '/') {
+            e.preventDefault();
+            olButton.click();
         }
     }
 };

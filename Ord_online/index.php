@@ -15,6 +15,9 @@
     <meta property="og:image" content="https://isak.brunhenriksen.no/Pictures/ordlogo.png">
     <meta property="og:url" content="https://isak.brunhenriksen.no/Ord_online">
     <meta property="og:type" content="website">
+
+    <script src="https://unpkg.com/turndown/dist/turndown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </head>
   <body>
 
