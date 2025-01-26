@@ -1,0 +1,38 @@
+<h3>
+Hva har jeg gjort i dag?
+</h3>
+
+<p>
+I dag har jeg jobbet mer med Ord Online tekst editoren min. Jeg har lagt til 2 easter eggs til den (du må enten finne de selv eller se i kildekoden) og gjort den mer mobilvennlig med mindre padding på toolbaren og bedre scrolling. <br>
+<i>Hint til easter eggs: faren til Jesus</i>
+</p>
+
+<br> <br>
+
+<h3>
+Hvordan jeg har jobbet
+</h3>
+
+<p>
+Har jobbet ganske bra og effektivt i dag. Fikk gjort det jeg skulle og kom igang med arbeidet ganske raskt.
+</p>
+
+<br> <br>
+
+<h3>
+Utfordringer
+</h3>
+
+<p>
+Ingen utfordringer i dag. Arbeidet gikk ganske smooth.
+</p>
+
+<br> <br>
+
+<h3>
+Hvordan jeg har hentet informasjonen min
+</h3>
+
+<p>
+Hjernen min + StackOverflow og Reddit
+</p>
