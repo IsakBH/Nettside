@@ -21,7 +21,7 @@ function sjekkFilNavn(filename){
 
 // lagre tekst som fil
 function saveTextAsFile() {
-    let filename = prompt("Skriv inn navn på dokumentet", "eksempel.txt")
+    let filename = prompt("Skriv inn navn på dokumentet", "ord.txt")
 
     //sjekker om filnavnet har .txt extension
     if(sjekkFilNavn(filename)){

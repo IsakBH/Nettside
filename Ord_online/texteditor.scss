@@ -194,3 +194,22 @@ input[type="color"] {
     font-size: 40px;
     filter: drop-shadow(0 0 100px yellow);
 }
+
+// for å gjøre den mer mobil vennlig
+@media screen and (max-height: 600px) {
+    .container {
+        height: 85vh;
+        top: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+        padding-bottom: 5px;
+    }
+
+    .options {
+        gap: 3px;
+    }
+}

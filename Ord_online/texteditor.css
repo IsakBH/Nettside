@@ -188,7 +188,23 @@ input[type=color] {
   top: 50%;
   transform: translateY(-50%);
   font-size: 40px;
-  filter: drop-shadow(0 0 30px yellow);
+  filter: drop-shadow(0 0 100px yellow);
+}
+
+@media screen and (max-height: 600px) {
+  .container {
+    height: 85vh;
+    top: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+    padding-bottom: 5px;
+  }
+  .options {
+    gap: 3px;
+  }
 }
 
 /*# sourceMappingURL=texteditor.css.map */
