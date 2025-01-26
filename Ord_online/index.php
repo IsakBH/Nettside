@@ -147,6 +147,8 @@
       <a href="https://www.github.com/isakbh/Ord-text-editor" id="reklame" target="_blank">Skaff deg Ord nå!</a>
     </div>
 
+    <div id="cross-symbol"><i class="fa-solid fa-cross"></i></div>
+
     <!-- javascript link-->
     <script src="texteditor.js"></script>
   </body>

@@ -14,22 +14,24 @@ let fontList = [
   "Times New Roman",
   "Cursive",
 ];
-let filename = prompt("Skriv inn navn på dokumentet", "eksempel.txt")
 
 function sjekkFilNavn(filename){
     return filename.toLowerCase().endsWith('.txt');
 }
 
-if(sjekkFilNavn(filename)){
-    console.log("Filnavnet er gyldig, har .txt extension");
-}
-else {
-    filename = filename + '.txt';
-    console.log("Filnavnet hadde ikke .txt, og har nå blitt lagt til.");
-}
-
 // lagre tekst som fil
 function saveTextAsFile() {
+    let filename = prompt("Skriv inn navn på dokumentet", "eksempel.txt")
+
+    //sjekker om filnavnet har .txt extension
+    if(sjekkFilNavn(filename)){
+        console.log("Filnavnet er gyldig, har .txt extension");
+    }
+    else {
+        filename = filename + '.txt';
+        console.log("Filnavnet hadde ikke .txt, og har nå blitt lagt til.");
+    }
+
     const textContent = document.getElementById("text-input").innerHTML;
     // konverter HTML innhold til ren tekst
     const plainText = textContent.replace(/<[^>]*>/g, '\n');
@@ -183,17 +185,17 @@ const highlighterRemover = (className) => {
 document.getElementById("saveFile").addEventListener("click", saveTextAsFile);
 document.getElementById("loadFile").addEventListener("click", loadTextFile);
 
-// Table insertion functionality
+// funksjonalitet for å legge til tabeller
 document.getElementById("insertTable").addEventListener("click", () => {
     const rows = prompt("Enter number of rows:", "2");
     const cols = prompt("Enter number of columns:", "2");
 
     if (rows && cols) {
-        // Create table container div
+        // lag tabell container div
         const tableContainer = document.createElement('div');
         tableContainer.className = 'table-container';
 
-        // Create delete button
+        // lag slett knapp
         const deleteButton = document.createElement('button');
         deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
         deleteButton.className = 'table-delete-btn';
@@ -209,7 +211,7 @@ document.getElementById("insertTable").addEventListener("click", () => {
         table.style.borderCollapse = 'collapse';
         table.style.marginBottom = '10px';
 
-        // Create rows and cells
+        // lag rader og celler
         for (let i = 0; i < rows; i++) {
             const row = table.insertRow();
             for (let j = 0; j < cols; j++) {
@@ -222,11 +224,11 @@ document.getElementById("insertTable").addEventListener("click", () => {
             }
         }
 
-        // Add table and delete button to container
+        // legg til tabell og slett knapp til container
         tableContainer.appendChild(deleteButton);
         tableContainer.appendChild(table);
 
-        // Insert table container at cursor position or at the end
+        // skriv inn tabeller på cursor position
         const selection = window.getSelection();
         if (selection.getRangeAt && selection.rangeCount) {
             const range = selection.getRangeAt(0);
@@ -238,7 +240,7 @@ document.getElementById("insertTable").addEventListener("click", () => {
     }
 });
 
-// Add this to your texteditor.js file
+// sletting av tabeller
 document.addEventListener('contextmenu', function(e) {
     const tableElement = e.target.closest('table');
     if (tableElement) {
@@ -248,6 +250,33 @@ document.addEventListener('contextmenu', function(e) {
         }
     }
 });
+
+// EASTER EGGS
+writingArea.addEventListener('input', () => {
+    saveContentToCookie();
+    checkForGud();
+    checkForMKX();
+});
+
+function checkForGud() {
+    const content = writingArea.innerText.toLowerCase();
+    const crossSymbol = document.getElementById('cross-symbol');
+
+    if (content.includes('gud')) {
+        crossSymbol.style.display = 'block';
+    } else {
+        crossSymbol.style.display = 'none';
+    }
+}
+
+function checkForMKX(){
+    const content = writingArea.innerText.toLowerCase();
+
+    if (content.includes('mkx')) {
+        const music = new Audio('../Include/Musikk/mkx-10-20-30-40.mp3');
+        music.play();
+    }
+}
 
 // eksperimentering med tastatur snarveier
 window.onkeydown = function(e) {

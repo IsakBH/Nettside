@@ -183,3 +183,14 @@ input[type="color"] {
     background-color: #f0f0f0;
     outline: 2px solid #8AC8FF;
 }
+
+#cross-symbol {
+    display: none;
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform:
+    translateY(-50%);
+    font-size: 40px;
+    filter: drop-shadow(0 0 100px yellow);
+}
