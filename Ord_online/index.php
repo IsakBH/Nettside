@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Ord Online v2.51</title>
+    <title>Ord Online v2.6</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="texteditor.css"/>
     <link rel="icon" href="../Pictures/ordlogo.png"/>
@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
 
     <!-- Open Graph meta-tagger -->
-    <meta property="og:title" content="Ord Online v2.51">
+    <meta property="og:title" content="Ord Online v2.6">
     <meta property="og:description" content="Nå med tabeller!">
     <meta property="og:image" content="https://isak.brunhenriksen.no/Pictures/ordlogo.png">
     <meta property="og:url" content="https://isak.brunhenriksen.no/Ord_online">
@@ -24,7 +24,7 @@
     <!-- layouten av toolbaren er direkte kopiert fra Google Docs for "familiarity" -->
 
     <div class="container"> <!--  containeren for toolbaren -->
-    <h1>Ord Online v2.51</h1>
+    <h1>Ord Online v2.6</h1>
       <div class="options"> <!--  Toolbaren-->
 
         <!-- undo og redo -->
