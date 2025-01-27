@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="skjema.css">
+    <title>Naturfags prosjekt</title>
     <link rel="icon" href="your-favicon-url">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
