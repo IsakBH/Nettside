@@ -118,10 +118,15 @@ input[type="color"] {
     overflow-y: auto; /* Enable vertical scrolling */
     overflow-x: hidden; /* Prevent horizontal scrolling */
     // fikser at liste punktene går utenfor tekst boksen
+    font-family: inherit;
     ul, ol{
         padding-left: 40px;
         margin: 0;
     }
+}
+
+.font-gothic {
+    font-family: 'UnifrakturMaguntia', cursive;
 }
 
 .active {

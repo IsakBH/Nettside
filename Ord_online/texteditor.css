@@ -115,10 +115,19 @@ input[type=color] {
   border-radius: 5px;
   overflow-y: auto; /* Enable vertical scrolling */
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: inherit;
 }
 #text-input ul, #text-input ol {
   padding-left: 40px;
   margin: 0;
+}
+
+.font-minecraft {
+  font-family: "Press Start 2P", cursive;
+}
+
+.font-gothic {
+  font-family: "UnifrakturMaguntia", cursive;
 }
 
 .active {

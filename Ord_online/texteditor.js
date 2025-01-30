@@ -12,9 +12,13 @@ let linkButton = document.getElementById("createLink");
 let olButton = document.getElementById("insertOrderedList");
 let ulButton = document.getElementById("insertUnorderedList");
 let fontList = [
-  "Arial",
-  "Times New Roman",
-  "Cursive",
+    "Arial",
+    "Times New Roman",
+    "Cursive",
+    "UnifrakturMaguntia",
+    "Fantasy",
+    "Courier New",
+    "Impact",
 ];
 let seenEasterEgg = false;
 
@@ -72,31 +76,37 @@ function loadTextFile() {
     input.click();
 }
 
-// funksjon for å lagre innholdet til cookie
-const saveContentToCookie = () => {
-    const content = writingArea.innerHTML;
-    document.cookie = `textEditorContent=${encodeURIComponent(content)}; expires=${new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString()}; path=/`;
-};
-
-// funksjon for å laste inn innholdet fra cookie
-const loadContentFromCookie = () => {
-    const cookies = document.cookie.split(';');
-    for (let cookie of cookies) {
-        const [name, value] = cookie.trim().split('=');
-        if (name === 'textEditorContent') {
-            writingArea.innerHTML = decodeURIComponent(value);
-            return;
-        }
+// funksjon for å lagre innholdet (tekst bufferet) til localstorage
+const saveContent = () => {
+    try {
+        const content = writingArea.innerHTML; // lager en variabel som lagrer innholdet (tekst bufferet)
+        localStorage.setItem('textEditorContent', content); // lager et localstorage item greie ting med content variabelen
+        console.log('Innhold lagret'); // bekrefter at innholdet ble lagret
+    } catch (error) { // hvis error
+        console.error('Feil ved lagring av innhold:', error); // sier ifra at det skjedde en feil
     }
 };
 
+// funksjon for å laste inn innhold fra localstorage
+const loadContent = () => {
+    try {
+        const savedContent = localStorage.getItem('textEditorContent');
+        if (savedContent) {
+            writingArea.innerHTML = savedContent;
+            console.log('Innhold lastet');
+        }
+    } catch (error) {
+        console.error('Feil ved lasting av innhold:', error);
+    }
+};
+
+// funksjon som initialiserer Ord Online
 const initializer = () => {
     highlighter(alignButtons, true);
     highlighter(spacingButtons, true);
     highlighter(formatButtons, false);
     highlighter(scriptButtons, true);
 
-    // valg av fonts
     fontList.map((value) => {
         let option = document.createElement("option");
         option.value = value;
@@ -104,7 +114,6 @@ const initializer = () => {
         fontName.appendChild(option);
     });
 
-    // valg av fontstørrelse
     for (let i = 1; i <= 7; i++) {
         let option = document.createElement("option");
         option.value = i;
@@ -114,14 +123,29 @@ const initializer = () => {
 
     fontSizeRef.value = 3;
 
-    // last inn lagret innhold fra cookie
-    loadContentFromCookie();
+    // caller på loadContent funksjonen som laster inn innholdet fra localstorage
+    loadContent();
 
-    // legg til en eventlistener for å lagre innholdet mens man skriver
-    writingArea.addEventListener('input', () => {
-        saveContentToCookie();
-    });
+    // legg til eventlisteners som alltid sikrer at innholdet er lagret til localstorage
+    writingArea.addEventListener('input', debounce(saveContent, 500)); // lagrer innhold hver gang bruker skriver noe med 500 ms delay via debounce funksjonen
+    writingArea.addEventListener('blur', saveContent); // lagrer når vinduet mister fokus
+    window.addEventListener('beforeunload', saveContent); // lagrer når vinduet blir unloadet (blir lukket / går i sovemodus)
 };
+
+// gjør sånn at det er litt delay mellom lagring
+function debounce(func, wait) {
+    let timeout; // timer
+
+    // lager/returnerer en ny funksjon som basically wrapper den gamle funksjonen med timer (hvordan skal jeg forklare dette bedre??????????)
+    return function executedFunction(...args) { // args er alle argumenter som sendes til funksjonen
+        const later = () => {
+            clearTimeout(timeout); // fjerner gammel timeout
+            func(...args); // kjører den funksjonen brukeren faktisk prøvde å kjøre
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait); // lager ny timer
+    };
+}
 
 // hoved logikken
 const modifyText = (command, defaultUi, value) => {
