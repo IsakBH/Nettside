@@ -37,7 +37,6 @@ hr {
     top: 50%;
     border-radius: 0px;
     filter: drop-shadow(0 0 15px grey);
-    overflow: hidden; // sånn at brukeren ikke kan scrolle i containeren
 }
 
 #reklame {
@@ -219,4 +218,8 @@ input[type="color"] {
     .options {
         gap: 3px;
     }
+}
+
+#giscus {
+    margin-top: 20px;
 }

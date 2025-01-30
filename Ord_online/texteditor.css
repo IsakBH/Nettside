@@ -33,7 +33,6 @@ hr {
   top: 50%;
   border-radius: 0px;
   filter: drop-shadow(0 0 15px grey);
-  overflow: hidden;
 }
 
 #reklame {
@@ -209,6 +208,9 @@ input[type=color] {
   .options {
     gap: 3px;
   }
+}
+#giscus {
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=texteditor.css.map */

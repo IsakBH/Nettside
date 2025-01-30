@@ -8,8 +8,6 @@
     <!-- ikoner fra font awesome og google fonts-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
-    <!-- minecraft lignende font-->
-    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <!-- Open Graph meta-tagger -->
     <meta property="og:title" content="Ord På Nett v2.81">
@@ -150,6 +148,22 @@
       <div id="text-input" contenteditable="true"></div>
       <br>
       <a href="https://www.github.com/isakbh/Ord-text-editor" id="reklame" target="_blank">Skaff deg Ord nå! (kun på Linux)</a>
+
+      <script src="https://giscus.app/client.js"
+              data-repo="isakbh/nettside"
+              data-repo-id="R_kgDOMnNuIw"
+              data-category="Comments"
+              data-category-id="DIC_kwDOMnNuI84Cme3r"
+              data-mapping="url"
+              data-strict="0"
+              data-reactions-enabled="1"
+              data-emit-metadata="0"
+              data-input-position="bottom"
+              data-theme="preferred_color_scheme"
+              data-lang="en"
+              crossorigin="anonymous"
+              async>
+      </script>
     </div>
 
     <div id="cross-symbol"><i class="fa-solid fa-cross"></i></div>
