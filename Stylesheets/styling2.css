@@ -74,6 +74,57 @@
   background-color: rgb(90.5660377358, 125.0188679245, 170.4339622642);
 }
 
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: aliceblue;
+    color: black;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #070b1d;
+    color: #f8f8f8;
+  }
+  button {
+    background-color: #333333;
+    color: #f8f8f8;
+  }
+  button:hover {
+    background-color: #555555;
+  }
+  #logg {
+    background-color: #1a2432;
+  }
+  .meny_topp {
+    background-color: #29394f;
+  }
+  #hjemknapp {
+    background-color: #364c69;
+    color: #f8f8f8;
+  }
+  #hjemknapp:hover {
+    background-color: #425d80;
+  }
+  #social {
+    color: #f8f8f8;
+  }
+  #social:hover {
+    background-color: #425d80;
+  }
+  .meny_topp_høyre {
+    background-color: #364c69;
+  }
+  .meny_topp_høyre button {
+    background-color: #364c69;
+    color: #f8f8f8;
+  }
+  .meny_topp_høyre button:hover {
+    background-color: #425d80;
+  }
+  .meny_topp_høyre button:active {
+    background-color: rgb(90.5660377358, 125.0188679245, 170.4339622642);
+  }
+}
 /* Navigation bar */
 .meny_topp {
   background-color: rgb(225, 237, 248);
@@ -187,6 +238,7 @@
 @media screen and (max-width: 768px) {
   .meny_topp {
     flex-direction: column;
+    padding: 15px;
     height: auto;
   }
   .dropdown-content {
@@ -363,34 +415,55 @@ body {
   }
 }
 /*Automatisk sjekk av default color-themeen til nettleseren*/
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #333333;
-    color: white;
-  }
-}
 @media (prefers-color-scheme: light) {
   body {
     background-color: aliceblue;
     color: black;
   }
-  /* Hack font */
-  @font-face {
-    font-family: HackFont;
-    src: url(Hack-v3.003-ttf/ttf/Hack-Regular.ttf);
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #070b1d;
+    color: #f8f8f8;
   }
-  div.gallery {
-    border-color: black;
-  }
-  div.gallery:hover {
-    border: 5px solid black;
-  }
-  .light-mode {
+  button {
     background-color: #333333;
-    color: aliceblue;
+    color: #f8f8f8;
+  }
+  button:hover {
+    background-color: #555555;
+  }
+  #logg {
+    background-color: #1a2432;
   }
   .meny_topp {
-    background-color: rgb(225, 237, 248);
+    background-color: #29394f;
+  }
+  #hjemknapp {
+    background-color: #364c69;
+    color: #f8f8f8;
+  }
+  #hjemknapp:hover {
+    background-color: #425d80;
+  }
+  #social {
+    color: #f8f8f8;
+  }
+  #social:hover {
+    background-color: #425d80;
+  }
+  .meny_topp_høyre {
+    background-color: #364c69;
+  }
+  .meny_topp_høyre button {
+    background-color: #364c69;
+    color: #f8f8f8;
+  }
+  .meny_topp_høyre button:hover {
+    background-color: #425d80;
+  }
+  .meny_topp_høyre button:active {
+    background-color: rgb(90.5660377358, 125.0188679245, 170.4339622642);
   }
 }
 

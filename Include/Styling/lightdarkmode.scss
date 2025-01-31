@@ -82,3 +82,60 @@
         }
 
 }
+// hvis det er lyst
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: aliceblue;
+        color: black;
+    }
+}
+
+// hvis det er mørkt
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: $base-color-dark;
+        color: $text-color-dark;
+    }
+    button {
+        background-color: #333333;
+        color: $text-color-dark;
+        &:hover {
+            background-color: #555555;
+        }
+    }
+    #logg {
+        background-color: #1a2432;
+    }
+    .meny_topp {
+        background-color: $navbar-background-dark;
+    }
+
+    #hjemknapp {
+        background-color: $navbar-button-dark;
+        color: $text-color-dark;
+        &:hover {
+            background-color: $navbar-button-dark-hover;
+        }
+    }
+
+    #social {
+        color: $text-color-dark;
+        &:hover {
+            background-color: $navbar-button-dark-hover;
+        }
+    }
+
+    .meny_topp_høyre {
+        background-color: $navbar-button-dark;
+            button {
+                background-color: $navbar-button-dark;
+                color: $text-color-dark;
+                &:hover {
+                    background-color: $navbar-button-dark-hover;
+                }
+                &:active {
+                    background-color: lighten($navbar-button-dark, 20%);
+                }
+            }
+        }
+}

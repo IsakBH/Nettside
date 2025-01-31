@@ -19,7 +19,7 @@ h1 {
 hr {
   height: 25px;
   width: 1px;
-  color: #020929;
+  color: lightgrey;
 }
 
 .container {
@@ -59,7 +59,7 @@ button {
   display: grid;
   place-items: center;
   border-radius: 10px;
-  border: none;
+  border: 1px solid grey;
   background-color: #ffffff;
   outline: none;
   color: #020929;
@@ -76,7 +76,7 @@ select {
   background-color: #ffffff;
   padding: 7px;
   text-decoration: none;
-  border: none;
+  border: 1px solid grey;
   border-radius: 10px;
 }
 select:hover {

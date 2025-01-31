@@ -1,0 +1,63 @@
+    <h3>
+    Hva har jeg gjort denne timen?
+    </h3>
+
+    <p>
+    I dag har jeg jobbet mer med Ord på Nett/Ord Online, og har fikset den automatiske lagringen av tekst bufferet, og lagt til kommentarer til siden som du kan se under tekst containeren. Problemet jeg hadde med den automatiske lagringen, var at noen ganger lagret den ikke i det hele tatt, noen ganger lagret den ikke alt (den hatet tabeller for en eller annen grunn), og det var egentlig bare ueffektivt å bruke cookies til det. Nå bruker jeg localstorage, som er bedre enn cookies for ting som dette fordi den har mer lagringsplass, det lagres kun lokalt (det sendes ikke med hver HTTP-reqest), det er enklere for utvikleren, eller, meg å jobbe med og det er ingen utløpsdato du må bry deg om. Jeg hadde også et problem med at den lagrer for ofte, og hvis du skrev fortere enn vanlig (over 100 ord i minuttet), så klarte den noen ganger å lagre bokstaver i feil rekkefølge. Det var fordi jeg hadde en event listener som sjekket etter input, og etter hvert input lagret den tekstbufferet. Det gikk for fort for programmet, og da fikk den så mange lagringsprosesser på en gang at den gjorde de i feil rekkefølge. <br> Her er en grafisk representasjon hvis det var vanskelig å forstå:
+
+    <br> <br>
+
+    Bruker skrev "H" ---> save <br>
+    Bruker skrev "E" ---> save <br>
+    Bruker skrev "I" ---> save
+    <br> <br>
+
+    Lagringsprosess for "E" blir ferdig før H og I, så teksten blir lagret som "EHI"
+    <br> <br>
+
+    På grunn av dette, har jeg lagt til en timer på 500 ms som starter etter hvert input, så hvis du skriver "hei" skjer det bare 1 lagring istedet for 3. Selvfølgelig har jeg ikke gjort sånn at den starter uendelige timere, som hadde gjort timeren kjempe lang hvis du skrev raskt, men jeg har heller gjort slik at timeren resetter hvis brukeren skriver mens den er gående. <br> Igjen, her er en grafisk representasjon av hvordan det funker hvis det var vanskelig å forstå: <br> <br>
+
+    Uten debounce timer: <br>
+    Tastetrykk: H----e----i  <br>
+    Lagringer:  S----S----S  (3 lagringer)
+    <br> <br>
+
+    Med debounce timer: <br>
+    Tastetrykk: H----e----i <br>
+    Timer:      [.........] <br>
+    Lagringer:              S  (1 lagring) <br>
+
+    <br>
+
+    Jeg har også lagt til kommentarer på Ord Online siden ved hjelp av Giscus. Den bruker GitHub discussions, og på en måte embedder det inn i siden. For å bruke det, må du logge inn via GitHub.
+
+    </p>
+    <br> <br>
+
+    <h3>
+    Hvordan jeg har jobbet
+    </h3>
+
+    <p>
+    Har jobbet veldig bra.
+    </p>
+
+    <br> <br>
+
+    <h3>
+    Utfordringer
+    </h3>
+
+    <p>
+    Finne ut av hva som var problemet med auto lagringen som jeg snakket om tidligere i loggen, fant ut av det til slutt som du kanskje skjønte av å lese om hvordan jeg fikset det.
+    </p>
+
+    <br> <br>
+
+    <h3>
+    Hvordan jeg har hentet informasjonen min
+    </h3>
+
+    <p>
+    Hjernen min og MYE StackOverflow og Reddit
+    </p>

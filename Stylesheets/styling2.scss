@@ -125,39 +125,60 @@ body {
 
 /*Automatisk sjekk av default color-themeen til nettleseren*/
 
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #333333;
-        color: white;
-    }
-}
-
+// hvis det er lyst
 @media (prefers-color-scheme: light) {
     body {
         background-color: aliceblue;
         color: black;
     }
+}
 
-    /* Hack font */
-    @font-face {
-        font-family: HackFont;
-        src: url(Hack-v3.003-ttf/ttf/Hack-Regular.ttf);
+// hvis det er mørkt
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: $base-color-dark;
+        color: $text-color-dark;
     }
-
-    div.gallery {
-        border-color: black;
-    }
-
-    div.gallery:hover {
-        border: 5px solid black;
-    }
-
-    .light-mode {
+    button {
         background-color: #333333;
-        color: aliceblue;
+        color: $text-color-dark;
+        &:hover {
+            background-color: #555555;
+        }
+    }
+    #logg {
+        background-color: #1a2432;
+    }
+    .meny_topp {
+        background-color: $navbar-background-dark;
     }
 
-    .meny_topp {
-        background-color: rgb(225, 237, 248);
+    #hjemknapp {
+        background-color: $navbar-button-dark;
+        color: $text-color-dark;
+        &:hover {
+            background-color: $navbar-button-dark-hover;
+        }
     }
+
+    #social {
+        color: $text-color-dark;
+        &:hover {
+            background-color: $navbar-button-dark-hover;
+        }
+    }
+
+    .meny_topp_høyre {
+        background-color: $navbar-button-dark;
+            button {
+                background-color: $navbar-button-dark;
+                color: $text-color-dark;
+                &:hover {
+                    background-color: $navbar-button-dark-hover;
+                }
+                &:active {
+                    background-color: lighten($navbar-button-dark, 20%);
+                }
+            }
+        }
 }
