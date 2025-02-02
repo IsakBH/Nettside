@@ -223,3 +223,23 @@ input[type="color"] {
 #giscus {
     margin-top: 20px;
 }
+
+#save-status {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 15px 15px;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid grey;
+    color: #020929;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(100px);
+}
+
+.status-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}

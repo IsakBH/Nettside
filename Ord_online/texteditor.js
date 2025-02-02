@@ -22,6 +22,18 @@ let fontList = [
 ];
 let seenEasterEgg = false;
 
+// auto-lagring indikator greie (viser "lagret" når den har auto lagret
+function showSaveStatus(status) {
+    const indicator = document.getElementById("save-status");
+    indicator.textContent = status;
+    indicator.style.opacity = '1';
+    indicator.classList.add('status-visible'); // legger til status-visible klassen for animasjon
+
+    setTimeout(() => {
+        indicator.classList.remove('status-visible');
+    }, 2000);
+}
+
 function sjekkFilNavn(filename) {
     return filename.toLowerCase().endsWith(".txt");
 }
@@ -81,9 +93,11 @@ const saveContent = () => {
     try {
         const content = writingArea.innerHTML; // lager en variabel som lagrer innholdet (tekst bufferet)
         localStorage.setItem("textEditorContent", content); // lager et localstorage item greie ting med content variabelen
-        console.log("Innhold lagret"); // bekrefter at innholdet ble lagret
+        showSaveStatus('Lagret :)')
+        console.log("Innhold lagret :)"); // bekrefter at innholdet ble lagret
     } catch (error) {
         // hvis error
+        showSaveStatus('Lagring feilet :(')
         console.error("Feil ved lagring av innhold:", error); // sier ifra at det skjedde en feil
     }
 };
@@ -286,7 +300,7 @@ document.addEventListener("contextmenu", function (e) {
 
 ////////////////// EASTER EGGS ////////////////////
 writingArea.addEventListener("input", () => {
-    saveContentToCookie();
+    saveContent();
     checkForGud();
     checkForMKX();
 });

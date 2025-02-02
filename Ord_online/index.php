@@ -167,6 +167,7 @@
     </div>
 
     <div id="cross-symbol"><i class="fa-solid fa-cross"></i></div>
+    <p id="save-status"></p>
 
     <!-- javascript link-->
     <script src="texteditor.js"></script>
