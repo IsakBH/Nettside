@@ -1,5 +1,4 @@
 ///////////////////////// BASIC STYLING  ////////////////////////////////
-
 $buttonHoverColor: #E2E7EA;
 
 * {
@@ -109,15 +108,15 @@ input[type="color"] {
     border-radius: 10px;
 }
 
-
 #text-input {
     margin-top: 10px;
     border: 1px solid #CCD4DB;
     padding: 10px;
     height: calc(100% - 180px); /* Fixed height, adjusting for toolbar */
-    border-radius: 5px;
+    border-radius: 10px;
     overflow-y: auto; /* Enable vertical scrolling */
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    border: 1px solid grey;
     // fikser at liste punktene går utenfor tekst boksen
     font-family: inherit;
     ul, ol{
@@ -242,4 +241,15 @@ input[type="color"] {
 .status-visible {
     opacity: 1 !important;
     transform: translateY(0) !important;
+}
+
+#splashText {
+    position: fixed;
+    right: 0;
+    top: 0;
+    color: yellow;
+    background: rgba(0, 0, 0, 0.5); /* Add background for better visibility */
+    padding: 10px;
+    margin: 10px;
+    z-index: 1000; /* Ensure it's above other elements */
 }

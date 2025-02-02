@@ -11,6 +11,10 @@ let writingArea = document.getElementById("text-input");
 let linkButton = document.getElementById("createLink");
 let olButton = document.getElementById("insertOrderedList");
 let ulButton = document.getElementById("insertUnorderedList");
+
+let seenEasterEgg = false;
+
+// lager liste av fonter for font velge greien
 let fontList = [
     "Arial",
     "Times New Roman",
@@ -20,7 +24,31 @@ let fontList = [
     "Courier New",
     "Impact",
 ];
-let seenEasterEgg = false;
+
+// lager liste over splash text som vises over Ord på nett tittelen.
+let splashText = [
+    "Jeg bruker ikke akebrett, fordi jeg har jo Ord på Nett",
+    "Å danse ballett er nesten like fint som Ord på Nett",
+    "Frisører liker ofte å flette, men jeg liker bare å bruke Ord på nettet",
+    "Å se på et fint garnsett, er nesten som å skrive i Ord på nett",
+    "Nå gikk jeg på et lite knett, men det gjør du aldri når du bruker Ord på nett",
+    "Hun legen var godt annsett, nesten som Ord på nett",
+    "Du blir sett på som ganske fett, om du bare bruker Ord på nett",
+    "Jeg har alltid elsket en god forrett, men aldri like mye som Ord på nett",
+    "Skjære brød på et skjærebrett? Nei, jeg har jo min kjære Ord på nett!",
+    "Å bruke Ord på nett er ofte ganske lett",
+    "Mange trodde soldatene til Napoleon brukte muskett, men jeg tror de brukte Ord på Nett.",
+    "Kan aldri bruke et nettbrett igjen uten Ord på nett.",
+    "Du vet aldri hvor du finner ditt neste favoritt fargepalett, men det gjør jeg. På Ord på nett.",
+    "Ta portrett? Pfff, har jo Ord på nett.",
+    "Jeg bruker aldri serviett, fordi jeg har jo Ord på nett!",
+];
+
+function randomSplashText(){
+    const kulSplash = document.getElementById("splashText");
+    const randomSplash = splashText[Math.floor(Math.random() * splashText.length)];
+    kulSplash.textContent = randomSplash;
+}
 
 // auto-lagring indikator greie (viser "lagret" når den har auto lagret
 function showSaveStatus(status) {
@@ -117,6 +145,7 @@ const loadContent = () => {
 
 // funksjon som initialiserer Ord Online
 const initializer = () => {
+    randomSplashText();
     highlighter(alignButtons, true);
     highlighter(spacingButtons, true);
     highlighter(formatButtons, false);
