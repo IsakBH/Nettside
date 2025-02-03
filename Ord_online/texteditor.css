@@ -120,6 +120,9 @@ input[type=color] {
   padding-left: 40px;
   margin: 0;
 }
+#text-input:focus {
+  outline: none;
+}
 
 .font-gothic {
   font-family: "UnifrakturMaguntia", cursive;
@@ -239,10 +242,10 @@ input[type=color] {
   right: 0;
   top: 0;
   color: yellow;
-  background: rgba(0, 0, 0, 0.5); /* Add background for better visibility */
+  background: rgba(0, 0, 0, 0.5);
   padding: 10px;
   margin: 10px;
-  z-index: 1000; /* Ensure it's above other elements */
+  z-index: 1000;
 }
 
 /*# sourceMappingURL=texteditor.css.map */
