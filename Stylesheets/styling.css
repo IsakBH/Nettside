@@ -363,6 +363,7 @@ button:active {
   column-count: 5;
   column-gap: 5px;
   z-index: 0;
+  position: relative;
 }
 #gallery img {
   width: 100% !important;
@@ -370,12 +371,15 @@ button:active {
   border-radius: 5px;
   margin-top: 5px;
   filter: brightness(1);
+  position: relative;
+  transition: all 0.25s !important;
 }
 
 #galleribilde:hover {
   transform: scale(1.1);
   filter: brightness(1.2);
-  z-index: 100000000000000000;
+  z-index: 1;
+  position: relative;
 }
 
 .advarsel {

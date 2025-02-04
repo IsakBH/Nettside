@@ -69,19 +69,23 @@ button {
     column-count: 5;
     column-gap: 5px;
     z-index: 0;
+    position: relative;  // Add this
         img {
             width: 100% !important;
             height: auto !important;
             border-radius: 5px;
             margin-top: 5px;
             filter: brightness(1);
+            position: relative;  // Add this
+            transition: all 0.25s !important;  // Add this
         }
 }
 
 #galleribilde:hover {
     transform: scale(1.1);
     filter: brightness(1.2);
-    z-index: 100000000000000000;
+    z-index: 1;  // Changed from large number to just 1
+    position: relative;  // Add this
 }
 
 .advarsel {
