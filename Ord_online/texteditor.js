@@ -48,6 +48,8 @@ let splashText = [
     "Du trenger ikke stort budsjett for å bruke Ord på Nett.",
     "Avhengig av cigarett? Bruk Ord på Nett!",
     "Bruker du ikke Ord på Nett er det bare å gå i rettrett.",
+    "Du må ha gått helt fra vettet om du ikke bruker Ord på Nettet",
+    "",
 ];
 
 // logg inn med google api

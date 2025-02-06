@@ -22,6 +22,8 @@
     <!-- logg inn med google api -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="1048905121636-72n9bbe0o608f6rdghit0cvngu195evr.apps.googleusercontent.com">
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 
 <body>
@@ -186,8 +188,22 @@
     <p id="save-status"></p>
 
     <!-- logg inn med google knapp-->
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div id="g_id_onload"
+         data-client_id="     1048905121636-72n9bbe0o608f6rdghit0cvngu195evr.apps.googleusercontent.com "
+         data-context="signin"
+         data-ux_mode="redirect"
+         data-login_uri="https://isak.brunhenriksen.no"
+         data-auto_prompt="false">
+    </div>
 
+    <div class="g_id_signin"
+         data-type="standard"
+         data-shape="pill"
+         data-theme="outline"
+         data-text="signin_with"
+         data-size="large"
+         data-logo_alignment="left">
+    </div>
     <!-- javascript link-->
     <script src="texteditor.js"></script>
 </body>
