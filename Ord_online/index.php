@@ -19,6 +19,9 @@
 
     <script src="https://unpkg.com/turndown/dist/turndown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- logg inn med google api -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="1048905121636-72n9bbe0o608f6rdghit0cvngu195evr.apps.googleusercontent.com">
 </head>
 
 <body>
@@ -181,6 +184,9 @@
 
     <div id="cross-symbol"><i class="fa-solid fa-cross"></i></div>
     <p id="save-status"></p>
+
+    <!-- logg inn med google knapp-->
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
     <!-- javascript link-->
     <script src="texteditor.js"></script>

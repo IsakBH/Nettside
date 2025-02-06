@@ -11,9 +11,7 @@ let writingArea = document.getElementById("text-input");
 let linkButton = document.getElementById("createLink");
 let olButton = document.getElementById("insertOrderedList");
 let ulButton = document.getElementById("insertUnorderedList");
-
 let seenEasterEgg = false;
-
 // lager liste av fonter for font velge greien
 let fontList = [
     "Arial",
@@ -24,7 +22,6 @@ let fontList = [
     "Courier New",
     "Impact",
 ];
-
 // lager liste over splash text som vises over Ord på nett tittelen.
 let splashText = [
     "Jeg bruker ikke akebrett, fordi jeg har jo Ord på Nett",
@@ -42,7 +39,26 @@ let splashText = [
     "Du vet aldri hvor du finner ditt neste favoritt fargepalett, men det gjør jeg. På Ord på nett.",
     "Ta portrett? Pfff, har jo Ord på nett.",
     "Jeg bruker aldri serviett, fordi jeg har jo Ord på nett!",
+    "Når doen er tett, er det bare å finne fram Ord på Nett!",
+    "Du blir kanskje ikke mett av å bruke Ord på Nett, men det er i hvertfall veldig lett.",
+    "Har du vondt i hodet, ikke bruk tablett. Bruk Ord på Nett!",
+    "Ord på Nett, like godt som en baguette!",
+    "Hva brukte du for å skrive det? Bare gjett... det er jo Ord på Nett!",
+    "Krokodillen som er på diett, bruker alltid Ord på Nett.",
+    "Du trenger ikke stort budsjett for å bruke Ord på Nett.",
+    "Avhengig av cigarett? Bruk Ord på Nett!",
+    "Bruker du ikke Ord på Nett er det bare å gå i rettrett.",
 ];
+
+// logg inn med google api
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+
 
 function randomSplashText(){
     const kulSplash = document.getElementById("splashText");
