@@ -12,18 +12,13 @@
 
     <!-- Open Graph meta-tagger -->
     <meta property="og:title" content="Ord På Nett v2.85">
-    <meta property="og:description" content="Nå med indikator for auto lagring!">
+    <meta property="og:description" content="Ord på Nett er et kraftig og brukervennlig tekstbehandlingsverktøy utviklet av meg (Isak Brun Henriksen). Med fokus på ytelse, enkelhet og tilgjengelighet, er Ord på Nett et ideelt valg for studenter, forfattere, forskere, profesjonelle, og egentlig alle yrker i hele verden som trenger et pålitelig og fleksibelt skriveverktøy.">
     <meta property="og:image" content="https://isak.brunhenriksen.no/Pictures/ordlogo.png">
     <meta property="og:url" content="https://isak.brunhenriksen.no/Ord_online">
     <meta property="og:type" content="website">
 
     <script src="https://unpkg.com/turndown/dist/turndown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <!-- logg inn med google api -->
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="1048905121636-72n9bbe0o608f6rdghit0cvngu195evr.apps.googleusercontent.com">
-
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 
 <body>
@@ -186,24 +181,6 @@
 
     <div id="cross-symbol"><i class="fa-solid fa-cross"></i></div>
     <p id="save-status"></p>
-
-    <!-- logg inn med google knapp-->
-    <div id="g_id_onload"
-         data-client_id="     1048905121636-72n9bbe0o608f6rdghit0cvngu195evr.apps.googleusercontent.com "
-         data-context="signin"
-         data-ux_mode="redirect"
-         data-login_uri="https://isak.brunhenriksen.no"
-         data-auto_prompt="false">
-    </div>
-
-    <div class="g_id_signin"
-         data-type="standard"
-         data-shape="pill"
-         data-theme="outline"
-         data-text="signin_with"
-         data-size="large"
-         data-logo_alignment="left">
-    </div>
     <!-- javascript link-->
     <script src="texteditor.js"></script>
 </body>
