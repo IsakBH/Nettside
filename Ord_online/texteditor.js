@@ -49,7 +49,6 @@ let splashText = [
     "Avhengig av cigarett? Bruk Ord på Nett!",
     "Bruker du ikke Ord på Nett er det bare å gå i rettrett.",
     "Du må ha gått helt fra vettet om du ikke bruker Ord på Nettet",
-    "",
 ];
 
 function randomSplashText(){
@@ -208,15 +207,23 @@ const modifyText = (command, defaultUi, value) => {
 
 // basic operasjoner
 optionsButtons.forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (e) => {
+        // stopper default actionen til clicket, som hadde tatt fokuset vekk fra writingarea
+        e.preventDefault();
+
         modifyText(button.id, false, null);
+
+        // ta fokuset tilbake til writingarea
+        writingArea.focus();
     });
 });
 
 // valg som trenger options parameters, som for eksempel farger
 advancedOptionButton.forEach((button) => {
-    button.addEventListener("change", () => {
+    button.addEventListener("click", (e) => {
+        e.preventDefault();
         modifyText(button.id, false, button.value);
+        writingArea.focus();
     });
 });
 
