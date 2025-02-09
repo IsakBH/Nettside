@@ -2,16 +2,17 @@
 session_start();
 require_once 'database.php';
 
+// sjekker om brukeren er logget inn, hvis ikke, redirect til innloggings siden
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
     exit();
 }
 
-// oppdatering av brukernavn
+// oppdatering av  brukernavn
 if (isset($_POST['new_username'])) {
     $new_username = $mysqli->real_escape_string($_POST['new_username']);
 
-    // sjekker om brukernavnet allerede eksisterer
+    // sjekker om brukernavnet allerede finnes i databasen (om det er brukt av en annen bruker)
     $check_sql = "SELECT id FROM users WHERE username = ? AND id != ?";
     $check_stmt = $mysqli->prepare($check_sql);
     $check_stmt->bind_param("si", $new_username, $_SESSION['user_id']);
@@ -21,6 +22,7 @@ if (isset($_POST['new_username'])) {
     if ($result->num_rows > 0) {
         $error = "Brukernavnet er allerede i bruk. Prøv et annet.";
     } else {
+        // oppdater brukernavnet i databasen
         $sql = "UPDATE users SET username = ? WHERE id = ?";
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param("si", $new_username, $_SESSION['user_id']);
@@ -49,16 +51,19 @@ if (isset($_POST['delete_account'])) {
     }
 }
 
+// oppdatering av profilbilde
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_FILES['new_profile_picture']) && $_FILES['new_profile_picture']['error'] === 0) {
-        $allowed = ['jpg', 'jpeg', 'png', 'gif'];
+        $allowed = ['jpg', 'jpeg', 'png', 'gif']; // filtypene bruker for lov til å laste opp
         $filename = $_FILES['new_profile_picture']['name'];
         $ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
 
         if (in_array($ext, $allowed)) {
+            // lag random filnavn og last bildet opp til uploads
             $new_filename = uniqid() . '.' . $ext;
             move_uploaded_file($_FILES['new_profile_picture']['tmp_name'], 'uploads/' . $new_filename);
 
+            // oppdater profilbilde i databasen
             $sql = "UPDATE users SET profile_picture = ? WHERE id = ?";
             $stmt = $mysqli->prepare($sql);
             $stmt->bind_param("si", $new_filename, $_SESSION['user_id']);
@@ -73,6 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -102,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php endif; ?>
 
         <div class="current-profile">
-            <img src="uploads/<?php echo htmlspecialchars($_SESSION['profile_picture']); ?>" alt="Current Profile Picture">
+            <img src="uploads/<?php echo htmlspecialchars($_SESSION['profile_picture']); ?>" alt="Profilbilde">
         </div>
 
         <form method="POST" enctype="multipart/form-data">
