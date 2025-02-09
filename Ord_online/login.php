@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="auth-container">
         <h2>Logg inn</h2>
         <p>
-        For å bruke Ord på Nett, må du logge inn. Logger du inn nå, får du tilgang til mange gøye funksjoner.
+        For å bruke Ord på Nett, må du logge inn. Logger du inn nå, får du snart tilgang til mange gøye funksjoner.
         </p> <br>
 
         <?php if (isset($error)): ?>
