@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Ord På Nett v2.85</title>
+    <title>Ord På Nett v3.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="texteditor.css" />
     <link rel="icon" href="../Pictures/ordlogo.png" />
@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 
     <!-- Open Graph meta-tagger -->
-    <meta property="og:title" content="Ord På Nett v2.85">
+    <meta property="og:title" content="Ord På Nett v3.0">
     <meta property="og:description" content="Ord på Nett er et kraftig og brukervennlig tekstbehandlingsverktøy utviklet av meg (Isak Brun Henriksen). Med fokus på ytelse, enkelhet og tilgjengelighet, er Ord på Nett et ideelt valg for studenter, forfattere, forskere, profesjonelle, og egentlig alle yrker i hele verden som trenger et pålitelig og fleksibelt skriveverktøy.">
     <meta property="og:image" content="https://isak.brunhenriksen.no/Pictures/ordlogo.png">
     <meta property="og:url" content="https://isak.brunhenriksen.no/Ord_online">
@@ -22,11 +22,21 @@
 </head>
 
 <body>
+    <?php
+    session_start();
+    require_once 'database.php';
+
+    // redirect til login hvis ikke autentisert
+    if (!isset($_SESSION['user_id'])) {
+        header('Location: login.php');
+        exit();
+    }
+    ?>
 
     <!-- layouten av toolbaren er direkte kopiert fra Google Docs for "familiarity" -->
 
     <div class="container"> <!--  containeren for toolbaren -->
-        <h1>Ord På Nett v2.85</h1>
+        <h1>Ord På Nett</h1>
         <p id="splashText"></p>
         <div class="options"> <!--  Toolbaren-->
 
@@ -179,8 +189,21 @@
         </script>
     </div>
 
+    <!-- menyen for konto instillinger og sånn -->
+    <div class="profile-menu">
+        <img src="uploads/<?php echo htmlspecialchars($_SESSION['profile_picture']); ?>" alt="Profile" class="profile-picture">
+        <div class="profile-dropdown">
+            <div class="profile-info">
+                <p><?php echo htmlspecialchars($_SESSION['username']); ?></p>
+            </div>
+            <hr id="splitter">
+            <a href="settings.php">Instillinger</a>
+        </div>
+    </div>
+
     <div id="cross-symbol"><i class="fa-solid fa-cross"></i></div>
     <p id="save-status"></p>
+
     <!-- javascript link-->
     <script src="texteditor.js"></script>
 </body>
