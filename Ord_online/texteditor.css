@@ -35,17 +35,6 @@ hr {
   filter: drop-shadow(0 0 15px grey);
 }
 
-#reklame {
-  color: #8AC8FF;
-  text-decoration: none;
-}
-#reklame:visited {
-  color: rgb(36, 152.0512820513, 255);
-}
-#reklame:hover {
-  color: rgb(163.5, 211.9871794872, 255);
-}
-
 .options {
   display: flex;
   flex-wrap: wrap;
@@ -490,6 +479,23 @@ input[type=file]::file-selector-button {
 #iamready:focus {
   background: rgb(204, 0, 37.6);
   outline: none;
+}
+
+#reklame {
+  color: #8AC8FF;
+  text-decoration: none;
+}
+#reklame:visited {
+  color: rgb(36, 152.0512820513, 255);
+}
+#reklame:hover {
+  color: rgb(163.5, 211.9871794872, 255);
+}
+
+#bottomtext {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=texteditor.css.map */

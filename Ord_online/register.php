@@ -17,6 +17,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $new_filename = uniqid() . '.' . $ext;
             move_uploaded_file($_FILES['profile_picture']['tmp_name'], 'uploads/' . $new_filename);
             $profile_picture = $new_filename;
+            if (!move_uploaded_file($_FILES['profile_picture']['tmp_name'], 'uploads/' . $new_filename)) {
+                error_log('Failed to move uploaded file. Error: ' . error_get_last()['message']);
+                $error = "Kunne ikke laste opp bildet. Sjekk tillatelser.";
+            }
         }
     }
 

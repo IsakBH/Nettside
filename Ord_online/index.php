@@ -169,8 +169,13 @@
 
         <!-- input boksen der du faktisk skriver teksten-->
         <div id="text-input" contenteditable="true"></div>
+
         <br>
-        <a href="https://www.github.com/isakbh/Ord-text-editor" id="reklame" target="_blank">Skaff deg Ord nå! (kun på Linux)</a>
+
+        <div id="bottomtext">
+            <a href="https://www.github.com/isakbh/Ord-text-editor" id="reklame" target="_blank">Skaff deg Ord nå! (kun på Linux)</a>
+            <p id="version">v3.0</p>
+        </div>
 
         <script src="https://giscus.app/client.js"
             data-repo="isakbh/nettside"

@@ -38,17 +38,6 @@ hr {
     filter: drop-shadow(0 0 15px grey);
 }
 
-#reklame {
-    color: #8AC8FF;
-    text-decoration: none;
-    &:visited {
-        color: darken(#8AC8FF, 20%);
-    }
-    &:hover{
-        color: lighten(#8AC8FF, 5%);
-    }
-}
-
 .options {
     display: flex;
     flex-wrap: wrap;
@@ -507,4 +496,21 @@ input[type="file"]::file-selector-button {
         background: darken(#FF002F, 10%);
         outline: none;
     }
+}
+
+#reklame {
+    color: #8AC8FF;
+    text-decoration: none;
+    &:visited {
+        color: darken(#8AC8FF, 20%);
+    }
+    &:hover{
+        color: lighten(#8AC8FF, 5%);
+    }
+}
+
+#bottomtext {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
