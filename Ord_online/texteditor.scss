@@ -484,7 +484,7 @@ input[type="file"]::file-selector-button {
     cursor: pointer;
 
     &:hover {
-        background: darken(#FF002F, 10%);
+        background: darken(#8AC8FF, 10%);
         transform: translateY(-1px);
         color: white;
         text-decoration: none;
@@ -493,7 +493,7 @@ input[type="file"]::file-selector-button {
         transform: translateY(1px);
     }
     &:focus {
-        background: darken(#FF002F, 10%);
+        background: darken(#8AC8FF, 10%);
         outline: none;
     }
 }

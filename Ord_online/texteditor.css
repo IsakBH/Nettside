@@ -468,7 +468,7 @@ input[type=file]::file-selector-button {
   cursor: pointer;
 }
 #iamready:hover {
-  background: rgb(204, 0, 37.6);
+  background: rgb(87, 176.0256410256, 255);
   transform: translateY(-1px);
   color: white;
   text-decoration: none;
@@ -477,7 +477,7 @@ input[type=file]::file-selector-button {
   transform: translateY(1px);
 }
 #iamready:focus {
-  background: rgb(204, 0, 37.6);
+  background: rgb(87, 176.0256410256, 255);
   outline: none;
 }
 

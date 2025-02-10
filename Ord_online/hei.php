@@ -12,7 +12,7 @@ if (!isset($_SESSION['user_id'])) {
 <html>
 <head>
     <title>Heisan sveisan!</title>
-    <link rel="stylesheet" type="text/css" href="texteditor.scss">
+    <link rel="stylesheet" type="text/css" href="texteditor.css">
 </head>
 <body>
     <div class="profile-settings">
