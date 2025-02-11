@@ -11,6 +11,7 @@ let writingArea = document.getElementById("text-input");
 let linkButton = document.getElementById("createLink");
 let olButton = document.getElementById("insertOrderedList");
 let ulButton = document.getElementById("insertUnorderedList");
+const kulSplash = document.getElementById("splashText");
 let seenEasterEgg = false;
 // lager liste av fonter for font velge greien
 let fontList = [
@@ -52,7 +53,6 @@ let splashText = [
 ];
 
 function randomSplashText(){
-    const kulSplash = document.getElementById("splashText");
     const randomSplash = splashText[Math.floor(Math.random() * splashText.length)];
     kulSplash.textContent = randomSplash;
 }
@@ -174,6 +174,9 @@ const initializer = () => {
 
     fontSizeRef.value = 3;
 
+    kulSplash.addEventListener("click", () => {
+        randomSplashText();
+    });
     // caller på loadContent funksjonen som laster inn innholdet fra localstorage
     loadContent();
 
