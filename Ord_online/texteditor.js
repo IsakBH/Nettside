@@ -342,7 +342,7 @@ optionsButtons.forEach((button) => {
 
 // valg som trenger options parameters, som for eksempel farger
 advancedOptionButton.forEach((button) => {
-    button.addEventListener("click", (e) => {
+    button.addEventListener("change", (e) => {
         e.preventDefault();
         modifyText(button.id, false, button.value);
         writingArea.focus();
