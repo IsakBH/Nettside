@@ -622,7 +622,7 @@ input[type="file"]::file-selector-button {
     list-style: none;
     padding: 0;
 
-    li {
+    li { // dokumentene
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -631,6 +631,7 @@ input[type="file"]::file-selector-button {
         margin-bottom: 8px;
         background: #f8f9fa;
         transition: all 0.2s ease;
+        border: 1px solid #ddd;
 
         &:hover {
             background: #f0f0f0;
@@ -642,6 +643,7 @@ input[type="file"]::file-selector-button {
     }
 }
 
+// slett knappen (og muligens andre actions i fremtiden)
 .document-actions {
     display: flex;
     gap: 8px;

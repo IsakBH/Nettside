@@ -40,7 +40,7 @@
             <h3>Mine dokumenter</h3>
             <button id="newDocument" class="new-doc-button">
                 <i class="fa-solid fa-plus"></i>
-                Nytt dokument
+                Nytt Ord dokument
             </button>
             <div class="search-container">
                 <i class="fa-solid fa-search"></i>

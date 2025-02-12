@@ -603,6 +603,7 @@ input[type=file]::file-selector-button {
   margin-bottom: 8px;
   background: #f8f9fa;
   transition: all 0.2s ease;
+  border: 1px solid #ddd;
 }
 #documentsList li:hover {
   background: #f0f0f0;
