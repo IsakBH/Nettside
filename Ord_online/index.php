@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Ord På Nett v3.0</title>
+    <title>Ord På Nett v3.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="texteditor.css" />
     <link rel="icon" href="../Pictures/ordlogo.png" />
@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 
     <!-- Open Graph meta-tagger -->
-    <meta property="og:title" content="Ord På Nett v3.0">
+    <meta property="og:title" content="Ord På Nett v3.1">
     <meta property="og:description" content="Ord på Nett er et kraftig og brukervennlig tekstbehandlingsverktøy utviklet av meg (Isak Brun Henriksen). Med fokus på ytelse, enkelhet og tilgjengelighet, er Ord på Nett et ideelt valg for studenter, forfattere, forskere, profesjonelle, og egentlig alle yrker i hele verden som trenger et pålitelig og fleksibelt skriveverktøy.">
     <meta property="og:image" content="https://isak.brunhenriksen.no/Pictures/ordlogo.png">
     <meta property="og:url" content="https://isak.brunhenriksen.no/Ord_online">
@@ -34,6 +34,21 @@
     ?>
 
     <!-- layouten av toolbaren er direkte kopiert fra Google Docs for "familiarity" -->
+
+    <div class="document-manager">
+        <div class="document-list">
+            <h3>Mine dokumenter</h3>
+            <button id="newDocument" class="new-doc-button">
+                <i class="fa-solid fa-plus"></i>
+                Nytt dokument
+            </button>
+            <div class="search-container">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" id="documentSearch" placeholder="Søk i dokumenter...">
+            </div>
+            <ul id="documentsList"></ul>
+        </div>
+    </div>
 
     <div class="container"> <!--  containeren for toolbaren -->
         <h1>Ord På Nett</h1>
@@ -174,7 +189,7 @@
 
         <div id="bottomtext">
             <a href="https://www.github.com/isakbh/Ord-text-editor" id="reklame" target="_blank">Skaff deg Ord nå! (kun på Linux)</a>
-            <p id="version">v3.0</p>
+            <p id="version">v3.1</p>
         </div>
 
         <script src="https://giscus.app/client.js"

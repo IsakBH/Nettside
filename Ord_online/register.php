@@ -2,17 +2,19 @@
 session_start();
 require_once 'database.php';
 
+// Håndter registreringsforsøk
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $mysqli->real_escape_string($_POST['username']);
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    // Handle profile picture upload
+    // Håndter opplasting av profilbilde
     $profile_picture = 'default.png';
     if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] === 0) {
-        $allowed = ['jpg', 'jpeg', 'png', 'gif'];
+        $allowed = ['jpg', 'jpeg', 'png', 'gif']; // Tillatte filtyper
         $filename = $_FILES['profile_picture']['name'];
         $ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
 
+        // Valider og last opp bilde
         if (in_array($ext, $allowed)) {
             $new_filename = uniqid() . '.' . $ext;
             move_uploaded_file($_FILES['profile_picture']['tmp_name'], 'uploads/' . $new_filename);
@@ -24,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
+    // Registrer ny bruker i databasen
     $sql = "INSERT INTO users (username, password, profile_picture) VALUES (?, ?, ?)";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param("sss", $username, $password, $profile_picture);

@@ -52,6 +52,142 @@ let splashText = [
     "Du må ha gått helt fra vettet om du ikke bruker Ord på Nettet",
 ];
 
+////////////////////// funksjoner for database og dokument "management" (finnes det er norsk ord for det?????)
+// variabel for å lagre ID-en til dokumentet brukeren bruker nå
+let currentDocumentId = null;
+
+// variabel for å hente documentSearch ID-en
+const documentSearch = document.getElementById('documentSearch');
+
+
+documentSearch.addEventListener('input', function(e) {
+    const searchTerm = e.target.value.toLowerCase(); // "e.target" = document.getElementById('documentSearch') // .value betyr at det er verdien til "documentSearch". skriver brukeren "hei hei", er .value "hei hei". // .toLowerCase betyr bare at den konverterer alt til lowercase
+    const documents = document.querySelectorAll('#documentsList li');
+
+    documents.forEach(doc => {
+        const title = doc.querySelector('span').textContent.toLowerCase();
+        if (title.includes(searchTerm)) {
+            doc.style.display = '';
+        } else {
+            doc.style.display = 'none';
+        }
+    });
+});
+
+// funksjon for å lage nytt dokument
+function createNewDocument(){
+    const title = prompt("Skriv inn tittel på dokumentet:", "Kult dokument på Ord Online");
+    // ajax :))))
+    if (title) {
+        fetch('save_document.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        body: JSON.stringify({
+            title: title,
+            content: '',
+            action: 'create'
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if(data.success) {
+            currentDocumentId = data.documentId;
+            loadDocumentsList();
+            writingArea.innerHTML = '';
+        }
+    })
+    }
+}
+
+// funksjon for å laste inn listen over dokumenter
+function loadDocumentsList() {
+    // ajax :-))))
+    fetch('get_documents.php')
+        .then(response => response.json())
+        .then(documents => {
+            const list = document.getElementById('documentsList');
+            list.innerHTML = '';
+            documents.forEach(doc => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <div class="document-item" onclick="loadDocument(${doc.id})">
+                        <span>${doc.title}</span>
+                    </div>
+                    <div class="document-actions">
+                        <button onclick="deleteDocument(${doc.id})" title="Slett dokument">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+                list.appendChild(li);
+            });
+        });
+}
+
+function loadDocument(documentId) {
+    fetch(`get_document.php?id=${documentId}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                currentDocumentId = documentId;
+                writingArea.innerHTML = data.content;
+            }
+        });
+}
+
+function saveDocument() {
+    if (!currentDocumentId) return;
+
+    fetch('save_document.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            id: currentDocumentId,
+            content: writingArea.innerHTML,
+            action: 'update'
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            showSaveStatus('Lagret :)');
+        }
+    });
+}
+
+function deleteDocument(documentId) {
+    if (confirm('Er du sikker på at du har lyst til å slette dette dokumentet? Gjør du det, forsvinner det for alltid, og det er ganske lenge.')) {
+        fetch('delete_document.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                id: documentId
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                loadDocumentsList();
+                if (currentDocumentId === documentId) {
+                    currentDocumentId = null;
+                    writingArea.innerHTML = '';
+                }
+            }
+        });
+    }
+}
+
+// initialisering av document manager
+document.getElementById('newDocument').addEventListener('click', createNewDocument);
+writingArea.addEventListener('input', debounce(saveDocument, 500));
+loadDocumentsList(); // laster inn dokumenter når Ord Online er åpnet
+
 function randomSplashText(){
     const randomSplash = splashText[Math.floor(Math.random() * splashText.length)];
     kulSplash.textContent = randomSplash;
@@ -125,28 +261,13 @@ function loadTextFile() {
 
 // funksjon for å lagre innholdet (tekst bufferet) til localstorage
 const saveContent = () => {
-    try {
-        const content = writingArea.innerHTML; // lager en variabel som lagrer innholdet (tekst bufferet)
-        localStorage.setItem("textEditorContent", content); // lager et localstorage item greie ting med content variabelen
-        showSaveStatus('Lagret :)')
-        console.log("Innhold lagret :)"); // bekrefter at innholdet ble lagret
-    } catch (error) {
-        // hvis error
-        showSaveStatus('Lagring feilet :(')
-        console.error("Feil ved lagring av innhold:", error); // sier ifra at det skjedde en feil
-    }
-};
+    if (!currentDocumentId) return;
 
-// funksjon for å laste inn innhold fra localstorage
-const loadContent = () => {
     try {
-        const savedContent = localStorage.getItem("textEditorContent");
-        if (savedContent) {
-            writingArea.innerHTML = savedContent;
-            console.log("Innhold lastet");
-        }
+        saveDocument();
     } catch (error) {
-        console.error("Feil ved lasting av innhold:", error);
+        showSaveStatus('Lagring feilet :(');
+        console.error("Feil ved lagring av innhold:", error);
     }
 };
 
@@ -177,8 +298,6 @@ const initializer = () => {
     kulSplash.addEventListener("click", () => {
         randomSplashText();
     });
-    // caller på loadContent funksjonen som laster inn innholdet fra localstorage
-    loadContent();
 
     // legg til eventlisteners som alltid sikrer at innholdet er lagret til localstorage
     writingArea.addEventListener("input", debounce(saveContent, 500)); // lagrer innhold hver gang bruker skriver noe med 500 ms delay via debounce funksjonen

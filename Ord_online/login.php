@@ -2,9 +2,11 @@
 session_start();
 require_once 'database.php';
 
+// Håndter innloggingsforsøk
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $mysqli->real_escape_string($_POST['username']);
 
+    // Sjekk brukernavn og passord mot database
     $sql = "SELECT * FROM users WHERE username = ?";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param("s", $username);
@@ -12,6 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = $stmt->get_result();
     $user = $result->fetch_assoc();
 
+    // Verifiser passord og opprett sesjon hvis korrekt
     if ($user && password_verify($_POST['password'], $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
