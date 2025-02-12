@@ -1,8 +1,13 @@
+<?php
+// variabel for versjonsnummer
+$version = "v3.1.1";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Ord På Nett v3.1.1</title>
+    <title>Ord På Nett <?php echo $version; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="texteditor.css" />
     <link rel="icon" href="../Pictures/ordlogo.png" />
@@ -11,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 
     <!-- Open Graph meta-tagger -->
-    <meta property="og:title" content="Ord På Nett v3.1.1">
+    <meta property="og:title" content="Ord På Nett <?php echo $version; ?>">
     <meta property="og:description" content="Nå med funksjonalitet for flere dokumenter! \n Ord på Nett er et kraftig og brukervennlig tekstbehandlingsverktøy utviklet av meg (Isak Brun Henriksen). Med fokus på ytelse, enkelhet og tilgjengelighet, er Ord på Nett et ideelt valg for studenter, forfattere, forskere, profesjonelle, og egentlig alle yrker i hele verden som trenger et pålitelig og fleksibelt skriveverktøy.">
     <meta property="og:image" content="https://isak.brunhenriksen.no/Pictures/ordlogo.png">
     <meta property="og:url" content="https://isak.brunhenriksen.no/Ord_online">
@@ -189,7 +194,7 @@
 
         <div id="bottomtext">
             <a href="https://www.github.com/isakbh/Ord-text-editor" id="reklame" target="_blank">Skaff deg Ord nå! (kun på Linux)</a>
-            <p id="version">v3.1.1</p>
+            <p id="version"><?php echo $version; ?></p>
         </div>
 
         <script src="https://giscus.app/client.js"
