@@ -641,6 +641,7 @@ input[type=file]::file-selector-button {
 .document-item span {
   font-size: 0.9rem;
   color: #333;
+  user-select: none;
 }
 
 @media screen and (max-width: 768px) {

@@ -675,6 +675,7 @@ input[type="file"]::file-selector-button {
     span {
         font-size: 0.9rem;
         color: #333;
+        user-select: none;
     }
 }
 
