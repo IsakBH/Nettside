@@ -52,6 +52,30 @@ let splashText = [
     "Du må ha gått helt fra vettet om du ikke bruker Ord på Nettet",
 ];
 
+// light/dark mode toggle
+function toggleDarkMode() {
+    const toggleButton = document.getElementById('themeToggle');
+    document.body.classList.toggle('dark-theme');
+    localStorage.setItem('darkMode', toggleButton.checked);
+}
+
+// sjekk og enable dark mode når siden lastes
+function applyDarkMode() {
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    if (isDarkMode) {
+        document.body.classList.add('dark-theme');
+    }
+
+    // hvis på settings siden, toggle switchen
+    const toggleButton = document.getElementById('themeToggle');
+    if (toggleButton) {
+        toggleButton.checked = isDarkMode;
+    }
+}
+
+// apply dark mode når siden lastes
+document.addEventListener('DOMContentLoaded', applyDarkMode);
+
 // funksjon for å telle antall bokstaver og tegn
 function updateWordAndCharCount() {
     const text = writingArea.innerText || "";

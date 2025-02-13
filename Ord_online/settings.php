@@ -86,18 +86,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <title>Instillinger Ord på Nett</title>
     <link rel="stylesheet" href="texteditor.css">
+    <script src="texteditor.js"></script>
 </head>
 
 <body>
     <div class="profile-settings">
-
         <h2>Ord på Nett instillinger</h2>
-        <span id="bepatient">Profiler har enda ingen bruk eller fordel, men det kommer snart. Be patient.</span>
-        <style>
-            #bepatient {
-                font-size: 15px;
-            }
-        </style>
 
         <?php if (isset($error)): ?>
             <div class="error"><?php echo $error; ?></div>
@@ -123,7 +117,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="text" name="new_username" value="<?php echo htmlspecialchars($_SESSION['username']); ?>" required>
             </div>
 
-            <button id="submit" type="submit">Oppdater profil</button>
+            <!-- Rounded switch -->
+            <label>Dark mode</label>
+            <label class="switch">
+                <input id="themeToggle" type="checkbox" onclick="toggleDarkMode()">
+                <span class="slider round"></span>
+            </label> <br> <br>
+
+            <!--
+            <select>
+                <option value="lightmode" title="lys">Lys</option>
+                <option value="darkmode" title="mørk">Mørk</option>
+                <option value="gruvbox" title="gruvbox">Gruvbox</option>
+                <option value="vscode" title="vscodedefault">VSCode Default</option>
+            </select>
+            -->
+
+            <button id="submit" type="submit">Oppdater instillinger</button>
         </form>
 
         <!-- slett bruker -->

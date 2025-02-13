@@ -18,7 +18,7 @@ foreach ($files as $file) {
         $image_path = $picture_dir . $file;
         $image_data = file_get_contents($image_path);
 
-        // Prepare and execute the INSERT query
+        // forbered og kjør sql query
         $stmt = $db->prepare("INSERT INTO images (name, image_data) VALUES (?, ?)");
         $stmt->bind_param("ss", $file, $image_data);
 
