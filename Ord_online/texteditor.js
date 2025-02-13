@@ -54,7 +54,7 @@ let splashText = [
 
 function migrateFromLocalStorage() {
     // sjekk om det finnes gammel data i localstorage
-    const oldContent = localStorage.getItem('content');
+    const oldContent = localStorage.getItem('textEditorContent');
 
     if (oldContent) {
         // spør brukeren om han/hun vil migrere data
