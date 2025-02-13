@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.1.4";
+$version = "v3.1.5"; // siste oppdatering: mer mobil-vennlig
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ $version = "v3.1.4";
 
 <head>
     <title>Ord På Nett <?php echo $version; ?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="texteditor.css" />
     <link rel="icon" href="../Pictures/ordlogo.png" />
     <!-- ikoner fra font awesome og google fonts-->
@@ -39,6 +39,10 @@ $version = "v3.1.4";
     ?>
 
     <!-- layouten av toolbaren er direkte kopiert fra Google Docs for "familiarity" -->
+
+    <button class="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+    </button>
 
     <div class="document-manager">
         <div class="document-list">

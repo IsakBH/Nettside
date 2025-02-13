@@ -52,6 +52,32 @@ let splashText = [
     "Du må ha gått helt fra vettet om du ikke bruker Ord på Nettet",
 ];
 
+// bedre touch funksjonalitet
+writingArea.addEventListener('touchstart', function(e) {
+    const touch = e.touches[0];
+    const selection = window.getSelection();
+    const range = document.caretRangeFromPoint(touch.clientX, touch.clientY);
+    if (range) {
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
+});
+
+// hamburger meny
+const menuToggle = document.querySelector('.menu-toggle');
+const documentManager = document.querySelector('.document-manager');
+
+menuToggle.addEventListener('click', () => {
+    documentManager.classList.toggle('active');
+});
+
+// lukk menyen når man trykker utenfor
+document.addEventListener('click', (e) => {
+    if (!documentManager.contains(e.target) && !menuToggle.contains(e.target)) {
+        documentManager.classList.remove('active');
+    }
+});
+
 function migrateFromLocalStorage() {
     // sjekk om det finnes gammel data i localstorage
     const oldContent = localStorage.getItem('textEditorContent');
