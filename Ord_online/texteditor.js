@@ -52,6 +52,34 @@ let splashText = [
     "Du må ha gått helt fra vettet om du ikke bruker Ord på Nettet",
 ];
 
+function migrateFromLocalStorage() {
+    // sjekk om det finnes gammel data i localstorage
+    const oldContent = localStorage.getItem('content');
+
+    if (oldContent) {
+        // spør brukeren om han/hun vil migrere data
+        if (confirm('Ord har funnet gammel data i localStorage fra en tidligere versjon, Ord har nå byttet over til å bruke databaser for lagring av innhold. Vil du migrere innholdet til Ord 3.1?')) {
+            // plasser innholdet fra localstorage i textboksen
+            writingArea.innerHTML = oldContent;
+
+            // lagre innholdet i databasen :)
+            saveDocument();
+
+            // spør brukeren om å slette dataen fra localstorage
+            if (confirm('Migrering fullført. Vil du slette det gamle innholdet fra localStorage?')) {
+                localStorage.removeItem('content');
+            }
+
+            showSaveStatus('Migrering fullført');
+        }
+    } else {
+        alert('Ingen data funnet i localStorage');
+    }
+}
+
+// event listener for migrerings knappen
+document.getElementById('migrateFromLocal').addEventListener('click', migrateFromLocalStorage);
+
 ////////////////////// funksjoner for database og dokument "management" (finnes det er norsk ord for det?????)
 // variabel for å lagre ID-en til dokumentet brukeren bruker nå
 let currentDocumentId = null;

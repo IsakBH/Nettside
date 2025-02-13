@@ -176,6 +176,10 @@ $version = "v3.1.3";
                 <i class="fa-solid fa-upload"></i>
             </button>
 
+            <button id="migrateFromLocal" class="option-button" title="Migrate from localStorage">
+                <i class="fa-solid fa-file-import"></i>
+            </button> <- Migrer data
+
             <!-- KNAPPER SOM IKKE FUNGERER (FIKS EN ELLER ANNEN GANG)
         <hr>
         <button id="indent" class="option-button spacing">
