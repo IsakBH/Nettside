@@ -67,7 +67,7 @@ function migrateFromLocalStorage() {
 
             // spør brukeren om å slette dataen fra localstorage
             if (confirm('Migrering fullført. Vil du slette det gamle innholdet fra localStorage?')) {
-                localStorage.removeItem('content');
+                localStorage.removeItem('textEditorContent');
             }
 
             showSaveStatus('Migrering fullført');

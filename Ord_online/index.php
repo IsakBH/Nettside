@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.1.3";
+$version = "v3.1.4";
 ?>
 
 <!DOCTYPE html>
