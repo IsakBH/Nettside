@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.1.5"; // siste oppdatering: mer mobil-vennlig
+$version = "v3.1.6"; // siste oppdatering: ord og bokstav tellere
 ?>
 
 <!DOCTYPE html>
