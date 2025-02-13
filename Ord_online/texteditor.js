@@ -133,7 +133,7 @@ function migrateFromLocalStorage() {
 
     if (oldContent) {
         // spør brukeren om han/hun vil migrere data
-        if (confirm('Ord har funnet gammel data i localStorage fra en tidligere versjon, Ord har nå byttet over til å bruke databaser for lagring av innhold. Vil du migrere innholdet til Ord 3.1?')) {
+        if (confirm('BARE GJØR DETTE HVIS DU MANGLER DATA ETTER DEN FORRIGE OPPDATERINGEN! \nDETTE VIL OVERSKRIVE ALT DU HAR I DOKUMENTET DU HAR ÅPENT, LAG OG ÅPNE NYTT DOKUMENT FØR DU GJØR DETTE\n\nOrd har funnet gammel data i localStorage fra dokumentet du hadde før den store multi-dokument oppdateringen (v3.1), vil du migrere dataen til den nye versjonen? ')) {
             // plasser innholdet fra localstorage i textboksen
             writingArea.innerHTML = oldContent;
 

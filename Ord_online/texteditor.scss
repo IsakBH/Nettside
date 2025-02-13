@@ -737,22 +737,8 @@ input[type="file"]::file-selector-button {
     }
 }
 
-#counter {
-    margin-top: 10px;
-    display: flex;
-    gap: 20px;
-    color: #666;
-    font-size: 0.9rem;
-
-    span {
-        padding: 5px 10px;
-        background: #f5f5f5;
-        border-radius: 5px;
-        border: 1px solid #ddd;
-    }
-}
-
 // toggle switch
+
 // boksen rundt slider
 .switch {
   position: relative;
@@ -821,59 +807,89 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-// LIGHT OG DARK MODE
-
+// DARK MODE
 .dark-theme {
     background-color: #0D1117;
     color: #ffffff;
 
     .container {
-        background-color: #2d2d2d;
+        background-color: #0D1117;
+        filter: none;
+        border: 1px solid #3D444D;
         color: #ffffff;
     }
 
     #text-input {
-        background-color: #333333;
+        background-color: #0D1117;
         color: #ffffff;
-        border-color: #444444;
+        border-color: #3D444D;
     }
 
     .options button {
-        background-color: #404040;
+        background-color: #0D1117;
         color: #ffffff;
-        border-color: #555555;
+        border-color: #3D444D;
 
         &:hover {
-            background-color: #505050;
+            background-color: #151B23;
         }
     }
 
     select {
-        background-color: #404040;
+        background-color: #0D1117;
         color: #ffffff;
-        border-color: #555555;
+        border-color: #3D444D;
+        &:hover {
+            background-color: #151B23;
+        }
     }
 
     .document-manager {
-        background-color: #2d2d2d;
-        border-color: #444444;
+        background-color: #0D1117;
+        border-color: #3D444D;
+        color: #ffffff !important;
+        h3 {
+            color: #ffffff;
+        }
     }
 
     #documentsList li {
-        background-color: #333333;
-        border-color: #444444;
+        background-color: #0D1117;
+        border-color: #3D444D;
         color: #ffffff;
+    }
+
+    .document-item {
+        span {
+            color: #ffffff;
+        }
+    }
+
+    #documentSearch {
+        background-color: #212830;
+        border-color: #3D444D;
+        color: #ffffff;
+    }
+
+    #splashText {
+        background-color: #151B23;
     }
 
     .profile-dropdown {
-        background-color: #2d2d2d;
-        border-color: #444444;
+        background-color: #0D1117;
+        border-color: #3D444D;
         color: #ffffff;
+        a {
+            color: #ffffff;
+            &:hover {
+                background-color: #151B23;
+            }
+        }
     }
 
     hr {
-            border-color: #444444;
-        }
+        color: #3D444D;
+    }
 
     // INSTILLINGER SIDE
     .profile-settings {
@@ -884,18 +900,31 @@ input:checked + .slider:before {
     input[type="file"]::file-selector-button {
       // grønn farge: #4CAF50
       background-color: #1F6FEB;
+      &:hover {
+          background-color: darken(#8AC8FF, 20%);
+      }
     }
 
-    #submit {
+    #submit, #newDocument {
         background-color: #1F6FEB;
+        color: #ffffff;
+        &:hover {
+            background-color: darken(#8AC8FF, 20%);
+        }
     }
 
     #logout, #delete-account {
         background-color: #FF002F;
+        &:hover {
+            background-color: #FF4444;
+        }
     }
 
     input:checked + .slider {
         background-color: #1F6FEB;
+        &:hover {
+            background-color: darken(#8AC8FF, 20%);
+        }
     }
 }
 

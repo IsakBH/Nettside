@@ -690,20 +690,6 @@ input[type=file]::file-selector-button {
     -webkit-overflow-scrolling: touch;
   }
 }
-#counter {
-  margin-top: 10px;
-  display: flex;
-  gap: 20px;
-  color: #666;
-  font-size: 0.9rem;
-}
-#counter span {
-  padding: 5px 10px;
-  background: #f5f5f5;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-}
-
 .switch {
   position: relative;
   display: inline-block;
@@ -774,43 +760,69 @@ input:checked + .slider:before {
   color: #ffffff;
 }
 .dark-theme .container {
-  background-color: #2d2d2d;
+  background-color: #0D1117;
+  filter: none;
+  border: 1px solid #3D444D;
   color: #ffffff;
 }
 .dark-theme #text-input {
-  background-color: #333333;
+  background-color: #0D1117;
   color: #ffffff;
-  border-color: #444444;
+  border-color: #3D444D;
 }
 .dark-theme .options button {
-  background-color: #404040;
+  background-color: #0D1117;
   color: #ffffff;
-  border-color: #555555;
+  border-color: #3D444D;
 }
 .dark-theme .options button:hover {
-  background-color: #505050;
+  background-color: #151B23;
 }
 .dark-theme select {
-  background-color: #404040;
+  background-color: #0D1117;
   color: #ffffff;
-  border-color: #555555;
+  border-color: #3D444D;
+}
+.dark-theme select:hover {
+  background-color: #151B23;
 }
 .dark-theme .document-manager {
-  background-color: #2d2d2d;
-  border-color: #444444;
+  background-color: #0D1117;
+  border-color: #3D444D;
+  color: #ffffff !important;
+}
+.dark-theme .document-manager h3 {
+  color: #ffffff;
 }
 .dark-theme #documentsList li {
-  background-color: #333333;
-  border-color: #444444;
+  background-color: #0D1117;
+  border-color: #3D444D;
   color: #ffffff;
+}
+.dark-theme .document-item span {
+  color: #ffffff;
+}
+.dark-theme #documentSearch {
+  background-color: #212830;
+  border-color: #3D444D;
+  color: #ffffff;
+}
+.dark-theme #splashText {
+  background-color: #151B23;
 }
 .dark-theme .profile-dropdown {
-  background-color: #2d2d2d;
-  border-color: #444444;
+  background-color: #0D1117;
+  border-color: #3D444D;
   color: #ffffff;
 }
+.dark-theme .profile-dropdown a {
+  color: #ffffff;
+}
+.dark-theme .profile-dropdown a:hover {
+  background-color: #151B23;
+}
 .dark-theme hr {
-  border-color: #444444;
+  color: #3D444D;
 }
 .dark-theme .profile-settings {
   background-color: #0D1117;
@@ -819,14 +831,27 @@ input:checked + .slider:before {
 .dark-theme input[type=file]::file-selector-button {
   background-color: #1F6FEB;
 }
-.dark-theme #submit {
+.dark-theme input[type=file]::file-selector-button:hover {
+  background-color: rgb(36, 152.0512820513, 255);
+}
+.dark-theme #submit, .dark-theme #newDocument {
   background-color: #1F6FEB;
+  color: #ffffff;
+}
+.dark-theme #submit:hover, .dark-theme #newDocument:hover {
+  background-color: rgb(36, 152.0512820513, 255);
 }
 .dark-theme #logout, .dark-theme #delete-account {
   background-color: #FF002F;
 }
+.dark-theme #logout:hover, .dark-theme #delete-account:hover {
+  background-color: #FF4444;
+}
 .dark-theme input:checked + .slider {
   background-color: #1F6FEB;
+}
+.dark-theme input:checked + .slider:hover {
+  background-color: rgb(36, 152.0512820513, 255);
 }
 
 .lightmode body {
