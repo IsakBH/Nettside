@@ -198,6 +198,11 @@ $version = "v3.1.5"; // siste oppdatering: mer mobil-vennlig
         <!-- input boksen der du faktisk skriver teksten-->
         <div id="text-input" contenteditable="true"></div>
 
+        <div id="counter">
+            <span id="wordCount">0 ord</span>
+            <span id="charCount">0 tegn</span>
+        </div>
+
         <br>
 
         <div id="bottomtext">

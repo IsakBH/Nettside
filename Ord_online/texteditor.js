@@ -52,6 +52,31 @@ let splashText = [
     "Du må ha gått helt fra vettet om du ikke bruker Ord på Nettet",
 ];
 
+// funksjon for å telle antall bokstaver og tegn
+function updateWordAndCharCount() {
+    const text = writingArea.innerText || "";
+
+    // antall tegn (med mellomrom)
+    const charCount = text.length;
+
+    // telle ord (splitter på mellomrom)
+    const wordCount = text
+        .trim()
+        .split(/\s+/)
+        .filter(word => word.length > 0)
+        .length;
+
+    // oppdaterer visningen under tekstboksen
+    document.getElementById('wordCount').textContent = `${wordCount} ord`;
+    document.getElementById('charCount').textContent = `${charCount} tegn`;
+}
+
+// eventlisteners som hører etter input for å oppdatere ord og bokstav telleren
+writingArea.addEventListener('input', updateWordAndCharCount);
+writingArea.addEventListener('paste', () => {
+    setTimeout(updateWordAndCharCount, 0);
+});
+
 // bedre touch funksjonalitet
 writingArea.addEventListener('touchstart', function(e) {
     const touch = e.touches[0];
@@ -327,6 +352,7 @@ const saveContent = () => {
 
 // funksjon som initialiserer Ord Online
 const initializer = () => {
+    updateWordAndCharCount();
     randomSplashText();
     highlighter(alignButtons, true);
     highlighter(spacingButtons, true);
