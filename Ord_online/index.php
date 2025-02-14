@@ -171,8 +171,8 @@ $version = "v3.1.8"; // siste oppdatering: bedre colour pickers
             </button>
 
             <button id="migrateFromLocal" class="option-button" title="Migrate from localStorage">
-                <i class="fa-solid fa-file-import"></i>
-            </button> <- Migrer data
+                <i class="fa-solid fa-file-import"></i> Migrer data
+            </button>
 
             <!-- KNAPPER SOM IKKE FUNGERER (FIKS EN ELLER ANNEN GANG)
         <hr>

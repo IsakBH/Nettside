@@ -571,7 +571,7 @@ document.addEventListener("contextmenu", function (e) {
     const tableElement = e.target.closest("table");
     if (tableElement) {
         e.preventDefault();
-        if (confirm("Delete this table?")) {
+        if (confirm("Vil du slette denne tabellen??")) {
             tableElement.closest(".table-container").remove();
         }
     }
