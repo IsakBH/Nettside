@@ -122,7 +122,7 @@ input[type="color"] {
 }
 
 .active {
-    background-color: #8AC8FF;
+    background-color: #E2E7EA;
 }
 
 #text-input table {
@@ -720,6 +720,9 @@ input[type="file"]::file-selector-button {
         color: white;
         padding: 10px;
         border-radius: 5px;
+        &:hover {
+            background-color: #E2E7EA;
+        }
     }
 
     .profile-menu {
@@ -950,6 +953,13 @@ input:checked + .slider:before {
 
     input[type=file] {
         border: 1px solid #3D444D;
+    }
+
+    .menu-toggle {
+        background-color: #1F6FEB;
+        &:hover {
+            background-color: #2498FF;
+        }
     }
 }
 
