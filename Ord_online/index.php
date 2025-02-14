@@ -121,11 +121,6 @@ $version = "v3.1.7"; // siste oppdatering: dark mode
             <div class="input-wrapper">
                 <input type="color" id="backColor" class="adv-option-button" />
                 <i class="fa-solid fa-paint-roller"></i>
-                <style>
-                    #backColor {
-                        color: #020929;
-                    }
-                </style>
             </div>
 
             <hr>

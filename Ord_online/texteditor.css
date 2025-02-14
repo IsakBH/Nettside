@@ -42,6 +42,29 @@ hr {
   gap: 15px;
 }
 
+input[type=color] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  width: 28px;
+  height: 28px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+input[type=color]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type=color]::-webkit-color-swatch {
+  border: none;
+  border-radius: 10px;
+}
+input[type=color]::-moz-color-swatch {
+  border: none;
+  border-radius: 10px;
+}
+
 button {
   height: 35px;
   width: 35px;
