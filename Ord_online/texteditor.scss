@@ -689,6 +689,10 @@ input[type="file"]::file-selector-button {
         transform: none;
     }
 
+    #splashText {
+        display: none;
+    }
+
     .options {
         gap: 5px;
         justify-content: center;
@@ -873,7 +877,7 @@ input:checked + .slider:before {
     }
 
     #splashText {
-        background-color: #151B23;
+        background-color: rgba(21, 27, 35, 0.5);
     }
 
     .profile-dropdown {
