@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.1.6"; // siste oppdatering: ord og bokstav tellere
+$version = "v3.1.7"; // siste oppdatering: dark mode
 ?>
 
 <!DOCTYPE html>

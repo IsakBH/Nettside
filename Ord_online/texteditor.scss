@@ -927,6 +927,10 @@ input:checked + .slider:before {
             background-color: darken(#8AC8FF, 20%);
         }
     }
+
+    #save-status {
+        color: #ffffff;
+    }
 }
 
 .lightmode {

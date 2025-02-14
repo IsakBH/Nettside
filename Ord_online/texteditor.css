@@ -854,6 +854,9 @@ input:checked + .slider:before {
 .dark-theme input:checked + .slider:hover {
   background-color: rgb(36, 152.0512820513, 255);
 }
+.dark-theme #save-status {
+  color: #ffffff;
+}
 
 .lightmode body {
   background-color: white;
