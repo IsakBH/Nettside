@@ -860,6 +860,15 @@ input:checked + .slider:before {
 .dark-theme #save-status {
   color: #ffffff;
 }
+.dark-theme .auth-container {
+  background-color: #0D1117;
+  border: 1px solid #3D444D;
+}
+.dark-theme input[type=text], .dark-theme input[type=password] {
+  background-color: #0D1117;
+  border: 1px solid #3D444D;
+  color: #ffffff;
+}
 
 .lightmode body {
   background-color: white;

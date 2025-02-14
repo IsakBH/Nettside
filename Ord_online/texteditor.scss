@@ -935,6 +935,18 @@ input:checked + .slider:before {
     #save-status {
         color: #ffffff;
     }
+
+    // login siden
+    .auth-container {
+        background-color: #0D1117;
+        border: 1px solid #3D444D;
+    }
+
+    input[type=text], input[type=password] {
+        background-color: #0D1117;
+        border: 1px solid #3D444D;
+        color: #ffffff;
+    }
 }
 
 .lightmode {

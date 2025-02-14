@@ -43,8 +43,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Register</title>
+    <title>Registrer</title>
     <link rel="stylesheet" href="texteditor.css">
+    <link rel="icon" href="../Pictures/ordlogo.png" />
 </head>
 <body>
     <div class="auth-container">

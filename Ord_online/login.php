@@ -30,14 +30,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>Logg inn</title>
     <link rel="stylesheet" href="texteditor.css">
+    <script src="texteditor.js"></script>
+    <link rel="icon" href="../Pictures/ordlogo.png" />
 </head>
 <body>
     <div class="auth-container">
         <h2>Logg inn</h2>
         <p>
-        For å bruke Ord på Nett, må du logge inn. Logger du inn nå, får du snart tilgang til mange gøye funksjoner.
+        For å bruke Ord på Nett, må du logge inn.
         </p> <br>
 
         <?php if (isset($error)): ?>
