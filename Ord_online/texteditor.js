@@ -325,9 +325,9 @@ function saveTextAsFile() {
         console.log('Markdown content:', markdownContent);
 
         let filename = prompt("Skriv inn navn på dokumentet", "ord.md");
+        console.log('Filnavn:', filename)
         if (!filename)
-            console.log("Bruker har kansellert nedlastning")
-            return; // bruker har kansellert
+            filename = "ord.md";
 
         if (!filename.toLowerCase().endsWith(".md")) {
             filename = filename + ".md";
