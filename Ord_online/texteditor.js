@@ -314,30 +314,39 @@ function sjekkFilNavn(filename) {
 
 // lagre tekst som fil
 function saveTextAsFile() {
-    // gjør turndownService klar til bruk og sånn (hvordan skal jeg forklare dette på en bedre måte?????????)
-    const turndownService = new TurndownService();
+    try {
+        const turndownService = new TurndownService();
+        console.log('TurndownService created');
 
-    // hent html dataen brukeren har skrevet inn i tekst boksen
-    const htmlContent = document.getElementById("text-input").innerHTML;
-    const markdownContent = turndownService.turndown(htmlContent);
+        const htmlContent = document.getElementById("text-input").innerHTML;
+        console.log('HTML content:', htmlContent);
 
-    let filename = prompt("Skriv inn navn på dokumentet", "ord.md");
+        const markdownContent = turndownService.turndown(htmlContent);
+        console.log('Markdown content:', markdownContent);
 
-    // sjekker hvis filnavnet slutter med .md (akkurat det samme som det jeg hadde før med .txt, men bare med .md)
-    if (!filename.toLowerCase().endsWith(".md")) {
-        filename = filename + ".md";
-        console.log("Filnavnet hadde ikke .md, og det har nå blitt lagt til.");
+        let filename = prompt("Skriv inn navn på dokumentet", "ord.md");
+        if (!filename)
+            console.log("Bruker har kansellert nedlastning")
+            return; // bruker har kansellert
+
+        if (!filename.toLowerCase().endsWith(".md")) {
+            filename = filename + ".md";
+        }
+
+        const blob = new Blob([markdownContent], { type: "text/markdown" });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+    } catch (error) {
+        console.error('Error i saveTextAsFile:', error);
+        alert('Det oppstod en feil ved nedlasting av filen: ' + error.message);
     }
-
-    const blob = new Blob([markdownContent], { type: "text/markdown" });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement("a");
-
-    a.href = url;
-    a.download = filename;
-    a.click();
-
-    window.URL.revokeObjectURL(url);
 }
 
 function loadTextFile() {
