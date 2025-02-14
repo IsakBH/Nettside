@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.1.7"; // siste oppdatering: dark mode
+$version = "v3.1.8"; // siste oppdatering: bedre colour pickers
 ?>
 
 <!DOCTYPE html>
@@ -112,11 +112,6 @@ $version = "v3.1.7"; // siste oppdatering: dark mode
             <div class="input-wrapper">
                 <input type="color" id="foreColor" class="adv-option-button" />
                 <i class="fa-solid fa-palette"></i>
-                <style>
-                    #foreColor {
-                        color: #020929;
-                    }
-                </style>
             </div>
             <div class="input-wrapper">
                 <input type="color" id="backColor" class="adv-option-button" />
