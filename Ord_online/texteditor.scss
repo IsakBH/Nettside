@@ -947,6 +947,10 @@ input:checked + .slider:before {
         border: 1px solid #3D444D;
         color: #ffffff;
     }
+
+    input[type=file] {
+        border: 1px solid #3D444D;
+    }
 }
 
 .lightmode {

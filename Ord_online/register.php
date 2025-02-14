@@ -45,6 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <title>Registrer</title>
     <link rel="stylesheet" href="texteditor.css">
+    <script src="texteditor.js"></script>
     <link rel="icon" href="../Pictures/ordlogo.png" />
 </head>
 <body>
