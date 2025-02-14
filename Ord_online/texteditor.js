@@ -235,7 +235,8 @@ function loadDocument(documentId) {
         .then(data => {
             if (data.success) {
                 currentDocumentId = documentId;
-                writingArea.innerHTML = data.content;
+                writingArea.innerHTML = data.content || ''; // Hvis content er tom, sett tom string
+                placeholder.style.display = 'none'; // Skjul placeholder når dokument er lastet
             }
         });
 }
@@ -411,6 +412,11 @@ const initializer = () => {
     kulSplash.addEventListener("click", () => {
         randomSplashText();
     });
+
+    // hvis brukeren ikke har valgt et dokument, skriv "vennligst velg et dokument"
+    if (!currentDocumentId) {
+            writingArea.innerHTML = '<p id="placeholder"><u>Vennligst velg et dokument.</u> <br> Ingenting du skriver vil bli lagret før du lager et dokument.</p>';
+    }
 
     // legg til eventlisteners som alltid sikrer at innholdet er lagret til localstorage
     writingArea.addEventListener("input", debounce(saveContent, 500)); // lagrer innhold hver gang bruker skriver noe med 500 ms delay via debounce funksjonen

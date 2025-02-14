@@ -186,7 +186,9 @@ $version = "v3.1.8"; // siste oppdatering: bedre colour pickers
         </div>
 
         <!-- input boksen der du faktisk skriver teksten-->
-        <div id="text-input" contenteditable="true"></div>
+        <div id="text-input" contenteditable="true">
+            <p id="placeholder"></p>
+        </div>
 
         <div id="counter">
             <span id="wordCount">0 ord</span>

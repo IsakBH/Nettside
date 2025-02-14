@@ -674,6 +674,11 @@ input[type=file]::file-selector-button {
   padding-right: 5px;
 }
 
+#placeholder {
+  font-style: italic;
+  user-select: none;
+}
+
 @media screen and (max-width: 768px) {
   .container {
     width: 100%;
