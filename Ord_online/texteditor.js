@@ -236,7 +236,8 @@ function loadDocument(documentId) {
             if (data.success) {
                 currentDocumentId = documentId;
                 writingArea.innerHTML = data.content || ''; // Hvis content er tom, sett tom string
-                placeholder.style.display = 'none'; // Skjul placeholder når dokument er lastet
+                writingArea.contentEditable = 'true'; // gjør tekstboksen editable når brukeren har valgt et dokument
+                placeholder.style.display = 'none'; // skjul placeholder teksten når et dokument er lastet inn av bruker
             }
         });
 }
@@ -415,7 +416,7 @@ const initializer = () => {
 
     // hvis brukeren ikke har valgt et dokument, skriv "vennligst velg et dokument"
     if (!currentDocumentId) {
-            writingArea.innerHTML = '<p id="placeholder"><u>Vennligst velg et dokument.</u> <br> Ingenting du skriver vil bli lagret før du lager et dokument.</p>';
+            writingArea.innerHTML = '<p id="placeholder"><u>Vennligst velg et dokument.</u> <br> <br> <h2>   Kreditter:  </h2>  Programmering: Isak Henriksen <br> Easter egg sang: NRK <br> Dark mode inspirasjon: GitHub/Microsoft <br> Ord på Nett sangen: Isak Henriksen (sangtekst) Suno AI (sanger) </p>';
     }
 
     // legg til eventlisteners som alltid sikrer at innholdet er lagret til localstorage

@@ -186,7 +186,7 @@ $version = "v3.1.8"; // siste oppdatering: bedre colour pickers
         </div>
 
         <!-- input boksen der du faktisk skriver teksten-->
-        <div id="text-input" contenteditable="true">
+        <div id="text-input">
             <p id="placeholder"></p>
         </div>
 
