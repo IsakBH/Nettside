@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.1.11"; // dropshadow på dokumentene i dokument listen
+$version = "v3.1.12"; // dropshadow på dokumentene i dokument listen
 ?>
 
 <!DOCTYPE html>
