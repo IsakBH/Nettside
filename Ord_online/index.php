@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.1.10"; // hover og click effekter på dokument liste
+$version = "v3.1.11"; // hover og click effekter på dokument liste
 ?>
 
 <!DOCTYPE html>
