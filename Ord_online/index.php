@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.1.11"; // hover og click effekter på dokument liste
+$version = "v3.1.11"; // dropshadow på dokumentene i dokument listen
 ?>
 
 <!DOCTYPE html>
@@ -213,7 +213,7 @@ $version = "v3.1.11"; // hover og click effekter på dokument liste
             data-reactions-enabled="1"
             data-emit-metadata="0"
             data-input-position="bottom"
-            data-theme="preferred_color_scheme"
+            data-theme="light"
             data-lang="en"
             crossorigin="anonymous"
             async>
