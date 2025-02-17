@@ -216,6 +216,7 @@ $version = "v3.1.11"; // dropshadow på dokumentene i dokument listen
             data-theme="light"
             data-lang="en"
             crossorigin="anonymous"
+            referrerpolicy="no-referrer-when-downgrade"
             async>
         </script>
     </div>
