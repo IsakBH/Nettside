@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.1.8"; // siste oppdatering: bedre colour pickers
+$version = "v3.1.9"; // siste oppdatering: bedre colour pickers
 ?>
 
 <!DOCTYPE html>

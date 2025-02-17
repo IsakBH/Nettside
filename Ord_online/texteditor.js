@@ -179,7 +179,9 @@ documentSearch.addEventListener('input', function(e) {
 
 // funksjon for å lage nytt dokument
 function createNewDocument(){
+    console.log("Bruker prøver å lage nytt dokument");
     const title = prompt("Skriv inn tittel på dokumentet:", "Kult dokument på Ord Online");
+    console.log("Brukeren skrev inn tittel:", title);
     // ajax :))))
     if (title) {
         fetch('save_document.php', {
@@ -194,8 +196,10 @@ function createNewDocument(){
         })
     })
     .then(response => response.json())
+        console.log("Fikk respons")
     .then(data => {
         if(data.success) {
+            console.log("Oppretting av dokument vellykket!")
             currentDocumentId = data.documentId;
             loadDocumentsList();
             writingArea.innerHTML = '';
