@@ -2,11 +2,6 @@
 session_start();
 require_once 'database.php';
 
-// debug logging
-error_log("save_document.php called");
-error_log("Session user_id: " . $_SESSION['user_id']);
-error_log("POST data: " . file_get_contents('php://input'));
-
 // sjekker om brukeren er kul og authenticated, vel, alle som bruker ord på nett er kul så den sjekker egentlig bare om du er authenticated
 if (!isset($_SESSION['user_id'])) {
     die(json_encode(['success' => false, 'error' => 'Not authenticated']));
