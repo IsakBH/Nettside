@@ -196,7 +196,6 @@ function createNewDocument(){
         })
     })
     .then(response => response.json())
-        console.log("Fikk respons")
     .then(data => {
         if(data.success) {
             console.log("Oppretting av dokument vellykket!")
