@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.1.9"; // lagt til discord application id for testing av activity greier
+$version = "v3.1.10"; // hover og click effekter på dokument liste
 ?>
 
 <!DOCTYPE html>
@@ -61,7 +61,7 @@ $version = "v3.1.9"; // lagt til discord application id for testing av activity 
     </div>
 
     <div class="container"> <!--  containeren for toolbaren -->
-        <h1>Ord På Nett</h1>
+        <h1 id="header">Ord På Nett</h1>
         <p id="splashText"></p>
         <div class="options"> <!--  Toolbaren-->
 

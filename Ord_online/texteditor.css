@@ -11,7 +11,6 @@ body {
 
 h1 {
   padding-top: 0px;
-  text-align: center;
   margin: 0 auto;
   padding-bottom: 10px;
 }
@@ -800,6 +799,10 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+#header {
+  text-align: center;
 }
 
 .dark-theme {
