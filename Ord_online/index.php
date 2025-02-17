@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.1.9"; // siste oppdatering: bedre colour pickers
+$version = "v3.1.9"; // lagt til discord application id for testing av activity greier
 ?>
 
 <!DOCTYPE html>
