@@ -87,6 +87,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Instillinger Ord på Nett</title>
     <link rel="stylesheet" href="texteditor.css">
     <script src="texteditor.js"></script>
+    <link rel="icon" href="../Pictures/ordlogo.png" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 
@@ -115,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="form-group">
                 <label>Endre brukernavn:</label>
-                <input type="text" name="new_username" value="<?php echo htmlspecialchars($_SESSION['username']); ?>" required>
+                <input type="text" name="new_username" placeholder="<?php echo htmlspecialchars($_SESSION['username']); ?>" required>
             </div>
 
             <!-- Rounded switch -->
