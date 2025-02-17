@@ -117,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="form-group">
                 <label>Endre brukernavn:</label>
-                <input type="text" name="new_username" placeholder="<?php echo htmlspecialchars($_SESSION['username']); ?>" required>
+                <input type="text" name="new_username" value="<?php echo htmlspecialchars($_SESSION['username']); ?>" required>
             </div>
 
             <!-- Rounded switch -->
