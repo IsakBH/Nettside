@@ -616,7 +616,7 @@ input[type="file"]::file-selector-button {
 
         &:focus {
             outline: none;
-            border-color: #8AC8FF;
+            border-color: #3D444D;
             box-shadow: 0 0 0 2px rgba(138, 200, 255, 0.2);
         }
     }
@@ -661,7 +661,7 @@ input[type="file"]::file-selector-button {
         border: 1px solid #ddd;
 
         &:hover {
-            background: #f0f0f0;
+            transform: translateY(-3px);
 
             .document-actions {
                 opacity: 1;
@@ -687,7 +687,6 @@ input[type="file"]::file-selector-button {
         &:hover {
             background: #ff4444;
             color: white;
-            border-color: #ff4444;
         }
     }
 }
