@@ -21,6 +21,7 @@ $version = "v3.1.9"; // siste oppdatering: bedre colour pickers
     <meta property="og:image" content="https://isak.brunhenriksen.no/Pictures/ordlogo.png">
     <meta property="og:url" content="https://isak.brunhenriksen.no/Ord_online">
     <meta property="og:type" content="website">
+    <meta property="discord:app_id" content="1341008803189100676">
 
     <script src="https://unpkg.com/turndown/dist/turndown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
