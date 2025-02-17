@@ -416,7 +416,7 @@ const initializer = () => {
 
     // hvis brukeren ikke har valgt et dokument, skriv "vennligst velg et dokument"
     if (!currentDocumentId) {
-            writingArea.innerHTML = '<p id="placeholder"><u><h1>Vennligst velg et dokument.</h1></u> <br> <br> <h2>   Kreditter:  </h2>  Programmering: Isak Henriksen <br> Easter egg sang: NRK <br> Dark mode inspirasjon: GitHub/Microsoft <br> Ord på Nett sangen: Isak Henriksen (sangtekst) Suno AI (sanger) </p>';
+            writingArea.innerHTML = '<p id="placeholder"><u><h1>Vennligst velg et dokument.</h1></u> <br> <br> <h2>   Kreditter:  </h2>  Programmering: Isak Henriksen <br> Easter egg sang: NRK <br> Dark mode inspirasjon: GitHub/Microsoft <br> <a href="https://www.youtube.com/watch?v=7lQatGnsoS8" target="_blank">Ord på Nett sangen:</a> Isak Henriksen (sangtekst) Suno AI (sanger) </p>';
     }
 
     // legg til eventlisteners som alltid sikrer at innholdet er lagret til localstorage
