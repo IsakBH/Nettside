@@ -217,6 +217,32 @@ input[type="color"] {
     filter: drop-shadow(0 0 100px yellow);
 }
 
+#social {
+    height: 40px;
+    width: 75%;
+    margin: 0 auto;
+    background: #1F6FEB;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    gap: 8px;
+    font-size: 1.5rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+        background: darken(#8AC8FF, 10%);
+        transform: translateY(-1px);
+    }
+    &:active {
+        transform: translateY(1px);
+    }
+}
+
 // for å gjøre den mer mobil vennlig
 @media screen and (max-height: 600px) {
     .container {

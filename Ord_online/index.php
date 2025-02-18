@@ -58,6 +58,7 @@ $version = "v3.1.12"; // dropshadow på dokumentene i dokument listen
             </div>
             <ul id="documentsList"></ul>
         </div>
+        <a id="social" title="discord serveren vår" href="https://discord.gg/kT8s4NVn">Discord<i class="fa-brands fa-discord"></i></a>
     </div>
 
     <div class="container"> <!--  containeren for toolbaren -->
