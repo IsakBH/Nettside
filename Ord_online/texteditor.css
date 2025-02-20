@@ -11,6 +11,7 @@ body {
 
 h1 {
   padding-top: 0px;
+  text-align: center;
   margin: 0 auto;
   padding-bottom: 10px;
 }
@@ -207,32 +208,6 @@ input[type=color] {
   transform: translateY(-50%);
   font-size: 40px;
   filter: drop-shadow(0 0 100px yellow);
-}
-
-#social {
-  height: 40px;
-  width: 75%;
-  margin: 0 auto;
-  background: #1F6FEB;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  gap: 8px;
-  font-size: 1.5rem;
-  transition: all 0.2s ease;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-#social:hover {
-  background: rgb(87, 176.0256410256, 255);
-  transform: translateY(-1px);
-}
-#social:active {
-  transform: translateY(1px);
 }
 
 @media screen and (max-height: 600px) {
@@ -655,15 +630,9 @@ input[type=file]::file-selector-button {
 }
 #documentsList li:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 2px -4px black;
 }
 #documentsList li:hover .document-actions {
   opacity: 1;
-}
-#documentsList li:active {
-  transform: translateY(0px);
-  transform: scale(0.95);
-  border: 2px solid #8AC8FF;
 }
 
 .document-actions {
@@ -709,21 +678,7 @@ input[type=file]::file-selector-button {
   user-select: none;
 }
 
-@media screen and (max-width: 1000px) {
-  .container {
-    width: 100%;
-    height: 100vh;
-    padding: 20px 10px;
-    position: static;
-    transform: none;
-  }
-  #splashText {
-    display: none;
-  }
-  .options {
-    gap: 5px;
-    justify-content: center;
-  }
+@media screen and (max-width: 1500px) {
   .document-manager {
     position: fixed;
     left: -250px;
@@ -748,6 +703,22 @@ input[type=file]::file-selector-button {
   }
   .menu-toggle:hover {
     background-color: #E2E7EA;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 100%;
+    height: 100vh;
+    padding: 20px 10px;
+    position: static;
+    transform: none;
+  }
+  #splashText {
+    display: none;
+  }
+  .options {
+    gap: 5px;
+    justify-content: center;
   }
   .profile-menu {
     top: 10px;
@@ -827,10 +798,6 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-}
-
-#header {
-  text-align: center;
 }
 
 .dark-theme {

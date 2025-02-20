@@ -14,6 +14,7 @@ body {
 
 h1 {
     padding-top: 0px;
+    text-align: center;
     margin: 0 auto;
     padding-bottom: 10px;
 }
@@ -215,32 +216,6 @@ input[type="color"] {
     translateY(-50%);
     font-size: 40px;
     filter: drop-shadow(0 0 100px yellow);
-}
-
-#social {
-    height: 40px;
-    width: 75%;
-    margin: 0 auto;
-    background: #1F6FEB;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    gap: 8px;
-    font-size: 1.5rem;
-    transition: all 0.2s ease;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    &:hover {
-        background: darken(#8AC8FF, 10%);
-        transform: translateY(-1px);
-    }
-    &:active {
-        transform: translateY(1px);
-    }
 }
 
 // for å gjøre den mer mobil vennlig
@@ -687,16 +662,10 @@ input[type="file"]::file-selector-button {
 
         &:hover {
             transform: translateY(-3px);
-            box-shadow: 0 4px 2px -4px black;
 
             .document-actions {
                 opacity: 1;
             }
-        }
-        &:active {
-            transform: translateY(0px);
-            transform: scale(0.95);
-            border: 2px solid #8AC8FF;
         }
     }
 }
@@ -747,25 +716,7 @@ input[type="file"]::file-selector-button {
     user-select: none;
 }
 
-// MOBIL VENNLIGHET
-@media screen and (max-width: 1000px) {
-    .container {
-        width: 100%;
-        height: 100vh;
-        padding: 20px 10px;
-        position: static;
-        transform: none;
-    }
-
-    #splashText {
-        display: none;
-    }
-
-    .options {
-        gap: 5px;
-        justify-content: center;
-    }
-
+@media screen and (max-width: 1500px) {
     .document-manager {
         position: fixed;
         left: -250px;
@@ -793,6 +744,26 @@ input[type="file"]::file-selector-button {
         &:hover {
             background-color: #E2E7EA;
         }
+    }
+}
+
+// MOBIL VENNLIGHET
+@media screen and (max-width: 1000px) {
+    .container {
+        width: 100%;
+        height: 100vh;
+        padding: 20px 10px;
+        position: static;
+        transform: none;
+    }
+
+    #splashText {
+        display: none;
+    }
+
+    .options {
+        gap: 5px;
+        justify-content: center;
     }
 
     .profile-menu {
@@ -883,10 +854,6 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
-}
-
-#header {
-    text-align: center;
 }
 
 // DARK MODE
