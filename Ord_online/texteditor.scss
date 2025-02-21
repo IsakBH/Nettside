@@ -667,6 +667,10 @@ input[type="file"]::file-selector-button {
                 opacity: 1;
             }
         }
+        &:active {
+            transform: translateY(0px);
+            transform: scale(0.95);
+        }
     }
 }
 
