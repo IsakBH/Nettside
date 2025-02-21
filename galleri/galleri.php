@@ -32,14 +32,41 @@
         while ($row = $result->fetch_assoc()) {
             $image_data = base64_encode($row['image_data']);
             echo "<img id='galleribilde'
-                               src='data:image/jpeg;base64,{$image_data}'
-                               alt='{$row['name']}'
-                               title='{$row['name']}'>";
+                       class='slide-in'
+                       src='data:image/jpeg;base64,{$image_data}'
+                       alt='{$row['name']}'
+                       title='{$row['name']}'>";
         }
 
         $db->close();
         ?>
     </div>
+
+    <script>
+            function checkSlide() {
+                const images = document.querySelectorAll('.slide-in');
+
+                images.forEach(image => {
+                    // hvor langt er bildet fra toppen av vinduet
+                    const slideInAt = (window.scrollY + window.innerHeight) - image.height / 2;
+
+                    // hvor er bunnen av bildet
+                    const imageBottom = image.offsetTop + image.height;
+
+                    const isHalfShown = slideInAt > image.offsetTop;
+                    const isNotScrolledPast = window.scrollY < imageBottom;
+
+                    if (isHalfShown && isNotScrolledPast) {
+                        image.classList.add('active');
+                    } else {
+                        image.classList.remove('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', checkSlide); // kjører funksjonen checkSlide når brukeren scroller på vinduet
+            window.addEventListener('DOMContentLoaded', checkSlide); // kjører funksjonen checkSlide når vinduet laster inn, slik at de øverste bildene blir vist og det ikke er en tom skjerm før du scroller.
+        </script>
 
     <!--- Ionic icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

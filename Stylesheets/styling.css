@@ -534,6 +534,17 @@ button:active {
     background-color: rgb(90.5660377358, 125.0188679245, 170.4339622642);
   }
 }
+.slide-in {
+  opacity: 0;
+  transform: translateY(50px); /* Start litt nedenfor */
+  transition: all 0.75s ease-out;
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateY(0px); /* Sluttposisjon */
+}
+
 @font-face {
   font-family: HackFont;
   src: url(Hack-v3.003-ttf/ttf/Hack-Regular.ttf);
