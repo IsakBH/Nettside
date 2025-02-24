@@ -926,7 +926,12 @@ input:checked + .slider:before {
     text-align: right;
     margin-bottom: 10px;
     border: none;
-    background: #f3f3f3;
+    background: #F2F2F2;
+    color: #333333;
+    transition: 0.3s;
+    &:hover {
+        background: #E6E6E6;
+    }
 }
 
 .buttons {
@@ -939,43 +944,48 @@ input:checked + .slider:before {
     padding: 30px;
     font-size: 18px;
     border: none;
-    background: #e0e0e0;
+    background: #D2D2D2;
     cursor: pointer;
     justify-content: center;
     align-items: center;
     display: flex;
     transition: 0.1s;
     &:hover {
-        scale: 0.95;
+        background: #C8C8C8;
+        scale: 1.02;
     }
     &:active {
-        scale: 0.92;
+        background: #B4B4B4;
+        scale: 0.9999999999
     }
 }
 
 .calc-btn.operator {
-    background: #ff9500;
-    color: white;
+    background: #E6E6E6;
+    color: #3F3F3F;
+    &:hover {
+        background: #DCDCDC;
+    }
+    &:active {
+        background: #BEBEBE;
+    }
 }
 
 .calc-btn.equal {
     grid-column: span 4;
-    background: #007AFF;
-    color: white;
+    background: #3584E4;
+    color: #EDF4FD;
+    padding: 30px 135px;
+    &:hover {
+        background: #4990E7;
+    }
+    &:active {
+        background: #2A6AB6;
+    }
 }
 
 .hidden {
     display: none;
-}
-
-@media print {
-    body * {
-        display: none;
-    }
-
-    #text-input, #text-input * {
-        display: block;
-    }
 }
 
 // DARK MODE

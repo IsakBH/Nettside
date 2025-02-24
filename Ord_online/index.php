@@ -184,6 +184,7 @@ $version = "v3.2"; // kalkulator + print ut knapp
             <div id="calculator-container" class="hidden">
                 <input type="text" id="calc-display" disabled>
                 <div class="buttons">
+
                     <button class="calc-btn" data-value="7">7</button>
                     <button class="calc-btn" data-value="8">8</button>
                     <button class="calc-btn" data-value="9">9</button>
@@ -202,8 +203,8 @@ $version = "v3.2"; // kalkulator + print ut knapp
                     <button class="calc-btn" data-value="0">0</button>
                     <button class="calc-btn" data-value=".">.</button>
                     <button class="calc-btn" id="clear">C</button>
-                    <button class="calc-btn operator" data-value="+">+</button>
 
+                    <button class="calc-btn operator" data-value="+">+</button>
                     <button class="calc-btn equal" id="equals">=</button>
                 </div>
             </div>
