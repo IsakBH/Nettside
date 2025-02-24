@@ -159,9 +159,6 @@ function applyDarkMode() {
     }
 }
 
-// apply dark mode når siden lastes
-document.addEventListener('DOMContentLoaded', applyDarkMode);
-
 // funksjon for å telle antall bokstaver og tegn
 function updateWordAndCharCount() {
     const text = writingArea.innerText || "";
@@ -473,6 +470,7 @@ const saveContent = () => {
 
 // funksjon som initialiserer Ord Online
 const initializer = () => {
+    applyDarkMode();
     updateWordAndCharCount();
     randomSplashText();
     highlighter(alignButtons, true);

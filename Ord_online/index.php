@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.2"; // kalkulator + print ut knapp
+$version = "v3.2.1"; // fikset dark mode
 ?>
 
 <!DOCTYPE html>
