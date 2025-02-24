@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.1.12"; // dropshadow på dokumentene i dokument listen
+$version = "v3.2"; // kalkulator + print ut knapp
 ?>
 
 <!DOCTYPE html>
@@ -163,7 +163,6 @@ $version = "v3.1.12"; // dropshadow på dokumentene i dokument listen
                 <i class="fa-solid fa-table"></i>
             </button>
 
-            <!-- Add this where you want the save/load buttons to appear in your toolbar -->
             <hr>
             <button id="saveFile" class="option-button" title="Save as Text File">
                 <i class="fa-solid fa-download"></i>
@@ -176,6 +175,43 @@ $version = "v3.1.12"; // dropshadow på dokumentene i dokument listen
                 <i class="fa-solid fa-file-import"></i> Migrer data
             </button>
 
+            <hr>
+            <button id="calculator" class="option-button" title="Åpne kalkulator">
+                <i class="fa-solid fa-calculator"></i>
+            </button>
+
+            <!-- kalkulator dropdown -->
+            <div id="calculator-container" class="hidden">
+                <input type="text" id="calc-display" disabled>
+                <div class="buttons">
+                    <button class="calc-btn" data-value="7">7</button>
+                    <button class="calc-btn" data-value="8">8</button>
+                    <button class="calc-btn" data-value="9">9</button>
+                    <button class="calc-btn operator" data-value="/">÷</button>
+
+                    <button class="calc-btn" data-value="4">4</button>
+                    <button class="calc-btn" data-value="5">5</button>
+                    <button class="calc-btn" data-value="6">6</button>
+                    <button class="calc-btn operator" data-value="*">×</button>
+
+                    <button class="calc-btn" data-value="1">1</button>
+                    <button class="calc-btn" data-value="2">2</button>
+                    <button class="calc-btn" data-value="3">3</button>
+                    <button class="calc-btn operator" data-value="-">−</button>
+
+                    <button class="calc-btn" data-value="0">0</button>
+                    <button class="calc-btn" data-value=".">.</button>
+                    <button class="calc-btn" id="clear">C</button>
+                    <button class="calc-btn operator" data-value="+">+</button>
+
+                    <button class="calc-btn equal" id="equals">=</button>
+                </div>
+            </div>
+
+            <hr>
+            <button id="print" class="option-button" title="Print ut dokumentet">
+                <i class="fa-solid fa-print"></i>
+            </button>
             <!-- KNAPPER SOM IKKE FUNGERER (FIKS EN ELLER ANNEN GANG)
         <hr>
         <button id="indent" class="option-button spacing">

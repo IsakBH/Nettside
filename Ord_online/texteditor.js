@@ -12,6 +12,11 @@ let linkButton = document.getElementById("createLink");
 let olButton = document.getElementById("insertOrderedList");
 let ulButton = document.getElementById("insertUnorderedList");
 const kulSplash = document.getElementById("splashText");
+const calcButton = document.getElementById("calculator");
+const calcContainer = document.getElementById("calculator-container");
+const calcDisplay = document.getElementById("calc-display");
+const calcButtons = document.querySelectorAll(".calc-btn");
+const printButton = document.getElementById("print");
 let seenEasterEgg = false;
 // lager liste av fonter for font velge greien
 let fontList = [
@@ -51,6 +56,87 @@ let splashText = [
     "Bruker du ikke Ord på Nett er det bare å gå i rettrett.",
     "Du må ha gått helt fra vettet om du ikke bruker Ord på Nettet",
 ];
+
+printButton.addEventListener("click", () => {
+    printWritingArea();
+    console.log("Bruker trykket på print knappen");
+})
+
+function printWritingArea() {
+    if (!writingArea) {
+        console.error("Ord på Nett finner ikke ID-en 'text-input', plz kontakt Isak! han har ødelagt noe!!!");
+        return;
+    }
+
+    const content = writingArea.innerHTML; // henter bare innholdet av writingArea, ikke hele writingArea
+    const printWindow = window.open('', '_blank');
+
+    printWindow.document.open();
+    printWindow.document.write(`
+        <html>
+        <head>
+            <title>Print</title>
+            <style>
+                body { font-family: Arial, sans-serif; padding: 20px; }
+            </style>
+        </head>
+        <body>
+            ${content}
+        </body>
+        </html>
+    `);
+    printWindow.document.close();
+    printWindow.print();
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    let expression = "";
+
+    // toggler kalkulatoren
+    calcButton.addEventListener("click", (event) => {
+        event.stopPropagation(); // hindrer at klikket bobbler opp og lukker kalkisen (kalkulatoren)
+        calcContainer.classList.toggle("hidden");
+    });
+
+    // lukk kalkulatoren om du trykker utenfor
+    document.addEventListener("click", (event) => {
+        if (!calcContainer.contains(event.target) && event.target !== calcButton) {
+            calcContainer.classList.add("hidden");
+        }
+    });
+
+    // trykking på kalkulator knappen
+    calcButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const value = button.getAttribute("data-value");
+
+            if (value) {
+                expression += value;
+                calcDisplay.value = expression;
+            }
+        });
+    });
+
+    // erlik tegn (=)
+    document.getElementById("equals").addEventListener("click", () => {
+        try {
+            if (expression.trim() !== "") { // sjekker at expression ikke er tom
+                expression = eval(expression).toString();
+                calcDisplay.value = expression;
+            }
+        } catch {
+            calcDisplay.value = "Bruk kalkulatoren riktig bro";
+            expression = "";
+        }
+    });
+
+    // clear knappen
+    document.getElementById("clear").addEventListener("click", () => {
+        expression = "";
+        calcDisplay.value = "";
+    });
+});
 
 // light/dark mode toggle
 function toggleDarkMode() {
