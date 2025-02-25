@@ -808,9 +808,36 @@ input[type="file"]::file-selector-button {
         display: none;
     }
 
+    .container {
+        button {
+            flex: 0 0 auto; // gjør slik at knappene ikke krymper når brukeren er på mobil og det ikke er flex-wrapping
+            padding: 10px 15px; // nok padding på knappene
+            min-width: 40px; // minimum width
+        }
+    }
+
     .options {
-        gap: 5px;
-        justify-content: center;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        gap: 15px;
+        scrollbar-width: thin;
+        scrollbar-color: #666 transparent;
+    }
+
+    .options::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .options::-webkit-scrollbar-thumb {
+      background: #666;
+      border-radius: 3px;
+    }
+
+    .options::-webkit-scrollbar-track {
+      background: transparent; // skjuler bakgrunnen på scrollbaren
     }
 
     .profile-menu {

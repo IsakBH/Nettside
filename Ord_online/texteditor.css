@@ -759,9 +759,30 @@ input[type=file]::file-selector-button {
   #splashText {
     display: none;
   }
+  .container button {
+    flex: 0 0 auto;
+    padding: 10px 15px;
+    min-width: 40px;
+  }
   .options {
-    gap: 5px;
-    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    gap: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: #666 transparent;
+  }
+  .options::-webkit-scrollbar {
+    height: 6px;
+  }
+  .options::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 3px;
+  }
+  .options::-webkit-scrollbar-track {
+    background: transparent;
   }
   .profile-menu {
     top: 10px;
