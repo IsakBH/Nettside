@@ -367,6 +367,7 @@ input[type=color] {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
+  filter: drop-shadow(0px 0px 5px #cccccc);
 }
 
 #submit {
@@ -1000,6 +1001,10 @@ input:checked + .slider:before {
 .dark-theme .profile-settings {
   background-color: #0D1117;
   border: 1px solid #3D444D;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+}
+.dark-theme .current-profile img {
+  filter: drop-shadow(0px 0px 10px #3D444D);
 }
 .dark-theme input[type=file]::file-selector-button {
   background-color: #1F6FEB;
