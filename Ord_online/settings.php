@@ -148,7 +148,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <a id="logout" href="logout.php">Logg ut</a>
         <br>
 
-        <a href="index.php">Tilbake til Ord på Nett (det er fett)</a>
+        <a id="backButton" href="index.php">Tilbake til Ord på Nett</a>
     </div>
 </body>
 

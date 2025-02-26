@@ -307,6 +307,24 @@ input[type=color] {
   background: #f5f5f5;
 }
 
+#backButton {
+  display: inline-flex;
+  width: fit-content;
+  white-space: nowrap;
+  background: white;
+  padding: 10px;
+  border-radius: 100px;
+  color: black;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px #cccccc;
+}
+#backButton:hover {
+  transform: translate3d(0, -0.2em, 0);
+  outline: none;
+  border: none;
+}
+
 .auth-container {
   max-width: 400px;
   margin: 50px auto;
@@ -360,8 +378,8 @@ input[type=color] {
 .current-profile {
   text-align: center;
   margin: 20px 0;
+  transition: 0.3s;
 }
-
 .current-profile img {
   width: 150px;
   height: 150px;
@@ -1023,6 +1041,9 @@ input:checked + .slider:before {
   background-color: #0D1117;
   border: 1px solid #3D444D;
   box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+}
+.dark-theme .current-profile {
+  transition: 0.4s;
 }
 .dark-theme .current-profile img {
   filter: drop-shadow(0px 0px 10px #3D444D);

@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.2.1"; // fikset dark mode
+$version = "v3.2.2"; // toolbar mobile friendly
 ?>
 
 <!DOCTYPE html>
