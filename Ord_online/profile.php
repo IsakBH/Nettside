@@ -25,7 +25,9 @@ if (!isset($_SESSION['user_id'])) {
 <body>
     <div class="profile-settings">
         <h2><?php echo htmlspecialchars($_SESSION['username']); ?>s profil</h2>
-
+        <div class="current-profile">
+            <img src="uploads/<?php echo htmlspecialchars($_SESSION['profile_picture']); ?>" alt="Profilbilde">
+        </div>
         <a id="backButton" href="index.php">Tilbake til Ord på Nett</a>
     </div>
 </body>
