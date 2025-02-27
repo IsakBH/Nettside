@@ -267,6 +267,7 @@ $version = "v3.2.2"; // toolbar mobile friendly
                 <p><?php echo htmlspecialchars($_SESSION['username']); ?></p>
             </div>
             <hr id="splitter">
+            <a href="profile.php">Din profil</a>
             <a href="settings.php">Instillinger</a>
         </div>
     </div>
