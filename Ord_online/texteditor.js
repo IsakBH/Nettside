@@ -463,6 +463,7 @@ const saveContent = () => {
     try {
         saveDocument();
     } catch (error) {
+        debounce(showSaveStatus('Lagring feilet :(', 500));
         showSaveStatus('Lagring feilet :(');
         console.error("Feil ved lagring av innhold:", error);
     }
