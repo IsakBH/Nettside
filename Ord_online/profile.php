@@ -1,10 +1,10 @@
 <?php
 session_start();
-require_once 'database.php';
+require_once "database.php";
 
 // sjekker om brukeren er logget inn, hvis ikke, redirect til innloggings siden
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
+if (!isset($_SESSION["user_id"])) {
+    header("Location: login.php");
     exit();
 }
 ?>
@@ -13,7 +13,7 @@ if (!isset($_SESSION['user_id'])) {
 <html>
 
 <head>
-    <title>Instillinger Ord på Nett</title>
+    <title>Din profil</title>
     <link rel="stylesheet" href="texteditor.css">
     <script src="texteditor.js"></script>
     <script src="settings.js"></script>
@@ -24,9 +24,11 @@ if (!isset($_SESSION['user_id'])) {
 
 <body>
     <div class="profile-settings">
-        <h2><?php echo htmlspecialchars($_SESSION['username']); ?>s profil</h2>
+        <h2><?php echo htmlspecialchars($_SESSION["username"]); ?>s profil</h2>
         <div class="current-profile">
-            <img src="uploads/<?php echo htmlspecialchars($_SESSION['profile_picture']); ?>" alt="Profilbilde">
+            <img src="uploads/<?php echo htmlspecialchars(
+                $_SESSION["profile_picture"]
+            ); ?>" alt="Profilbilde">
         </div>
         <a id="backButton" href="index.php">Tilbake til Ord på Nett</a>
     </div>
