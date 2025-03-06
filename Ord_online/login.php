@@ -20,21 +20,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['username'] = $user['username'];
         $_SESSION['profile_picture'] = $user['profile_picture'];
 
-        // Husk meg-funksjonalitet (setter en cookie)
+        // Husk meg-funksjonalitet
         if (isset($_POST['remember_me'])) {
             // Generer et sikkert tilfeldig token
             $token = bin2hex(random_bytes(32));
             $expires = date('Y-m-d H:i:s', time() + (30 * 24 * 60 * 60)); // 30 dager
 
-            // Lagre tokenet i sessions-tabellen
-            $sql = "INSERT INTO sessions (user_id, token, expires_at) VALUES (?, ?, ?)
-                    ON DUPLICATE KEY UPDATE token=?, expires_at=?";
-            $stmt = $mysqli->prepare($sql);
-            $stmt->bind_param("issss", $user['id'], $token, $expires, $token, $expires);
-            $stmt->execute();
+            error_log("Setting new remember_me token: " . $token);
 
-            // Sett en sikker cookie for husk-meg
-            setcookie("remember_me", $token, time() + (30 * 24 * 60 * 60), "/", "", true, true);
+            // Først slett eventuelle eksisterende sessions for denne brukeren
+            $delete_sql = "DELETE FROM sessions WHERE user_id = ?";
+            $delete_stmt = $mysqli->prepare($delete_sql);
+            $delete_stmt->bind_param("i", $user['id']);
+            $delete_stmt->execute();
+
+            // Lagre den nye tokenen
+            $sql = "INSERT INTO sessions (user_id, token, expires_at) VALUES (?, ?, ?)";
+            $stmt = $mysqli->prepare($sql);
+            $stmt->bind_param("iss", $user['id'], $token, $expires);
+
+            if ($stmt->execute()) {
+                // Sett cookie med secure og httponly flags
+                setcookie(
+                    "remember_me",
+                    $token,
+                    time() + (30 * 24 * 60 * 60),  // 30 dager
+                    "/",                            // path
+                    "",                            // domain
+                    true,                          // secure
+                    true                           // httponly
+                );
+                error_log("Remember me token set successfully");
+            } else {
+                error_log("Failed to save remember me token: " . $stmt->error);
+            }
         }
 
         header('Location: index.php');
@@ -45,7 +64,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-?>
 
 <!DOCTYPE html>
 <html>
@@ -78,6 +96,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <label>Passord:</label>
                 <input type="password" name="password" required>
             </div>
+
+            <label for="remember_me">
+                <input type="checkbox" id="remember_me" name="remember_me"> Husk meg
+            </label> <br> <br>
 
             <button id="submit" type="submit">Logg inn</button>
 

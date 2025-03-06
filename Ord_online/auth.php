@@ -2,16 +2,19 @@
 session_start();
 require_once 'database.php';
 
-// Hvis brukeren allerede er logget inn via session, gjør ingenting
+// hvis brukeren allerede er logget inn via session så gjør ingenting
 if (isset($_SESSION['user_id'])) {
     return;
 }
 
-// Hvis en "Husk meg"-cookie eksisterer, sjekk om den er gyldig
+// hvis en remember me cookie finnes, sjekk om den er gyldig
 if (isset($_COOKIE['remember_me'])) {
     $token = $_COOKIE['remember_me'];
 
-    // Sjekk om token finnes i sessions-tabellen og er gyldig
+    // Legg til debugging
+    error_log("Checking remember_me token: " . $token);
+
+    // sjekker om token/id finnes i databasen og er gyldig
     $sql = "SELECT user_id FROM sessions WHERE token = ? AND expires_at > NOW()";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param("s", $token);
@@ -20,10 +23,11 @@ if (isset($_COOKIE['remember_me'])) {
     $user = $result->fetch_assoc();
 
     if ($user) {
-        // Logg inn brukeren automatisk
+        error_log("Valid token found for user_id: " . $user['user_id']);
+        // logg brukeren inn automatisk
         $_SESSION['user_id'] = $user['user_id'];
 
-        // Hent også brukernavn og profilbilde
+        // hent brukernavn og profilbilde
         $sql = "SELECT username, profile_picture FROM users WHERE id = ?";
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param("i", $user['user_id']);
@@ -34,8 +38,8 @@ if (isset($_COOKIE['remember_me'])) {
         $_SESSION['username'] = $userdata['username'];
         $_SESSION['profile_picture'] = $userdata['profile_picture'];
     } else {
-        // Ugyldig token – slett cookie
+        error_log("No valid token found");
+        // ugyldig eller utløpt token - slett cookie
         setcookie("remember_me", "", time() - 3600, "/", "", true, true);
     }
 }
-?>
