@@ -2,11 +2,11 @@
 session_start();
 require_once 'database.php';
 
-// håndterer innlogging
+// Håndterer innlogging
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $mysqli->real_escape_string($_POST['username']);
 
-    // sjekker brukernavn og passord mot database
+    // Sjekker brukernavn og passord mot databasen
     $sql = "SELECT * FROM users WHERE username = ?";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param("s", $username);
@@ -14,17 +14,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = $stmt->get_result();
     $user = $result->fetch_assoc();
 
-    // verifiser passord og lag session om det er korrekt
+    // Verifiser passord og opprett session hvis riktig
     if ($user && password_verify($_POST['password'], $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
         $_SESSION['profile_picture'] = $user['profile_picture'];
+
+        // Husk meg-funksjonalitet (setter en cookie)
+        if (isset($_POST['remember_me'])) {
+            // Generer et sikkert tilfeldig token
+            $token = bin2hex(random_bytes(32));
+            $expires = date('Y-m-d H:i:s', time() + (30 * 24 * 60 * 60)); // 30 dager
+
+            // Lagre tokenet i sessions-tabellen
+            $sql = "INSERT INTO sessions (user_id, token, expires_at) VALUES (?, ?, ?)
+                    ON DUPLICATE KEY UPDATE token=?, expires_at=?";
+            $stmt = $mysqli->prepare($sql);
+            $stmt->bind_param("issss", $user['id'], $token, $expires, $token, $expires);
+            $stmt->execute();
+
+            // Sett en sikker cookie for husk-meg
+            setcookie("remember_me", $token, time() + (30 * 24 * 60 * 60), "/", "", true, true);
+        }
+
         header('Location: index.php');
         exit();
     } else {
         $error = "Ugyldig brukernavn eller passord";
     }
 }
+?>
+
 ?>
 
 <!DOCTYPE html>
