@@ -2,7 +2,7 @@
 session_start();
 require_once 'database.php';
 
-// Slett session fra databasen hvis token eksisterer
+// slett session fra databasen hvis cookie eksisterer
 if (isset($_COOKIE['remember_me'])) {
     $token = $_COOKIE['remember_me'];
     $sql = "DELETE FROM sessions WHERE token = ?";
@@ -11,10 +11,10 @@ if (isset($_COOKIE['remember_me'])) {
     $stmt->execute();
 }
 
-// Slett cookie
+// slett cookie
 setcookie("remember_me", "", time() - 3600, "/", "", true, true);
 
-// Destroy session
+// kill session
 session_destroy();
 
 header("Location: login.php");

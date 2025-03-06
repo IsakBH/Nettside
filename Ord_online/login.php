@@ -2,11 +2,11 @@
 session_start();
 require_once 'database.php';
 
-// Håndterer innlogging
+// håndterer innlogging
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $mysqli->real_escape_string($_POST['username']);
 
-    // Sjekker brukernavn og passord mot databasen
+    // sjekker brukernavn og passord opp mot databasen
     $sql = "SELECT * FROM users WHERE username = ?";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param("s", $username);
@@ -14,33 +14,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = $stmt->get_result();
     $user = $result->fetch_assoc();
 
-    // Verifiser passord og opprett session hvis riktig
+    // verifiser brukernavn og passord og lager session hvis de er riktig
     if ($user && password_verify($_POST['password'], $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
         $_SESSION['profile_picture'] = $user['profile_picture'];
 
-        // Husk meg-funksjonalitet
+        // remember me funksjonalitet
         if (isset($_POST['remember_me'])) {
-            // Generer et sikkert tilfeldig token
+            // genererer en random token
             $token = bin2hex(random_bytes(32));
-            $expires = date('Y-m-d H:i:s', time() + (30 * 24 * 60 * 60)); // 30 dager
+            $expires = date('Y-m-d H:i:s', time() + (30 * 24 * 60 * 60)); // varer i 30 dager :-)
 
             error_log("Setting new remember_me token: " . $token);
 
-            // Først slett eventuelle eksisterende sessions for denne brukeren
+            // slett eventuelle eksisterende sessions for brukeren
             $delete_sql = "DELETE FROM sessions WHERE user_id = ?";
             $delete_stmt = $mysqli->prepare($delete_sql);
             $delete_stmt->bind_param("i", $user['id']);
             $delete_stmt->execute();
 
-            // Lagre den nye tokenen
+            // lagre ny token
             $sql = "INSERT INTO sessions (user_id, token, expires_at) VALUES (?, ?, ?)";
             $stmt = $mysqli->prepare($sql);
             $stmt->bind_param("iss", $user['id'], $token, $expires);
 
             if ($stmt->execute()) {
-                // Sett cookie med secure og httponly flags
+                // sett en kul cookie med secure og httponly flags
                 setcookie(
                     "remember_me",
                     $token,

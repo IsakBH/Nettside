@@ -11,7 +11,7 @@ if (isset($_SESSION['user_id'])) {
 if (isset($_COOKIE['remember_me'])) {
     $token = $_COOKIE['remember_me'];
 
-    // Legg til debugging
+    // debugging
     error_log("Checking remember_me token: " . $token);
 
     // sjekker om token/id finnes i databasen og er gyldig
