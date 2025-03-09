@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.2.2"; // toolbar mobile friendly
+$version = "v3.2.3"; // extra OG Meta tags for bedre Search Engine Optimalization
 ?>
 
 <!DOCTYPE html>

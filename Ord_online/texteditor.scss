@@ -1048,6 +1048,27 @@ input:checked + .slider:before {
     display: none;
 }
 
+// CHANGELOG SIDEN
+.commit {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.commit-date {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.commit-message {
+    margin: 10px 0;
+}
+
+.commit-author {
+    color: #0366d6;
+}
+
 // DARK MODE
 .dark-theme {
     background-color: #0D1117;
