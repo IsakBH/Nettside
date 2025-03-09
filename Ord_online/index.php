@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.2.3"; // extra OG Meta tags for bedre Search Engine Optimalization
+$version = "v3.3.0"; // changelog side
 ?>
 
 <!DOCTYPE html>
@@ -17,12 +17,11 @@ $version = "v3.2.3"; // extra OG Meta tags for bedre Search Engine Optimalizatio
 
     <!-- Open Graph meta-tagger -->
     <meta property="og:title" content="Ord På Nett <?php echo $version; ?>">
-    <meta property="og:description" content="Nå med 'husk meg' funksjonalitet ved innlogging! Ord på Nett er et kraftig og brukervennlig tekstbehandlingsverktøy utviklet av meg (Isak Brun Henriksen). Med fokus på ytelse, enkelhet og tilgjengelighet, er Ord på Nett et ideelt valg for studenter, forfattere, forskere, profesjonelle, og egentlig alle yrker i hele verden som trenger et pålitelig og fleksibelt skriveverktøy.">
+    <meta property="og:description" content="Nå med en changelog side! Ord på Nett er et kraftig og brukervennlig tekstbehandlingsverktøy utviklet av meg (Isak Brun Henriksen). Med fokus på ytelse, enkelhet og tilgjengelighet, er Ord på Nett et ideelt valg for studenter, forfattere, forskere, profesjonelle, og egentlig alle yrker i hele verden som trenger et pålitelig og fleksibelt skriveverktøy.">
     <meta property="og:image" content="https://isak.brunhenriksen.no/Pictures/ordlogo.png">
     <meta property="og:url" content="https://isak.brunhenriksen.no/Ord_online">
     <meta property="og:type" content="website">
     <meta property="discord:app_id" content="1341008803189100676">
-    <meta name="description" content="Nå med 'husk meg' funksjonalitet ved innlogging! Ord på Nett er et kraftig og brukervennlig tekstbehandlingsverktøy utviklet av meg (Isak Brun Henriksen). Med fokus på ytelse, enkelhet og tilgjengelighet, er Ord på Nett et ideelt valg for studenter, forfattere, forskere, profesjonelle, og egentlig alle yrker i hele verden som trenger et pålitelig og fleksibelt skriveverktøy."
     <meta property="og:locale" content="no_NO">
     <meta property="og:site_name" content="Ord På Nett">
 
