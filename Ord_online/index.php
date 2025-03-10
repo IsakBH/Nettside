@@ -61,7 +61,7 @@ $version = "v3.3.0"; // changelog side
             <ul id="documentsList"></ul>
         </div>
         <a id="social" target="_blank" title="discord serveren vår" href="https://discord.gg/kT8s4NVn">Discord<i class="fa-brands fa-discord"></i></a>
-        <a id="changelogButton" target="_blank" title="endringslogg ord på nett" href="changelog.php">Endringslogg<i class="fa-solid fa-clock-rotate-left"></i></a>
+        <a id="changelogButton" title="endringslogg ord på nett" href="changelog.php">Endringslogg<i class="fa-solid fa-clock-rotate-left"></i></a>
     </div>
 
     <div class="container"> <!--  containeren for toolbaren -->
