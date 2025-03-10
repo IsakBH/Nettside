@@ -2,13 +2,28 @@
 session_start();
 require_once 'database.php';
 
-// hvis brukeren allerede er logget inn via session så gjør ingenting
+// hvis brukeren allerede er logget inn via session, verifiser at session er gyldig
 if (isset($_SESSION['user_id'])) {
-    return;
-}
+    // Verifiser at brukeren fortsatt eksisterer i databasen
+    $sql = "SELECT id, username, profile_picture FROM users WHERE id = ?";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param("i", $_SESSION['user_id']);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $user = $result->fetch_assoc();
 
+    if (!$user) {
+        // hvis brukeren ikke finnes i databasen, slett session
+        session_destroy();
+        header('Location: login.php');
+        exit();
+    }
+    // oppdater session
+    $_SESSION['username'] = $user['username'];
+    $_SESSION['profile_picture'] = $user['profile_picture'];
+}
 // hvis en remember me cookie finnes, sjekk om den er gyldig
-if (isset($_COOKIE['remember_me'])) {
+else if (isset($_COOKIE['remember_me'])) {
     $token = $_COOKIE['remember_me'];
 
     // debugging
