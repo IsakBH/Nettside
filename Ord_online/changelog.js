@@ -19,7 +19,7 @@ async function displayChangelog() {
         const commits = await response.json();
 
         if (commits.length === 0) {
-            changelogDiv.innerHTML = 'Ingen endringer funnet :( Si at Isak skal fokusere';
+            changelogDiv.innerHTML = 'Ingen endringer funnet :( Si at Isak skal locke inn';
             return;
         }
 

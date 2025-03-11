@@ -1055,6 +1055,13 @@ input:checked + .slider:before {
   background-color: #0D1117;
   color: #ffffff;
 }
+.dark-theme .commit {
+  filter: none;
+}
+.dark-theme #changeLogBackButton {
+  color: #ffffff;
+  border: 1px solid white;
+}
 .dark-theme .container {
   background-color: #0D1117;
   filter: none;

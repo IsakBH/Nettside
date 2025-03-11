@@ -1124,6 +1124,16 @@ input:checked + .slider:before {
     background-color: #0D1117;
     color: #ffffff;
 
+    // changelog side
+    .commit {
+        filter: none;
+    }
+
+    #changeLogBackButton {
+        color: #ffffff;
+        border: 1px solid white;
+    }
+
     .container {
         background-color: #0D1117;
         filter: none;
