@@ -1,3 +1,14 @@
+<?php
+session_start();
+require_once 'database.php';
+
+// redirect til login hvis ikke autentisert
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,5 +24,7 @@
     </div>
     <div id="changelog"></div>
     <script src="changelog.js"></script>
+    <script src="applydarkmode.js"></script>
+    <script src="texteditor.js"></script>
 </body>
 </html>
