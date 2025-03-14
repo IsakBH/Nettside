@@ -122,11 +122,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
 
             <!-- Rounded switch -->
-            <label>Dark mode</label>
             <label class="switch">
                 <input id="themeToggle" type="checkbox" onclick="toggleDarkMode()">
                 <span class="slider round"></span>
-            </label> <br> <br>
+            </label>
+            <label>Dark mode</label>
+            <br> <br>
 
             <!--
             <select>

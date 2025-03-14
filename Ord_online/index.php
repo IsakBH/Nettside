@@ -66,7 +66,7 @@ $version = "v3.3.2"; // changelog side
 
     <div class="container"> <!--  containeren for toolbaren -->
         <h1 id="header">Ord På Nett</h1>
-        <p id="splashText"></p>
+        <p id="splashText" style="<?php echo isset($_SESSION['hide_splash_text']) && $_SESSION['hide_splash_text'] ? 'display: none;' : ''; ?>"></p> <!-- Splash tekst-->
         <div class="options"> <!--  Toolbaren-->
 
             <!-- undo og redo -->

@@ -228,7 +228,7 @@ function migrateFromLocalStorage() {
                 localStorage.removeItem('textEditorContent');
             }
 
-            showSaveStatus('Migrering fullført');
+            debounce(showSaveStatus('Migrering fullført'), 500);
         }
     } else {
         alert('Ingen data funnet i localStorage');
@@ -262,7 +262,7 @@ documentSearch.addEventListener('input', function(e) {
 
 // funksjon for å lage nytt dokument
 function createNewDocument(){
-    const title = prompt("Skriv inn tittel på dokumentet:", "Kult dokument på Ord Online");
+    const title = prompt("Skriv inn tittel på dokumentet:", "Skriv inn navnet her");
     // ajax :))))
     if (title) {
         fetch('save_document.php', {
@@ -342,7 +342,7 @@ function saveDocument() {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            showSaveStatus('Lagret :)');
+            debounce(showSaveStatus('Lagret :)'), 2000);
         }
     });
 }
@@ -464,7 +464,6 @@ const saveContent = () => {
         saveDocument();
     } catch (error) {
         debounce(showSaveStatus('Lagring feilet :(', 500));
-        showSaveStatus('Lagring feilet :(');
         console.error("Feil ved lagring av innhold:", error);
     }
 };
