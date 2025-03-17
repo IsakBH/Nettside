@@ -1074,6 +1074,12 @@ input:checked + .slider:before {
   color: #ffffff;
   border: 1px solid white;
 }
+.dark-theme #changeLogBackButton:hover {
+  background: #3c434c;
+}
+.dark-theme #changeLogBackButton:active {
+  background: rgb(37.5, 41.875, 47.5);
+}
 .dark-theme .container {
   background-color: #0D1117;
   filter: none;

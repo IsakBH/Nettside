@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.3.3"; // changelog -> mer responsiv tilbakeknapp + favicon
+$version = "v3.3.4"; // changelog -> gjort tilbakeknappen dark-mode friendly
 ?>
 
 <!DOCTYPE html>

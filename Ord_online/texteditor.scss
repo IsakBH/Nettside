@@ -1144,6 +1144,12 @@ input:checked + .slider:before {
     #changeLogBackButton {
         color: #ffffff;
         border: 1px solid white;
+        &:hover {
+            background: #3c434c;
+        }
+        &:active {
+            background: darken(#3c434c, 10%);
+        }
     }
 
     .container {
