@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.3.2"; // changelog side
+$version = "v3.3.3"; // changelog -> mer responsiv tilbakeknapp + favicon
 ?>
 
 <!DOCTYPE html>
