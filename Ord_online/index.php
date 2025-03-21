@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.3.4"; // changelog -> gjort tilbakeknappen dark-mode friendly
+$version = "v3.3.6"; // word count oppdateres nå også automatisk når du velger nytt dokument + fjernet Migrer Data knappen, det er såpass lenge siden jeg migrerte fra localStorage til databaser at hvis du enda ikke har migrert er det din feil
 ?>
 
 <!DOCTYPE html>
@@ -174,10 +174,11 @@ $version = "v3.3.4"; // changelog -> gjort tilbakeknappen dark-mode friendly
                 <i class="fa-solid fa-upload"></i>
             </button>
 
+            <!--
             <button id="migrateFromLocal" class="option-button" title="Migrate from localStorage">
                 <i class="fa-solid fa-file-import"></i> Migrer data
             </button>
-
+            -->
             <hr>
             <button id="calculator" class="option-button" title="Åpne kalkulator">
                 <i class="fa-solid fa-calculator"></i>

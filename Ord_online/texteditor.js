@@ -210,6 +210,7 @@ document.addEventListener('click', (e) => {
     }
 });
 
+/*
 function migrateFromLocalStorage() {
     // sjekk om det finnes gammel data i localstorage
     const oldContent = localStorage.getItem('textEditorContent');
@@ -237,6 +238,7 @@ function migrateFromLocalStorage() {
 
 // event listener for migrerings knappen
 document.getElementById('migrateFromLocal').addEventListener('click', migrateFromLocalStorage);
+*/
 
 ////////////////////// funksjoner for database og dokument "management" (finnes det er norsk ord for det?????)
 // variabel for å lagre ID-en til dokumentet brukeren bruker nå
@@ -457,18 +459,6 @@ function loadTextFile() {
     input.click();
 }
 
-// funksjon for å lagre innholdet (tekst bufferet) til localstorage
-const saveContent = () => {
-    if (!currentDocumentId) return;
-
-    try {
-        saveDocument();
-    } catch (error) {
-        debounce(showSaveStatus('Lagring feilet :(', 500));
-        console.error("Feil ved lagring av innhold:", error);
-    }
-};
-
 // funksjon som initialiserer Ord Online
 const initializer = () => {
     applyDarkMode();
@@ -504,10 +494,10 @@ const initializer = () => {
             writingArea.innerHTML = '<p id="placeholder"><u><h1>Vennligst velg et dokument.</h1></u> <br> <br> <h2>   Kreditter:  </h2>  Programmering: Isak Henriksen <br> Easter egg sang: NRK <br> Dark mode inspirasjon: GitHub/Microsoft <br> <a href="https://www.youtube.com/watch?v=7lQatGnsoS8" target="_blank">Ord på Nett sangen:</a> Isak Henriksen (sangtekst) Suno AI (sanger) </p>';
     }
 
-    // legg til eventlisteners som alltid sikrer at innholdet er lagret til localstorage
-    writingArea.addEventListener("input", debounce(saveContent, 500)); // lagrer innhold hver gang bruker skriver noe med 500 ms delay via debounce funksjonen
-    writingArea.addEventListener("blur", saveContent); // lagrer når vinduet mister fokus
-    window.addEventListener("beforeunload", saveContent); // lagrer når vinduet blir unloadet (blir lukket / går i sovemodus)
+    // legg til eventlisteners som alltid sikrer at innholdet er lagret til databasen
+    writingArea.addEventListener("input", debounce(saveDocument, 2000)); // lagrer innhold hver gang bruker skriver noe med 500 ms delay via debounce funksjonen
+    writingArea.addEventListener("blur", debounce(saveDocument, 500)); // lagrer når vinduet mister fokus
+    window.addEventListener("beforeunload", debounce(saveDocument, 500)); // lagrer når vinduet blir unloadet (blir lukket / går i sovemodus)
 };
 
 // gjør sånn at det er litt delay mellom lagring
@@ -671,7 +661,6 @@ document.addEventListener("contextmenu", function (e) {
 
 ////////////////// EASTER EGGS ////////////////////
 writingArea.addEventListener("input", () => {
-    saveContent();
     checkForGud();
     checkForMKX();
 });
