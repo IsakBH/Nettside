@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: login.php');
         exit();
     } else {
-        $error = "Username already exists";
+        $error = "Brukernavn finnes allerede i databasen";
     }
 }
 ?>
