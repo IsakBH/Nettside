@@ -323,6 +323,7 @@ function loadDocument(documentId) {
                 placeholder.style.display = 'none'; // skjul placeholder teksten når et dokument er lastet inn av bruker
             }
         });
+    updateWordAndCharCount();
 }
 
 function saveDocument() {
