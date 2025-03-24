@@ -6,7 +6,7 @@
 @import "../Include/Styling/navbar.scss"; // importer nav-bar styling
 @import "../Include/Styling/base.scss"; // importerer base styling
 
-/* CSS Animation*/
+/* animasjon når du kommer inn på siden */
 @keyframes animate-glow {
   0% {
     opacity: 0;
@@ -57,7 +57,7 @@ body {
 #embedwrapper {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    padding-top: 56.25%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -67,7 +67,7 @@ body {
     }
 }
 
-/*Side 2 biografi*/
+/* Side 2 biografi */
 #biography {
     width: 35%;
     margin: 0 auto;
@@ -123,7 +123,7 @@ body {
 }
 
 
-/*Automatisk sjekk av default color-themeen til nettleseren*/
+/* Automatisk sjekk av default color-themeen til nettleseren */
 
 // hvis det er lyst
 @media (prefers-color-scheme: light) {
