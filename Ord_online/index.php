@@ -60,7 +60,6 @@ $version = "v3.3.6"; // word count oppdateres nå også automatisk når du velge
             </div>
             <ul id="documentsList"></ul>
         </div>
-        <a id="social" target="_blank" title="discord serveren vår" href="https://discord.gg/kT8s4NVn">Discord<i class="fa-brands fa-discord"></i></a>
         <a id="changelogButton" title="endringslogg ord på nett" href="changelog.php">Endringslogg<i class="fa-solid fa-clock-rotate-left"></i></a>
     </div>
 
