@@ -466,5 +466,9 @@ body {
     background-color: rgb(90.5660377358, 125.0188679245, 170.4339622642);
   }
 }
+@font-face {
+  font-family: HackFont;
+  src: url(Hack-v3.003-ttf/ttf/Hack-Regular.ttf);
+}
 
 /*# sourceMappingURL=styling2.css.map */
