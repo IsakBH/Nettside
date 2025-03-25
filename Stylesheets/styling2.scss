@@ -24,6 +24,12 @@
 * {
     font-family: HackFont, Helvetica, Arial, sans-serif;
     transition: 0.25s !important;
+    p::selection, a::selection {
+        background-color: #E1EDF8;
+    }
+    p::-moz-selection, a::-moz-selection {
+        background-color: #E1EDF8;
+    }
 }
 
 html {

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Sist oppdatert: 29. Desember  2024 10:59 | Av: isakbh */
+/* Sist oppdatert: 24. Mars 2025 08:15 | Av: isakbh */
 /* Sist oppdatert: 27. November 2024 | Av: isakbh */
 .lightmode {
   background-color: #F0F8FF;
@@ -303,7 +303,7 @@ button:active {
   padding-bottom: 20px;
 }
 
-/* CSS Animation*/
+/* animasjon når du kommer inn på siden */
 @keyframes animate-glow {
   0% {
     opacity: 0;
@@ -353,7 +353,7 @@ body {
 #embedwrapper {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  padding-top: 56.25%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -362,16 +362,29 @@ body {
     height: 100%;
   }
 }
-/*Side 2 biografi*/
+p::moz-selection {
+  background-color: #E1EDF8;
+}
+
+/* Side 2 biografi */
 #biography {
   width: 35%;
   margin: 0 auto;
   text-align: center;
 }
+#biography p::selection {
+  background-color: #E1EDF8;
+}
 
 #bio2 {
   text-align: start;
   font-size: 1.5em;
+}
+#bio2 p::selection {
+  background-color: #E1EDF8;
+}
+#bio2 p::-moz-selection {
+  background-color: #E1EDF8;
 }
 
 #isak {
@@ -379,6 +392,12 @@ body {
   margin: 0 auto;
   text-align: left;
   font-size: 1.5em;
+}
+#isak p::selection, #isak a::selection {
+  background-color: #E1EDF8;
+}
+#isak p::-moz-selection, #isak a::-moz-selection {
+  background-color: #E1EDF8;
 }
 
 #isak2 {
@@ -414,7 +433,7 @@ body {
     font-size: 1.5em;
   }
 }
-/*Automatisk sjekk av default color-themeen til nettleseren*/
+/* Automatisk sjekk av default color-themeen til nettleseren */
 @media (prefers-color-scheme: light) {
   body {
     background-color: aliceblue;

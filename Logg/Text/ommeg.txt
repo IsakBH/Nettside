@@ -19,3 +19,4 @@
             <li> <ion-icon name="logo-discord"></ion-icon> isakbh </li>
         </ul>
     </div>
+</div>
