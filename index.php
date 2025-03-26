@@ -29,7 +29,6 @@
 <?php
 include("Logg/Text/ommeg.txt");
 ?>
-
     <button onclick="location.href = '/Undersider/side2.php';">Leke side</button>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
