@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.3.6"; // word count oppdateres nå også automatisk når du velger nytt dokument + fjernet Migrer Data knappen, det er såpass lenge siden jeg migrerte fra localStorage til databaser at hvis du enda ikke har migrert er det din feil
+$version = "v3.3.7"; // fjernet link til discord, skal kanskje legge til link til linktree-en laget av tobias 
 ?>
 
 <!DOCTYPE html>
