@@ -598,7 +598,7 @@ document.getElementById("insertTable").addEventListener("click", () => {
     const rows = prompt("Enter number of rows:", "2");
     const cols = prompt("Enter number of columns:", "2");
 
-    if (rows && cols) {
+    if (rows && cols < 100) {
         // lag tabell container div
         const tableContainer = document.createElement("div");
         tableContainer.className = "table-container";
@@ -645,6 +645,9 @@ document.getElementById("insertTable").addEventListener("click", () => {
         } else {
             writingArea.appendChild(tableContainer);
         }
+    }
+    else {
+        console.log("Hey woah woah woah woah woah, den tabellen var alt for stor! Konrad slutt å crashe Ord på Nett :(");
     }
 });
 
