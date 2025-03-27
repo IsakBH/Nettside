@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.3.7"; // fjernet link til discord, skal kanskje legge til link til linktree-en laget av tobias 
+$version = "v3.3.8"; // tabeller over 100 rader/kolonner blir ikke lenger insertet fordi det crasher Ord på Nett (værsågod Konrad)
 ?>
 
 <!DOCTYPE html>
