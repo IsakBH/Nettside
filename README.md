@@ -10,5 +10,6 @@
 ## Sikkert
 #### Jeg deler ikke dataen din med noen 🔒
 ![temp](https://github.com/user-attachments/assets/f09ae1b4-067f-4bd3-9645-0361992f04a4)
+^skal finne bedre bilde
 
 Jobber på å få sessions til å funke, men det er vanskelig :(
