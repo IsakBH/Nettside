@@ -60,7 +60,7 @@ $version = "v3.3.8"; // tabeller over 100 rader/kolonner blir ikke lenger insert
             </div>
             <ul id="documentsList"></ul>
         </div>
-        <a id="changelogButton" title="endringslogg ord på nett" href="changelog.php">Endringslogg<i class="fa-solid fa-clock-rotate-left"></i></a>
+        <button id="changelogButton" title="Endringslogg Ord på Nett" href="changelog.php">Endringslogg<i class="fa-solid fa-clock-rotate-left"></i></button>
     </div>
 
     <div class="container"> <!--  containeren for toolbaren -->
