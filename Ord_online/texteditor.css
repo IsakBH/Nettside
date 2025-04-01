@@ -662,6 +662,7 @@ input[type=file]::file-selector-button {
   background: #f8f9fa;
   transition: all 0.2s ease;
   border: 1px solid #ddd;
+  animation: popin 0.3s;
 }
 #documentsList li:hover {
   transform: translateY(-3px);
@@ -1215,6 +1216,18 @@ input:checked + .slider:before {
 
 .lightmode body {
   background-color: white;
+}
+
+@keyframes popin {
+  0% {
+    transform: scale(0.2);
+  }
+  90% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /*# sourceMappingURL=texteditor.css.map */
