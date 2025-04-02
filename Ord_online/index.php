@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.3.8"; // tabeller over 100 rader/kolonner blir ikke lenger insertet fordi det crasher Ord på Nett (værsågod Konrad)
+$version = "v3.3.9"; // fikset problemer med dårlig scaling ved lav screen height
 ?>
 
 <!DOCTYPE html>
