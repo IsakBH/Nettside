@@ -240,7 +240,7 @@ $version = "v3.3.8"; // tabeller over 100 rader/kolonner blir ikke lenger insert
         <br>
 
         <div id="bottomtext">
-            <a href="https://www.github.com/isakbh/Ord-text-editor" id="reklame" target="_blank">Skaff deg Ord nå! (kun på Linux)</a>
+            <a href="https://github.com/veggenss/Ord-paa-Nett" id="reklame" target="_blank">Skaff deg Ord på Nett Desktop nå! (kun for Windows)</a>
             <p id="version"><?php echo $version; ?></p>
         </div>
 
