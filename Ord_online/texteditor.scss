@@ -27,7 +27,7 @@ hr {
 
 .container {
     background-color: #ffffff;
-    width: 100vmin;
+    width: 60%; // var 100vmin, men endret til 60% for å fikse height-scaling
     height: 100%;
     padding: 50px 30px;
     position: absolute;
@@ -850,6 +850,11 @@ input[type="file"]::file-selector-button {
             background-color: #E2E7EA;
         }
     }
+
+    .container {
+        width: 100vmin;
+        height: 100%;
+    }
 }
 
 // MOBIL VENNLIGHET
@@ -868,9 +873,9 @@ input[type="file"]::file-selector-button {
 
     .container {
         button {
-            flex: 0 0 auto; // gjør slik at knappene ikke krymper når brukeren er på mobil og det ikke er flex-wrapping
-            padding: 10px 15px; // nok padding på knappene
-            min-width: 40px; // minimum width
+            flex: 0 0 auto;
+            padding: 10px 15px;
+            min-width: 40px;
         }
     }
 

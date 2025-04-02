@@ -24,7 +24,7 @@ hr {
 
 .container {
   background-color: #ffffff;
-  width: 100vmin;
+  width: 60%;
   height: 100%;
   padding: 50px 30px;
   position: absolute;
@@ -803,6 +803,10 @@ input[type=file]::file-selector-button {
   }
   .menu-toggle:hover {
     background-color: #E2E7EA;
+  }
+  .container {
+    width: 100vmin;
+    height: 100%;
   }
 }
 @media screen and (max-width: 1000px) {
