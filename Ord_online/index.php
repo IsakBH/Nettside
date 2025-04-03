@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.3.10"; // fikset bakgrunnsfarge på knapper som f.eks Bold eller Italic når de er aktiv
+$version = "v3.3.11"; // lagt til :active scale() på selectene
 ?>
 
 <!DOCTYPE html>
