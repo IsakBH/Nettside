@@ -94,6 +94,9 @@ select {
 select:hover {
   background-color: #E2E7EA;
 }
+select:active {
+  transform: scale(0.9);
+}
 
 .options label, .options select {
   font-family: "Poppins", sans-serif;

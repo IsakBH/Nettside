@@ -96,8 +96,11 @@ select {
     text-decoration: none;
     border: 1px solid grey;
     border-radius: 10px;
-    &:hover {
+    &:hover{
         background-color: $buttonHoverColor;
+    }
+    &:active{
+        transform: scale(0.9);
     }
 }
 

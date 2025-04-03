@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.3.9"; // fikset problemer med dårlig scaling ved lav screen height
+$version = "v3.3.10"; // fikset bakgrunnsfarge på knapper som f.eks Bold eller Italic når de er aktiv
 ?>
 
 <!DOCTYPE html>
