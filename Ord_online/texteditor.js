@@ -306,6 +306,7 @@ function loadDocument(documentId) {
     updateWordAndCharCount();
 }
 
+// funksjon for å lagre dokumentene
 function saveDocument() {
     if (!currentDocumentId) return;
 
@@ -328,6 +329,7 @@ function saveDocument() {
     });
 }
 
+// funksjon for å slette dokumenter
 function deleteDocument(documentId) {
     if (confirm('Er du sikker på at du har lyst til å slette dette dokumentet? Gjør du det, forsvinner det for alltid, og det er ganske lenge.')) {
         fetch('delete_document.php', {
