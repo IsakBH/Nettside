@@ -1,4 +1,4 @@
-// lager variabler av html verdier
+// lager variabler for html id-er og klasser
 let alignButtons = document.querySelectorAll(".align");
 let spacingButtons = document.querySelectorAll(".spacing");
 let formatButtons = document.querySelectorAll(".format");
@@ -18,6 +18,7 @@ const calcDisplay = document.getElementById("calc-display");
 const calcButtons = document.querySelectorAll(".calc-btn");
 const printButton = document.getElementById("print");
 let seenEasterEgg = false;
+const documentSearch = document.getElementById('documentSearch');
 // lager liste av fonter for font velge greien
 let fontList = [
     "Arial",
@@ -28,7 +29,7 @@ let fontList = [
     "Courier New",
     "Impact",
 ];
-// lager liste over splash text som vises over Ord på nett tittelen.
+// lager liste over splash text som vises over Ord på Nett tittelen.
 let splashText = [
     "Jeg bruker ikke akebrett, fordi jeg har jo Ord på Nett",
     "Å danse ballett er nesten like fint som Ord på Nett",
@@ -88,7 +89,6 @@ function printWritingArea() {
     printWindow.document.close();
     printWindow.print();
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
     let expression = "";
@@ -210,43 +210,9 @@ document.addEventListener('click', (e) => {
     }
 });
 
-/*
-function migrateFromLocalStorage() {
-    // sjekk om det finnes gammel data i localstorage
-    const oldContent = localStorage.getItem('textEditorContent');
-
-    if (oldContent) {
-        // spør brukeren om han/hun vil migrere data
-        if (confirm('BARE GJØR DETTE HVIS DU MANGLER DATA ETTER DEN FORRIGE OPPDATERINGEN! \nDETTE VIL OVERSKRIVE ALT DU HAR I DOKUMENTET DU HAR ÅPENT, LAG OG ÅPNE NYTT DOKUMENT FØR DU GJØR DETTE\n\nOrd har funnet gammel data i localStorage fra dokumentet du hadde før den store multi-dokument oppdateringen (v3.1), vil du migrere dataen til den nye versjonen? ')) {
-            // plasser innholdet fra localstorage i textboksen
-            writingArea.innerHTML = oldContent;
-
-            // lagre innholdet i databasen :)
-            saveDocument();
-
-            // spør brukeren om å slette dataen fra localstorage
-            if (confirm('Migrering fullført. Vil du slette det gamle innholdet fra localStorage?')) {
-                localStorage.removeItem('textEditorContent');
-            }
-
-            debounce(showSaveStatus('Migrering fullført'), 500);
-        }
-    } else {
-        alert('Ingen data funnet i localStorage');
-    }
-}
-
-// event listener for migrerings knappen
-document.getElementById('migrateFromLocal').addEventListener('click', migrateFromLocalStorage);
-*/
-
 ////////////////////// funksjoner for database og dokument "management" (finnes det er norsk ord for det?????)
 // variabel for å lagre ID-en til dokumentet brukeren bruker nå
 let currentDocumentId = null;
-
-// variabel for å hente documentSearch ID-en
-const documentSearch = document.getElementById('documentSearch');
-
 
 documentSearch.addEventListener('input', function(e) {
     const searchTerm = e.target.value.toLowerCase(); // "e.target" = document.getElementById('documentSearch') // .value betyr at det er verdien til "documentSearch". skriver brukeren "hei hei", er .value "hei hei". // .toLowerCase betyr bare at den konverterer alt til lowercase
@@ -314,15 +280,27 @@ function loadDocumentsList() {
         });
 }
 
+// funksjon for å laste inn dokumentet brukeren trykker på
 function loadDocument(documentId) {
+    // fjerner active-document klassen fra alle dokumenter slik at det alltid bare er ett dokument som har active-document
+    document.querySelectorAll('#documentsList li').forEach(doc => {
+        doc.classList.remove('active-document');
+    });
+
+    // legg til active-document på dokumentet brukeren vil ha det på
+    const activeDoc = document.querySelector(`#documentsList li:has(.document-item[onclick="loadDocument(${documentId})"])`);
+    if (activeDoc) {
+        activeDoc.classList.add('active-document');
+    }
+
     fetch(`get_document.php?id=${documentId}`)
         .then(response => response.json())
         .then(data => {
             if (data.success) {
                 currentDocumentId = documentId;
-                writingArea.innerHTML = data.content || ''; // Hvis content er tom, sett tom string
-                writingArea.contentEditable = 'true'; // gjør tekstboksen editable når brukeren har valgt et dokument
-                placeholder.style.display = 'none'; // skjul placeholder teksten når et dokument er lastet inn av bruker
+                writingArea.innerHTML = data.content || '';
+                writingArea.contentEditable = 'true';
+                placeholder.style.display = 'none';
             }
         });
     updateWordAndCharCount();

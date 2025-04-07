@@ -671,6 +671,10 @@ input[type=file]::file-selector-button {
   transform: translateY(0px);
   transform: scale(0.95);
 }
+#documentsList li.active-document {
+  border: 2px solid #8AC8FF;
+  background: white;
+}
 
 .document-actions {
   display: flex;

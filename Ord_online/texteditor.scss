@@ -707,6 +707,11 @@ input[type="file"]::file-selector-button {
             transform: translateY(0px);
             transform: scale(0.95);
         }
+
+        &.active-document {
+            border: 2px solid #8AC8FF;
+            background: lighten(#8AC8FF, 25%);
+        }
     }
 }
 
