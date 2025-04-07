@@ -376,10 +376,6 @@ function showSaveStatus(status) {
     }, 2000);
 }
 
-function sjekkFilNavn(filename) {
-    return filename.toLowerCase().endsWith(".txt");
-}
-
 // lagre tekst som fil
 function saveTextAsFile() {
     try {
