@@ -413,6 +413,7 @@ function saveTextAsFile() {
     }
 }
 
+// funksjon for å laste inn en fil
 function loadTextFile() {
     const input = document.createElement("input");
     input.type = "file";
@@ -476,7 +477,7 @@ const initializer = () => {
     window.addEventListener("beforeunload", debounce(saveDocument, 500)); // lagrer når vinduet blir unloadet (blir lukket / går i sovemodus)
 };
 
-// gjør sånn at det er litt delay mellom lagring
+// funksjon som er nesten som en middle man og legger til delay før funksjonen du caller
 function debounce(func, wait) {
     let timeout; // timer
 

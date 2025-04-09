@@ -674,6 +674,7 @@ input[type=file]::file-selector-button {
 #documentsList li.active-document {
   border: 2px solid #8AC8FF;
   background: white;
+  filter: drop-shadow(0 0 2px #cccccc);
 }
 
 .document-actions {

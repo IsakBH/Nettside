@@ -711,6 +711,7 @@ input[type="file"]::file-selector-button {
         &.active-document {
             border: 2px solid #8AC8FF;
             background: lighten(#8AC8FF, 25%);
+            filter: drop-shadow(0 0 2px #cccccc);
         }
     }
 }
