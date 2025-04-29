@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $token = bin2hex(random_bytes(32));
             $expires = date('Y-m-d H:i:s', time() + (30 * 24 * 60 * 60)); // varer i 30 dager :-)
 
-            error_log("Setting new remember_me token: " . $token);
+            error_log("Ny husk meg token: " . $token);
 
             // slett eventuelle eksisterende sessions for brukeren
             $delete_sql = "DELETE FROM sessions WHERE user_id = ?";
@@ -50,9 +50,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     true,                          // secure
                     true                           // httponly
                 );
-                error_log("Remember me token set successfully");
+                error_log("Sette ny husk meg token vellykket");
             } else {
-                error_log("Failed to save remember me token: " . $stmt->error);
+                error_log("Kunne ikke lagre husk meg token -_-: " . $stmt->error);
             }
         }
 
