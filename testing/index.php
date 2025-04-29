@@ -29,8 +29,8 @@
     <section id="arbeid">
         <div class="projects">
             <div class="project-card">
-                <h3>Tekst editor</h3>
-                <p>En veldig simpel tekst editor med et enkelt brukergrensesnitt.</p>
+                <h3>Ord på Nett og Ord Offline</h3>
+                <p>Ord på Nett er en simpel og minimalistisk tekst editor på nett. Ord Offline er en offline tekst editor skrevet i Python med GTK GUI toolkitet</p>
                 <li>
                     <ul><a href="https://isak.brunhenriksen.no/Ord_online" target="_blank">Ord Online</a></ul>
                 </li>
@@ -49,12 +49,14 @@
                 </video>
             </div>
 
+            <br>
+
             <div class="project-card">
                 <h3>Interaktiv historie</h3>
                 <p> En interaktiv historie om Ord på Nett skrevet i Python med Ren'Py. </p>
                 <li>
                     <ul>
-                        <a href="https://www.gihub.com/isakbh/interaktivhistorie" target="_blank">GitHub</a>
+                        <a href="https://github.com/IsakBH/interaktivhistorie" target="_blank">GitHub</a>
                     </ul>
                 </li>
             </div>
