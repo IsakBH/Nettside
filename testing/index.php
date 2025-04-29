@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="no">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isak Henriksen</title>
     <link rel="stylesheet" href="testing.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="icon" href="../Pictures/Tux.svg.png">
 </head>
+
 <body>
     <header>
-        <img class="bio"src="isakbilde.jpg" alt="Bilde av meg" id="biopic">
+        <img class="bio" src="isakbilde.jpg" alt="Bilde av meg" id="biopic">
         <h1 class="bio">Isak Henriksen</h1>
         <p class="bio">Svært kul utvikler basert i Bergen</p>
         <button class="headercontact">+47 458 48 234</button>
@@ -42,18 +44,28 @@
                 <h3>Fotoserie</h3>
                 <p> En foto serie med 5 bilder og en video. </p>
                 <video width="100%" height="100%" controls>
-                 <source src="/Pictures/videos/skummelvideo.mp4" type="video/mp4">
-               Nettleseren din støtter ikke HTML video-taggen. :(
-               </video>
+                    <source src="/Pictures/videos/skummelvideo.mp4" type="video/mp4">
+                    Nettleseren din støtter ikke HTML video-taggen. :(
+                </video>
+            </div>
+
+            <div class="project-card">
+                <h3>Interaktiv historie</h3>
+                <p> En interaktiv historie om Ord på Nett skrevet i Python med Ren'Py. </p>
+                <li>
+                    <ul>
+                        <a href="https://www.gihub.com/isakbh/interaktivhistorie" target="_blank">GitHub</a>
+                    </ul>
+                </li>
             </div>
 
             <div class="project-card">
                 <h3>Galleri side</h3>
                 <p>Veldig fin galleri side.</p>
                 <li>
-                <ul>
-                <a href="https://isak.brunhenriksen.no/galleri/galleri.php" target="_blank">Galleri</a>
-                </ul>
+                    <ul>
+                        <a href="https://isak.brunhenriksen.no/galleri/galleri.php" target="_blank">Galleri</a>
+                    </ul>
                 </li>
             </div>
         </div>
@@ -80,4 +92,5 @@
         <a href="https://linkedin.com/in/isak-henriksen-272565346/" target="_blank">LinkedIn</a>
     </section>
 </body>
+
 </html>
