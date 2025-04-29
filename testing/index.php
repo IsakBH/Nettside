@@ -30,7 +30,7 @@
                 <h3>Tekst editor</h3>
                 <p>En veldig simpel tekst editor med et enkelt brukergrensesnitt.</p>
                 <li>
-                    <ul><a href="https://isak.brunhenriksen.no/Texteditor/" target="_blank">Ord Online</a></ul>
+                    <ul><a href="https://isak.brunhenriksen.no/Ord_online" target="_blank">Ord Online</a></ul>
                 </li>
 
                 <li>
@@ -41,15 +41,18 @@
             <div class="project-card">
                 <h3>Fotoserie</h3>
                 <p> En foto serie med 5 bilder og en video. </p>
-                <span>Side under utvikling</span>
+                <video width="100%" height="100%" controls>
+                 <source src="/Pictures/videos/skummelvideo.mp4" type="video/mp4">
+               Nettleseren din støtter ikke HTML video-taggen. :(
+               </video>
             </div>
 
             <div class="project-card">
                 <h3>Galleri side</h3>
-                <p>Veldig simpel galleri side (snart med database for lagring av bilder).</p>
+                <p>Veldig fin galleri side.</p>
                 <li>
                 <ul>
-                <a href="https://isak.brunhenriksen.no/Undersider/galleri.php" target="_blank">Galleri</a>
+                <a href="https://isak.brunhenriksen.no/galleri/galleri.php" target="_blank">Galleri</a>
                 </ul>
                 </li>
             </div>
