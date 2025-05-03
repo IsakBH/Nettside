@@ -301,7 +301,7 @@ function loadDocument(documentId) {
                 console.log("Du redigerer nå " + currentDocumentId);
                 writingArea.innerHTML = data.content || '';
                 writingArea.contentEditable = 'true';
-                placeholder.style.display = 'none';
+                //placeholder.style.display = 'none';
             }
         });
     updateWordAndCharCount();
