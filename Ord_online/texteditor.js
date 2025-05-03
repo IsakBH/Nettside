@@ -376,7 +376,7 @@ function showSaveStatus(status) {
     }, 2000);
 }
 
-// lagre tekst som fil
+// lagre dokument som fil
 function saveTextAsFile() {
     try {
         const turndownService = new TurndownService();
@@ -413,7 +413,7 @@ function saveTextAsFile() {
     }
 }
 
-// funksjon for å laste inn en fil
+// funksjon for å laste inn dokument fra fil
 function loadTextFile() {
     const input = document.createElement("input");
     input.type = "file";
