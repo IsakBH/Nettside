@@ -298,6 +298,7 @@ function loadDocument(documentId) {
         .then(data => {
             if (data.success) {
                 currentDocumentId = documentId;
+                console.log("Du redigerer nå " + currentDocumentId);
                 writingArea.innerHTML = data.content || '';
                 writingArea.contentEditable = 'true';
                 placeholder.style.display = 'none';
