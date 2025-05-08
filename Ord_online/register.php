@@ -9,8 +9,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // opplasting av profilbilder
     $profile_picture = 'default.png';
-    if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] === 0) {
-        $allowed = ['jpg', 'jpeg', 'png', 'gif']; // de tillatte filtypene jeg har |||||||| TODO: LEGG TIL EN MELDING SOM SIER HVILKE FILTYPER DEN AKSEPTERER HVIS UPLOADEN FEILER
+    if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] === 0) { // hvis brukeren har lastet opp et profil bilde og det ikke oppstod en feil
+        $allowed = ['jpg', 'jpeg', 'png', 'gif']; // de tillatte filtypene
         $filename = $_FILES['profile_picture']['name'];
         $ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
 

@@ -14,7 +14,7 @@ $user_id = $_SESSION['user_id'];
 // håndterer ulike handlinger, lage nytt dokument og oppdater dokument
 if ($data['action'] === 'create') {
     // opprett nytt dokument
-    $stmt = $mysqli->prepare("INSERT INTO documents (user_id, title, content) VALUES (?, ?, ?)"); // forbereder sql query, '?' er en placeholder verdi
+    $stmt = $mysqli->prepare("INSERT INTO documents (user_id, title, content) VALUES (?, ?, ?)"); // forbereder sql query
     $content = '';
     $stmt->bind_param("iss", $user_id, $data['title'], $content);
     $success = $stmt->execute();
