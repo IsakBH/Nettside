@@ -11,12 +11,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $profile_picture = 'default.png';
     if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] === 0) { // hvis brukeren har lastet opp et profil bilde og det ikke oppstod en feil
         $allowed = ['jpg', 'jpeg', 'png', 'gif']; // de tillatte filtypene
-        $filename = $_FILES['profile_picture']['name'];
-        $ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+        $filename = $_FILES['profile_picture']['name']; // henter filnavnet til uploaden
+        $ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION)); // henter file extensionen (eller filutvidelsen hvis du virkelig vil ha det på norsk, da) til bildet
 
         // valider og last opp bildet
-        if (in_array($ext, $allowed)) {
-            $new_filename = uniqid() . '.' . $ext;
+        if (in_array($ext, $allowed)) { // sjekker hvis file extensionen til bildet brukeren lastet opp er i $allowed arrayen
+            $new_filename = uniqid() . '.' . $ext; // genererer en unik id basert på det nåværende klokkeslettet (tror jeg, i hvertfall) - for å ikke få conflicts med filnavn og sånt drit
             move_uploaded_file($_FILES['profile_picture']['tmp_name'], 'uploads/' . $new_filename);
             $profile_picture = $new_filename;
             if (!move_uploaded_file($_FILES['profile_picture']['tmp_name'], 'uploads/' . $new_filename)) {
@@ -35,13 +35,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: login.php');
         exit();
     } else {
-        $error = "Brukernavn finnes allerede i databasen";
+        $error = "Kunne ikke lage bruker :(";
     }
 }
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Registrer</title>
     <link rel="stylesheet" href="texteditor.css">
@@ -49,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="icon" href="../Pictures/ordlogo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
+
 <body>
     <div class="auth-container">
         <h2>Registrer deg</h2>
@@ -73,4 +75,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p>Har du allerede bruker? <a href="login.php">Logg inn her</a></p>
     </div>
 </body>
+
 </html>
