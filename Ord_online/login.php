@@ -22,48 +22,46 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // remember me funksjonalitet
         if (isset($_POST['remember_me'])) {
-            // genererer en random token
-            $token = bin2hex(random_bytes(32));
+            $token = bin2hex(random_bytes(32)); // genererer en random token
             $expires = date('Y-m-d H:i:s', time() + (30 * 24 * 60 * 60)); // varer i 30 dager :-)
 
-            error_log("Ny husk meg token: " . $token);
+            error_log("Ny husk meg token: " . $token); // skriver ut den nye tokenen til error loggen
 
-            // slett eventuelle eksisterende sessions for brukeren
+            // hvis brukeren har flere sessions, slett de
             $delete_sql = "DELETE FROM sessions WHERE user_id = ?";
             $delete_stmt = $mysqli->prepare($delete_sql);
             $delete_stmt->bind_param("i", $user['id']);
             $delete_stmt->execute();
 
             // lagre ny token
-            $sql = "INSERT INTO sessions (user_id, token, expires_at) VALUES (?, ?, ?)";
+            $sql = "INSERT INTO sessions (user_id, token, expires_at) VALUES (?, ?, ?)"; // skriver inn tokenen i databasen - id-en til brukeren som eier tokenen, selve tokenen og når den utløper
             $stmt = $mysqli->prepare($sql);
-            $stmt->bind_param("iss", $user['id'], $token, $expires);
+            $stmt->bind_param("iss", $user['id'], $token, $expires); // binder paramaters med user id, token og når den utløper | det er "iss" fordi verdiene er int - string - string
 
+            // setter en cookie med tokenen
             if ($stmt->execute()) {
-                // sett en kul cookie med secure og httponly flags
-                setcookie(
+                setcookie( // sett en kul cookie med secure og httponly flags
                     "remember_me",
                     $token,
-                    time() + (30 * 24 * 60 * 60),  // 30 dager
-                    "/",                            // path
-                    "",                            // domain
-                    true,                          // secure
-                    true                           // httponly
+                    time() + (30 * 24 * 60 * 60), // 30 dager
+                    "/", // path
+                    "", // domain
+                    true, // secure -> cookien blir bare overført via sikre kanaler, altså HTTPS
+                    true // httponly -> betyr at bare serveren kan se den
                 );
-                error_log("Sette ny husk meg token vellykket");
+                error_log("Setting av ny husk meg token vellykket"); // skriver ut til error loggen
             } else {
-                error_log("Kunne ikke lagre husk meg token -_-: " . $stmt->error);
+                error_log("Kunne ikke lagre husk meg token -_-: " . $stmt->error); // skriver ut til error loggen
             }
         }
 
-        header('Location: index.php');
+        header('Location: index.php'); // redirecter til hovedsiden
         exit();
     } else {
-        $error = "Ugyldig brukernavn eller passord";
+        $error = "Ugyldig brukernavn eller passord"; // error melding hvis du skrev ugyldig brukernavn eller passord
     }
 }
 ?>
-
 
 <!DOCTYPE html>
 <html>
