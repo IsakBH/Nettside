@@ -79,9 +79,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         For å bruke Ord på Nett, må du logge inn.
         </p> <br>
 
-        <?php if (isset($error)): ?>
-            <div class="error"><?php echo $error; ?></div>
-        <?php endif; ?>
+            <?php if (isset($error)): ?> <!-- hvis det oppstod en feil-->
+            <div class="error"><?php echo $error; ?></div> <!-- for error melding -->
+        <?php endif; ?> <!-- exiter if statement -->
 
         <form method="POST">
 

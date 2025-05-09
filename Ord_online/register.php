@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: login.php'); // redirecter til login siden
         exit(); // exiter
     } else { // hvis den ikke klarte å kjøre sql queryen, eller, den klarte ikke lage ny bruker
-        $error = "Kunne ikke lage bruker :(";
+        $error = "Kunne ikke lage bruker :("; // skriver at den ikke klarte å lage bruker til error meldingen
     }
 }
 ?>
