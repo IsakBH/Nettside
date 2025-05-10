@@ -58,6 +58,12 @@ let splashText = [
     "Du må ha gått helt fra vettet om du ikke bruker Ord på Nettet",
 ];
 
+// skriver at brukeren må velge et dokument - calles når currentDocumentId er null
+function selectDocumentMessage(){
+    writingArea.innerHTML = '<p id="placeholder"><u><h1>Vennligst velg et dokument.</h1></u> <br> <br> <h2>   Kreditter:  </h2>  Programmering: Isak Henriksen <br> Easter egg sang: NRK <br> Dark mode inspirasjon: GitHub/Microsoft <br> <a href="https://www.youtube.com/watch?v=7lQatGnsoS8" target="_blank">Ord på Nett sangen:</a> Isak Henriksen (sangtekst) Suno AI (sanger) </p>';
+    console.log("Vennligst velg et dokument (skrevet via selectDocumentMessage funksjon)")
+}
+
 printButton.addEventListener("click", () => {
     printWritingArea();
     console.log("Bruker trykket på print knappen");
@@ -348,7 +354,7 @@ function deleteDocument(documentId) {
                 loadDocumentsList();
                 if (currentDocumentId === documentId) {
                     currentDocumentId = null;
-                    writingArea.innerHTML = '<p id="placeholder"><u><h1>Vennligst velg et dokument.</h1></u> <br> <br> <h2>   Kreditter:  </h2>  Programmering: Isak Henriksen <br> Easter egg sang: NRK <br> Dark mode inspirasjon: GitHub/Microsoft <br> <a href="https://www.youtube.com/watch?v=7lQatGnsoS8" target="_blank">Ord på Nett sangen:</a> Isak Henriksen (sangtekst) Suno AI (sanger) </p>';
+                    selectDocumentMessage();
                 }
             }
         });
@@ -439,6 +445,8 @@ function loadTextFile() {
 
 // funksjon som initialiserer Ord Online
 const initializer = () => {
+    console.log("Initialiserer Ord på Nett...");
+
     applyDarkMode();
     updateWordAndCharCount();
     randomSplashText();
@@ -466,16 +474,20 @@ const initializer = () => {
     kulSplash.addEventListener("click", () => {
         randomSplashText();
     });
+    console.log("Splash text event listener ✓")
 
     // hvis brukeren ikke har valgt et dokument, skriv "vennligst velg et dokument"
     if (!currentDocumentId) {
-            writingArea.innerHTML = '<p id="placeholder"><u><h1>Vennligst velg et dokument.</h1></u> <br> <br> <h2>   Kreditter:  </h2>  Programmering: Isak Henriksen <br> Easter egg sang: NRK <br> Dark mode inspirasjon: GitHub/Microsoft <br> <a href="https://www.youtube.com/watch?v=7lQatGnsoS8" target="_blank">Ord på Nett sangen:</a> Isak Henriksen (sangtekst) Suno AI (sanger) </p>';
+        selectDocumentMessage();
     }
 
     // legg til eventlisteners som alltid sikrer at innholdet er lagret til databasen
     writingArea.addEventListener("input", debounce(saveDocument, 2000)); // lagrer innhold hver gang bruker skriver noe med 500 ms delay via debounce funksjonen
     writingArea.addEventListener("blur", debounce(saveDocument, 500)); // lagrer når vinduet mister fokus
     window.addEventListener("beforeunload", debounce(saveDocument, 500)); // lagrer når vinduet blir unloadet (blir lukket / går i sovemodus)
+    console.log("Event listeners for lagring ✓")
+
+    console.log("Ord på Nett er ferdig initialisert!")
 };
 
 // funksjon som er nesten som en middle man og legger til delay før funksjonen du caller
