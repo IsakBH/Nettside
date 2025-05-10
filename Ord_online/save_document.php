@@ -25,6 +25,6 @@ elseif ($data['action'] === 'update') { // hvis brukeren gir action update
     // oppdater/lagre endringer i allerede eksisterende dokument
     $stmt = $mysqli->prepare("UPDATE documents SET content = ? WHERE id = ? AND user_id = ?"); // lager sql query for å oppdatere dokumentet med ny content
     $stmt->bind_param("sii", $data['content'], $data['id'], $user_id); // binder paramaters med verdiene av data content (innholdet i dokumentet), data id (dokument id) og user id
-    $success = $stmt->execute(); // kjører
+    $success = $stmt->execute(); // kjører queryen
     echo json_encode(['success' => $success]);
 }
