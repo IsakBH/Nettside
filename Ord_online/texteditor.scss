@@ -44,6 +44,9 @@ hr {
     flex-wrap: wrap;
     align-items: center;
     gap: 15px;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
 }
 
 input[type="color"] {
@@ -129,13 +132,13 @@ input[type="color"] {
 
 #text-input {
     margin-top: 10px;
-    border: 1px solid #CCD4DB;
     padding: 10px;
+    border: 1px solid grey;
     height: calc(100% - 180px);
     border-radius: 10px;
     overflow-y: auto;
     overflow-x: hidden;
-    border: 1px solid grey;
+
     // fikser at liste punktene går utenfor tekst boksen
     font-family: inherit;
     ul, ol{

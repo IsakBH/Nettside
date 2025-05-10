@@ -41,6 +41,9 @@ hr {
   flex-wrap: wrap;
   align-items: center;
   gap: 15px;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
 }
 
 input[type=color] {
@@ -123,13 +126,12 @@ input[type=color] {
 
 #text-input {
   margin-top: 10px;
-  border: 1px solid #CCD4DB;
   padding: 10px;
-  height: calc(100% - 180px); /* Fixed height, adjusting for toolbar */
-  border-radius: 10px;
-  overflow-y: auto; /* Enable vertical scrolling */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
   border: 1px solid grey;
+  height: calc(100% - 180px);
+  border-radius: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
   font-family: inherit;
 }
 #text-input ul, #text-input ol {
