@@ -6,6 +6,7 @@ $buttonHoverColor: #E2E7EA;
     margin: 0;
     box-sizing: border-box;
     transition: 0.05s;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -130,10 +131,10 @@ input[type="color"] {
     margin-top: 10px;
     border: 1px solid #CCD4DB;
     padding: 10px;
-    height: calc(100% - 180px); /* Fixed height, adjusting for toolbar */
+    height: calc(100% - 180px);
     border-radius: 10px;
-    overflow-y: auto; /* Enable vertical scrolling */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto;
+    overflow-x: hidden;
     border: 1px solid grey;
     // fikser at liste punktene går utenfor tekst boksen
     font-family: inherit;

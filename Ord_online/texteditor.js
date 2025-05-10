@@ -387,18 +387,20 @@ function showSaveStatus(status) {
 function saveTextAsFile() {
     try {
         const turndownService = new TurndownService();
-        console.log('TurndownService created');
+        console.log("Laget turndown service")
 
         const htmlContent = document.getElementById("text-input").innerHTML;
-        console.log('HTML content:', htmlContent);
 
         const markdownContent = turndownService.turndown(htmlContent);
-        console.log('Markdown content:', markdownContent);
 
-        let filename = prompt("Skriv inn navn på dokumentet", "ord.md");
-        console.log('Filnavn:', filename)
-        if (!filename)
-            filename = "ord.md";
+        console.log("Brukeren har blitt spurt om filnavn")
+        let filename = prompt("Skriv inn navn på filen");
+        console.log('Bruker har skrevet inn filnavn. Filnavn:', filename)
+
+        if (!filename){
+            filename = "ordpanettdokument.md";
+            console.log("Bruker skrev ikke inn filnavn! Bruker default filnavnet 'ordpanettdokument'");
+        }
 
         if (!filename.toLowerCase().endsWith(".md")) {
             filename = filename + ".md";
@@ -414,9 +416,11 @@ function saveTextAsFile() {
         a.click();
         document.body.removeChild(a);
         window.URL.revokeObjectURL(url);
+        console.log("Du lastet ned et dokument! Dokument ID: " + currentDocumentId);
     } catch (error) {
         console.error('Error i saveTextAsFile:', error);
         alert('Det oppstod en feil ved nedlasting av filen: ' + error.message);
+        console.log("Det oppstod desverre en feil ved nedlasting av filen: " + error.message);
     }
 }
 
