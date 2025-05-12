@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.3.11"; // lagt til :active scale() på selectene
+$version = "v3.4.0"; // lagt til :active scale() på selectene
 ?>
 
 <!DOCTYPE html>
@@ -239,10 +239,7 @@ $version = "v3.3.11"; // lagt til :active scale() på selectene
 
         <br>
 
-        <div id="bottomtext">
-            <a href="https://github.com/veggenss/Ord-paa-Nett" id="reklame" target="_blank">Skaff deg Ord på Nett Desktop nå! (kun for Windows)</a>
-            <p id="version"><?php echo $version; ?></p>
-        </div>
+
 
         <script src="https://giscus.app/client.js"
             data-repo="isakbh/nettside"
@@ -277,6 +274,11 @@ $version = "v3.3.11"; // lagt til :active scale() på selectene
 
     <div id="cross-symbol"><i class="fa-solid fa-cross"></i></div>
     <p id="save-status"></p>
+
+    <div id="bottomtext">
+        <!--<a href="https://github.com/veggenss/Ord-paa-Nett" id="reklame" target="_blank">Skaff deg Ord på Nett Desktop nå! (kun for Windows)</a>-->
+        <p id="version"><?php echo $version; ?></p>
+    </div>
 
     <!-- javascript link-->
     <script src="texteditor.js"></script>
