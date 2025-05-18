@@ -13,7 +13,7 @@ $version = "v0.0.1";
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- stylesheets -->
-    <link rel="stylesheet" href="styling/main.scss" />
+    <link rel="stylesheet" href="styling/main.css" />
 
     <!-- logoet til toner på nett som favicon -->
     <link rel="icon" href="assets/icons/logo.png" />
@@ -25,7 +25,7 @@ $version = "v0.0.1";
 <body>
     <div class="song-manager">
         <div class="song-list">
-            <h3>Mine dokumenter</h3>
+            <h3>Mine sanger</h3>
             <button id="newSong" class="new-song-button">
                 <i class="fa-solid fa-plus"></i>
                 Ny sang
