@@ -32,7 +32,7 @@
                 <h3>Ord på Nett og Ord Offline</h3>
                 <p>Ord på Nett er en simpel og minimalistisk tekst editor på nett. Ord Offline er en offline tekst editor skrevet i Python med GTK GUI toolkitet</p>
                 <li>
-                    <ul><a href="https://isak.brunhenriksen.no/Ord_online" target="_blank">Ord Online</a></ul>
+                    <ul><a href="https://isak.brunhenriksen.no/ordpanett" target="_blank">Ord Online</a></ul>
                 </li>
 
                 <li>
