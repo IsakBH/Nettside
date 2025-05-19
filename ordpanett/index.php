@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.0"; // lagt til :active scale() på selectene
+$version = "v3.4.0"; // UI-redesign!
 ?>
 
 <!DOCTYPE html>
