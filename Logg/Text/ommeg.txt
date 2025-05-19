@@ -8,7 +8,7 @@
 
     <div id="isak">
         <p>
-            Jeg er interresert i alt som handler om data/IT, og har drevet med det på fritiden ganske lenge. Jeg har laget et par små prosjekter, som for eksempel en <a href="https://www.github.com/isakbh/Ord-text-editor">offline tekst editor</a>, og en <a href="https://isak.brunhenriksen.no/Ord_online">online tekst editor</a>. Akkurat nå holder jeg på å lære meg programmeringsspråket <a href="https://rust-lang.org" target="_blank">Rust</a>. Grunnen til at jeg valgte IM-linjen er at jeg har vært veldig interessert i IT hele livet. Språkene jeg har erfaring i er Javascript, PHP, Rust, Python, og litt C++, men jeg foretrekker PHP og Rust. Jeg kommer fra Bergen, og har bodd her hele livet mitt.
+            Jeg er interresert i alt som handler om data/IT, og har drevet med det på fritiden ganske lenge. Jeg har laget et par små prosjekter, som for eksempel en <a href="https://www.github.com/isakbh/Ord-text-editor">offline tekst editor</a>, og en <a href="https://isak.brunhenriksen.no/ordpanett">online tekst editor</a>. Akkurat nå holder jeg på å lære meg programmeringsspråket <a href="https://rust-lang.org" target="_blank">Rust</a>. Grunnen til at jeg valgte IM-linjen er at jeg har vært veldig interessert i IT hele livet. Språkene jeg har erfaring i er Javascript, PHP, Rust, Python, og litt C++, men jeg foretrekker PHP og Rust. Jeg kommer fra Bergen, og har bodd her hele livet mitt.
         </p>
     </div>
 
