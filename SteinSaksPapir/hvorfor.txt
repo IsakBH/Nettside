@@ -1,4 +1,0 @@
-<h1>Hvorfor akkurat Stein, saks, papir?</h1>
-Jeg tenkte at Stein, saks, papir hadde vært gøy å lage.
-<h1>Var det gøy å lage?</h1>
-Ja
