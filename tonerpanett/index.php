@@ -37,6 +37,10 @@ $version = "v0.0.1";
             <ul id="songsList"></ul>
         </div>
     </div>
+
+    <div class="container">
+        <h1 id="header">Toner på Nett</h1>
+    </div>
 </body>
 
 </html>
