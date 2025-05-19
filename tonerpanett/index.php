@@ -40,6 +40,10 @@ $version = "v0.0.1";
 
     <div class="container">
         <h1 id="header">Toner på Nett</h1>
+
+        <p>Her kommer den snart berømte musikkspilleren, Toner på Nett. Her er en skisse over hvordan den vil se ut når den er ferdig:</p>
+        <img src="assets/images/tonerpanettsketch.png" width="100%" height="auto" border="1">
+        <p>Som du sikkert ser gjenbruker jeg designet til Ord på Nett. Hvorfor gjør jeg det? Fordi jeg gidder ikke finne på noe bedre. (+ jeg synes det ser litt fint ut)</p>
     </div>
 </body>
 
