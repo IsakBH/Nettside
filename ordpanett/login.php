@@ -65,21 +65,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Logg inn</title>
     <link rel="stylesheet" href="texteditor.css">
     <script src="texteditor.js"></script>
     <link rel="icon" href="../Pictures/ordlogo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Open Graph meta-tagger -->
+    <meta property="og:title" content="Ord På Nett <?php echo $version; ?>">
+    <meta property="og:description" content="UI Redesign! Ord på Nett er et kraftig og brukervennlig tekstbehandlingsverktøy utviklet av meg (Isak Brun Henriksen). Med fokus på ytelse, enkelhet og tilgjengelighet, er Ord på Nett et ideelt valg for studenter, forfattere, forskere, profesjonelle, og egentlig alle yrker i hele verden som trenger et pålitelig og fleksibelt skriveverktøy.">
+    <meta property="og:image" content="https://isak.brunhenriksen.no/Pictures/ordlogo.png">
+    <meta property="og:url" content="https://isak.brunhenriksen.no/ordpanett">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="no_NO">
+    <meta property="og:site_name" content="Ord På Nett">
 </head>
+
 <body>
     <div class="auth-container">
         <h2>Logg inn</h2>
         <p>
-        For å bruke Ord på Nett, må du logge inn.
+            For å bruke Ord på Nett, må du logge inn.
         </p> <br>
 
-            <?php if (isset($error)): ?> <!-- hvis det oppstod en feil-->
+        <?php if (isset($error)): ?> <!-- hvis det oppstod en feil-->
             <div class="error"><?php echo $error; ?></div> <!-- for error melding -->
         <?php endif; ?> <!-- exiter if statement -->
 
@@ -106,4 +117,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p>Har du ikke bruker enda? <a href="register.php">Registrer deg her</a></p>
     </div>
 </body>
+
 </html>
