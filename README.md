@@ -10,6 +10,3 @@
 ## Sikkert
 #### Jeg deler ikke dataen din med noen 🔒
 ![image](https://github.com/user-attachments/assets/fd03132b-72e3-4866-b41f-685806ebf1ef)
-
-
-Liten pause på oppdateringer for nå, er høstferie. Jobber mest sannsynlig med det neste uke
