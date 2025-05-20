@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <!-- Open Graph meta-tagger -->
     <meta property="og:title" content="Ord På Nett <?php echo $version; ?>">
-    <meta property="og:description" content="UI Redesign! Ord på Nett er et kraftig og brukervennlig tekstbehandlingsverktøy utviklet av meg (Isak Brun Henriksen). Med fokus på ytelse, enkelhet og tilgjengelighet, er Ord på Nett et ideelt valg for studenter, forfattere, forskere, profesjonelle, og egentlig alle yrker i hele verden som trenger et pålitelig og fleksibelt skriveverktøy.">
+    <meta property="og:description" content="UI Redesign!">
     <meta property="og:image" content="https://isak.brunhenriksen.no/Pictures/ordlogo.png">
     <meta property="og:url" content="https://isak.brunhenriksen.no/ordpanett">
     <meta property="og:type" content="website">
