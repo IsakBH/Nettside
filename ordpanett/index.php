@@ -21,7 +21,6 @@ $version = "v3.4.0"; // UI-redesign!
     <meta property="og:image" content="https://isak.brunhenriksen.no/Pictures/ordlogo.png">
     <meta property="og:url" content="https://isak.brunhenriksen.no/Ord_online">
     <meta property="og:type" content="website">
-    <meta property="discord:app_id" content="1341008803189100676">
     <meta property="og:locale" content="no_NO">
     <meta property="og:site_name" content="Ord På Nett">
 
