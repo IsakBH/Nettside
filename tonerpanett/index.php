@@ -3,6 +3,17 @@
 $version = "v0.0.1";
 ?>
 
+<?php
+session_start();
+require_once 'database.php';
+
+// redirect til login hvis ikke autentisert
+if (!isset($_SESSION['user_id'])) {
+    header('Location: pages/login.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
