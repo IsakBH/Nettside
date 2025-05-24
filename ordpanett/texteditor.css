@@ -7,9 +7,21 @@
 }
 
 body {
-  background-color: aliceblue;
+    background-image: url("assets/OrdPåNettBanner.png");
 }
 
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.25); 
+    pointer-events: none;
+    z-index: -1; 
+    backdrop-filter: blur(2px);
+}
 h1 {
   padding-top: 0px;
   text-align: center;
