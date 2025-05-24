@@ -22,7 +22,7 @@ body::before{
     height: 100vh;
     background: rgba(255, 255, 255, 0.25); 
     pointer-events: none;
-    z-index: 1; 
+    z-index: -1; 
     backdrop-filter: blur(2px);
 }
 
