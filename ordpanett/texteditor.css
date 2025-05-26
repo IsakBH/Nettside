@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -7,21 +8,23 @@
 }
 
 body {
-    background-image: url("assets/OrdPåNettBanner.png");
+  background-image: url("assets/OrdPåNettBanner.png");
 }
 
-body::before{
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.25); 
-    pointer-events: none;
-    z-index: -1; 
-    backdrop-filter: blur(2px);
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.25);
+  pointer-events: none;
+  z-index: -1;
+  backdrop-filter: blur(4px);
+  backdrop-filter: brightness(60%);
 }
+
 h1 {
   padding-top: 0px;
   text-align: center;
@@ -939,7 +942,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
   filter: drop-shadow(0px 0px black);
