@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'database.php';
+require_once '../database.php';
 
 // sjekker om brukeren er logget inn, hvis ikke, redirect til innloggings siden
 if (!isset($_SESSION['user_id'])) {
@@ -84,11 +84,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 
 <head>
-    <title>Instillinger Ord på Nett</title>
-    <link rel="stylesheet" href="texteditor.css">
-    <script src="texteditor.js"></script>
-    <script src="applydarkmode.js"></script>
-    <link rel="icon" href="../Pictures/ordlogo.png" />
+    <title>Ord På Nett | Instillinger</title>
+    <link rel="stylesheet" href="../styling/texteditor.css">
+    <script src="../scripts/texteditor.js"></script>
+    <script src="../scripts/applydarkmode.js"></script>
+    <link rel="icon" href="../assets/ordlogo.png" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php endif; ?>
 
         <div class="current-profile">
-            <img src="uploads/<?php echo htmlspecialchars($_SESSION['profile_picture']); ?>" alt="Profilbilde">
+            <img src="../uploads/<?php echo htmlspecialchars($_SESSION['profile_picture']); ?>" alt="Profilbilde">
         </div>
 
         <form method="POST" enctype="multipart/form-data">
@@ -129,15 +129,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <label>Dark mode</label>
             <br> <br>
 
-            <!--
-            <select>
-                <option value="lightmode" title="lys">Lys</option>
-                <option value="darkmode" title="mørk">Mørk</option>
-                <option value="gruvbox" title="gruvbox">Gruvbox</option>
-                <option value="vscode" title="vscodedefault">VSCode Default</option>
-            </select>
-            -->
-
             <button id="submit" type="submit">Oppdater instillinger</button>
         </form>
 
@@ -149,7 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <a id="logout" href="logout.php">Logg ut</a>
         <br>
 
-        <a id="backButton" href="index.php">Tilbake til Ord på Nett</a>
+        <a id="backButton" href="../index.php">Tilbake til Ord på Nett</a>
     </div>
 </body>
 

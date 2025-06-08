@@ -10,7 +10,7 @@ $buttonHoverColor: #E2E7EA;
 }
 
 body {
-    background-image: url("assets/OrdPåNettBanner.png");
+    background-image: url("../assets/OrdPåNettBanner.png");
 }
 
 body::before{
@@ -30,7 +30,6 @@ body::before{
 
 h1 {
     padding-top: 0px;
-    text-align: center;
     margin: 0 auto;
     padding-bottom: 10px;
 }
@@ -1132,6 +1131,10 @@ input:checked + .slider:before {
     display: flex;
     width: 100%;
     justify-content: space-between;
+}
+
+#title {
+    text-align: center;
 }
 
 #changeLogTitle {

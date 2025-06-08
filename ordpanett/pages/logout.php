@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'database.php';
+require_once '../database.php';
 
 // slett session fra databasen hvis cookie eksisterer
 if (isset($_COOKIE['remember_me'])) {

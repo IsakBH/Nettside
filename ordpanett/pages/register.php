@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'database.php';
+require_once '../database.php';
 
 // håndter registrering
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -44,10 +44,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 
 <head>
-    <title>Registrer</title>
-    <link rel="stylesheet" href="texteditor.css">
-    <script src="texteditor.js"></script>
-    <link rel="icon" href="../Pictures/ordlogo.png" />
+    <title>Ord På Nett | Registrer deg</title>
+    <link rel="stylesheet" href="../styling/texteditor.css">
+    <script src="../scripts/texteditor.js"></script>
+    <link rel="icon" href="../assets/ordlogo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 

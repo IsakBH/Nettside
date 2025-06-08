@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'database.php';
+require_once '../database.php';
 
 // håndterer innlogging
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
-        header('Location: index.php'); // redirecter til hovedsiden
+        header('Location: ../index.php'); // redirecter til hovedsiden
         exit();
     } else {
         $error = "Ugyldig brukernavn eller passord"; // error melding hvis du skrev ugyldig brukernavn eller passord
@@ -67,16 +67,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 
 <head>
-    <title>Logg inn</title>
-    <link rel="stylesheet" href="texteditor.css">
-    <script src="texteditor.js"></script>
-    <link rel="icon" href="../Pictures/ordlogo.png" />
+    <title>Ord På Nett | Logg inn</title>
+    <link rel="stylesheet" href="../styling/texteditor.css">
+    <script src="../scripts/texteditor.js"></script>
+    <link rel="icon" href="../assets/ordlogo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Open Graph meta-tagger -->
     <meta property="og:title" content="Ord På Nett <?php echo $version; ?>">
-    <meta property="og:description" content="UI Redesign! Ord på Nett er et kraftig og brukervennlig tekstbehandlingsverktøy utviklet av meg (Isak Brun Henriksen). Bruk også https://isak.brunhenriksen.no/tonerpanett">
-    <meta property="og:image" content="https://isak.brunhenriksen.no/Pictures/ordlogo.png">
+    <meta property="og:description" content="Nå med en changelog side! Ord på Nett er et kraftig og brukervennlig tekstbehandlingsverktøy utviklet av meg (Isak Brun Henriksen). Med fokus på ytelse, enkelhet og tilgjengelighet, er Ord på Nett et ideelt valg for studenter, forfattere, forskere, profesjonelle, og egentlig alle yrker i hele verden som trenger et pålitelig og fleksibelt skriveverktøy.">
+    <meta property="og:image" content="https://isak.brunhenriksen.no/ordpanett/assets/ordlogo.png">
     <meta property="og:url" content="https://isak.brunhenriksen.no/ordpanett">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="no_NO">

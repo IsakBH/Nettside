@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.0"; // UI-redesign!
+$version = "v3.4.1"; // Full revamp av mappestruktur
 ?>
 
 <!DOCTYPE html>
@@ -9,20 +9,11 @@ $version = "v3.4.0"; // UI-redesign!
 <head>
     <title>Ord På Nett <?php echo $version; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="texteditor.css" />
-    <link rel="icon" href="../Pictures/ordlogo.png" />
+    <link rel="stylesheet" href="styling/texteditor.css" />
+    <link rel="icon" href="assets/ordlogo.png" />
     <!-- ikoner fra font awesome og google fonts-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-
-    <!-- Open Graph meta-tagger -->
-    <meta property="og:title" content="Ord På Nett <?php echo $version; ?>">
-    <meta property="og:description" content="Nå med en changelog side! Ord på Nett er et kraftig og brukervennlig tekstbehandlingsverktøy utviklet av meg (Isak Brun Henriksen). Med fokus på ytelse, enkelhet og tilgjengelighet, er Ord på Nett et ideelt valg for studenter, forfattere, forskere, profesjonelle, og egentlig alle yrker i hele verden som trenger et pålitelig og fleksibelt skriveverktøy.">
-    <meta property="og:image" content="https://isak.brunhenriksen.no/Pictures/ordlogo.png">
-    <meta property="og:url" content="https://isak.brunhenriksen.no/ordpanett">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="no_NO">
-    <meta property="og:site_name" content="Ord På Nett">
 
     <script src="https://unpkg.com/turndown/dist/turndown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -59,11 +50,11 @@ $version = "v3.4.0"; // UI-redesign!
             </div>
             <ul id="documentsList"></ul>
         </div>
-        <button id="changelogButton" title="Endringslogg Ord på Nett" href="changelog.php">Endringslogg<i class="fa-solid fa-clock-rotate-left"></i></button>
+        <a id="changelogButton" title="Endringslogg Ord på Nett" href="pages/changelog.php">Endringslogg<i class="fa-solid fa-clock-rotate-left"></i></a>
     </div>
 
     <div class="container"> <!--  containeren for toolbaren -->
-        <h1 id="header">Ord På Nett</h1>
+        <h1 id="title">Ord På Nett</h1>
         <p id="splashText" style="<?php echo isset($_SESSION['hide_splash_text']) && $_SESSION['hide_splash_text'] ? 'display: none;' : ''; ?>"></p> <!-- Splash tekst-->
         <div class="options"> <!--  Toolbaren-->
 
@@ -82,15 +73,15 @@ $version = "v3.4.0"; // UI-redesign!
                 <option value="H1" title="Overskrift 1 (heading 1)">Overskrift 1</option>
                 <option value="H2" title="Overskrift 2 (heading 2)">Overskrift 2</option>
                 <option value="H3" title="Overskrift 3 (heading 3)">Overskrift 3</option>
-                <option value="H4" title="Overskrift 4 (heading 4)">Overskrift 4</option>
-                <option value="H5" title="Overskrift 5 (heading 5)">Overskrift 5</option>
-                <option value="H6" title="Overskrift 6 (heading 6)">Overskrift 6</option>
+                <option value="H4" title="Vanlig skrift (normal text)">Vanlig tekst</option>
+                <option value="H5" title="Undertittel 1 (subtitle 1)">Undertittel 1</option>
+                <option value="H6" title="Undertittel 2 (subtitle 2)">Undertittel 2</option>
             </select>
 
             <hr>
 
             <!-- font knapper -->
-            <select id="fontName" class="adv-option-button"></select>
+            <select id="fontName" title="Ikke fungerende for øyeblikket" class="adv-option-button"></select>
             <select id="fontSize" class="adv-option-button"></select>
 
             <hr>
@@ -266,8 +257,8 @@ $version = "v3.4.0"; // UI-redesign!
                 <p><?php echo htmlspecialchars($_SESSION['username']); ?></p>
             </div>
             <hr id="splitter">
-            <a href="profile.php">Din profil</a>
-            <a href="settings.php">Instillinger</a>
+            <a href="pages/profile.php">Din profil</a>
+            <a href="pages/settings.php">Instillinger</a>
         </div>
     </div>
 
@@ -280,7 +271,7 @@ $version = "v3.4.0"; // UI-redesign!
     </div>
 
     <!-- javascript link-->
-    <script src="texteditor.js"></script>
+    <script src="scripts/texteditor.js"></script>
 </body>
 
 </html>
