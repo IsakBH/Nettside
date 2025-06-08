@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.1"; // Full revamp av mappestruktur
+$version = "v3.4.2"; // spiller av en lyd når du lager nytt dokument
 ?>
 
 <!DOCTYPE html>
