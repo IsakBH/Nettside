@@ -15,7 +15,7 @@ if (!isset($_SESSION['user_id'])) {
     <title>Endringslogg - Ord på Nett</title>
     <link rel="stylesheet" href="../styling/texteditor.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="icon" href="../Pictures/ordlogo.png" />
+    <link rel="icon" href="../assets/ordlogo.png" />
 </head>
 <body>
     <div id="changeLogTopBar">
