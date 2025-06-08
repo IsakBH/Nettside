@@ -244,6 +244,8 @@ documentSearch.addEventListener('input', function(e) {
 
 // funksjon for å lage nytt dokument
 function createNewDocument(){
+    const music = new Audio("assets/sound/twinkle.mp3");
+    music.play();
     const title = prompt("Skriv inn tittel på dokumentet:", "Skriv inn navnet her");
     // ajax :))))
     if (title) {
