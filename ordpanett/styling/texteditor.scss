@@ -672,7 +672,9 @@ input[type="file"]::file-selector-button {
 #documentSearch {
     &:hover {
         cursor: pointer; // I guess pointer er bra? jeg foretrekker pointer, men kan skjønne at andre synes det er bedre med pointer: text (med tanke på at dette er tekst)
-        box-shadow: 0 4px 2px -4px black;    }
+        box-shadow: 0 4px 2px -4px black;
+        border-color: #9F9F9F;
+    }
 }
 
 .document-list {
@@ -717,6 +719,7 @@ input[type="file"]::file-selector-button {
         &:hover {
             transform: translateY(-3px);
             box-shadow: 0 4px 2px -4px black;
+            border-color: #9F9F9F;
 
             .document-actions {
                 opacity: 1;

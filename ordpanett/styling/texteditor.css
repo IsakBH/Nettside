@@ -643,6 +643,7 @@ input[type=file]::file-selector-button {
 #documentSearch:hover {
   cursor: pointer;
   box-shadow: 0 4px 2px -4px black;
+  border-color: #9F9F9F;
 }
 
 .document-list {
@@ -683,6 +684,7 @@ input[type=file]::file-selector-button {
 #documentsList li:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 2px -4px black;
+  border-color: #9F9F9F;
 }
 #documentsList li:hover .document-actions {
   opacity: 1;
