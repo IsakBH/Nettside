@@ -2,7 +2,7 @@ async function displayChangelog() {
     const changelogDiv = document.getElementById('changelog');
     const owner = 'isakbh';
     const repo = 'nettside';
-    const path = 'Ord_online';
+    const path = 'ordpanett';
     const apiUrl = `https://api.github.com/repos/${owner}/${repo}/commits?path=${path}`;
 
     try {
