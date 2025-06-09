@@ -55,7 +55,22 @@ $version = "v3.4.2"; // spiller av en lyd når du lager nytt dokument
 
     <div class="container"> <!--  containeren for toolbaren -->
         <h1 id="title">Ord På Nett</h1>
-        <p id="splashText" style="<?php echo isset($_SESSION['hide_splash_text']) && $_SESSION['hide_splash_text'] ? 'display: none;' : ''; ?>"></p> <!-- Splash tekst-->
+        <div id="topRightContainer">
+            <p id="splashText" style="<?php echo isset($_SESSION['hide_splash_text']) && $_SESSION['hide_splash_text'] ? 'display: none;' : ''; ?>"></p> <!-- Splash tekst-->
+            <!-- menyen for konto instillinger og sånn -->
+            <div class="profile-menu">
+                <img src="uploads/<?php echo htmlspecialchars($_SESSION['profile_picture']); ?>" alt="Profile" class="profile-picture">
+                <div class="profile-dropdown">
+                    <div class="profile-info">
+                        <p><?php echo htmlspecialchars($_SESSION['username']); ?></p>
+                    </div>
+                    <hr id="splitter">
+                    <a href="pages/profile.php">Din profil</a>
+                    <a href="pages/settings.php">Instillinger</a>
+                </div>
+            </div>
+        </div>
+
         <div class="options"> <!--  Toolbaren-->
 
             <!-- undo og redo -->
@@ -247,19 +262,6 @@ $version = "v3.4.2"; // spiller av en lyd når du lager nytt dokument
             referrerpolicy="no-referrer-when-downgrade"
             async>
         </script>
-    </div>
-
-    <!-- menyen for konto instillinger og sånn -->
-    <div class="profile-menu">
-        <img src="uploads/<?php echo htmlspecialchars($_SESSION['profile_picture']); ?>" alt="Profile" class="profile-picture">
-        <div class="profile-dropdown">
-            <div class="profile-info">
-                <p><?php echo htmlspecialchars($_SESSION['username']); ?></p>
-            </div>
-            <hr id="splitter">
-            <a href="pages/profile.php">Din profil</a>
-            <a href="pages/settings.php">Instillinger</a>
-        </div>
     </div>
 
     <div id="cross-symbol"><i class="fa-solid fa-cross"></i></div>

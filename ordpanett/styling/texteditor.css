@@ -263,14 +263,19 @@ input[type=color] {
   transform: translateY(0) !important;
 }
 
-#splashText {
+#topRightContainer {
+  display: flex;
   position: fixed;
   right: 0;
   top: 0;
+  margin: 10px;
+}
+
+#splashText {
   color: yellow;
   background: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
   z-index: 1000;
   user-select: none;
 }
@@ -279,9 +284,7 @@ input[type=color] {
 }
 
 .profile-menu {
-  position: fixed;
-  top: 20px;
-  right: 20px;
+  margin-left: 10px;
   z-index: 1000;
 }
 
