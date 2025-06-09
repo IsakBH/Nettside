@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (in_array($ext, $allowed)) {
             // lag random filnavn og last bildet opp til uploads
             $new_filename = uniqid() . '.' . $ext;
-            move_uploaded_file($_FILES['new_profile_picture']['tmp_name'], 'uploads/' . $new_filename);
+            move_uploaded_file($_FILES['new_profile_picture']['tmp_name'], '../uploads/' . $new_filename);
 
             // oppdater profilbilde i databasen
             $sql = "UPDATE users SET profile_picture = ? WHERE id = ?";

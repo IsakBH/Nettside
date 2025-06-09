@@ -716,6 +716,7 @@ input[type="file"]::file-selector-button {
 
         &:hover {
             transform: translateY(-3px);
+            box-shadow: 0 4px 2px -4px black;
 
             .document-actions {
                 opacity: 1;

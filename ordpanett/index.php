@@ -26,7 +26,7 @@ $version = "v3.4.2"; // spiller av en lyd når du lager nytt dokument
 
     // redirect til login hvis ikke autentisert
     if (!isset($_SESSION['user_id'])) {
-        header('Location: login.php');
+        header('Location: pages/login.php');
         exit();
     }
     ?>
