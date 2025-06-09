@@ -642,6 +642,7 @@ input[type=file]::file-selector-button {
 
 #documentSearch:hover {
   cursor: pointer;
+  box-shadow: 0 4px 2px -4px black;
 }
 
 .document-list {
@@ -687,8 +688,7 @@ input[type=file]::file-selector-button {
   opacity: 1;
 }
 #documentsList li:active {
-  transform: translateY(0px);
-  transform: scale(0.95);
+  transform: translateY(3px);
 }
 #documentsList li.active-document {
   border: 2px solid #8AC8FF;
