@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.2"; // spiller av en lyd når du lager nytt dokument
+$version = "v3.4.3"; // finere styling på login og register + det aktive dokumentet bruker nå 'outline' istedet for 'border'
 ?>
 
 <!DOCTYPE html>
