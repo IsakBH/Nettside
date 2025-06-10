@@ -107,11 +107,13 @@ button {
     background-color: #ffffff;
     outline: none;
     color: #020929;
+    transition: transform 0.3s ease;
     &:hover{
         background-color: $buttonHoverColor;
+        transform: scale(1.05);
     }
     &:active{
-        transform: scale(0.9);
+        transform: translateY(3px);
     }
 }
 
@@ -122,11 +124,13 @@ select {
     text-decoration: none;
     border: 1px solid grey;
     border-radius: 10px;
+    transition: transform 0.3s ease;
     &:hover{
         background-color: $buttonHoverColor;
+        transform: scale(1.05);
     }
     &:active{
-        transform: scale(0.9);
+        transform: translateY(3px);
     }
 }
 
