@@ -64,6 +64,7 @@ let splashText = [
     "Achtung!",
     "Ihre befehle!",
     "Befehle!",
+    "That is bullshit blazing!",
 ];
 
 // skriver at brukeren må velge et dokument - calles når currentDocumentId er null
