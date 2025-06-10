@@ -9,8 +9,16 @@ $buttonHoverColor: #E2E7EA;
     font-family: "Poppins", sans-serif;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     background-image: url("../assets/OrdPåNettBanner.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 body::before{
@@ -355,12 +363,14 @@ input[type="color"] {
 }
 
 .auth-container {
+    width: 100%;
     max-width: 400px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 30px 20px 30px 20px;
     background: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid #8AC8FF;
 }
 
 .form-group {
@@ -374,9 +384,10 @@ input[type="color"] {
 
 .form-group input {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #8AC8FF;
+    border-radius: 8px;
 }
 
 .error {

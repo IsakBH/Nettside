@@ -98,12 +98,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="form-group">
                 <label>Brukernavn:</label>
-                <input type="text" name="username" required>
+                <input type="text" name="username" placeholder="brukernavn" required>
             </div>
 
             <div class="form-group">
                 <label>Passord:</label>
-                <input type="password" name="password" required>
+                <input type="password" name="password" placeholder="passord" required>
             </div>
 
             <label for="remember_me">
