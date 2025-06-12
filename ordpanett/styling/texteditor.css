@@ -1134,6 +1134,27 @@ input:checked + .slider:before {
   background: rgb(189, 224.2, 255);
 }
 
+
+/*ACHIEVEMENT STYLING*/
+.achievement-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #222;
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.3s;
+    transform: translateY(20px);
+    z-index: 1000;
+}
+.achievement-popup.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .dark-theme {
   background-color: #0d1117;
   color: #ffffff;

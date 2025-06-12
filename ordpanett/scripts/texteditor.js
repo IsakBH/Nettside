@@ -603,7 +603,7 @@ document.getElementById("insertTable").addEventListener("click", () => {
     const rows = prompt("Enter number of rows:", "2");
     const cols = prompt("Enter number of columns:", "2");
 
-    if (rows && cols < 100) {
+    if (rows < 100 && cols < 100) { //Liten bug fiks: Du må også definere at rows skal være mindre en hundre, ikke bnare cols
         // lag tabell container div
         const tableContainer = document.createElement("div");
         tableContainer.className = "table-container";
@@ -640,6 +640,7 @@ document.getElementById("insertTable").addEventListener("click", () => {
         // legg til tabell og slett knapp til container
         tableContainer.appendChild(deleteButton);
         tableContainer.appendChild(table);
+        updateAchievement("tables_inserted", 1);
 
         // skriv inn tabeller på cursor position
         const selection = window.getSelection();
@@ -667,12 +668,78 @@ document.addEventListener("contextmenu", function (e) {
     }
 });
 
+
+// ========== ACHIEVEMENTS ==========
+let achieved = new Set();
+
+function showAchievement(title, message) {
+    if (achieved.has(title)) return; // vis bare én gang
+
+    achieved.add(title);
+
+    const popup = document.createElement("div");
+    popup.className = "achievement-popup";
+    popup.innerHTML = `<strong>${title}</strong><br>${message}`;
+
+    document.body.appendChild(popup);
+    setTimeout(() => {
+        popup.classList.add("visible");
+    }, 100); // forsinkelse for animasjon
+
+    setTimeout(() => {
+        popup.classList.remove("visible");
+        setTimeout(() => document.body.removeChild(popup), 500);
+    }, 3000);
+}
+
+function updateAchievement(event, value) {
+    fetch('update_achievement_progress.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            event: event,
+            value: value
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            console.log('Achievement progresjon oppdatert');
+
+            // Hvis serveren sier at et achievement ble låst opp
+            if (data.achievement_unlocked) {
+                const { title, message } = data.achievement_unlocked;
+                showAchievement(title, message);
+            }
+        }
+    });
+}
+
+/*Achievements i databasen - husk at du kan legge til flere:
+INSERT INTO achievements (name, description, icon_url, trigger_event, trigger_value) VALUES
+('Første Ord', 'Skriv ditt aller første ord i editoren.', '/icons/word.png', 'words_written', 1),
+('Produktiv Forfatter', 'Skriv totalt 1000 ord i dine dokumenter.', '/icons/typewriter.png', 'words_written', 1000),
+('Tabelltroll', 'Sett inn 5 tabeller totalt.', '/icons/table.png', 'tables_inserted', 5),
+('Lyd på!', 'Spill av en hemmelig lyd.', '/icons/music-note.png', 'easter_egg_played', 1),
+('Shortcut Master', 'Bruk 10 tastatursnarveier.', '/icons/keyboard.png', 'shortcuts_used', 10);
+*/ 
+
 ////////////////// EASTER EGGS ////////////////////
 writingArea.addEventListener("input", () => {
     checkForGud();
     checkForMKX();
+    checkForOrd();
 });
 
+
+//Achievement for å skrive noe
+function checkForOrd(){
+        let totalWords = writingArea.innerText.trim().split(/\s+/).length;
+        updateAchievement("words_written", totalWords - lastWordCount);
+        lastWordCount = totalWords;
+}
 // sjekker om det står "gud" i tekst boksen der brukeren skriver
 function checkForGud() {
     const content = writingArea.innerText.toLowerCase();
@@ -694,7 +761,8 @@ function checkForMKX() {
             const music = new Audio("../Include/Musikk/mkx-10-20-30-40.mp3");
             music.play();
             seenEasterEgg = true;
-        }
+            updateAchievement("easter_egg_played", 1);
+}
     }
 }
 
@@ -705,46 +773,73 @@ window.onkeydown = function (e) {
         if (e.key === "b") {
             e.preventDefault(); // stopper default action
             modifyText("bold", false, null);
+            shortcutCount++;
+            updateAchievement("shortcuts_used", 1);
+
         }
         // kursiv skrift
         else if (e.key === "i") {
             e.preventDefault(); // stopper default action
             modifyText("italic", false, null);
+            shortcutCount++;
+            updateAchievement("shortcuts_used", 1);
+
         }
         // understrek
         else if (e.key === "u") {
             e.preventDefault(); // stopper default action
             modifyText("underline", false, null);
+            shortcutCount++;
+            updateAchievement("shortcuts_used", 1);
+
         }
         // hyperlink
         else if (e.key === "k") {
             e.preventDefault(); // stopper default action
             linkButton.click(); // link knapp click
+            shortcutCount++;
+            updateAchievement("shortcuts_used", 1);
+
         }
         // lagre fil
         else if (e.key == "s") {
             e.preventDefault();
             saveTextAsFile();
+            shortcutCount++;
+            updateAchievement("shortcuts_used", 1);
+
         }
         // åpne fil
         else if (e.key == "o") {
             e.preventDefault();
             loadTextFile();
+            shortcutCount++;
+         updateAchievement("shortcuts_used", 1);
+
         }
         // strikethrough
         else if (e.key == "-") {
             e.preventDefault();
             modifyText("strikethrough", false, null);
+            shortcutCount++;
+            updateAchievement("shortcuts_used", 1);
+
         }
         // unordered list (uten tall)
         else if (e.key == "*") {
             e.preventDefault();
             ulButton.click();
+            shortcutCount++;
+            updateAchievement("shortcuts_used", 1);
+
         }
         // ordered list (med tall)
         else if (e.key == "/") {
             e.preventDefault();
             olButton.click();
+            shortcutCount++;
+            updateAchievement("shortcuts_used", 1);
+
         }
         // +1 skriftstørrelse
         if (e.key === ".") {
