@@ -56,7 +56,6 @@ $version = "v3.4.4"; // document-manager ser finere ut, flyttet versjonsnummeret
     <div class="container"> <!--  containeren for toolbaren -->
         <h1 id="title">Ord På Nett</h1>
         <div id="topRightContainer">
-            <p id="splashText" style="<?php echo isset($_SESSION['hide_splash_text']) && $_SESSION['hide_splash_text'] ? 'display: none;' : ''; ?>"></p> <!-- Splash tekst-->
             <!-- menyen for konto instillinger og sånn -->
             <div class="profile-menu">
                 <img src="uploads/<?php echo htmlspecialchars($_SESSION['profile_picture']); ?>" alt="Profile" class="profile-picture">
@@ -264,6 +263,8 @@ $version = "v3.4.4"; // document-manager ser finere ut, flyttet versjonsnummeret
             async>
         </script>
     </div>
+
+    <p id="splashText" style="<?php echo isset($_SESSION['hide_splash_text']) && $_SESSION['hide_splash_text'] ? 'display: none;' : ''; ?>"></p> <!-- splash tekst-->
 
     <div id="cross-symbol"><i class="fa-solid fa-cross"></i></div>
     <p id="save-status"></p>
