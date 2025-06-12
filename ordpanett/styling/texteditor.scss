@@ -1,5 +1,5 @@
 ///////////////////////// BASIC STYLING  ////////////////////////////////
-$buttonHoverColor: #E2E7EA;
+$buttonHoverColor: #e2e7ea;
 
 * {
     padding: 0;
@@ -21,7 +21,7 @@ body {
     height: 100%;
 }
 
-body::before{
+body::before {
     content: "";
     position: fixed;
     top: 0;
@@ -34,7 +34,6 @@ body::before{
     backdrop-filter: blur(4px);
     backdrop-filter: brightness(60%);
 }
-
 
 h1 {
     padding-top: 0px;
@@ -108,11 +107,11 @@ button {
     outline: none;
     color: #020929;
     transition: transform 0.3s ease;
-    &:hover{
+    &:hover {
         background-color: $buttonHoverColor;
         transform: scale(1.05);
     }
-    &:active{
+    &:active {
         transform: translateY(3px);
     }
 }
@@ -125,16 +124,17 @@ select {
     border: 1px solid grey;
     border-radius: 10px;
     transition: transform 0.3s ease;
-    &:hover{
+    &:hover {
         background-color: $buttonHoverColor;
         transform: scale(1.05);
     }
-    &:active{
+    &:active {
         transform: translateY(3px);
     }
 }
 
-.options label, .options select {
+.options label,
+.options select {
     font-family: "Poppins", sans-serif;
 }
 
@@ -167,7 +167,8 @@ input[type="color"] {
 
     // fikser at liste punktene går utenfor tekst boksen
     font-family: inherit;
-    ul, ol{
+    ul,
+    ol {
         padding-left: 40px;
         margin: 0;
     }
@@ -177,11 +178,11 @@ input[type="color"] {
 }
 
 .font-gothic {
-    font-family: 'UnifrakturMaguntia', cursive;
+    font-family: "UnifrakturMaguntia", cursive;
 }
 
 .active {
-    background-color: #D3E3FD;
+    background-color: #d3e3fd;
 }
 
 #text-input table {
@@ -198,7 +199,7 @@ input[type="color"] {
 
 #text-input td:focus {
     background-color: #f0f0f0;
-    outline: 2px solid #8AC8FF;
+    outline: 2px solid #8ac8ff;
 }
 
 .table-container {
@@ -237,7 +238,7 @@ input[type="color"] {
 
 #text-input .table-container td:focus {
     background-color: #f0f0f0;
-    outline: 2px solid #8AC8FF;
+    outline: 2px solid #8ac8ff;
 }
 
 #cross-symbol {
@@ -245,8 +246,7 @@ input[type="color"] {
     position: fixed;
     right: 20px;
     top: 50%;
-    transform:
-    translateY(-50%);
+    transform: translateY(-50%);
     font-size: 40px;
     filter: drop-shadow(0 0 100px yellow);
 }
@@ -277,7 +277,9 @@ input[type="color"] {
     border: 1px solid grey;
     color: #020929;
     opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
     transform: translateY(100px);
 }
 
@@ -328,7 +330,7 @@ input[type="color"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     min-width: 150px;
 }
 
@@ -374,7 +376,7 @@ input[type="color"] {
     background: white;
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid #8AC8FF;
+    border: 1px solid #8ac8ff;
 }
 
 .form-group {
@@ -390,7 +392,7 @@ input[type="color"] {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #8AC8FF;
+    border: 1px solid #8ac8ff;
     border-radius: 8px;
 }
 
@@ -416,7 +418,7 @@ input[type="color"] {
     padding: 20px;
     background: white;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .current-profile {
@@ -435,7 +437,7 @@ input[type="color"] {
 #submit {
     width: 100%;
     height: 40px;
-    background: #8AC8FF;
+    background: #8ac8ff;
     color: white;
     border: none;
     border-radius: 10px;
@@ -445,22 +447,22 @@ input[type="color"] {
     transition: all 0.2s ease;
 
     &:hover {
-        background: darken(#8AC8FF, 10%);
+        background: darken(#8ac8ff, 10%);
         transform: translateY(-1px);
     }
     &:active {
         transform: translateY(1px);
     }
     &:focus {
-        background: darken(#8AC8FF, 10%);
+        background: darken(#8ac8ff, 10%);
     }
 }
 
-input[type=text],
-input[type=password] {
+input[type="text"],
+input[type="password"] {
     &:focus {
         outline: none;
-        border: 1px solid #8AC8FF;
+        border: 1px solid #8ac8ff;
     }
 }
 
@@ -474,7 +476,7 @@ input[type=password] {
 #logout {
     width: 100%;
     height: 40px;
-    background: #FF002F;
+    background: #ff002f;
     color: white;
     border: none;
     border-radius: 10px;
@@ -489,7 +491,7 @@ input[type=password] {
     cursor: pointer;
 
     &:hover {
-        background: darken(#FF002F, 10%);
+        background: darken(#ff002f, 10%);
         transform: translateY(-1px);
         color: white;
         text-decoration: none;
@@ -498,20 +500,20 @@ input[type=password] {
         transform: translateY(1px);
     }
     &:focus {
-        background: darken(#FF002F, 10%);
+        background: darken(#ff002f, 10%);
         outline: none;
     }
 }
 
 // gjør sånn at "browse" knappen blir større og blå
 input[type="file"]::file-selector-button {
-  // grønn farge: #4CAF50
-  background-color: #8AC8FF;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    // grønn farge: #4CAF50
+    background-color: #8ac8ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .settings-form {
@@ -550,7 +552,7 @@ input[type="file"]::file-selector-button {
 #iamready {
     width: 100%;
     height: 40px;
-    background: #8AC8FF;
+    background: #8ac8ff;
     color: white;
     border: none;
     border-radius: 10px;
@@ -565,7 +567,7 @@ input[type="file"]::file-selector-button {
     cursor: pointer;
 
     &:hover {
-        background: darken(#8AC8FF, 10%);
+        background: darken(#8ac8ff, 10%);
         transform: translateY(-1px);
         color: white;
         text-decoration: none;
@@ -574,19 +576,19 @@ input[type="file"]::file-selector-button {
         transform: translateY(1px);
     }
     &:focus {
-        background: darken(#8AC8FF, 10%);
+        background: darken(#8ac8ff, 10%);
         outline: none;
     }
 }
 
 #reklame {
-    color: #8AC8FF;
+    color: #8ac8ff;
     text-decoration: none;
     &:visited {
-        color: darken(#8AC8FF, 20%);
+        color: darken(#8ac8ff, 20%);
     }
-    &:hover{
-        color: lighten(#8AC8FF, 5%);
+    &:hover {
+        color: lighten(#8ac8ff, 5%);
     }
 }
 
@@ -618,22 +620,22 @@ input[type="file"]::file-selector-button {
     }
 
     ::-webkit-scrollbar {
-      width: 1px;
+        width: 1px;
     }
 
     ::-webkit-scrollbar-track {
-      background: transparent;
+        background: transparent;
     }
 
     ::-webkit-scrollbar-thumb {
-      background: rgba(0, 0, 0, 0.5); /* Adjust the color as needed */
+        background: rgba(0, 0, 0, 0.5); /* Adjust the color as needed */
     }
 }
 
 .new-doc-button {
     width: 100%;
     height: 40px;
-    background: #8AC8FF;
+    background: #8ac8ff;
     color: white;
     border: none;
     border-radius: 10px;
@@ -646,7 +648,7 @@ input[type="file"]::file-selector-button {
     transition: all 0.2s ease;
 
     &:hover {
-        background: darken(#8AC8FF, 10%);
+        background: darken(#8ac8ff, 10%);
         transform: translateY(-1px);
     }
 
@@ -681,7 +683,7 @@ input[type="file"]::file-selector-button {
 
         &:focus {
             outline: none;
-            border-color: #3D444D;
+            border-color: #3d444d;
             box-shadow: 0 0 0 2px rgba(138, 200, 255, 0.2);
         }
     }
@@ -691,7 +693,7 @@ input[type="file"]::file-selector-button {
     &:hover {
         cursor: pointer; // I guess pointer er bra? jeg foretrekker pointer, men kan skjønne at andre synes det er bedre med pointer: text (med tanke på at dette er tekst)
         box-shadow: 0 4px 2px -4px black;
-        border-color: #9F9F9F;
+        border-color: #9f9f9f;
     }
 }
 
@@ -722,7 +724,8 @@ input[type="file"]::file-selector-button {
     list-style: none;
     padding: 0;
 
-    li { // dokumentene
+    li {
+        // dokumentene
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -737,7 +740,7 @@ input[type="file"]::file-selector-button {
         &:hover {
             transform: translateY(-3px);
             box-shadow: 0 4px 2px -4px black;
-            border-color: #9F9F9F;
+            border-color: #9f9f9f;
 
             .document-actions {
                 opacity: 1;
@@ -748,8 +751,8 @@ input[type="file"]::file-selector-button {
         }
 
         &.active-document {
-            outline: 2px solid #8AC8FF;
-            background: lighten(#8AC8FF, 25%);
+            outline: 2px solid #8ac8ff;
+            background: lighten(#8ac8ff, 25%);
             filter: drop-shadow(0 0 2px #cccccc);
         }
     }
@@ -792,7 +795,7 @@ input[type="file"]::file-selector-button {
 #social {
     width: 100%;
     height: 40px;
-    background: #1F6FEB;
+    background: #1f6feb;
     color: white;
     border: none;
     border-radius: 10px;
@@ -807,7 +810,7 @@ input[type="file"]::file-selector-button {
     cursor: pointer;
 
     &:hover {
-        background: #2498FF;
+        background: #2498ff;
         transform: translateY(-1px);
         color: white;
         text-decoration: none;
@@ -818,8 +821,11 @@ input[type="file"]::file-selector-button {
 }
 
 #changelogButton {
-    width: 100%;
     height: 40px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
     background: #808080;
     color: white;
     border: none;
@@ -889,13 +895,13 @@ input[type="file"]::file-selector-button {
         left: 10px;
         top: 10px;
         z-index: 1001;
-        background: #8AC8FF;
+        background: #8ac8ff;
         color: white;
         padding: 10px;
         border-radius: 5px;
         margin-bottom: 200px;
         &:hover {
-            background-color: #E2E7EA;
+            background-color: #e2e7ea;
         }
     }
 
@@ -939,16 +945,16 @@ input[type="file"]::file-selector-button {
     }
 
     .options::-webkit-scrollbar {
-      height: 6px;
+        height: 6px;
     }
 
     .options::-webkit-scrollbar-thumb {
-      background: #666;
-      border-radius: 3px;
+        background: #666;
+        border-radius: 3px;
     }
 
     .options::-webkit-scrollbar-track {
-      background: transparent; // skjuler bakgrunnen på scrollbaren
+        background: transparent; // skjuler bakgrunnen på scrollbaren
     }
 
     .profile-menu {
@@ -975,11 +981,11 @@ input[type="file"]::file-selector-button {
 
 // boksen rundt slider
 .switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  outline: none;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    outline: none;
 }
 
 // gjem default html checkbox
@@ -998,9 +1004,9 @@ input[type="file"]::file-selector-button {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #F0F8FF;
-    -webkit-transition: .1s;
-    transition: .1s;
+    background-color: #f0f8ff;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
 }
 
 .slider:before {
@@ -1011,17 +1017,17 @@ input[type="file"]::file-selector-button {
     left: 4px;
     bottom: 4px;
     background-color: white;
-    -webkit-transition: .1s;
-    transition: .1s;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
     filter: drop-shadow(0px 0px 2px #ccc);
 }
 
 input:checked + .slider {
-    background-color: #8AC8FF;
+    background-color: #8ac8ff;
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #1F6FEB;
+    box-shadow: 0 0 1px #1f6feb;
 }
 
 input:checked + .slider:before {
@@ -1064,11 +1070,11 @@ input:checked + .slider:before {
     text-align: right;
     margin-bottom: 10px;
     border: none;
-    background: #F2F2F2;
+    background: #f2f2f2;
     color: #333333;
     transition: 0.3s;
     &:hover {
-        background: #E6E6E6;
+        background: #e6e6e6;
     }
 }
 
@@ -1082,43 +1088,43 @@ input:checked + .slider:before {
     padding: 30px;
     font-size: 18px;
     border: none;
-    background: #D2D2D2;
+    background: #d2d2d2;
     cursor: pointer;
     justify-content: center;
     align-items: center;
     display: flex;
     transition: 0.1s;
     &:hover {
-        background: #C8C8C8;
+        background: #c8c8c8;
         scale: 1.02;
     }
     &:active {
-        background: #B4B4B4;
-        scale: 0.9999999999
+        background: #b4b4b4;
+        scale: 0.9999999999;
     }
 }
 
 .calc-btn.operator {
-    background: #E6E6E6;
-    color: #3F3F3F;
+    background: #e6e6e6;
+    color: #3f3f3f;
     &:hover {
-        background: #DCDCDC;
+        background: #dcdcdc;
     }
     &:active {
-        background: #BEBEBE;
+        background: #bebebe;
     }
 }
 
 .calc-btn.equal {
     grid-column: span 4;
-    background: #3584E4;
-    color: #EDF4FD;
+    background: #3584e4;
+    color: #edf4fd;
     padding: 30px 135px;
     &:hover {
-        background: #4990E7;
+        background: #4990e7;
     }
     &:active {
-        background: #2A6AB6;
+        background: #2a6ab6;
     }
 }
 
@@ -1188,7 +1194,7 @@ input:checked + .slider:before {
 
 // DARK MODE
 .dark-theme {
-    background-color: #0D1117;
+    background-color: #0d1117;
     color: #ffffff;
 
     // changelog side
@@ -1208,40 +1214,40 @@ input:checked + .slider:before {
     }
 
     .container {
-        background-color: #0D1117;
+        background-color: #0d1117;
         filter: none;
-        border: 1px solid #3D444D;
+        border: 1px solid #3d444d;
         color: #ffffff;
     }
 
     #text-input {
-        background-color: #0D1117;
+        background-color: #0d1117;
         color: #ffffff;
-        border-color: #3D444D;
+        border-color: #3d444d;
     }
 
     .options button {
-        background-color: #0D1117;
+        background-color: #0d1117;
         color: #ffffff;
-        border-color: #3D444D;
+        border-color: #3d444d;
 
         &:hover {
-            background-color: #151B23;
+            background-color: #151b23;
         }
     }
 
     select {
-        background-color: #0D1117;
+        background-color: #0d1117;
         color: #ffffff;
-        border-color: #3D444D;
+        border-color: #3d444d;
         &:hover {
-            background-color: #151B23;
+            background-color: #151b23;
         }
     }
 
     .document-manager {
-        background-color: #0D1117;
-        border-color: #3D444D;
+        background-color: #0d1117;
+        border-color: #3d444d;
         color: #ffffff !important;
         h3 {
             color: #ffffff;
@@ -1249,8 +1255,8 @@ input:checked + .slider:before {
     }
 
     #documentsList li {
-        background-color: #0D1117;
-        border-color: #3D444D;
+        background-color: #0d1117;
+        border-color: #3d444d;
         color: #ffffff;
     }
 
@@ -1262,7 +1268,7 @@ input:checked + .slider:before {
 
     #documentSearch {
         background-color: #212830;
-        border-color: #3D444D;
+        border-color: #3d444d;
         color: #ffffff;
     }
 
@@ -1271,62 +1277,64 @@ input:checked + .slider:before {
     }
 
     .profile-dropdown {
-        background-color: #0D1117;
-        border-color: #3D444D;
+        background-color: #0d1117;
+        border-color: #3d444d;
         color: #ffffff;
         a {
             color: #ffffff;
             &:hover {
-                background-color: #151B23;
+                background-color: #151b23;
             }
         }
     }
 
     hr {
-        color: #3D444D;
+        color: #3d444d;
     }
 
     // INSTILLINGER SIDE
     .profile-settings {
-        background-color: #0D1117;
-        border: 1px solid #3D444D;
-        box-shadow: 0 2px 5px rgba(255,255,255,0.2);
+        background-color: #0d1117;
+        border: 1px solid #3d444d;
+        box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
     }
 
     .current-profile {
         transition: 0.4s;
         img {
-            filter: drop-shadow(0px 0px 10px #3D444D);
+            filter: drop-shadow(0px 0px 10px #3d444d);
         }
     }
 
     input[type="file"]::file-selector-button {
-      // grønn farge: #4CAF50
-      background-color: #1F6FEB;
-      &:hover {
-          background-color: darken(#8AC8FF, 20%);
-      }
-    }
-
-    #submit, #newDocument {
-        background-color: #1F6FEB;
-        color: #ffffff;
+        // grønn farge: #4CAF50
+        background-color: #1f6feb;
         &:hover {
-            background-color: darken(#8AC8FF, 20%);
+            background-color: darken(#8ac8ff, 20%);
         }
     }
 
-    #logout, #delete-account {
-        background-color: #FF002F;
+    #submit,
+    #newDocument {
+        background-color: #1f6feb;
+        color: #ffffff;
         &:hover {
-            background-color: #FF4444;
+            background-color: darken(#8ac8ff, 20%);
+        }
+    }
+
+    #logout,
+    #delete-account {
+        background-color: #ff002f;
+        &:hover {
+            background-color: #ff4444;
         }
     }
 
     input:checked + .slider {
-        background-color: #1F6FEB;
+        background-color: #1f6feb;
         &:hover {
-            background-color: darken(#8AC8FF, 20%);
+            background-color: darken(#8ac8ff, 20%);
         }
     }
 
@@ -1344,24 +1352,25 @@ input:checked + .slider:before {
 
     // login siden
     .auth-container {
-        background-color: #0D1117;
-        border: 1px solid #3D444D;
+        background-color: #0d1117;
+        border: 1px solid #3d444d;
     }
 
-    input[type=text], input[type=password] {
-        background-color: #0D1117;
-        border: 1px solid #3D444D;
+    input[type="text"],
+    input[type="password"] {
+        background-color: #0d1117;
+        border: 1px solid #3d444d;
         color: #ffffff;
     }
 
-    input[type=file] {
-        border: 1px solid #3D444D;
+    input[type="file"] {
+        border: 1px solid #3d444d;
     }
 
     .menu-toggle {
-        background-color: #1F6FEB;
+        background-color: #1f6feb;
         &:hover {
-            background-color: #2498FF;
+            background-color: #2498ff;
         }
     }
 }
@@ -1380,6 +1389,6 @@ input:checked + .slider:before {
         transform: scale(1.02);
     }
     100% {
-        transform: scale(1.0);
+        transform: scale(1);
     }
 }
