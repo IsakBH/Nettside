@@ -301,6 +301,7 @@ input[type=color] {
 }
 #splashText:hover {
   cursor: pointer;
+  outline: 2px solid yellow;
 }
 
 .profile-menu {

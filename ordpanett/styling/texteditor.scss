@@ -311,6 +311,7 @@ input[type="color"] {
     user-select: none;
     &:hover {
         cursor: pointer;
+        outline: 2px solid yellow;
     }
 }
 
