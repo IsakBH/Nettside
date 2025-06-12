@@ -18,8 +18,10 @@ if (!$event) {
     exit;
 }
 
+$achievementUnlocked = null;
+
 // 1. Finn alle achievements som matcher event
-$stmt = $conn->prepare("SELECT id, trigger_value FROM achievements WHERE trigger_event = ?");
+$stmt = $conn->prepare("SELECT id, name, description, icon_url, trigger_value FROM achievements WHERE trigger_event = ?");
 $stmt->bind_param("s", $event);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -47,11 +49,18 @@ while ($row = $result->fetch_assoc()) {
                   VALUES ($userId, $achievementId, $newProgress, '$now')
                   ON DUPLICATE KEY UPDATE progress_value = $newProgress, last_updated = '$now'");
 
-    // 4. Hvis progresjon >= trigger_value, legg til i user_achievements
     if ($newProgress >= $triggerValue) {
-        $conn->query("INSERT IGNORE INTO user_achievements (user_id, achievement_id, achieved_at)
-                      VALUES ($userId, $achievementId, '$now')");
+        $insertResult = $conn->query("INSERT IGNORE INTO user_achievements (user_id, achievement_id, achieved_at) VALUES ($userId, $achievementId, '$now')");
+            $achievementUnlocked = [
+                'title' => $row['name'],
+                'message' => $row['description'],
+                'icon_url' => $row['icon_url']
+            ];
     }
 }
 
-echo json_encode(['success' => true]);
+
+echo json_encode([
+    'success' => true,
+    'achievement_unlocked' => $achievementUnlocked
+]);
