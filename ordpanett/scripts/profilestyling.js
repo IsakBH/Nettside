@@ -7,4 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
             profileElement.style.backgroundColor = "gold";
         }
     }
+    else {
+        console.log("Du er ikke Lucas.")
+    }
 })
