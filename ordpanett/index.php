@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.3"; // finere styling på login og register + det aktive dokumentet bruker nå 'outline' istedet for 'border'
+$version = "v3.4.4"; // document-manager ser finere ut, flyttet versjonsnummeret
 ?>
 
 <!DOCTYPE html>
@@ -237,14 +237,15 @@ $version = "v3.4.3"; // finere styling på login og register + det aktive dokume
             <p id="placeholder"></p>
         </div>
 
-        <div id="counter">
-            <span id="wordCount">0 ord</span>
-            <span id="charCount">0 tegn</span>
+        <div id="bottomtext">
+            <div> <!-- i en egen div slik at justify-content: space-between; ikke fucker med word- og charCount -->
+                <span id="wordCount">0 ord</span>
+                <span id="charCount">0 tegn</span>
+            </div>
+            <p id="version"><?php echo $version; ?></p>
         </div>
 
         <br>
-
-
 
         <script src="https://giscus.app/client.js"
             data-repo="isakbh/nettside"
@@ -266,11 +267,6 @@ $version = "v3.4.3"; // finere styling på login og register + det aktive dokume
 
     <div id="cross-symbol"><i class="fa-solid fa-cross"></i></div>
     <p id="save-status"></p>
-
-    <div id="bottomtext">
-        <!--<a href="https://github.com/veggenss/Ord-paa-Nett" id="reklame" target="_blank">Skaff deg Ord på Nett Desktop nå! (kun for Windows)</a>-->
-        <p id="version"><?php echo $version; ?></p>
-    </div>
 
     <!-- javascript link-->
     <script src="scripts/texteditor.js"></script>
