@@ -609,8 +609,11 @@ input[type="file"]::file-selector-button {
     padding: 20px;
     border-right: 1px solid #e0e0e0;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
-    scrollbar-width: 0px;
+    scrollbar-width: none;
+    scrollbar-color: #8AC8FF transparent;
     overflow: overlay;
+    display: flex;
+    flex-direction: column;
 
     h3 {
         color: #020929;
@@ -628,7 +631,7 @@ input[type="file"]::file-selector-button {
     }
 
     ::-webkit-scrollbar-thumb {
-        background: rgba(0, 0, 0, 0.5); /* Adjust the color as needed */
+        background: rgba(0, 0, 0, 0.5);
     }
 }
 
@@ -721,8 +724,11 @@ input[type="file"]::file-selector-button {
 }
 
 #documentsList {
-    list-style: none;
+    flex-grow: 1;
+    overflow-y: auto;
+    margin: 0;
     padding: 0;
+    list-style: none;
 
     li {
         // dokumentene
