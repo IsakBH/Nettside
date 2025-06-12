@@ -698,7 +698,7 @@ input[type="file"]::file-selector-button {
 }
 
 .document-list {
-    height: calc(100% - 140px);
+    height: calc(100% - 60px);
     overflow-y: auto;
 
     &::-webkit-scrollbar {
