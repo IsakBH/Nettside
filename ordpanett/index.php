@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.4"; // document-manager ser finere ut, flyttet versjonsnummeret
+$version = "v3.4.5"; // flere splash texter - referanser til devil may cry og bara bada bastu
 ?>
 
 <!DOCTYPE html>
