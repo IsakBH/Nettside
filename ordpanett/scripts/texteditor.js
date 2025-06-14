@@ -68,6 +68,14 @@ let splashText = [
     "I am the storm that is approaching",
     "Forsakened I am awakened",
     "Vi ska bada bastu, bastu",
+    "\"Kahoot = CS Cases\" - Halfdann Hesthammer",
+    "\"4\" - Ivan Kuzmych",
+    "En Arisk Jul",
+    "Linux!!!!!",
+    "Trenger jobb? Bare vær flink til å smile :)",
+    "HTML er ikke koding",
+    "Meat Prisoner!",
+    "BBB"
 ];
 
 // skriver at brukeren må velge et dokument - calles når currentDocumentId er null
