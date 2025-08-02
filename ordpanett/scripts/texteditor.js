@@ -330,9 +330,9 @@ function loadDocument(documentId) {
                 writingArea.innerHTML = data.content || '';
                 writingArea.contentEditable = 'true';
                 //placeholder.style.display = 'none';
+                updateWordAndCharCount();
             }
         });
-    updateWordAndCharCount();
 }
 
 // funksjon for å lagre dokumentene
