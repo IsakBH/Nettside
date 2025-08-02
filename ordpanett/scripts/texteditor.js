@@ -474,7 +474,6 @@ const initializer = () => {
     console.log("Initialiserer Ord på Nett...");
 
     applyDarkMode();
-    updateWordAndCharCount();
     randomSplashText();
     highlighter(alignButtons, true);
     highlighter(spacingButtons, true);
@@ -505,6 +504,7 @@ const initializer = () => {
     // hvis brukeren ikke har valgt et dokument, skriv "vennligst velg et dokument"
     if (!currentDocumentId) {
         selectDocumentMessage();
+        updateWordAndCharCount();
     }
 
     // legg til eventlisteners som alltid sikrer at innholdet er lagret til databasen
