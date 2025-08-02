@@ -1,3 +1,14 @@
+//   ____          _   _____        _   _      _   _
+//  / __ \        | | |  __ \      | \ | |    | | | |
+// | |  | |_ __ __| | | |__) |_ _  |  \| | ___| |_| |_
+// | |  | | '__/ _` | |  ___/ _` | | . ` |/ _ \ __| __|
+// | |__| | | | (_| | | |  | (_| | | |\  |  __/ |_| |_
+//  \____/|_|  \__,_| |_|   \__,_| |_| \_|\___|\__|\__|
+
+////////////////////////////////////////////////////////////
+// Til deg som prøver å lese denne filen: beklager..      //
+////////////////////////////////////////////////////////////
+
 // lager variabler for html id-er og klasser
 let alignButtons = document.querySelectorAll(".align");
 let spacingButtons = document.querySelectorAll(".spacing");

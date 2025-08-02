@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.5"; // flere splash texter - referanser til devil may cry og bara bada bastu
+$version = "v3.4.6"; // ord og bokstav telleren fungerer nå som den skal
 ?>
 
 <!DOCTYPE html>
