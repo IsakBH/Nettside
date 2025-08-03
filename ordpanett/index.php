@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.6"; // ord og bokstav telleren fungerer nå som den skal
+$version = "v3.4.7"; // tastatursnarveier for + og - skriftstørrelse er nå lik andre skriveprogrammer som Google Docs, Word og LibreOffice.
 ?>
 
 <!DOCTYPE html>

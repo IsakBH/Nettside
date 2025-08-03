@@ -371,7 +371,7 @@ function saveDocument() {
 
 // funksjon for å slette dokumenter
 function deleteDocument(documentId) {
-    if (confirm('Er du sikker på at du har lyst til å slette dette dokumentet? Gjør du det, forsvinner det for alltid, og det er ganske lenge.')) {
+    if (confirm('Er du sikker på at du har lyst til å slette dette dokumentet med dokumentId ' + documentId + '? Gjør du det, forsvinner det for alltid, og det er ganske lenge.')) {
         fetch('delete_document.php', {
             method: 'POST',
             headers: {
