@@ -617,7 +617,7 @@ input[type="file"]::file-selector-button {
     border-right: 1px solid #e0e0e0;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
     scrollbar-width: none;
-    scrollbar-color: #8AC8FF transparent;
+    scrollbar-color: #8ac8ff transparent;
     overflow: overlay;
     display: flex;
     flex-direction: column;
@@ -749,6 +749,7 @@ input[type="file"]::file-selector-button {
         transition: all 0.2s ease;
         border: 1px solid #ddd;
         animation: popin 0.3s;
+        width: 100%;
 
         &:hover {
             transform: translateY(-3px);
@@ -764,9 +765,11 @@ input[type="file"]::file-selector-button {
         }
 
         &.active-document {
-            outline: 2px solid #8ac8ff;
+            border: 2px solid #8ac8ff;
             background: lighten(#8ac8ff, 25%);
             filter: drop-shadow(0 0 2px #cccccc);
+            transition: 0.2s;
+            width: 95%;
         }
     }
 }
