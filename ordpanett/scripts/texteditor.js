@@ -720,7 +720,7 @@ function checkForMKX() {
     }
 }
 
-// eksperimentering med tastatur snarveier
+// tastatur snarveier
 window.onkeydown = function (e) {
     if (e.ctrlKey) {
         // fet skrift
@@ -739,7 +739,7 @@ window.onkeydown = function (e) {
             modifyText("underline", false, null);
         }
         // hyperlink
-        else if (e.key === "k") {
+        else if (e.key === "k") { // desverre kan du ikke bruke e.preventDefault på Ctrl + Shift + K i firefox, så derfor må det bli ctrl + k istedet. Hadde det gått an å bruke ctrl shift k istedet, hadde jeg gjort det siden det er default i nesten alt, men men, det går bra.
             e.preventDefault(); // stopper default action
             linkButton.click(); // link knapp click
         }
@@ -769,8 +769,9 @@ window.onkeydown = function (e) {
             olButton.click();
         }
         // +1 skriftstørrelse
-        if (e.key === ".") {
+        if (e.key === ":" && e.shiftKey) {
             e.preventDefault();
+            console.log("Skriftstørrelse +1");
             let currentSize = parseInt(fontSizeRef.value);
             if (currentSize < 7) {
                 fontSizeRef.value = currentSize + 1;
@@ -779,8 +780,9 @@ window.onkeydown = function (e) {
         }
 
         // -1 skriftstørrelse
-        if (e.key === ",") {
+        if (e.key === ";" && e.shiftKey) {
             e.preventDefault();
+            console.log("Skriftstørrelse -1");
             let currentSize = parseInt(fontSizeRef.value);
             if (currentSize > 1) {
                 fontSizeRef.value = currentSize - 1;
