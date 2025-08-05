@@ -768,14 +768,26 @@ input[type="file"]::file-selector-button {
             border: 2px solid #8ac8ff;
             background: lighten(#8ac8ff, 25%);
             filter: drop-shadow(0 0 2px #cccccc);
-            transition: 0.2s;
-            width: 95%;
+            //transition: 0.2s;
+            animation: aktivt-dokument 0.5s;
+            animation-fill-mode: forwards;
         }
     }
 }
 
 @keyframes aktivt-dokument {
-
+    0% {
+        width: 100%;
+    }
+    60% {
+        width: 85%;
+    }
+    80% {
+        width: 97%;
+    }
+    100% {
+        width: 95%;
+    }
 }
 
 // slett knappen (og muligens andre actions i fremtiden)
