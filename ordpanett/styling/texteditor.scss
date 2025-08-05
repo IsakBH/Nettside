@@ -774,6 +774,10 @@ input[type="file"]::file-selector-button {
     }
 }
 
+@keyframes aktivt-dokument {
+
+}
+
 // slett knappen (og muligens andre actions i fremtiden)
 .document-actions {
     display: flex;
@@ -1399,7 +1403,7 @@ input:checked + .slider:before {
 
 @keyframes popin {
     0% {
-        transform: scale(0.2);
+        transform: scale(0);
     }
     90% {
         transform: scale(1.02);
