@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.7"; // tastatursnarveier for + og - skriftstørrelse er nå lik andre skriveprogrammer som Google Docs, Word og LibreOffice.
+$version = "v3.4.8"; // lagt til en fin og "bouncy" animasjon på det aktive dokumentet
 ?>
 
 <!DOCTYPE html>
