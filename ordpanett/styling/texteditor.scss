@@ -760,9 +760,6 @@ input[type="file"]::file-selector-button {
                 opacity: 1;
             }
         }
-        &:active {
-            transform: translateY(3px);
-        }
 
         &.active-document {
             border: 2px solid #8ac8ff;
