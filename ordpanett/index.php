@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.8"; // lagt til en fin og "bouncy" animasjon på det aktive dokumentet
+$version = "v3.4.9"; // forbedret UI og animasjoner på toolbar knappene
 ?>
 
 <!DOCTYPE html>
