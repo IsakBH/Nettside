@@ -66,6 +66,7 @@ $version = "v3.4.10"; // forbedret hover animasjon på dokumentene i dokument li
                     <hr id="splitter">
                     <a href="pages/profile.php">Din profil</a>
                     <a href="pages/settings.php">Instillinger</a>
+                    <a href="">Prestasjoner? (på vei)</a>
                 </div>
             </div>
         </div>
