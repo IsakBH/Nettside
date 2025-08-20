@@ -101,14 +101,16 @@ button {
   background-color: #ffffff;
   outline: none;
   color: #020929;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 button:hover {
   background-color: #e2e7ea;
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0px 2px 2px #ccc;
 }
 button:active {
   transform: translateY(3px);
+  background-color: #D3E3FD;
 }
 
 select {
