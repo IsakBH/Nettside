@@ -723,9 +723,9 @@ input[type=file]::file-selector-button {
   width: 100%;
 }
 #documentsList li:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 2px -4px black;
+  box-shadow: 4px 0px 0px 0px #E2E2E2;
   border-color: #9f9f9f;
+  width: 95%;
 }
 #documentsList li:hover .document-actions {
   opacity: 1;
@@ -1330,10 +1330,10 @@ input:checked + .slider:before {
 }
 @keyframes aktivt-dokument {
   0% {
-    width: 100%;
+    width: 95%;
   }
   60% {
-    width: 85%;
+    width: 80%;
   }
   80% {
     width: 97%;

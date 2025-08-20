@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.9"; // forbedret UI og animasjoner på toolbar knappene
+$version = "v3.4.10"; // forbedret hover animasjon på dokumentene i dokument listen. bruker ikke lenger translateY, og har heller redusert widthen for å etterligne animasjonen når du trykker på dokumentet (aktivt-dokument animasjonen)
 ?>
 
 <!DOCTYPE html>
