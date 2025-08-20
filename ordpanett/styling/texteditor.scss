@@ -330,6 +330,9 @@ input[type="color"] {
     border-radius: 50%;
     cursor: pointer;
     object-fit: cover;
+    &:hover {
+        animation: bounce 0.5s;
+    }
 }
 
 .profile-dropdown {
@@ -776,21 +779,6 @@ input[type="file"]::file-selector-button {
     }
 }
 
-@keyframes aktivt-dokument {
-    0% {
-        width: 100%;
-    }
-    60% {
-        width: 85%;
-    }
-    80% {
-        width: 97%;
-    }
-    100% {
-        width: 95%;
-    }
-}
-
 // slett knappen (og muligens andre actions i fremtiden)
 .document-actions {
     display: flex;
@@ -898,13 +886,16 @@ input[type="file"]::file-selector-button {
 .current-profile {
     text-align: left;
     margin: 10px 0;
-    transition: 0.1s;
+    transition: 0.5s;
     img {
         width: 150px;
         height: 150px;
         border-radius: 50%;
         object-fit: cover;
         filter: drop-shadow(0px 0px 5px #cccccc);
+        &:hover {
+            animation: bounce 0.9s;
+        }
     }
 }
 
@@ -1423,5 +1414,38 @@ input:checked + .slider:before {
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(1px);
+    }
+    75% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes aktivt-dokument {
+    0% {
+        width: 100%;
+    }
+    60% {
+        width: 85%;
+    }
+    80% {
+        width: 97%;
+    }
+    100% {
+        width: 95%;
     }
 }
