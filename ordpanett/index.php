@@ -54,7 +54,7 @@ $version = "v3.4.10"; // forbedret hover animasjon på dokumentene i dokument li
     </div>
 
     <div class="container"> <!--  containeren for toolbaren -->
-        <h1 id="title">Ord På Nett</h1>
+        <h1 id="title">Ord På Nett TESTING</h1>
         <div id="topRightContainer">
             <!-- menyen for konto instillinger og sånn -->
             <div class="profile-menu">
