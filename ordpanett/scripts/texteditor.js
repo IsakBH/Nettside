@@ -86,7 +86,8 @@ let splashText = [
     "Trenger jobb? Bare vær flink til å smile :)",
     "HTML er ikke koding",
     "Meat Prisoner!",
-    "BBB"
+    "BBB",
+    "\"Kan vi ta pause?\" - Ivan Kuzmych"
 ];
 
 // skriver at brukeren må velge et dokument - calles når currentDocumentId er null
