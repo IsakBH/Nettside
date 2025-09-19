@@ -11,10 +11,12 @@ $version = "v3.4.12"; // glassmorphism på splash text og dokumentene i dokument
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="styling/texteditor.css" />
     <link rel="icon" href="assets/ordlogo.png" />
+
     <!-- ikoner fra font awesome og google fonts-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 
+    <!-- turndown og marked javascript biblioteker - for oversetting av html til markdown og motsatt -->
     <script src="https://unpkg.com/turndown/dist/turndown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
