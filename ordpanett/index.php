@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.14"; // lagt til hotkey for å printe. Ctrl + P kjører printWritingArea() funksjonen.
+$version = "v3.4.15"; // fjernet transition fra splash text on hover og endret outline til svart og gjennomsiktig
 ?>
 
 <!DOCTYPE html>
