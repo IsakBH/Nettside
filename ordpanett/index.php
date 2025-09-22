@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.13"; // lagt til hotkey for å bytte på splashtext. Ctrl + J kjører randomSplashText() funksjonen.
+$version = "v3.4.14"; // lagt til hotkey for å printe. Ctrl + P kjører printWritingArea() funksjonen.
 ?>
 
 <!DOCTYPE html>

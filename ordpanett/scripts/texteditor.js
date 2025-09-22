@@ -790,10 +790,17 @@ window.onkeydown = function (e) {
                 modifyText("fontSize", false, currentSize - 1);
             }
         }
+
         if (e.key === "j") {
             e.preventDefault();
             randomSplashText();
             console.log("Bruker endret splash text.");
+        }
+
+        if (e.key === "p") {
+            e.preventDefault();
+            printWritingArea();
+            console.log("Bruker brukte hotkey for printWritingArea()")
         }
     }
 };
