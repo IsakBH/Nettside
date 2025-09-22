@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.12"; // glassmorphism på splash text og dokumentene i dokumentlisten
+$version = "v3.4.13"; // lagt til hotkey for å bytte på splashtext. Ctrl + J kjører randomSplashText() funksjonen.
 ?>
 
 <!DOCTYPE html>
