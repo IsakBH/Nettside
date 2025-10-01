@@ -313,6 +313,7 @@ input[type=color] {
 }
 
 .profile-menu {
+  position: relative;
   margin-left: 10px;
   z-index: 1000;
 }
@@ -333,11 +334,14 @@ input[type=color] {
   position: absolute;
   right: 0;
   top: 45px;
-  background: white;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 2000;
   min-width: 150px;
 }
 

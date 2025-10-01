@@ -55,7 +55,8 @@ $version = "v3.4.15"; // fjernet transition fra splash text on hover og endret o
         <a id="changelogButton" title="Endringslogg Ord på Nett" href="pages/changelog.php">Endringslogg<i class="fa-solid fa-clock-rotate-left"></i></a>
     </div>
 
-    <div class="container"> <!--  containeren for toolbaren -->
+    <!--  containeren for toolbaren -->
+    <div class="container">
         <h1 id="title">Ord På Nett</h1>
         <div id="topRightContainer">
             <!-- menyen for konto instillinger og sånn -->
