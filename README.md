@@ -5,7 +5,7 @@
 
 ## Masse funksjonalitet
 #### Det er til og med en kalkulator med 😎
-![image](https://github.com/user-attachments/assets/ab7f5a3f-c21e-4f4e-a9e2-b10c4a7193bf)
+<img width="1467" height="187" alt="image" src="https://github.com/user-attachments/assets/58b8672a-a7e4-4198-8b79-555986d09429" />
 
 ## Sikkert
 #### Jeg deler ikke dataen din med noen 🔒
