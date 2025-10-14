@@ -1,7 +1,7 @@
 # Ord på Nett
 ## Clean design
 #### Mye cleanere enn Google Docs og Word 😄 
-![image](https://github.com/user-attachments/assets/4471037f-678a-49e5-b647-df31e87ba763)
+<img width="2519" height="1301" alt="image" src="https://github.com/user-attachments/assets/3a1a3cac-b6cc-475f-8732-df181c2612e9" />
 
 ## Masse funksjonalitet
 #### Det er til og med en kalkulator med 😎
