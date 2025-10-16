@@ -802,6 +802,13 @@ window.onkeydown = function (e) {
             printWritingArea();
             console.log("Bruker brukte hotkey for printWritingArea()")
         }
+
+        // focuse documentsearch
+        if (e.key === "l") {
+            e.preventDefault();
+            console.log("Bruker brukte snarvei for å selecte / focuse på documentSearch");
+            documentSearch.focus();
+        }
     }
 };
 
