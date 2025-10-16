@@ -953,6 +953,12 @@ input[type="file"]::file-selector-button {
     }
 }
 
+@media screen and (max-width: 1556px) {
+    .options {
+        gap: 10px;
+    }
+}
+
 // MOBIL VENNLIGHET
 @media screen and (max-width: 1000px) {
     .container {
@@ -1291,6 +1297,7 @@ input:checked + .slider:before {
         background-color: #0d1117;
         border-color: #3d444d;
         color: #ffffff !important;
+        scrollbar-color: #1F6FEB transparent;
         h3 {
             color: #ffffff;
         }
