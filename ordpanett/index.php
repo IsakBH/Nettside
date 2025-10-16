@@ -69,7 +69,7 @@ $version = "v3.4.15"; // fjernet transition fra splash text on hover og endret o
                     <hr id="splitter">
                     <a href="pages/profile.php">Din profil</a>
                     <a href="pages/settings.php">Instillinger</a>
-                    <a href="">Prestasjoner? (på vei)</a>
+                    <!--<a href="">Prestasjoner? (på vei)</a>-->
                 </div>
             </div>
         </div>
