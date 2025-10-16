@@ -335,7 +335,6 @@ input[type=color] {
   right: 0;
   top: 45px;
   background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   border: 1px solid #ccc;
   border-radius: 5px;
