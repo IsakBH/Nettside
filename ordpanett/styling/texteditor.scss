@@ -135,6 +135,11 @@ select {
         transform: translateY(3px);
         background-color: #D3E3FD;
     }
+
+}
+
+option {
+    border-radius: 10px;
 }
 
 .options label,
@@ -1242,8 +1247,15 @@ input:checked + .slider:before {
 
 // DARK MODE
 .dark-theme {
+    background-image: url("../assets/ordpanettbanner-dark.png");
+    backdrop-filter: none;
+
     background-color: #0d1117;
     color: #ffffff;
+
+    &::before {
+        background: rgba(0, 0, 0, 0.4);
+    }
 
     // changelog side
     .commit {
