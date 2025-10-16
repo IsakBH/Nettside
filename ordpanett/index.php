@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.15"; // fjernet transition fra splash text on hover og endret outline til svart og gjennomsiktig
+$version = "v3.4.22"; // dark mode bakgrunnsbilde og masse andre fixes
 ?>
 
 <!DOCTYPE html>
