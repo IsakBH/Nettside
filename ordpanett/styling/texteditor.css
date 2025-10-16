@@ -893,6 +893,11 @@ input[type=file]::file-selector-button {
     height: 100%;
   }
 }
+@media screen and (max-width: 1318px) {
+  #splashText {
+    display: none;
+  }
+}
 @media screen and (max-width: 1000px) {
   .container {
     width: 100%;

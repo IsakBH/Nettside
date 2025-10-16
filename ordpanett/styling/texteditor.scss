@@ -946,6 +946,13 @@ input[type="file"]::file-selector-button {
     }
 }
 
+// splash text forsvinner
+@media screen and (max-width: 1318px) {
+    #splashText {
+        display: none;
+    }
+}
+
 // MOBIL VENNLIGHET
 @media screen and (max-width: 1000px) {
     .container {
