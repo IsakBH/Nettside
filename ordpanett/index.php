@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.28"; // profile-dropdown sin border-radius tilsvarer nå border-radiusen til sånn alle andre elementer (det er så sykt mye bedre)
+$version = "v3.4.29"; // border-radiusen til a elementene i profile-dropdown matcher nå profile-dropdown, og det ser helt nydelig ut.
 ?>
 
 <!DOCTYPE html>

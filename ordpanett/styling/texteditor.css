@@ -356,6 +356,7 @@ input[type=color] {
   padding: 5px 10px;
   text-decoration: none;
   color: #333;
+  border-radius: 10px;
 }
 
 .profile-dropdown a:hover {
@@ -1280,7 +1281,7 @@ input:checked + .slider:before {
   color: #ffffff;
 }
 .dark-theme .profile-dropdown a:hover {
-  background-color: #151b23;
+  background-color: #1F232A;
 }
 .dark-theme hr {
   color: #3d444d;
