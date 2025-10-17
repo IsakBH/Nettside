@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.34"; // flyttet link til changelog siden til versjonsnummeret og fjernet changelog knappen nedi venstre hjørne
+$version = "v3.4.35"; // a taggen på versjonsnummeret blir nå lukket lol
 ?>
 
 <!DOCTYPE html>
@@ -245,7 +245,7 @@ $version = "v3.4.34"; // flyttet link til changelog siden til versjonsnummeret o
                 <span id="wordCount">0 ord</span>
                 <span id="charCount">0 tegn</span>
             </div>
-            <a id="version" href="pages/changelog.php"><?php echo $version; ?></p>
+            <a id="version" href="pages/changelog.php"><?php echo $version; ?></a>
         </div>
 
         <br>
