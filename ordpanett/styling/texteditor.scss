@@ -1325,6 +1325,7 @@ input:checked + .slider:before {
         &:hover {
             box-shadow: 4px 0px 0px 0px #E2E2E2;
             border-color: #9f9f9f;
+            background: lighten(#222931, 5%);
             width: 95%;
 
             .document-actions {
@@ -1352,6 +1353,9 @@ input:checked + .slider:before {
         background-color: #212830;
         border-color: #3d444d;
         color: #ffffff;
+        &:hover {
+            background: lighten(#222931, 5%);
+        }
     }
 
     #splashText {

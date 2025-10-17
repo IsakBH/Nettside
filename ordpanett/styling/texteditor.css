@@ -1236,6 +1236,7 @@ input:checked + .slider:before {
 .dark-theme #documentsList li:hover {
   box-shadow: 4px 0px 0px 0px #E2E2E2;
   border-color: #9f9f9f;
+  background: rgb(44.4457831325, 53.5963855422, 64.0542168675);
   width: 95%;
 }
 .dark-theme #documentsList li:hover .document-actions {
@@ -1255,6 +1256,9 @@ input:checked + .slider:before {
   background-color: #212830;
   border-color: #3d444d;
   color: #ffffff;
+}
+.dark-theme #documentSearch:hover {
+  background: rgb(44.4457831325, 53.5963855422, 64.0542168675);
 }
 .dark-theme #splashText {
   background-color: rgba(21, 27, 35, 0.5);
