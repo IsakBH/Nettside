@@ -343,6 +343,7 @@ function loadDocument(documentId) {
                 console.log("Fetchet content fra " + data.name);
                 writingArea.contentEditable = 'true';
                 updateWordAndCharCount();
+                checkForGud();
             }
         });
 }

@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.30"; // get_document.php passer også navnet på dokumentet over til javascripten i tillegg til content
+$version = "v3.4.31"; // kjører nå CheckForGud() når du fetcher et dokument. hvorfor? sånn at hvis du har et dokument med gud i seg, så vises den alltid med en gang
 ?>
 
 <!DOCTYPE html>
