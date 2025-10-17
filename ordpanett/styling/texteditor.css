@@ -7,6 +7,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+::selection {
+  background-color: #8AC8FF;
+}
+
 html {
   height: 100%;
 }
@@ -1179,6 +1183,9 @@ input:checked + .slider:before {
   backdrop-filter: none;
   background-color: #0d1117;
   color: #ffffff;
+}
+.dark-theme ::selection {
+  background-color: #1F6FEB;
 }
 .dark-theme::before {
   background: rgba(0, 0, 0, 0.4);

@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.31"; // kjører nå CheckForGud() når du fetcher et dokument. hvorfor? sånn at hvis du har et dokument med gud i seg, så vises den alltid med en gang
+$version = "v3.4.33"; // har nå custom farger på ::selection. fargene er hovedfargene på light og dark mode
 ?>
 
 <!DOCTYPE html>

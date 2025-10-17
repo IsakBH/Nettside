@@ -9,6 +9,11 @@ $buttonHoverColor: #e2e7ea;
     font-family: "Poppins", sans-serif;
 }
 
+::selection {
+  background-color: #8AC8FF;
+}
+
+
 html {
     height: 100%;
 }
@@ -1257,6 +1262,10 @@ input:checked + .slider:before {
 
     background-color: #0d1117;
     color: #ffffff;
+
+    ::selection {
+      background-color: #1F6FEB;
+    }
 
     &::before {
         background: rgba(0, 0, 0, 0.4);
