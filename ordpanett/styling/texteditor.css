@@ -694,6 +694,7 @@ input[type=file]::file-selector-button {
   cursor: pointer;
   box-shadow: 0 4px 2px -4px black;
   border-color: #9f9f9f;
+  background: #EAEDF0;
 }
 
 .document-list {
@@ -741,6 +742,7 @@ input[type=file]::file-selector-button {
 #documentsList li:hover {
   box-shadow: 4px 0px 0px 0px #E2E2E2;
   border-color: #9f9f9f;
+  background: #EAEDF0;
   width: 95%;
 }
 #documentsList li:hover .document-actions {

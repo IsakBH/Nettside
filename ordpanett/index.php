@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.26"; // bakgrunnsfarge på dokumentene og documentSearch er nå mørkere, i samsvar med github sin light theme. #F6F8FA
+$version = "v3.4.27"; // bakgrunnsfarge på dokumentene er nå mørkere på hover, og er nå i samsvar med github sin light mode. #EAEDF0
 ?>
 
 <!DOCTYPE html>
