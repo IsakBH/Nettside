@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.25"; // border farge på toolbaren matcher nå farge med border på text boksen
+$version = "v3.4.26"; // bakgrunnsfarge på dokumentene og documentSearch er nå mørkere, i samsvar med github sin light theme. #F6F8FA
 ?>
 
 <!DOCTYPE html>

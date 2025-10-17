@@ -720,6 +720,7 @@ input[type="file"]::file-selector-button {
 }
 
 #documentSearch {
+    background: #F6F8FA;
     &:hover {
         cursor: pointer; // I guess pointer er bra? jeg foretrekker pointer, men kan skjønne at andre synes det er bedre med pointer: text (med tanke på at dette er tekst)
         box-shadow: 0 4px 2px -4px black;
@@ -764,7 +765,7 @@ input[type="file"]::file-selector-button {
         align-items: center;
         padding: 8px;
         margin-bottom: 8px;
-        background: rgba(248, 249, 250, 0.30);
+        background: #F6F8FA;
         border-radius: 8px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5.8px);
