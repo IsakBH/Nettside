@@ -338,10 +338,10 @@ function loadDocument(documentId) {
         .then(data => {
             if (data.success) {
                 currentDocumentId = documentId;
-                console.log("Du redigerer nå " + currentDocumentId);
+                console.log("Du redigerer nå " + data.name + " med dokumentId " + currentDocumentId);
                 writingArea.innerHTML = data.content || '';
+                console.log("Fetchet content fra " + data.name);
                 writingArea.contentEditable = 'true';
-                //placeholder.style.display = 'none';
                 updateWordAndCharCount();
             }
         });

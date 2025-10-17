@@ -20,5 +20,6 @@ $document = $result->fetch_assoc(); // konverter resultatet til en associative a
 // send innholdet av dokumentet tilbake som JSON
 echo json_encode([
     'success' => true,
-    'content' => $document['content']
+    'content' => $document['content'],
+    'name' => $document['title']
 ]);

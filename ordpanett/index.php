@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.29"; // border-radiusen til a elementene i profile-dropdown matcher nå profile-dropdown, og det ser helt nydelig ut.
+$version = "v3.4.30"; // get_document.php passer også navnet på dokumentet over til javascripten i tillegg til content
 ?>
 
 <!DOCTYPE html>

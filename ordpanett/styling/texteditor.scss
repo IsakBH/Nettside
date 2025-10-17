@@ -257,7 +257,8 @@ input[type="color"] {
     top: 50%;
     transform: translateY(-50%);
     font-size: 40px;
-    filter: drop-shadow(0 0 100px yellow);
+    filter: drop-shadow(0 0 200px yellow);
+    color: #fff;
 }
 
 @media screen and (max-width: 480px) {
