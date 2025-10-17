@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.35"; // a taggen på versjonsnummeret blir nå lukket lol
+$version = "v3.4.36"; // endret default theme på giscus til dark
 ?>
 
 <!DOCTYPE html>
@@ -260,7 +260,7 @@ $version = "v3.4.35"; // a taggen på versjonsnummeret blir nå lukket lol
             data-reactions-enabled="1"
             data-emit-metadata="0"
             data-input-position="top"
-            data-theme="preferred_color_scheme"
+            data-theme="dark"
             data-lang="en"
             crossorigin="anonymous"
             referrerpolicy="no-referrer-when-downgrade"
