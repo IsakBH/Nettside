@@ -609,6 +609,10 @@ input[type=file]::file-selector-button {
   justify-content: space-between;
   margin: 10px;
 }
+#bottomtext a {
+  color: black;
+  text-decoration: none;
+}
 
 .document-manager {
   position: fixed;
@@ -1184,6 +1188,9 @@ input:checked + .slider:before {
   background-color: #0d1117;
   color: #ffffff;
 }
+.dark-theme #bottomtext a {
+  color: white;
+}
 .dark-theme ::selection {
   background-color: #1F6FEB;
 }
@@ -1195,6 +1202,9 @@ input:checked + .slider:before {
 }
 .dark-theme .commit {
   filter: none;
+}
+.dark-theme #changelogButton {
+  background-color: #151B23;
 }
 .dark-theme #changeLogBackButton {
   color: #ffffff;

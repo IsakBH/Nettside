@@ -631,6 +631,10 @@ input[type="file"]::file-selector-button {
     display: flex;
     justify-content: space-between;
     margin: 10px;
+    a {
+        color: black;
+        text-decoration: none;
+    }
 }
 
 .document-manager {
@@ -1263,6 +1267,12 @@ input:checked + .slider:before {
     background-color: #0d1117;
     color: #ffffff;
 
+    #bottomtext {
+        a {
+            color: white;
+        }
+    }
+
     ::selection {
       background-color: #1F6FEB;
     }
@@ -1278,6 +1288,10 @@ input:checked + .slider:before {
     // changelog side
     .commit {
         filter: none;
+    }
+
+    #changelogButton {
+        background-color: #151B23;
     }
 
     #changeLogBackButton {

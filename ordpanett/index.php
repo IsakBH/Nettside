@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.33"; // har nå custom farger på ::selection. fargene er hovedfargene på light og dark mode
+$version = "v3.4.34"; // flyttet link til changelog siden til versjonsnummeret og fjernet changelog knappen nedi venstre hjørne
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +52,7 @@ $version = "v3.4.33"; // har nå custom farger på ::selection. fargene er hoved
             </div>
             <ul id="documentsList"></ul>
         </div>
-        <a id="changelogButton" title="Endringslogg Ord på Nett" href="pages/changelog.php">Endringslogg<i class="fa-solid fa-clock-rotate-left"></i></a>
+        <!--<a id="changelogButton" title="Endringslogg Ord på Nett" href="pages/changelog.php">Endringslogg<i class="fa-solid fa-clock-rotate-left"></i></a>-->
     </div>
 
     <!--  containeren for toolbaren -->
@@ -245,7 +245,7 @@ $version = "v3.4.33"; // har nå custom farger på ::selection. fargene er hoved
                 <span id="wordCount">0 ord</span>
                 <span id="charCount">0 tegn</span>
             </div>
-            <p id="version"><?php echo $version; ?></p>
+            <a id="version" href="pages/changelog.php"><?php echo $version; ?></p>
         </div>
 
         <br>
