@@ -1176,6 +1176,9 @@ input:checked + .slider:before {
 .dark-theme::before {
   background: rgba(0, 0, 0, 0.4);
 }
+.dark-theme .options {
+  border: 1px solid #3D444D;
+}
 .dark-theme .commit {
   filter: none;
 }

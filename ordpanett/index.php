@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.24"; // lagt til tastatursnarvei for å toggle dark mode
+$version = "v3.4.25"; // border farge på toolbaren matcher nå farge med border på text boksen
 ?>
 
 <!DOCTYPE html>
