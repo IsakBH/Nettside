@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.27"; // bakgrunnsfarge på dokumentene er nå mørkere på hover, og er nå i samsvar med github sin light mode. #EAEDF0
+$version = "v3.4.28"; // profile-dropdown sin border-radius tilsvarer nå border-radiusen til sånn alle andre elementer (det er så sykt mye bedre)
 ?>
 
 <!DOCTYPE html>
