@@ -764,7 +764,7 @@ input[type="file"]::file-selector-button {
         align-items: center;
         padding: 8px;
         margin-bottom: 8px;
-        background: rgba(248, 249, 250, 0.29);
+        background: rgba(248, 249, 250, 0.30);
         border-radius: 8px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5.8px);
@@ -1310,6 +1310,9 @@ input:checked + .slider:before {
         border-color: #3d444d;
         color: #ffffff !important;
         scrollbar-color: #1F6FEB transparent;
+        ::-webkit-scrollbar-thumb {
+            background-color: #367eed;
+        }
         h3 {
             color: #ffffff;
         }
@@ -1319,6 +1322,24 @@ input:checked + .slider:before {
         background-color: #212830;
         border-color: #3d444d;
         color: #ffffff;
+        &:hover {
+            box-shadow: 4px 0px 0px 0px #E2E2E2;
+            border-color: #9f9f9f;
+            width: 95%;
+
+            .document-actions {
+                opacity: 1;
+            }
+        }
+
+        &.active-document {
+            border: 2px solid #1F6FEB;
+            background: lighten(#222931, 5%);
+            filter: drop-shadow(0 0 2px #3D444D);
+            //transition: 0.2s;
+            animation: aktivt-dokument 0.5s;
+            animation-fill-mode: forwards;
+        }
     }
 
     .document-item {

@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.23"; // dokumentene i sidebaren matcher nå bakgrunnsfarge med documentSearch i dark mode
+$version = "v3.4.24"; // lagt til tastatursnarvei for å toggle dark mode
 ?>
 
 <!DOCTYPE html>

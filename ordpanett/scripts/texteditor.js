@@ -809,6 +809,12 @@ window.onkeydown = function (e) {
             console.log("Bruker brukte snarvei for å selecte / focuse på documentSearch");
             documentSearch.focus();
         }
+
+        if (e.key === "d") {
+            e.preventDefault();
+            console.log("Bruker brukte snarvei for å toggle dark mode");
+            toggleDarkMode();
+        }
     }
 };
 

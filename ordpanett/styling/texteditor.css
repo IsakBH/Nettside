@@ -725,7 +725,7 @@ input[type=file]::file-selector-button {
   align-items: center;
   padding: 8px;
   margin-bottom: 8px;
-  background: rgba(248, 249, 250, 0.29);
+  background: rgba(248, 249, 250, 0.3);
   border-radius: 8px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5.8px);
@@ -1222,6 +1222,9 @@ input:checked + .slider:before {
   color: #ffffff !important;
   scrollbar-color: #1F6FEB transparent;
 }
+.dark-theme .document-manager ::-webkit-scrollbar-thumb {
+  background-color: #367eed;
+}
 .dark-theme .document-manager h3 {
   color: #ffffff;
 }
@@ -1229,6 +1232,21 @@ input:checked + .slider:before {
   background-color: #212830;
   border-color: #3d444d;
   color: #ffffff;
+}
+.dark-theme #documentsList li:hover {
+  box-shadow: 4px 0px 0px 0px #E2E2E2;
+  border-color: #9f9f9f;
+  width: 95%;
+}
+.dark-theme #documentsList li:hover .document-actions {
+  opacity: 1;
+}
+.dark-theme #documentsList li.active-document {
+  border: 2px solid #1F6FEB;
+  background: rgb(44.4457831325, 53.5963855422, 64.0542168675);
+  filter: drop-shadow(0 0 2px #3D444D);
+  animation: aktivt-dokument 0.5s;
+  animation-fill-mode: forwards;
 }
 .dark-theme .document-item span {
   color: #ffffff;
