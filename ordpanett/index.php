@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.36"; // endret default theme på giscus til dark
+$version = "v3.4.37"; // kommentert ut ALL remember me 'funksonalitet' (det var ikke funksjonalitet fordi det funket ikke)
 ?>
 
 <!DOCTYPE html>
