@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.37"; // kommentert ut ALL remember me 'funksonalitet' (det var ikke funksjonalitet fordi det funket ikke)
+$version = "v3.4.38"; // endret farge på box-shadow og border-color til hoved fargen (blå) i dark mode. #1F6FEB
 ?>
 
 <!DOCTYPE html>

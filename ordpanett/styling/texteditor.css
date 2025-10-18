@@ -1261,8 +1261,8 @@ input:checked + .slider:before {
   color: #ffffff;
 }
 .dark-theme #documentsList li:hover {
-  box-shadow: 4px 0px 0px 0px #E2E2E2;
-  border-color: #9f9f9f;
+  box-shadow: 4px 0px 0px 0px #1F6FEB;
+  border-color: #1F6FEB;
   background: rgb(44.4457831325, 53.5963855422, 64.0542168675);
   width: 95%;
 }
