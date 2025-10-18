@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.40"; // du kan nå skrive 'god' og 'kristus' for checkforgod
+$version = "v3.4.41"; // mkx easter egg sangen har nå litt lavere volum (fra 100% til 50%)
 ?>
 
 <!DOCTYPE html>

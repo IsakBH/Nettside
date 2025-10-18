@@ -716,6 +716,7 @@ function checkForMKX() {
     if (content.includes("mkx")) {
         if (seenEasterEgg === false) {
             const music = new Audio("../Include/Musikk/mkx-10-20-30-40.mp3");
+            music.volume = 0.5;
             music.play();
             seenEasterEgg = true;
         }
