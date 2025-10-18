@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['username'] = $user['username'];
         $_SESSION['profile_picture'] = $user['profile_picture'];
 
+        /*
         // remember me funksjonalitet
         if (isset($_POST['remember_me'])) {
             $token = bin2hex(random_bytes(32)); // genererer en random token
@@ -54,6 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 error_log("Kunne ikke lagre husk meg token -_-: " . $stmt->error); // skriver ut til error loggen
             }
         }
+        */
 
         header('Location: ../index.php'); // redirecter til hovedsiden
         exit();
