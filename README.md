@@ -1,4 +1,12 @@
 # Ord på Nett
+
+## Vinner av flere priser
+* Isaks Pris for Den Kuleste Programvaren
+* Isaks Pris for Programvare Som Slår Microsoft Word og Google Docs
+* Henriksens Peace Prize
+* Brun Henriksens Customer Satisfaction Award
+###### hvis du ikke skjønte det så er ikke dette ekte
+
 ## Clean design
 #### Mye cleanere enn Google Docs og Word 😄 
 <img width="2519" height="1301" alt="image" src="https://github.com/user-attachments/assets/3a1a3cac-b6cc-475f-8732-df181c2612e9" />
