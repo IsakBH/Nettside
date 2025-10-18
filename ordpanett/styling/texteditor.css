@@ -175,6 +175,7 @@ input[type=color] {
   border-radius: 10px;
   overflow-y: auto;
   overflow-x: hidden;
+  scrollbar-color: #8ac8ff;
   font-family: inherit;
 }
 #text-input ul,

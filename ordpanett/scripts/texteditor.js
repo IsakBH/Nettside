@@ -702,7 +702,7 @@ function checkForGud() {
     const content = writingArea.innerText.toLowerCase();
     const crossSymbol = document.getElementById("cross-symbol");
 
-    if (content.includes("gud")) {
+    if (content.includes("gud" || "kristus" || "god")) {
         crossSymbol.style.display = "block";
     } else {
         crossSymbol.style.display = "none";

@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.39"; // endret farge på a tags (hyperlinks) til å være i samsvar med hovedfargene i dark og light mode - i light mode er de dark og i dark mode er de light (det høres ikke ut som at det gir mening, men det gir mening)
+$version = "v3.4.40"; // du kan nå skrive 'god' og 'kristus' for checkforgod
 ?>
 
 <!DOCTYPE html>
