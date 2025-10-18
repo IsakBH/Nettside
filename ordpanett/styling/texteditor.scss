@@ -13,6 +13,9 @@ $buttonHoverColor: #e2e7ea;
   background-color: #8AC8FF;
 }
 
+a {
+    color: #1f6feb;
+}
 
 html {
     height: 100%;
@@ -1273,6 +1276,10 @@ input:checked + .slider:before {
         }
     }
 
+    a {
+        color: #8ac8ff;
+    }
+
     ::selection {
       background-color: #1F6FEB;
     }
@@ -1438,6 +1445,7 @@ input:checked + .slider:before {
         color: #ffffff;
         &:hover {
             background-color: darken(#8ac8ff, 20%);
+            box-shadow: 0px 2px 2px #1f6feb;
         }
     }
 
@@ -1476,13 +1484,20 @@ input:checked + .slider:before {
 
     input[type="text"],
     input[type="password"] {
-        background-color: #0d1117;
+        background-color: #212830;
         border: 1px solid #3d444d;
         color: #ffffff;
+        &:hover {
+            border: 1px solid #1f6feb;
+        }
     }
 
     input[type="file"] {
         border: 1px solid #3d444d;
+        background-color: #212830;
+        &:hover {
+            border: 1px solid #1f6feb;
+        }
     }
 
     .menu-toggle {

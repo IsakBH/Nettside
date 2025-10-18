@@ -11,6 +11,10 @@
   background-color: #8AC8FF;
 }
 
+a {
+  color: #1f6feb;
+}
+
 html {
   height: 100%;
 }
@@ -1191,6 +1195,9 @@ input:checked + .slider:before {
 .dark-theme #bottomtext a {
   color: white;
 }
+.dark-theme a {
+  color: #8ac8ff;
+}
 .dark-theme ::selection {
   background-color: #1F6FEB;
 }
@@ -1329,6 +1336,7 @@ input:checked + .slider:before {
 .dark-theme #submit:hover,
 .dark-theme #newDocument:hover {
   background-color: rgb(36, 152.0512820513, 255);
+  box-shadow: 0px 2px 2px #1f6feb;
 }
 .dark-theme #logout,
 .dark-theme #delete-account {
@@ -1360,12 +1368,20 @@ input:checked + .slider:before {
 }
 .dark-theme input[type=text],
 .dark-theme input[type=password] {
-  background-color: #0d1117;
+  background-color: #212830;
   border: 1px solid #3d444d;
   color: #ffffff;
 }
+.dark-theme input[type=text]:hover,
+.dark-theme input[type=password]:hover {
+  border: 1px solid #1f6feb;
+}
 .dark-theme input[type=file] {
   border: 1px solid #3d444d;
+  background-color: #212830;
+}
+.dark-theme input[type=file]:hover {
+  border: 1px solid #1f6feb;
 }
 .dark-theme .menu-toggle {
   background-color: #1f6feb;
