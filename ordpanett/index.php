@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.44"; // la til bakgrunnsfarge på knappene i toolbaren - ser bedre ut, måtte konsultere en ekspert!
+$version = "v3.4.45"; // la til flere splashtexter
 ?>
 
 <!DOCTYPE html>
