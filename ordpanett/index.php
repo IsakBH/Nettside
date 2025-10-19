@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.43"; // hvis server_addr ikke er localhost, så printer den ut versjonsnummer
+$version = "v3.4.44"; // la til bakgrunnsfarge på knappene i toolbaren - ser bedre ut, måtte konsultere en ekspert!
 ?>
 
 <!DOCTYPE html>

@@ -106,7 +106,7 @@ button {
   place-items: center;
   border-radius: 10px;
   border: 1px solid grey;
-  background-color: #ffffff;
+  background-color: #F6F8FA;
   outline: none;
   color: #020929;
   transition: transform 0.2s ease;
@@ -123,7 +123,7 @@ button:active {
 
 select {
   color: #020929;
-  background-color: #ffffff;
+  background-color: #F6F8FA;
   padding: 7px;
   text-decoration: none;
   border: 1px solid grey;
@@ -162,7 +162,7 @@ input[type=color] {
   background-color: transparent;
   width: 28px;
   height: 28px;
-  border: none;
+  border: 1px solid #3D444D;
   cursor: pointer;
   border-radius: 10px;
 }
@@ -1236,7 +1236,7 @@ input:checked + .slider:before {
   border-color: #3d444d;
 }
 .dark-theme .options button {
-  background-color: #0d1117;
+  background-color: #212830;
   color: #ffffff;
   border-color: #3d444d;
 }
@@ -1244,7 +1244,7 @@ input:checked + .slider:before {
   background-color: #151b23;
 }
 .dark-theme select {
-  background-color: #0d1117;
+  background-color: #212830;
   color: #ffffff;
   border-color: #3d444d;
 }
