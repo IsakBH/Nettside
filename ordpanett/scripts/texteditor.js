@@ -331,9 +331,9 @@ function loadDocumentsList() {
                         <span>${doc.title}</span>
                     </div>
                     <div class="document-actions">
-                        <button id="shareButton" onclick="shareDocument(${doc.id})" title="Del dokument">
+                        <!--<button id="shareButton" onclick="shareDocument(${doc.id})" title="Del dokument">
                             <i class="fa-solid fa-share"></i>
-                        </button>
+                        </button>-->
                         <button onclick="deleteDocument(${doc.id})" title="Slett dokument">
                             <i class="fa-solid fa-trash"></i>
                         </button>
