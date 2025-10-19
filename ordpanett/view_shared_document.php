@@ -7,7 +7,8 @@ if (empty($token)) {
 }
 
 // finner dokumentet ved å se på share token :solbriller emotikon:
-$stmt = $mysqli->prepare("SELECT id, title, content FROM documents WHERE share_token = ?");
+$stmt = $mysqli->prepare("SELECT d.title, d.content, d.last_modified, u.username FROM documents d JOIN users u ON d.user_id = u.id WHERE d.share_token = ?");
+
 $stmt->bind_param("s", $token);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -30,7 +31,12 @@ if (!$document) {
         <p id="read-only-status">Skrivebeskyttet (Read-only)</p>
         <h1 id="title">Ord På Nett | Delt dokument</h1>
 
-
+        <div class="options">
+            <h2>Dokumentinfo:</h2>
+            <p><b>Navn:</b> <?php echo htmlspecialchars($document['title']);?></p>
+            <p><b>Eid av: </b> <?php echo htmlspecialchars($document['username']);?></p>
+            <p><b>Sist endret:</b> <?php echo htmlspecialchars($document['last_modified']);?></p>
+        </div>
 
         <div class="text-input" id="shared-text-input" contenteditable="false">
             <?php echo $document['content']; ?>
