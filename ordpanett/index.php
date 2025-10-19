@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.45"; // la til flere splashtexter
+$version = "v3.5.0"; // fungerende deling av dokumenter
 ?>
 
 <!DOCTYPE html>
@@ -236,7 +236,7 @@ $version = "v3.4.45"; // la til flere splashtexter
         </div>
 
         <!-- input boksen der du faktisk skriver teksten-->
-        <div id="text-input">
+        <div class="text-input" id="text-input">
             <p id="placeholder"></p>
         </div>
 

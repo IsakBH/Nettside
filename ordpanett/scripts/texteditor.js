@@ -93,6 +93,24 @@ let splashText = [
     "\"Achievements kommer iløpet av sommerferien\" 💔",
 ];
 
+// dele dokumenter
+function shareDocument(documentId) {
+    fetch('create_share_link.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ id: documentId })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if(data.success) {
+            // viser link til bruker :solbriller emotikon:
+            prompt("Her er link til dokumentet ditt :) Hvem som helst kan se dokumentet, så ikke del linken med alle! Eller, du kan hvis du vil, men liksom, ja, du vet hva jeg mener. ", data.link);
+        } else {
+            alert("Det oppstod en feil under deling av dokument :( " + data.error);
+        }
+    })
+}
+
 // skriver at brukeren må velge et dokument - calles når currentDocumentId er null
 function selectDocumentMessage(){
     writingArea.innerHTML = '<p id="placeholder"><u><h1 id="title">Vennligst velg et dokument.</h1></u> <br> <br> <h2>   Kreditter:  </h2>  Programmering: Isak Henriksen <br> Easter egg sang: NRK <br> Dark mode inspirasjon: GitHub/Microsoft <br> <a href="https://www.youtube.com/watch?v=7lQatGnsoS8" target="_blank">Ord på Nett sangen:</a> Isak Henriksen (sangtekst) Suno AI (sanger) </p>';
@@ -313,6 +331,9 @@ function loadDocumentsList() {
                         <span>${doc.title}</span>
                     </div>
                     <div class="document-actions">
+                        <button id="shareButton" onclick="shareDocument(${doc.id})" title="Del dokument">
+                            <i class="fa-solid fa-share"></i>
+                        </button>
                         <button onclick="deleteDocument(${doc.id})" title="Slett dokument">
                             <i class="fa-solid fa-trash"></i>
                         </button>

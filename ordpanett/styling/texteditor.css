@@ -167,7 +167,7 @@ input[type=color] {
   border-radius: 10px;
 }
 
-#text-input {
+.text-input {
   margin-top: 5px;
   padding: 10px;
   border: 1px solid grey;
@@ -178,13 +178,17 @@ input[type=color] {
   scrollbar-color: #8ac8ff;
   font-family: inherit;
 }
-#text-input ul,
-#text-input ol {
+.text-input ul,
+.text-input ol {
   padding-left: 40px;
   margin: 0;
 }
-#text-input:focus {
+.text-input:focus {
   outline: none;
+}
+
+#shared-text-input {
+  height: 95%;
 }
 
 .font-gothic {
@@ -790,6 +794,10 @@ input[type=file]::file-selector-button {
   color: white;
 }
 
+#shareButton:hover {
+  background: #8AC8FF;
+}
+
 .document-item {
   flex-grow: 1;
   padding: 4px 8px;
@@ -1195,6 +1203,9 @@ input:checked + .slider:before {
 }
 .dark-theme #bottomtext a {
   color: white;
+}
+.dark-theme #shareButton:hover {
+  background: #1F6FEB;
 }
 .dark-theme a {
   color: #8ac8ff;

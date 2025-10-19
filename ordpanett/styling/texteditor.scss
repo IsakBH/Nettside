@@ -173,7 +173,7 @@ input[type="color"] {
     border-radius: 10px;
 }
 
-#text-input {
+.text-input {
     margin-top: 5px;
     padding: 10px;
     border: 1px solid grey;
@@ -193,6 +193,10 @@ input[type="color"] {
     &:focus {
         outline: none;
     }
+}
+
+#shared-text-input {
+    height: 95%;
 }
 
 .font-gothic {
@@ -834,6 +838,12 @@ input[type="file"]::file-selector-button {
     }
 }
 
+#shareButton {
+    &:hover {
+        background: #8AC8FF;
+    }
+}
+
 .document-item {
     flex-grow: 1;
     padding: 4px 8px;
@@ -1274,6 +1284,12 @@ input:checked + .slider:before {
     #bottomtext {
         a {
             color: white;
+        }
+    }
+
+    #shareButton {
+        &:hover {
+            background: #1F6FEB;
         }
     }
 
