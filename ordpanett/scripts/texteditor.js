@@ -104,7 +104,8 @@ function shareDocument(documentId) {
     .then(data => {
         if(data.success) {
             // viser link til bruker :solbriller emotikon:
-            prompt("Her er link til dokumentet ditt :) Hvem som helst kan se dokumentet, så ikke del linken med alle! Eller, du kan hvis du vil, men liksom, ja, du vet hva jeg mener. ", data.link);
+            alert("hei hei. deling av dokumenter kommer veldig snart. må bare få noen til å teste det først.")
+            //prompt("Her er link til dokumentet ditt :) Hvem som helst kan se dokumentet, så ikke del linken med alle! Eller, du kan hvis du vil, men liksom, ja, du vet hva jeg mener. ", data.link);
         } else {
             alert("Det oppstod en feil under deling av dokument :( " + data.error);
         }
@@ -331,9 +332,9 @@ function loadDocumentsList() {
                         <span>${doc.title}</span>
                     </div>
                     <div class="document-actions">
-                        <!--<button id="shareButton" onclick="shareDocument(${doc.id})" title="Del dokument">
+                        <button id="shareButton" onclick="shareDocument(${doc.id})" title="Del dokument">
                             <i class="fa-solid fa-share"></i>
-                        </button>-->
+                        </button>
                         <button onclick="deleteDocument(${doc.id})" title="Slett dokument">
                             <i class="fa-solid fa-trash"></i>
                         </button>
