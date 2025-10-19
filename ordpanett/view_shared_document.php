@@ -24,11 +24,13 @@ if (!$document) {
     <title>Ord På Nett | Delt dokument: <?php echo htmlspecialchars($document['title']); ?></title>
     <link rel="stylesheet" href="styling/texteditor.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
 </head>
 <body>
     <div class="container" id="sharedContainer">
+        <p id="read-only-status">Skrivebeskyttet (Read-only)</p>
         <h1 id="title">Ord På Nett | Delt dokument</h1>
+
+
 
         <div class="text-input" id="shared-text-input" contenteditable="false">
             <?php echo $document['content']; ?>

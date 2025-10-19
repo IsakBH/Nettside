@@ -195,8 +195,21 @@ input[type="color"] {
     }
 }
 
+//////////////////////////////////////////////////
+///              delte dokumenter              ///
+/////////////////////////////////////////////////
+
 #shared-text-input {
     height: 95%;
+}
+
+#read-only-status {
+    color: #000;
+    text-shadow: 1px 1px 2px #ccc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
 }
 
 .font-gothic {
