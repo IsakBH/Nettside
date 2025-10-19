@@ -1,13 +1,13 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.4.42"; // title og overskrift er nå 'ord på nett dev' når du er på localhost. den sjekker hvis server_addr er 127.0.0.1
+$version = "v3.4.43"; // hvis server_addr ikke er localhost, så printer den ut versjonsnummer
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Ord På Nett <?php if ($_SERVER['SERVER_ADDR'] == '127.0.0.1') { echo "dev"; } ?></title>
+    <title>Ord På Nett <?php if ($_SERVER['SERVER_ADDR'] == '127.0.0.1') { echo "dev"; } else { echo $version; } ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="styling/texteditor.css" />
     <link rel="icon" href="assets/ordlogo.png" />
