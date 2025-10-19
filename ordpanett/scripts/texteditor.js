@@ -87,7 +87,10 @@ let splashText = [
     "HTML er ikke koding",
     "Meat Prisoner!",
     "BBB",
-    "\"Kan vi ta pause?\" - Ivan Kuzmych"
+    "\"Kan vi ta pause?\" - Ivan Kuzmych",
+    "Has man gone insane \n A few will remain \n Who'll find a way \n To live one more day \n Through decades of war \n It spreads like disease \n There's no sign of peace \n Religion and greed \n cause to bleed \n Three decades of war",
+    "Achievements?",
+    "\"Achievements kommer iløpet av sommerferien\" 💔",
 ];
 
 // skriver at brukeren må velge et dokument - calles når currentDocumentId er null
