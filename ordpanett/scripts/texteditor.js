@@ -105,7 +105,7 @@ function shareDocument(documentId) {
         if(data.success) {
             // viser link til bruker :solbriller emotikon:
             alert("hei hei. deling av dokumenter kommer veldig snart. må bare få noen til å teste det først.")
-            //prompt("Her er link til dokumentet ditt :) Hvem som helst kan se dokumentet, så ikke del linken med alle! Eller, du kan hvis du vil, men liksom, ja, du vet hva jeg mener. ", data.link);
+            //prompt("Her er link til dokumentet ditt :) Hvem som helst som har linken kan se dokumentet, så ikke del linken med alle! Eller, du kan hvis du vil, men liksom, ja, du vet hva jeg mener. ", data.link);
         } else {
             alert("Det oppstod en feil under deling av dokument :( " + data.error);
         }
