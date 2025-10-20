@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.5.0"; // fungerende deling av dokumenter
+$version = "v3.5.1"; // lettere og bedre måte å håndtere splash texts på
 ?>
 
 <!DOCTYPE html>
