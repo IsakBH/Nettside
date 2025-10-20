@@ -30,6 +30,7 @@ const calcButtons = document.querySelectorAll(".calc-btn");
 const printButton = document.getElementById("print");
 let seenEasterEgg = false;
 const documentSearch = document.getElementById('documentSearch');
+
 // lager liste av fonter for font velge greien
 let fontList = [
     "Arial",
@@ -41,57 +42,15 @@ let fontList = [
     "Impact",
 ];
 // lager liste over splash text som vises over Ord på Nett tittelen.
-let splashText = [
-    "Jeg bruker ikke akebrett, fordi jeg har jo Ord på Nett",
-    "Å danse ballett er nesten like fint som Ord på Nett",
-    "Frisører liker ofte å flette, men jeg liker bare å bruke Ord på nettet",
-    "Å se på et fint garnsett, er nesten som å skrive i Ord på nett",
-    "Nå gikk jeg på et lite knett, men det gjør du aldri når du bruker Ord på nett",
-    "Hun legen var godt annsett, nesten som Ord på nett",
-    "Du blir sett på som ganske fett, om du bare bruker Ord på nett",
-    "Jeg har alltid elsket en god forrett, men aldri like mye som Ord på nett",
-    "Skjære brød på et skjærebrett? Nei, jeg har jo min kjære Ord på nett!",
-    "Å bruke Ord på nett er ofte ganske lett",
-    "Mange trodde soldatene til Napoleon brukte muskett, men jeg tror de brukte Ord på Nett.",
-    "Kan aldri bruke et nettbrett igjen uten Ord på nett.",
-    "Du vet aldri hvor du finner ditt neste favoritt fargepalett, men det gjør jeg. På Ord på nett.",
-    "Ta portrett? Pfff, har jo Ord på nett.",
-    "Jeg bruker aldri serviett, fordi jeg har jo Ord på nett!",
-    "Når doen er tett, er det bare å finne fram Ord på Nett!",
-    "Du blir kanskje ikke mett av å bruke Ord på Nett, men det er i hvertfall veldig lett.",
-    "Har du vondt i hodet, ikke bruk tablett. Bruk Ord på Nett!",
-    "Ord på Nett, like godt som en baguette!",
-    "Hva brukte du for å skrive det? Bare gjett... det er jo Ord på Nett!",
-    "Krokodillen som er på diett, bruker alltid Ord på Nett.",
-    "Du trenger ikke stort budsjett for å bruke Ord på Nett.",
-    "Avhengig av cigarett? Bruk Ord på Nett!",
-    "Bruker du ikke Ord på Nett er det bare å gå i rettrett.",
-    "Du må ha gått helt fra vettet om du ikke bruker Ord på Nettet",
-    "Live long and prosper",
-    "Space, the final frontier",
-    "No AI to be seen!",
-    "if(cookies.accepted) { trackUser(); } else { trackUserAnyway(); }",
-    "Angetreten!",
-    "Achtung!",
-    "Ihre befehle!",
-    "Befehle!",
-    "That is bullshit blazing!",
-    "I am the storm that is approaching",
-    "Forsakened I am awakened",
-    "Vi ska bada bastu, bastu",
-    "\"Kahoot = CS Cases\" - Halfdann Hesthammer",
-    "\"4\" - Ivan Kuzmych",
-    "En Arisk Jul",
-    "Linux!!!!!",
-    "Trenger jobb? Bare vær flink til å smile :)",
-    "HTML er ikke koding",
-    "Meat Prisoner!",
-    "BBB",
-    "\"Kan vi ta pause?\" - Ivan Kuzmych",
-    "Has man gone insane \n A few will remain \n Who'll find a way \n To live one more day \n Through decades of war \n It spreads like disease \n There's no sign of peace \n Religion and greed \n cause to bleed \n Three decades of war",
-    "Achievements?",
-    "\"Achievements kommer iløpet av sommerferien\" 💔",
-];
+let splashText = [];
+
+fetch('/ordpanett/assets/splashtext.txt')
+    .then(response => response.text())
+    .then(data => {
+        splashText = data.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+        randomSplashText();
+    })
+    .catch(error => console.error('kunne ikke loade splash text :( ', error));
 
 // dele dokumenter
 function shareDocument(documentId) {
