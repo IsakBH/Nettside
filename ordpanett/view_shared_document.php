@@ -25,6 +25,9 @@ if (!$document) {
     <title>Ord På Nett | Delt dokument: <?php echo htmlspecialchars($document['title']); ?></title>
     <link rel="stylesheet" href="styling/texteditor.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="./scripts/texteditor.js"></script>
+    <script src="./scripts/applydarkmode.js"></script>
+    <link rel="icon" href="./assets/ordlogo.png" />
 </head>
 <body>
     <div class="container" id="sharedContainer">
@@ -43,8 +46,5 @@ if (!$document) {
             <?php echo $document['content']; ?>
         </div>
     </div>
-
-    <!-- javascript link-->
-    <script src="scripts/texteditor.js"></script>
 </body>
 </html>
