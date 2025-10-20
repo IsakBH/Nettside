@@ -34,7 +34,7 @@ if (!$document) {
         <p id="read-only-status">Skrivebeskyttet (Read-only)</p>
         <h1 id="title">Ord På Nett | Delt dokument</h1>
 
-        <div class="options">
+        <div class="options" id="shared-options">
             <h2>Dokumentinfo:</h2>
             <p><b>Navn:</b> <?php echo htmlspecialchars($document['title']);?></p>
             <p><b>Eid av: </b> <?php echo htmlspecialchars($document['username']);?></p>

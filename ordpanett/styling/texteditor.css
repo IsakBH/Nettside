@@ -189,6 +189,13 @@ input[type=color] {
 
 #shared-text-input {
   height: 90%;
+  background-color: #F6F8FA;
+  border-color: #e0e0e0;
+}
+
+#shared-options {
+  background-color: #F6F8FA;
+  border-color: #e0e0e0;
 }
 
 #read-only-status {
@@ -1211,6 +1218,11 @@ input:checked + .slider:before {
   color: #ffffff;
 }
 .dark-theme #shared-text-input {
+  border-color: #3D444D;
+  background-color: #212830;
+}
+.dark-theme #shared-options {
+  background-color: #212830;
   border-color: #3D444D;
 }
 .dark-theme #read-only-status {

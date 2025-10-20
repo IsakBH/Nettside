@@ -201,6 +201,13 @@ input[type="color"] {
 
 #shared-text-input {
     height: 90%;
+    background-color: #F6F8FA;
+    border-color: #e0e0e0;
+}
+
+#shared-options {
+    background-color: #F6F8FA;
+    border-color: #e0e0e0;
 }
 
 #read-only-status {
@@ -1295,6 +1302,12 @@ input:checked + .slider:before {
     color: #ffffff;
 
     #shared-text-input {
+        border-color: #3D444D;
+        background-color: #212830;
+    }
+
+    #shared-options {
+        background-color: #212830;
         border-color: #3D444D;
     }
 
