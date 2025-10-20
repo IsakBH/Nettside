@@ -43,5 +43,8 @@ if (!$document) {
             <?php echo $document['content']; ?>
         </div>
     </div>
+
+    <!-- javascript link-->
+    <script src="scripts/texteditor.js"></script>
 </body>
 </html>
