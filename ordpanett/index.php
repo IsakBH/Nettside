@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.5.1"; // lettere og bedre måte å håndtere splash texts på
+$version = "v3.5.2"; // endret border-color på text-input og options i index - er nå i samsvar med delte dokumenter :D
 ?>
 
 <!DOCTYPE html>
