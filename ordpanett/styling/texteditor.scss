@@ -76,6 +76,7 @@ hr {
     padding: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
+    scrollbar-color: #8ac8ff transparent;
 }
 
 input[type="color"] {
@@ -181,7 +182,7 @@ input[type="color"] {
     border-radius: 10px;
     overflow-y: auto;
     overflow-x: hidden;
-    scrollbar-color: #8ac8ff;
+    scrollbar-color: #8ac8ff transparent;
 
     // fikser at liste punktene går utenfor tekst boksen
     font-family: inherit;
@@ -193,6 +194,10 @@ input[type="color"] {
     &:focus {
         outline: none;
     }
+}
+
+.text-input::-webkit-scrollbar-thumb {
+    
 }
 
 //////////////////////////////////////////////////
