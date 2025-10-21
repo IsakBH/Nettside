@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.6.0"; // lagt til floating mode :DDDDDDDDDD
+$version = "v3.6.0"; // lagt til floating mode :) det er helt nydelig
 ?>
 
 <!DOCTYPE html>
