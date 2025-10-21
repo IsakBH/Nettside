@@ -821,6 +821,12 @@ window.onkeydown = function (e) {
             console.log("Bruker brukte snarvei for å toggle dark mode");
             toggleDarkMode();
         }
+
+        if (e.key === "e") {
+            e.preventDefault();
+            console.log("bruker brukte snarvei for å toggle floating mode");
+            toggleFloatMode();
+        }
     }
 };
 
