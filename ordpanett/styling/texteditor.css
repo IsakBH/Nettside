@@ -63,7 +63,7 @@ hr {
   left: 50%;
   top: 50%;
   border-radius: 0px;
-  transition: height 0.25s;
+  transition: height 0.15s;
   filter: drop-shadow(0 0 15px grey);
 }
 
@@ -655,7 +655,7 @@ input[type=file]::file-selector-button {
   scrollbar-color: #8ac8ff transparent;
   overflow: overlay;
   display: flex;
-  transition: 0.25s;
+  transition: 0.15s;
   flex-direction: column;
 }
 .document-manager h3 {
