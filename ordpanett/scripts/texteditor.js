@@ -830,4 +830,4 @@ window.onkeydown = function (e) {
     }
 };
 
-document.addEventListener("DOMContentLoaded", initializer);
+window.onload = initializer();
