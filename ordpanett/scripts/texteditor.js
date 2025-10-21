@@ -44,6 +44,29 @@ let fontList = [
 // lager liste over splash text som vises over Ord på Nett tittelen.
 let splashText = [];
 
+// ummm... prestasjoner???
+function unlockAchievement(trigger_key) {
+    // achievement
+    fetch('/ordpanett/scripts/unlock_achievement.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ trigger_key: trigger_key })
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success === true) {
+                alert('Du fikk en achievement! ${data.name}\n\n${data.description}'); // denne funker ikke for en eller annen grunn :( jeg finner ikke ut av det :(((((((((((((
+            } else {
+                console.log(data.message || data.error);
+            }
+        })
+        .catch(error => {
+            console.error('feil når du fikk achievementen :( ', error);
+        });
+}
+
 fetch('/ordpanett/assets/splashtext.txt')
     .then(response => response.text())
     .then(data => {
@@ -708,25 +731,7 @@ function checkForGud() {
 
     if (content.includes("gud" || "kristus" || "god")) {
         crossSymbol.style.display = "block";
-
-        // achievement
-        fetch('/ordpanett/scripts/unlock_achievement.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ trigger_key: 'gud' })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if(data.success) {
-                alert("Du fikk en achievement! ", data.name, " \n ", data.description);
-                console.log("du fikk en achievement :D");
-            } else {
-                alert("du har allerede denne achievementen");
-            }
-        })
-
+        unlockAchievement('gud');
     } else {
         crossSymbol.style.display = "none";
     }
@@ -742,6 +747,7 @@ function checkForMKX() {
             music.volume = 0.5;
             music.play();
             seenEasterEgg = true;
+            unlockAchievement('mkx');
         }
     }
 }
