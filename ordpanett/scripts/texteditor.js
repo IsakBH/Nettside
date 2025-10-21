@@ -708,6 +708,25 @@ function checkForGud() {
 
     if (content.includes("gud" || "kristus" || "god")) {
         crossSymbol.style.display = "block";
+
+        // achievement
+        fetch('/ordpanett/scripts/unlock_achievement.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ trigger_key: 'gud' })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if(data.success) {
+                alert("Du fikk en achievement! ", data.name, " \n ", data.description);
+                console.log("du fikk en achievement :D");
+            } else {
+                alert("du har allerede denne achievementen");
+            }
+        })
+
     } else {
         crossSymbol.style.display = "none";
     }
