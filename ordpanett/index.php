@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.5.2"; // endret border-color på text-input og options i index - er nå i samsvar med delte dokumenter :D
+$version = "v3.6.0"; // lagt til floating mode :DDDDDDDDDD
 ?>
 
 <!DOCTYPE html>

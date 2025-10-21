@@ -79,7 +79,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html>
 
@@ -88,6 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="../styling/texteditor.css">
     <script src="../scripts/texteditor.js"></script>
     <script src="../scripts/applydarkmode.js"></script>
+    <script src="../scripts/applyfloatmode.js"></script>
     <link rel="icon" href="../assets/ordlogo.png" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -127,6 +127,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <span class="slider round"></span>
             </label>
             <label>Dark mode</label>
+
+            <br>
+
+            <label class="switch">
+                <input id="floatToggle" type="checkbox" onclick="toggleFloatMode()">
+                <span class="slider round"></span>
+            </label>
+            <label>Floating mode</label>
+
             <br> <br>
 
             <button id="submit" type="submit">Oppdater instillinger</button>

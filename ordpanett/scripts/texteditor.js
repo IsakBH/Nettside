@@ -156,11 +156,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+function toggleFloatMode() {
+    const toggleButton = document.getElementById('floatToggle');
+    document.body.classList.toggle('floating-mode');
+    localStorage.setItem('floatMode', toggleButton.checked);
+    applyFloatMode();
+}
+
+function applyFloatMode() {
+    const isFloatMode = localStorage.getItem('floatMode') === 'true';
+    if (isFloatMode) {
+        document.body.classList.add('floating-mode');
+    }
+    const toggleButton = document.getElementById('floatToggle');
+    if (toggleButton) {
+        toggleButton.checked = isFloatMode;
+    }
+}
+
 // light/dark mode toggle
 function toggleDarkMode() {
     const toggleButton = document.getElementById('themeToggle');
     document.body.classList.toggle('dark-theme');
     localStorage.setItem('darkMode', toggleButton.checked);
+    applyDarkMode();
 }
 
 // sjekk og enable dark mode når siden lastes
@@ -168,6 +187,7 @@ function applyDarkMode() {
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
     if (isDarkMode) {
         document.body.classList.add('dark-theme');
+        console.log("toggle dark mode :D")
     }
 
     // hvis på settings siden, toggle switchen
@@ -470,6 +490,7 @@ const initializer = () => {
     console.log("Initialiserer Ord på Nett...");
 
     applyDarkMode();
+    applyFloatMode();
     randomSplashText();
     highlighter(alignButtons, true);
     highlighter(spacingButtons, true);
@@ -803,4 +824,4 @@ window.onkeydown = function (e) {
     }
 };
 
-window.onload = initializer();
+document.addEventListener("DOMContentLoaded", initializer);

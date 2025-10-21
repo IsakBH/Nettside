@@ -1009,6 +1009,7 @@ input[type=file]::file-selector-button {
   width: 60px;
   height: 34px;
   outline: none;
+  margin-top: 5px;
 }
 
 .switch input {
@@ -1210,6 +1211,20 @@ input:checked + .slider:before {
 #changeLogBackButton:active {
   transform: translateY(0px);
   background: rgb(189, 224.2, 255);
+}
+
+.floating-mode .container {
+  height: 98%;
+  border-radius: 10px;
+}
+.floating-mode .document-manager {
+  position: fixed;
+  left: 0.5%;
+  top: 50%;
+  height: 98%;
+  transform: translateY(-50%);
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
 }
 
 .dark-theme {

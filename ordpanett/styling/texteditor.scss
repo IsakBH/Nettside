@@ -197,7 +197,7 @@ input[type="color"] {
 }
 
 .text-input::-webkit-scrollbar-thumb {
-    
+
 }
 
 //////////////////////////////////////////////////
@@ -1092,6 +1092,7 @@ input[type="file"]::file-selector-button {
     width: 60px;
     height: 34px;
     outline: none;
+    margin-top: 5px;
 }
 
 // gjem default html checkbox
@@ -1295,6 +1296,23 @@ input:checked + .slider:before {
     &:active {
         transform: translateY(0px);
         background: darken(aliceblue, 10%);
+    }
+}
+
+.floating-mode {
+    .container {
+        height: 98%;
+        border-radius: 10px;
+    }
+
+    .document-manager {
+        position: fixed;
+        left: 0.5%;
+        top: 50%;
+        height: 98%;
+        transform: translateY(-50%);
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
     }
 }
 
