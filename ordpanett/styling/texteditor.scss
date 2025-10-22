@@ -1345,6 +1345,48 @@ input:checked + .slider:before {
             box-shadow: none;
         }
     }
+
+    #documentsList li {
+        &:hover {
+            box-shadow: 4px 0px 0px 0px #7befb2;
+            filter: drop-shadow(0 0 7px #7befb2);
+            border-color: #7befeb;
+        }
+        &.active-document {
+            border: 2px solid #7befb2;
+            filter: drop-shadow(0 0 7px #7befb2);
+            box-shadow: 4px 0 0 0 #7befb2;
+        }
+    }
+
+    .document-manager {
+        scrollbar-color: #7befb2 transparent;
+        ::-webkit-scrollbar-thumb {
+            background-color: #41bc9f;
+        }
+    }
+
+    #shareButton {
+        &:hover {
+            background-color: #7befb2;
+        }
+    }
+
+    .text-input {
+        a {
+            color: #41BC9F;
+        }
+    }
+
+    .active {
+        background-color: #7befb2;
+    }
+
+    button {
+        &:hover {
+            background-color: #41bc9f;
+        }
+    }
 }
 
 // DARK MODE

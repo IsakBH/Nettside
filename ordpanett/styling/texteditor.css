@@ -1250,6 +1250,34 @@ input:checked + .slider:before {
   border: 1px solid #7befb2;
   box-shadow: none;
 }
+.green-theme #documentsList li:hover {
+  box-shadow: 4px 0px 0px 0px #7befb2;
+  filter: drop-shadow(0 0 7px #7befb2);
+  border-color: #7befeb;
+}
+.green-theme #documentsList li.active-document {
+  border: 2px solid #7befb2;
+  filter: drop-shadow(0 0 7px #7befb2);
+  box-shadow: 4px 0 0 0 #7befb2;
+}
+.green-theme .document-manager {
+  scrollbar-color: #7befb2 transparent;
+}
+.green-theme .document-manager ::-webkit-scrollbar-thumb {
+  background-color: #41bc9f;
+}
+.green-theme #shareButton:hover {
+  background-color: #7befb2;
+}
+.green-theme .text-input a {
+  color: #41BC9F;
+}
+.green-theme .active {
+  background-color: #7befb2;
+}
+.green-theme button:hover {
+  background-color: #41bc9f;
+}
 
 .dark-theme {
   background-image: url("../assets/ordpanettbanner-dark.png");
