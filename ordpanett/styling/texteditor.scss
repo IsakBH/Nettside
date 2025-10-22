@@ -1373,6 +1373,10 @@ input:checked + .slider:before {
     }
 
     .text-input {
+        scrollbar-color: #7befb2 transparent;
+        ::-webkit-scrollbar-thumb {
+            background-color: #41bc9f;
+        }
         a {
             color: #41BC9F;
         }

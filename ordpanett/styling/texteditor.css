@@ -1269,6 +1269,12 @@ input:checked + .slider:before {
 .green-theme #shareButton:hover {
   background-color: #7befb2;
 }
+.green-theme .text-input {
+  scrollbar-color: #7befb2 transparent;
+}
+.green-theme .text-input ::-webkit-scrollbar-thumb {
+  background-color: #41bc9f;
+}
 .green-theme .text-input a {
   color: #41BC9F;
 }
