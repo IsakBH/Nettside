@@ -1391,6 +1391,26 @@ input:checked + .slider:before {
             background-color: #41bc9f;
         }
     }
+
+    select {
+        &:hover {
+            background-color: #41bc9f;
+        }
+    }
+
+    .profile-dropdown {
+        a {
+            &:hover {
+                color: #41bc9f;
+            }
+        }
+    }
+
+    #logoutIndex {
+        &:hover {
+            color: #FF002F;
+        }
+    }
 }
 
 // DARK MODE

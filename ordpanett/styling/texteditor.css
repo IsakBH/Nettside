@@ -1284,6 +1284,15 @@ input:checked + .slider:before {
 .green-theme button:hover {
   background-color: #41bc9f;
 }
+.green-theme select:hover {
+  background-color: #41bc9f;
+}
+.green-theme .profile-dropdown a:hover {
+  color: #41bc9f;
+}
+.green-theme #logoutIndex:hover {
+  color: #FF002F;
+}
 
 .dark-theme {
   background-image: url("../assets/ordpanettbanner-dark.png");
