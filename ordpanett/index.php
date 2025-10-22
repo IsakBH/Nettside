@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.6.2"; // lagt til transition på container og document manager sånn at det er smooth å bytte til floating
+$version = "v3.7.0"; // lagt til achievements :)
 ?>
 
 <!DOCTYPE html>

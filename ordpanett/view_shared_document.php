@@ -41,7 +41,6 @@ if (!$document) {
             <p><b>Navn:</b> <?php echo htmlspecialchars($document['title']);?></p>
             <p><b>Eid av: </b> <?php echo htmlspecialchars($document['username']);?></p>
             <p><b>Sist endret:</b> <?php echo htmlspecialchars($document['last_modified']);?></p>
-            (mer metadata kommer her)
         </div>
 
         <div class="text-input" id="shared-text-input" contenteditable="false">
