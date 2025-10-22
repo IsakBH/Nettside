@@ -1327,9 +1327,23 @@ input:checked + .slider:before {
     background-image: url("../assets/ordpanettbanner-green.png");
     backdrop-filter: none;
 
+    ::selection {
+        background-color: #7befb2
+    }
+
     .new-doc-button {
         background-color: #7BEFB2;
         color: #040002;
+        &:hover {
+            background-color: #41BC9F;
+        }
+    }
+
+    #documentSearch {
+        &:focus {
+            border: 1px solid #7befb2;
+            box-shadow: none;
+        }
     }
 }
 
