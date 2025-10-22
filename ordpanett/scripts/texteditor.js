@@ -816,6 +816,13 @@ window.onkeydown = function (e) {
             documentSearch.focus();
         }
 
+        // selecte text-input
+        if (e.key === "q") {
+            e.preventDefault();
+            cconsole.log("bruker brukte snarvei for å focuse text-input
+            writingArea.focus();
+        }
+
         if (e.key === "d") {
             e.preventDefault();
             console.log("Bruker brukte snarvei for å toggle dark mode");
