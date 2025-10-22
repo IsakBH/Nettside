@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.7.3"; //
+$version = "v3.7.3"; // fikset deleteDocument()
 ?>
 
 <!DOCTYPE html>
