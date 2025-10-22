@@ -179,6 +179,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+function toggleGreenMode() {
+    const toggleButton = document.getElementById('greenToggle');
+    document.body.classList.toggle('green-theme');
+    localStorage.setItem('greenMode', toggleButton.checked);
+    applyGreenMode();
+}
+
+function applyGreenMode() {
+    const isGreenMode = localStorage.getItem('greenMode') === 'true';
+    if (isGreenMode) {
+        document.body.classList.add('green-theme');
+        console.log("green mode er enablet");
+    }
+    const toggleButton = document.getElementById('greenToggle');
+    if (toggleButton) {
+        toggleButton.checked = isGreenMode;
+    }
+}
+
 function toggleFloatMode() {
     const toggleButton = document.getElementById('floatToggle');
     document.body.classList.toggle('floating-mode');
@@ -514,6 +533,7 @@ const initializer = () => {
 
     applyDarkMode();
     applyFloatMode();
+    applyGreenMode();
     randomSplashText();
     highlighter(alignButtons, true);
     highlighter(spacingButtons, true);
