@@ -179,6 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// toggle og apply for green mode / grønt fargetema
 function toggleGreenMode() {
     const toggleButton = document.getElementById('greenToggle');
     document.body.classList.toggle('green-theme');
@@ -198,6 +199,7 @@ function applyGreenMode() {
     }
 }
 
+// toggle og apply for floating mode :D
 function toggleFloatMode() {
     const toggleButton = document.getElementById('floatToggle');
     document.body.classList.toggle('floating-mode');
