@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.7.1"; // lagt til box-shadow rundt det aktive dokumentet i dark mode, det ser nydelig ut
+$version = "v3.7.2"; // endret splash text fra norsk til svensk
 ?>
 
 <!DOCTYPE html>
