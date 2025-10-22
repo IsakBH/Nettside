@@ -107,7 +107,7 @@ button {
   display: grid;
   place-items: center;
   border-radius: 10px;
-  border: 1px solid grey;
+  border: 1px solid #E0E0E0;
   background-color: #F6F8FA;
   outline: none;
   color: #020929;
@@ -128,7 +128,7 @@ select {
   background-color: #F6F8FA;
   padding: 7px;
   text-decoration: none;
-  border: 1px solid grey;
+  border: 1px solid #E0E0E0;
   border-radius: 10px;
   transition: transform 0.2s ease;
 }
@@ -164,7 +164,7 @@ input[type=color] {
   background-color: transparent;
   width: 28px;
   height: 28px;
-  border: 1px solid #3D444D;
+  border: 1px solid #E0E0E0;
   cursor: pointer;
   border-radius: 10px;
 }
@@ -1299,6 +1299,9 @@ input:checked + .slider:before {
   backdrop-filter: none;
   background-color: #0d1117;
   color: #ffffff;
+}
+.dark-theme input[type=color] {
+  border: 1px solid #3d444d;
 }
 .dark-theme #shared-text-input {
   border-color: #3D444D;
