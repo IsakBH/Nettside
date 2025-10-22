@@ -1236,6 +1236,10 @@ input:checked + .slider:before {
   background-image: url("../assets/ordpanettbanner-green.png");
   backdrop-filter: none;
 }
+.green-theme .new-doc-button {
+  background-color: #7BEFB2;
+  color: #040002;
+}
 
 .dark-theme {
   background-image: url("../assets/ordpanettbanner-dark.png");
