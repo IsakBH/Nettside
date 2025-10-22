@@ -1323,6 +1323,11 @@ input:checked + .slider:before {
     }
 }
 
+.green-theme {
+    background-url: url("../assets/ordpanettbanner-green.png");
+    backdrop-filter: none;
+}
+
 // DARK MODE
 .dark-theme {
     background-image: url("../assets/ordpanettbanner-dark.png");

@@ -136,6 +136,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </label>
             <label>Floating mode</label>
 
+            <br>
+
+            <label class="switch">
+                <input id="greenToggle" type="checkbox" onclick="toggleGreenMode()">
+                <span class="slider round"></span>
+            </label>
+            <label>Grønn theme</label>
+
             <br> <br>
 
             <button id="submit" type="submit">Oppdater instillinger</button>

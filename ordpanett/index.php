@@ -13,7 +13,7 @@ $version = "v3.7.3"; // fikset deleteDocument()
     <link rel="icon" href="assets/ordlogo.png" />
 
     <!-- ikoner fra font awesome og google fonts-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 
     <!-- turndown og marked javascript biblioteker - for oversetting av html til markdown og motsatt -->

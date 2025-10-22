@@ -1232,6 +1232,11 @@ input:checked + .slider:before {
   border-radius: 10px;
 }
 
+.green-theme {
+  background-url: url("../assets/ordpanettbanner-green.png");
+  backdrop-filter: none;
+}
+
 .dark-theme {
   background-image: url("../assets/ordpanettbanner-dark.png");
   backdrop-filter: none;
