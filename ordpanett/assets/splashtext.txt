@@ -44,6 +44,6 @@ HTML er ikke koding
 Meat Prisoner!
 BBB
 "Kan vi ta pause?" - Ivan Kuzmych
-Has man gone insane \n A few will remain \n Who'll find a way \n To live one more day \n Through decades of war \n It spreads like disease \n There's no sign f peace \n Religion and greed \n cause to bleed \n Three decades of war
+Has man gone insane <br> A few will remain <br> Who'll find a way <br> To live one more day <br> Through decades of war <br> It spreads like disease <br> There's no sign f peace <br> Religion and greed <br> cause to bleed <br> Three decades of war
 Achievements?
 "Achievements kommer iløpet av sommerferien" 💔
