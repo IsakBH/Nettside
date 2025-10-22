@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.7.0"; // lagt til achievements :)
+$version = "v3.7.1"; // lagt til box-shadow rundt det aktive dokumentet i dark mode, det ser nydelig ut
 ?>
 
 <!DOCTYPE html>

@@ -840,6 +840,11 @@ input[type="file"]::file-selector-button {
             //transition: 0.2s;
             animation: aktivt-dokument 0.5s;
             animation-fill-mode: forwards;
+            &:hover {
+                .document-actions {
+                    opacity: 1;
+                }
+            }
         }
     }
 }
@@ -1443,6 +1448,7 @@ input:checked + .slider:before {
             border-color: #1F6FEB;
             background: lighten(#222931, 5%);
             width: 95%;
+            box-shadow: 0 0px 7px #1F6FEB;
 
             .document-actions {
                 opacity: 1;
@@ -1453,9 +1459,13 @@ input:checked + .slider:before {
             border: 2px solid #1F6FEB;
             background: lighten(#222931, 5%);
             filter: drop-shadow(0 0 2px #3D444D);
+            box-shadow: 0 0px 7px #1F6FEB;
             //transition: 0.2s;
             animation: aktivt-dokument 0.5s;
             animation-fill-mode: forwards;
+            .document-actions {
+                opacity: 1;
+            }
         }
     }
 
