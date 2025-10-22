@@ -69,6 +69,7 @@ $version = "v3.7.3"; // fikset deleteDocument()
                     <hr id="splitter">
                     <a href="pages/profile.php">Din profil</a>
                     <a href="pages/settings.php">Instillinger</a>
+                    <a id="logoutIndex" href="pages/logout.php">Logg ut</a>
                     <!--<a href="">Prestasjoner? (på vei)</a>-->
                 </div>
             </div>

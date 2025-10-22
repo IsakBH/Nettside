@@ -1330,10 +1330,10 @@ input:checked + .slider:before {
 }
 .dark-theme #documentsList li:hover {
   box-shadow: 4px 0px 0px 0px #1F6FEB;
+  filter: drop-shadow(0 0 7px #1F6FEB);
   border-color: #1F6FEB;
   background: rgb(44.4457831325, 53.5963855422, 64.0542168675);
   width: 95%;
-  box-shadow: 0 0px 7px #1F6FEB;
 }
 .dark-theme #documentsList li:hover .document-actions {
   opacity: 1;
@@ -1341,8 +1341,8 @@ input:checked + .slider:before {
 .dark-theme #documentsList li.active-document {
   border: 2px solid #1F6FEB;
   background: rgb(44.4457831325, 53.5963855422, 64.0542168675);
-  filter: drop-shadow(0 0 2px #3D444D);
-  box-shadow: 0 0px 7px #1F6FEB;
+  filter: drop-shadow(0 0 7px #1F6FEB);
+  box-shadow: 4px 0px 0px 0px #1F6FEB;
   animation: aktivt-dokument 0.5s;
   animation-fill-mode: forwards;
 }
@@ -1373,6 +1373,7 @@ input:checked + .slider:before {
 }
 .dark-theme .profile-dropdown a:hover {
   background-color: #1F232A;
+  color: #1F6FEB;
 }
 .dark-theme hr {
   color: #3d444d;
@@ -1411,6 +1412,9 @@ input:checked + .slider:before {
 .dark-theme #logout:hover,
 .dark-theme #delete-account:hover {
   background-color: #ff4444;
+}
+.dark-theme #logoutIndex:hover {
+  color: #FF002F;
 }
 .dark-theme input:checked + .slider {
   background-color: #1f6feb;

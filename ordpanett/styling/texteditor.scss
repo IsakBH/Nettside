@@ -1445,10 +1445,10 @@ input:checked + .slider:before {
         color: #ffffff;
         &:hover {
             box-shadow: 4px 0px 0px 0px #1F6FEB;
+            filter: drop-shadow(0 0 7px #1F6FEB);
             border-color: #1F6FEB;
             background: lighten(#222931, 5%);
             width: 95%;
-            box-shadow: 0 0px 7px #1F6FEB;
 
             .document-actions {
                 opacity: 1;
@@ -1458,8 +1458,8 @@ input:checked + .slider:before {
         &.active-document {
             border: 2px solid #1F6FEB;
             background: lighten(#222931, 5%);
-            filter: drop-shadow(0 0 2px #3D444D);
-            box-shadow: 0 0px 7px #1F6FEB;
+            filter: drop-shadow(0 0 7px #1F6FEB);
+            box-shadow: 4px 0px 0px 0px #1F6FEB;
             //transition: 0.2s;
             animation: aktivt-dokument 0.5s;
             animation-fill-mode: forwards;
@@ -1496,6 +1496,7 @@ input:checked + .slider:before {
             color: #ffffff;
             &:hover {
                 background-color: #1F232A;
+                color: #1F6FEB;
             }
         }
     }
@@ -1541,6 +1542,12 @@ input:checked + .slider:before {
         background-color: #ff002f;
         &:hover {
             background-color: #ff4444;
+        }
+    }
+
+    #logoutIndex {
+        &:hover {
+            color: #FF002F;
         }
     }
 
