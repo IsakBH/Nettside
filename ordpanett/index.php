@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.7.2"; // endret splash text fra norsk til svensk
+$version = "v3.7.3"; //
 ?>
 
 <!DOCTYPE html>

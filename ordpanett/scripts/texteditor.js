@@ -336,7 +336,7 @@ function loadDocumentsList() {
                         <button id="shareButton" onclick="shareDocument(${doc.id})" title="Del dokument">
                             <i class="fa-solid fa-share"></i>
                         </button>
-                        <button onclick="deleteDocument(${doc.id, doc.title})" title="Slett dokument">
+                        <button onclick="deleteDocument(${doc.id})" title="Slett dokument">
                             <i class="fa-solid fa-trash"></i>
                         </button>
                     </div>
@@ -398,8 +398,8 @@ function saveDocument() {
 }
 
 // funksjon for å slette dokumenter
-function deleteDocument(documentId, documentName) {
-    if (confirm('Er du sikker på at du har lyst til å slette dette dokumentet med navn ' + documentName + ' og dokumentId ' + documentId + '? Gjør du det, forsvinner det for alltid, og det er ganske lenge.')) {
+function deleteDocument(documentId) {
+    if (confirm('Er du sikker på at du har lyst til å slette dette dokumentet med dokumentId ' + documentId + '? Gjør du det, forsvinner det for alltid, og det er ganske lenge.')) {
         fetch('delete_document.php', {
             method: 'POST',
             headers: {
