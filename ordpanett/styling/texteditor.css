@@ -1442,6 +1442,10 @@ input:checked + .slider:before {
 .dark-theme input[type=password]:hover {
   border: 1px solid #1f6feb;
 }
+.dark-theme input[type=text]:focus,
+.dark-theme input[type=password]:focus {
+  border: 1px solid #1f6feb;
+}
 .dark-theme input[type=file] {
   border: 1px solid #3d444d;
   background-color: #212830;

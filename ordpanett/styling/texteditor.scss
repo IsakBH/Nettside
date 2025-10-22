@@ -1577,6 +1577,9 @@ input:checked + .slider:before {
         &:hover {
             border: 1px solid #1f6feb;
         }
+        &:focus {
+            border: 1px solid #1f6feb;
+        }
     }
 
     input[type="file"] {
