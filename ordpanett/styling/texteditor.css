@@ -1233,7 +1233,7 @@ input:checked + .slider:before {
 
 .green-theme {
   background-image: none;
-  background-color: #E0FFE0;
+  background-color: #8FCFA7;
   backdrop-filter: brightness(100%);
   backdrop-filter: blur(0);
 }
@@ -1254,19 +1254,8 @@ input:checked + .slider:before {
 .green-theme .new-doc-button:hover {
   background-color: #41BC9F;
 }
-.green-theme #documentSearch:focus {
-  border: 1px solid #7befb2;
-  box-shadow: none;
-}
-.green-theme #documentsList li:hover {
-  box-shadow: 4px 0px 0px 0px #7befb2;
-  filter: drop-shadow(0 0 7px #7befb2);
-  border-color: #7befeb;
-}
 .green-theme #documentsList li.active-document {
   border: 2px solid #7befb2;
-  filter: drop-shadow(0 0 7px #7befb2);
-  box-shadow: 4px 0 0 0 #7befb2;
 }
 .green-theme .document-manager {
   scrollbar-color: #7befb2 transparent;
@@ -1304,6 +1293,9 @@ input:checked + .slider:before {
 .green-theme .auth-container {
   border-color: #7befb2;
 }
+.green-theme .auth-container a {
+  color: #41bc9f;
+}
 .green-theme input[type=text],
 .green-theme input[type=password] {
   border-color: #7befb2;
@@ -1316,11 +1308,9 @@ input:checked + .slider:before {
 .green-theme input[type=password]:focus {
   border-color: #41bc9f;
 }
-.green-theme a {
-  color: #41bc9f;
-}
 .green-theme #submit {
   background-color: #7befb2;
+  color: #040002;
 }
 
 .dark-theme {

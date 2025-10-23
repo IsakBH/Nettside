@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.7.4"; // fikset issue #54: document manager collapser nå inn i hamburger menyen når du har floating mode skrudd på
+$version = "v3.7.5"; // bedre bakgrunnsfarge og dokumenter i green mode
 ?>
 
 <!DOCTYPE html>

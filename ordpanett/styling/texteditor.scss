@@ -1324,7 +1324,7 @@ input:checked + .slider:before {
 .green-theme {
     //background-image: url("../assets/ordpanettbanner-green.png");
     background-image: none;
-    background-color: #E0FFE0;
+    background-color: #8FCFA7;
     backdrop-filter: brightness(100%);
     backdrop-filter: blur(0);
 
@@ -1348,23 +1348,10 @@ input:checked + .slider:before {
         }
     }
 
-    #documentSearch {
-        &:focus {
-            border: 1px solid #7befb2;
-            box-shadow: none;
-        }
-    }
-
     #documentsList li {
-        &:hover {
-            box-shadow: 4px 0px 0px 0px #7befb2;
-            filter: drop-shadow(0 0 7px #7befb2);
-            border-color: #7befeb;
-        }
         &.active-document {
             border: 2px solid #7befb2;
-            filter: drop-shadow(0 0 7px #7befb2);
-            box-shadow: 4px 0 0 0 #7befb2;
+            //box-shadow: 4px 0 0 0 #7befb2;
         }
     }
 
@@ -1423,6 +1410,9 @@ input:checked + .slider:before {
 
     .auth-container {
         border-color: #7befb2;
+        a {
+            color: #41bc9f;
+        }
     }
 
     input[type="text"],
@@ -1436,12 +1426,9 @@ input:checked + .slider:before {
         }
     }
 
-    a {
-        color: #41bc9f;
-    }
-
     #submit {
         background-color: #7befb2;
+        color: #040002;
     }
 }
 
