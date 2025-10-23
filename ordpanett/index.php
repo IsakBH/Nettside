@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.7.6"; // fikset document manager i floating mode
+$version = "v3.7.7"; // bedre bakgrunn på grønn modus. takk til @unicfoxx som hjalp med den grønne logoen
 ?>
 
 <!DOCTYPE html>
