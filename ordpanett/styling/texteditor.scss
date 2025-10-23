@@ -1519,6 +1519,10 @@ input:checked + .slider:before {
         background-color: #0d1117;
         color: #ffffff;
         border-color: #3d444d;
+        scrollbar-color: #1f6feb transparent;
+        ::-webkit-scrollbar-thumb {
+            background-color: #367eed;
+        }
     }
 
     .options button {

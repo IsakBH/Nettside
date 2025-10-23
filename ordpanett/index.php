@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.7.8"; // lagt til enda et easter egg når du trykker på tittelen
+$version = "v3.7.9"; // fikset farge på scrollbar i dark mode
 ?>
 
 <!DOCTYPE html>
