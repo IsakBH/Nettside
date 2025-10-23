@@ -835,15 +835,13 @@ input[type="file"]::file-selector-button {
 
         &.active-document {
             border: 2px solid #8ac8ff;
-            background: lighten(#8ac8ff, 25%);
+            background-color: #E9ECEF;
             filter: drop-shadow(0 0 2px #cccccc);
             //transition: 0.2s;
             animation: aktivt-dokument 0.5s;
             animation-fill-mode: forwards;
-            &:hover {
-                .document-actions {
-                    opacity: 1;
-                }
+            .document-actions {
+                opacity: 1;
             }
         }
     }
@@ -1561,10 +1559,6 @@ input:checked + .slider:before {
             border-color: #1F6FEB;
             background: lighten(#222931, 5%);
             width: 95%;
-
-            .document-actions {
-                opacity: 1;
-            }
         }
 
         &.active-document {
@@ -1575,9 +1569,6 @@ input:checked + .slider:before {
             //transition: 0.2s;
             animation: aktivt-dokument 0.5s;
             animation-fill-mode: forwards;
-            .document-actions {
-                opacity: 1;
-            }
         }
     }
 

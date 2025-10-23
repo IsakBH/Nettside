@@ -788,12 +788,12 @@ input[type=file]::file-selector-button {
 }
 #documentsList li.active-document {
   border: 2px solid #8ac8ff;
-  background: white;
+  background-color: #E9ECEF;
   filter: drop-shadow(0 0 2px #cccccc);
   animation: aktivt-dokument 0.5s;
   animation-fill-mode: forwards;
 }
-#documentsList li.active-document:hover .document-actions {
+#documentsList li.active-document .document-actions {
   opacity: 1;
 }
 
@@ -1419,9 +1419,6 @@ input:checked + .slider:before {
   background: rgb(44.4457831325, 53.5963855422, 64.0542168675);
   width: 95%;
 }
-.dark-theme #documentsList li:hover .document-actions {
-  opacity: 1;
-}
 .dark-theme #documentsList li.active-document {
   border: 2px solid #1F6FEB;
   background: rgb(44.4457831325, 53.5963855422, 64.0542168675);
@@ -1429,9 +1426,6 @@ input:checked + .slider:before {
   box-shadow: 4px 0px 0px 0px #1F6FEB;
   animation: aktivt-dokument 0.5s;
   animation-fill-mode: forwards;
-}
-.dark-theme #documentsList li.active-document .document-actions {
-  opacity: 1;
 }
 .dark-theme .document-item span {
   color: #ffffff;
