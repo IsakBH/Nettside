@@ -1233,8 +1233,10 @@ input:checked + .slider:before {
 }
 
 .green-theme {
-  background-image: url("../assets/ordpanettbanner-green.png");
-  backdrop-filter: none;
+  background-image: none;
+  background-color: #E0FFE0;
+  backdrop-filter: brightness(100%);
+  backdrop-filter: blur(0);
 }
 .green-theme .menu-toggle {
   background-color: #7befb2;
