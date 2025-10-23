@@ -58,7 +58,7 @@ function unlockAchievement(trigger_key) {
         .then(response => response.json())
         .then(data => {
             if (data.success === true) {
-                alert('Du fikk en achievement! ${data.name}\n\n${data.description}'); // denne funker ikke for en eller annen grunn :( jeg finner ikke ut av det :(((((((((((((
+                alert('Du fikk en achievement! \n\n' + data.name + "\n" + data.description);
             } else {
                 console.log(data.message || data.error);
             }
