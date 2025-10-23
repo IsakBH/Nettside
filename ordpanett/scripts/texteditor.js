@@ -844,12 +844,14 @@ window.onkeydown = function (e) {
             }
         }
 
+        // endre / cycle splash text
         if (e.key === "j") {
             e.preventDefault();
             randomSplashText();
             console.log("Bruker endret splash text.");
         }
 
+        // print
         if (e.key === "p") {
             e.preventDefault();
             printWritingArea();
@@ -870,18 +872,21 @@ window.onkeydown = function (e) {
             writingArea.focus();
         }
 
+        // toggle dark mode
         if (e.key === "d") {
             e.preventDefault();
             console.log("Bruker brukte snarvei for å toggle dark mode");
             toggleDarkMode();
         }
 
+        // toggle floating mode
         if (e.key === "e") {
             e.preventDefault();
             console.log("bruker brukte snarvei for å toggle floating mode");
             toggleFloatMode();
         }
 
+        // toggle grønn tema
         if (e.key === "g") {
             e.preventDefault();
             console.log("bruker brukte shortcut for å toggle green mode");
