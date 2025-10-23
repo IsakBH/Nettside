@@ -881,6 +881,12 @@ window.onkeydown = function (e) {
             console.log("bruker brukte snarvei for å toggle floating mode");
             toggleFloatMode();
         }
+
+        if (e.key === "g") {
+            e.preventDefault();
+            console.log("bruker brukte shortcut for å toggle green mode");
+            toggleGreenMode();
+        }
     }
 };
 
