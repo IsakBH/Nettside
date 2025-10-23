@@ -751,6 +751,7 @@ function opnEasterEgg() {
     const opn = new Audio("assets/sound/ordpanett.mp3");
     opn.play();
     console.log("ord på nett easteregg")
+    unlockAchievement('opn');
 }
 
 // sjekker om det står "gud" i tekst boksen der brukeren skriver
