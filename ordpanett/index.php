@@ -57,7 +57,7 @@ $version = "v3.7.7"; // bedre bakgrunn på grønn modus. takk til @unicfoxx som 
 
     <!--  containeren for toolbaren -->
     <div class="container">
-        <h1 id="title">Ord På Nett <?php if ($_SERVER['SERVER_ADDR'] == '127.0.0.1') { echo "dev"; } ?></h1>
+        <h1 onclick="opnEasterEgg()" id="title">Ord På Nett <?php if ($_SERVER['SERVER_ADDR'] == '127.0.0.1') { echo "dev"; } ?></h1>
         <div id="topRightContainer">
             <!-- menyen for konto instillinger og sånn -->
             <div class="profile-menu">

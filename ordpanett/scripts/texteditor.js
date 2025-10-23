@@ -29,6 +29,7 @@ const calcDisplay = document.getElementById("calc-display");
 const calcButtons = document.querySelectorAll(".calc-btn");
 const printButton = document.getElementById("print");
 let seenEasterEgg = false;
+const title = document.getElementById('title');
 const documentSearch = document.getElementById('documentSearch');
 
 // lager liste av fonter for font velge greien
@@ -745,6 +746,12 @@ writingArea.addEventListener("input", () => {
     checkForGud();
     checkForMKX();
 });
+
+function opnEasterEgg() {
+    const opn = new Audio("assets/sound/ordpanett.mp3");
+    opn.play();
+    console.log("ord på nett easteregg")
+}
 
 // sjekker om det står "gud" i tekst boksen der brukeren skriver
 function checkForGud() {

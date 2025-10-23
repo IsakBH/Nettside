@@ -1189,6 +1189,10 @@ input:checked + .slider:before {
 
 #title {
   text-align: center;
+  user-select: none;
+}
+#title:hover {
+  cursor: pointer;
 }
 
 #changeLogTitle {
