@@ -1224,6 +1224,7 @@ input:checked + .slider:before {
 }
 .floating-mode .document-manager {
   position: fixed;
+  margin-left: 9px;
   top: 50%;
   height: 98%;
   transform: translateY(-50%);

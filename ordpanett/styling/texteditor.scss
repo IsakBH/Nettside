@@ -1313,6 +1313,7 @@ input:checked + .slider:before {
 
     .document-manager {
         position: fixed;
+        margin-left: 9px;
         top: 50%;
         height: 98%;
         transform: translateY(-50%);

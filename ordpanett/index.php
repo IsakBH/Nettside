@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.7.5"; // bedre bakgrunnsfarge og dokumenter i green mode
+$version = "v3.7.6"; // fikset document manager i floating mode
 ?>
 
 <!DOCTYPE html>
