@@ -1029,13 +1029,6 @@ input[type="file"]::file-selector-button {
         padding: 20px 10px;
         position: static;
         transform: none;
-    }
-
-    #splashText {
-        display: none;
-    }
-
-    .container {
         button {
             flex: 0 0 auto;
             padding: 10px 15px;
@@ -1043,6 +1036,10 @@ input[type="file"]::file-selector-button {
         }
     }
 
+    #splashText {
+        display: none;
+    }
+    
     .options {
         display: flex;
         flex-wrap: nowrap;
