@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.7.16"; // nydelige bakgrunnsfarger på knappene i profile-dropdown
+$version = "v3.7.17"; // fikset at .document-manager er helt grønn i grønn modus på små skjermer
 ?>
 
 <!DOCTYPE html>

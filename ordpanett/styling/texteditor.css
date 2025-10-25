@@ -1254,9 +1254,6 @@ input:checked + .slider:before {
 .green-theme .text-input a {
   color: #41BC9F;
 }
-.green-theme .active {
-  background-color: #7befb2;
-}
 .green-theme button:hover {
   background-color: #41bc9f;
 }
@@ -1314,6 +1311,9 @@ input:checked + .slider:before {
 }
 .green-theme input:checked + .slider:hover {
   background-color: #41bc9f;
+}
+.green-theme .container .active {
+  background-color: #7befb2;
 }
 
 .dark-theme {

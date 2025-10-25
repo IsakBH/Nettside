@@ -1350,10 +1350,6 @@ input:checked + .slider:before {
         }
     }
 
-    .active {
-        background-color: #7befb2;
-    }
-
     button {
         &:hover {
             background-color: #41bc9f;
@@ -1426,6 +1422,12 @@ input:checked + .slider:before {
         background-color: #7befb2;
         &:hover {
             background-color: #41bc9f;
+        }
+    }
+
+    .container {
+        .active {
+            background-color: #7befb2;
         }
     }
 }
