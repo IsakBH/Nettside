@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.7.12"; // grønn styling på inpyt type file
+$version = "v3.7.13"; // samme rødfarge på slett bruker og logg ut knappene i instillinger
 ?>
 
 <!DOCTYPE html>

@@ -517,10 +517,10 @@ input[type=password]:focus {
   height: 1px;
 }
 
-#logout {
+#logout, #delete-account {
   width: 100%;
   height: 40px;
-  background: #ff002f;
+  background: #EF3C50;
   color: white;
   border: none;
   border-radius: 10px;
@@ -534,16 +534,16 @@ input[type=password]:focus {
   align-items: center;
   cursor: pointer;
 }
-#logout:hover {
+#logout:hover, #delete-account:hover {
   background: rgb(204, 0, 37.6);
   transform: translateY(-1px);
   color: white;
   text-decoration: none;
 }
-#logout:active {
+#logout:active, #delete-account:active {
   transform: translateY(1px);
 }
-#logout:focus {
+#logout:focus, #delete-account:focus {
   background: rgb(204, 0, 37.6);
   outline: none;
 }
@@ -563,30 +563,6 @@ input[type=file]::file-selector-button {
 
 .delete-account-form {
   margin: 20px 0;
-}
-
-#delete-account {
-  width: 100%;
-  height: 40px;
-  background: #ff4444;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  gap: 8px;
-  font-size: 0.9rem;
-  transition: all 0.2s ease;
-}
-#delete-account:hover {
-  background: #ff1111;
-  transform: translateY(-1px);
-}
-#delete-account:active {
-  transform: translateY(1px);
-}
-#delete-account:focus {
-  background: #ff1111;
-  outline: none;
 }
 
 #iamready {
@@ -1330,6 +1306,12 @@ input:checked + .slider:before {
   color: #040002;
 }
 .green-theme #submit:hover {
+  background-color: #41bc9f;
+}
+.green-theme input:checked + .slider {
+  background-color: #7befb2;
+}
+.green-theme input:checked + .slider:hover {
   background-color: #41bc9f;
 }
 
