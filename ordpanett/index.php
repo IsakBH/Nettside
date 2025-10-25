@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.8.3"; // bilder i dokumenter har nå rounded-corners (border-radius)
+$version = "v3.9.0"; // delte dokumenter blir nå oppdatert automatisk hvert 5. sekund.
 ?>
 
 <!DOCTYPE html>

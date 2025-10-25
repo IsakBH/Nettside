@@ -54,12 +54,52 @@ $profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $docu
             <h2>Dokumentinfo:</h2>
             <p><b>Navn:</b> <?php echo htmlspecialchars($document['title']);?></p>
             <p><b>Eid av: </b> <?php echo htmlspecialchars($document['username']);?></p>
-            <p><b>Sist endret:</b> <?php echo htmlspecialchars($document['last_modified']);?></p>
+            <p><b>Sist endret:</b> <span id="last-modified-display"><?php echo htmlspecialchars($document['last_modified']);?></span></p>
         </div>
 
         <div class="text-input" id="shared-text-input" contenteditable="false">
             <?php echo $document['content']; ?>
         </div>
     </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log("poller for oppdateringer hvert 10. sekund")
+        const sharedTextInput = document.getElementById('shared-text-input');
+        const lastModifiedDisplay = document.getElementById('last-modified-display');
+
+        let currentTimestamp = '<?php echo $document['last_modified']; ?>';
+        const token = '<?php echo $token; ?>';
+
+        if (!token) {
+            console.error('du har ikke noe token lil bro');
+            return;
+        }
+
+        // poll
+        setInterval(() => {
+            const url = `/ordpanett/scripts/check_for_updates.php?token=${encodeURIComponent(token)}&timestamp=${encodeURIComponent(currentTimestamp)}`;
+
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`http error >:( status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.status === 'updated') {
+                        console.log('dokument er oppdatert, fetcher content');
+                        sharedTextInput.innerHTML = data.content;
+                        lastModifiedDisplay.textContent = data.last_modified;
+                        currentTimestamp = data.last_modified;
+                    }
+                })
+                .catch(error => {
+                    console.error('tror det oppstod en liten feil her :( ', error);
+                });
+        }, 5000);
+    });
+    </script>
 </body>
 </html>
