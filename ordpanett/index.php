@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.7.11"; // grønn modus blir nå applyet på register
+$version = "v3.7.12"; // grønn styling på inpyt type file
 ?>
 
 <!DOCTYPE html>

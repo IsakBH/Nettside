@@ -1039,7 +1039,7 @@ input[type="file"]::file-selector-button {
     #splashText {
         display: none;
     }
-    
+
     .options {
         display: flex;
         flex-wrap: nowrap;
@@ -1410,6 +1410,10 @@ input:checked + .slider:before {
         border-color: #7befb2;
         a {
             color: #41bc9f;
+            &:hover {
+                color: #7befb2;
+                text-decoration: none;
+            }
         }
     }
 
@@ -1424,9 +1428,22 @@ input:checked + .slider:before {
         }
     }
 
+    input[type="file"] {
+        border-color: #7befb2;
+        &::file-selector-button {
+            background-color: #7befb2;
+            &:hover {
+                background-color: #41bc9f;
+            }
+        }
+    }
+
     #submit {
         background-color: #7befb2;
         color: #040002;
+        &:hover {
+            background-color: #41bc9f;
+        }
     }
 }
 
