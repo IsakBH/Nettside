@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.7.19"; // green mode blir nå togglet/applyet i profil siden
+$version = "v3.8.0"; // la til kule open graph meta tags i delte dokumenter :D
 ?>
 
 <!DOCTYPE html>

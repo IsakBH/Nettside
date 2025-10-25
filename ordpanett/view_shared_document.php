@@ -7,7 +7,7 @@ if (empty($token)) {
 }
 
 // finner dokumentet ved å se på share token :solbriller emotikon:
-$stmt = $mysqli->prepare("SELECT d.title, d.content, d.last_modified, u.username FROM documents d JOIN users u ON d.user_id = u.id WHERE d.share_token = ?");
+$stmt = $mysqli->prepare("SELECT d.title, d.content, d.last_modified, u.username, u.profile_picture FROM documents d JOIN users u ON d.user_id = u.id WHERE d.share_token = ?");
 
 $stmt->bind_param("s", $token);
 $stmt->execute();
@@ -17,6 +17,13 @@ $document = $result->fetch_assoc();
 if (!$document) {
     die("Var ingen dokument der >:(.");
 }
+
+// link
+$protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+$host = $_SERVER['HTTP_HOST'];
+$request_uri = $_SERVER['REQUEST_URI'];
+$full_url = $protocol . "://" . $host . $request_uri;
+$profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $document['profile_picture'];
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +38,12 @@ if (!$document) {
     <script src="./scripts/applygreenmode.js"></script>
     <link rel="icon" href="./assets/ordlogo.png" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <meta property="og:title" content="<?php echo htmlspecialchars($document['title']); ?>"
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Ord På Nett">
+    <meta property="og:url" content="<?php echo $full_url; ?>">
+    <meta property="og:image" content="<?php echo $profile_picture_url; ?>"
+    <meta property="og:description" content="Dette dokumentet er delt ved deg via Ord På Nett. Dokumentet er skrivebeskyttet, som vil si at du ikke kan redigere noe. Du behøver ikke logge inn for å se dokumentet.">
 </head>
 <body>
     <div class="container" id="sharedContainer">
