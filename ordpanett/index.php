@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.8.0"; // la til kule open graph meta tags i delte dokumenter :D
+$version = "v3.8.1"; // nå funker faktisk description i meta tag delt dokument ord på nett. glemte å lukke en html tag
 ?>
 
 <!DOCTYPE html>

@@ -42,7 +42,7 @@ $profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $docu
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Ord På Nett">
     <meta property="og:url" content="<?php echo $full_url; ?>">
-    <meta property="og:image" content="<?php echo $profile_picture_url; ?>"
+    <meta property="og:image" content="<?php echo $profile_picture_url; ?>">
     <meta property="og:description" content="Dette dokumentet er delt ved deg via Ord På Nett. Dokumentet er skrivebeskyttet, som vil si at du ikke kan redigere noe. Du behøver ikke logge inn for å se dokumentet.">
 </head>
 <body>
