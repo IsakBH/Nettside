@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.7.14"; // bedre rød farge på slett bruker og logg ut knappene i instillinger
+$version = "v3.7.15"; // mørkere rød hover farge
 ?>
 
 <!DOCTYPE html>

@@ -560,9 +560,8 @@ input[type="password"] {
     cursor: pointer;
 
     &:hover {
-        background: darken(#ff002f, 10%);
+        background: #ba453f;
         transform: translateY(-1px);
-        color: white;
         text-decoration: none;
     }
     &:active {
