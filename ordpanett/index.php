@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.8.1"; // nå funker faktisk description i meta tag delt dokument ord på nett. glemte å lukke en html tag
+$version = "v3.8.2"; // fikset enda en html tag som jeg glemte å lukke i view_shared_dokument.php
 ?>
 
 <!DOCTYPE html>

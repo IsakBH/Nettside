@@ -38,7 +38,7 @@ $profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $docu
     <script src="./scripts/applygreenmode.js"></script>
     <link rel="icon" href="./assets/ordlogo.png" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-    <meta property="og:title" content="<?php echo htmlspecialchars($document['title']); ?>"
+    <meta property="og:title" content="<?php echo htmlspecialchars($document['title']); ?>">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Ord På Nett">
     <meta property="og:url" content="<?php echo $full_url; ?>">
