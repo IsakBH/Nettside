@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.7.18"; // holder på med achievements på profil siden
+$version = "v3.7.19"; // green mode blir nå togglet/applyet i profil siden
 ?>
 
 <!DOCTYPE html>
