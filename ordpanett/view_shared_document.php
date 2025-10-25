@@ -93,6 +93,7 @@ $profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $docu
                         sharedTextInput.innerHTML = data.content;
                         lastModifiedDisplay.textContent = data.last_modified;
                         currentTimestamp = data.last_modified;
+                        sharedTextInput.scrollTop = sharedTextInput.scrollHeight;
                     }
                 })
                 .catch(error => {
