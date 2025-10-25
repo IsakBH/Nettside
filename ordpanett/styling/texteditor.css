@@ -188,6 +188,10 @@ input[type=color] {
 .text-input:focus {
   outline: none;
 }
+.text-input img {
+  border-radius: 10px;
+  border: none;
+}
 
 #shared-text-input {
   height: 90%;

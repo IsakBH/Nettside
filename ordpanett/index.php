@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.8.2"; // fikset enda en html tag som jeg glemte å lukke i view_shared_dokument.php
+$version = "v3.8.3"; // bilder i dokumenter har nå rounded-corners (border-radius)
 ?>
 
 <!DOCTYPE html>
