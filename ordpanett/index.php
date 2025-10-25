@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.7.10"; // unlockAchievement skriver nå navn og description på achievementen du får
+$version = "v3.7.11"; // grønn modus blir nå applyet på register
 ?>
 
 <!DOCTYPE html>
