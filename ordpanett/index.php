@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.7.15"; // mørkere rød hover farge
+$version = "v3.7.16"; // nydelige bakgrunnsfarger på knappene i profile-dropdown
 ?>
 
 <!DOCTYPE html>

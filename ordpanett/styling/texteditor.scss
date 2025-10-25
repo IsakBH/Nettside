@@ -1370,6 +1370,7 @@ input:checked + .slider:before {
         a {
             &:hover {
                 color: #41bc9f;
+                background-color: #F0FCF6;
             }
         }
     }
@@ -1377,6 +1378,7 @@ input:checked + .slider:before {
     #logoutIndex {
         &:hover {
             color: #FF002F;
+            background-color: #FCF0F6;
         }
     }
 

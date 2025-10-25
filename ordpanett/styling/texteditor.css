@@ -1265,9 +1265,11 @@ input:checked + .slider:before {
 }
 .green-theme .profile-dropdown a:hover {
   color: #41bc9f;
+  background-color: #F0FCF6;
 }
 .green-theme #logoutIndex:hover {
   color: #FF002F;
+  background-color: #FCF0F6;
 }
 .green-theme .auth-container {
   border-color: #7befb2;
