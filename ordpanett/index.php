@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.1"; // delte dokumenter scroller automatisk til bunnen når en endring kommer sånn som chatgpt omg
+$version = "v3.9.2"; // delte dokumenter scroller nå automatisk hvert 3. sekund istedet for hvert 5. sekund
 ?>
 
 <!DOCTYPE html>

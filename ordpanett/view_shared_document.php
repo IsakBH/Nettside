@@ -99,7 +99,7 @@ $profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $docu
                 .catch(error => {
                     console.error('tror det oppstod en liten feil her :( ', error);
                 });
-        }, 5000);
+        }, 3000);
     });
     </script>
 </body>
