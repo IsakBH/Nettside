@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.7.17"; // fikset at .document-manager er helt grønn i grønn modus på små skjermer
+$version = "v3.7.18"; // holder på med achievements på profil siden
 ?>
 
 <!DOCTYPE html>
