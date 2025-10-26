@@ -1210,6 +1210,20 @@ input:checked + .slider:before {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+#admin-profile-picture {
+  width: 20vw;
+  height: 20vw;
+}
+
+#top-admin {
+  display: flex;
+}
+
+#admin-username {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
 .floating-mode .container {
   height: 98%;
   border-radius: 10px;

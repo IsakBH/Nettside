@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +17,10 @@
 
 <body>
     <div class="admin-container">
-
+        <div id="top-admin">
+            <img src="/ordpanett/uploads/<?php echo htmlspecialchars($_SESSION['profile_picture']); ?>" alt="Profile" class="profile-picture" id="admin-profile-picture">
+            <p id="admin-username"><?php echo htmlspecialchars($_SESSION['username']); ?></p>
+        </div>
     </div>
 </body>
 

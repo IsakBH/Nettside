@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.5"; // poppins font blir nå applyet på settings siden
+$version = "v3.9.6"; // admin siden skriver nå ut profilbildet og brukernavnet ditt
 ?>
 
 <!DOCTYPE html>
