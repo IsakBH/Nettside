@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.3"; // nå kan bare mine brukere se admin panel
+$version = "v3.9.4"; // begynt på admin panelet. det er nå en side.
 ?>
 
 <!DOCTYPE html>
