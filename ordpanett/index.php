@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.3"; // user_id-en din er nå ved siden av brukernavnet i profile_dropdown. er mest for debugging, men det er jo også litt kult, da. har også begynt på admin panel
+$version = "v3.9.3"; // nå kan bare mine brukere se admin panel
 ?>
 
 <!DOCTYPE html>
@@ -73,7 +73,7 @@ $version = "v3.9.3"; // user_id-en din er nå ved siden av brukernavnet i profil
 
                     <?php
 
-                    if($_SESSION['user_id'] === "1" || "37") {
+                    if($user_id === 1 || $user_id === 37) {
                         echo "<a id='admin-panel-button' href='pages/admin.php'>Admin panel</a>";
                     }
 
