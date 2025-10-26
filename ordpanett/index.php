@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.2"; // delte dokumenter scroller nå automatisk hvert 3. sekund istedet for hvert 5. sekund
+$version = "v3.9.3"; // user_id-en din er nå ved siden av brukernavnet i profile_dropdown. er mest for debugging, men det er jo også litt kult, da. har også begynt på admin panel
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +31,7 @@ $version = "v3.9.2"; // delte dokumenter scroller nå automatisk hvert 3. sekund
         header('Location: pages/login.php');
         exit();
     }
+    $user_id = $_SESSION['user_id'];
     ?>
 
     <!-- layouten av toolbaren er direkte kopiert fra Google Docs for "familiarity" -->
@@ -64,11 +65,20 @@ $version = "v3.9.2"; // delte dokumenter scroller nå automatisk hvert 3. sekund
                 <img src="uploads/<?php echo htmlspecialchars($_SESSION['profile_picture']); ?>" alt="Profile" class="profile-picture">
                 <div class="profile-dropdown">
                     <div class="profile-info">
-                        <p><?php echo htmlspecialchars($_SESSION['username']); ?></p>
+                        <p><?php echo htmlspecialchars($_SESSION['username']) . " (" . htmlspecialchars($user_id) . ")"; ?></p>
                     </div>
                     <hr id="splitter">
                     <a href="pages/profile.php">Din profil</a>
                     <a href="pages/settings.php">Instillinger</a>
+
+                    <?php
+
+                    if($_SESSION['user_id'] === "1" || "37") {
+                        echo "<a id='admin-panel-button' href='pages/admin.php'>Admin panel</a>";
+                    }
+
+                    ?>
+
                     <a id="logoutIndex" href="pages/logout.php">Logg ut</a>
                     <!--<a href="">Prestasjoner? (på vei)</a>-->
                 </div>
