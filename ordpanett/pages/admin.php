@@ -11,6 +11,7 @@ session_start();
     <link rel="stylesheet" href="../styling/texteditor.css" />
     <link rel="icon" href="../assets/ordlogo.png" />
 
+    <script src="../scripts/texteditor.js"></script>
     <script src="../scripts/applydarkmode.js"></script>
     <script src="../scripts/applygreenmode.js"></script>
 </head>
