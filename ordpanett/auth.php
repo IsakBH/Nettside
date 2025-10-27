@@ -23,7 +23,7 @@ if (isset($_SESSION['user_id'])) {
     $_SESSION['profile_picture'] = $user['profile_picture'];
 }
 // hvis en remember me cookie finnes, sjekk om den er gyldig
-else if (isset($_COOKIE['remember_me'])) {
+/*else if (isset($_COOKIE['remember_me'])) {
     $token = $_COOKIE['remember_me'];
 
     // debugging
@@ -57,4 +57,4 @@ else if (isset($_COOKIE['remember_me'])) {
         // ugyldig eller utløpt token - slett cookie
         setcookie("remember_me", "", time() - 3600, "/", "", true, true);
     }
-}
+}*/
