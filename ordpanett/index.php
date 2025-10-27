@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.7"; // favicon er nå highres versjonen av logoet
+$version = "v3.9.8"; // favicon er nå en scalet versjon av high res logoet
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ $version = "v3.9.7"; // favicon er nå highres versjonen av logoet
     <title>Ord På Nett <?php if ($_SERVER['SERVER_ADDR'] == '127.0.0.1') { echo "dev"; } else { echo $version; } ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="styling/texteditor.css" />
-    <link rel="icon" href="assets/opnlogo-highres.png" />
+    <link rel="icon" href="assets/opnlogo-highres-scaled.png" />
 
     <!-- ikoner fra font awesome og google fonts-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
