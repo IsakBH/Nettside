@@ -1,4 +1,5 @@
 # Ord på Nett
+<img width="480" height="480" alt="image" src="https://github.com/user-attachments/assets/63e4e6b3-27b5-4ca1-b725-35a2895b5468" />
 
 ## Vinner av flere priser
 * Isaks Pris for Den Kuleste Programvaren
