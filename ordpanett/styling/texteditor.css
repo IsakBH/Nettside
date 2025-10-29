@@ -197,6 +197,7 @@ input[type=color] {
   height: 90%;
   background-color: #F6F8FA;
   border-color: #e0e0e0;
+  scroll-behaviour: smooth;
 }
 
 #shared-options {

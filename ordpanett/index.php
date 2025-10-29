@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.8"; // favicon er nå en scalet versjon av high res logoet
+$version = "v3.9.9"; // auto scrollingen i ord på nett delte dokumenter skal nå være smooth, men jeg er ikke helt sikker
 ?>
 
 <!DOCTYPE html>

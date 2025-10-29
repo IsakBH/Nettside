@@ -14,9 +14,9 @@ function getSjanger(id) {
 }
 
 function getAlbum(id) {
-    let sql = global.db.prepare("select tittel from album where idArtist = ?");
-    let result = sql.tittel;
-    return result.tittel;
+    let sql = global.db.prepare("select id, tittel from album where idArtist = ?");
+    let result = sql.all();
+    return result;
 }
 
 function getSongs(id) {
