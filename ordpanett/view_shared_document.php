@@ -53,7 +53,7 @@ $profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $docu
         <div class="options" id="shared-options">
             <h2>Dokumentinfo:</h2>
             <p><b>Navn:</b> <?php echo htmlspecialchars($document['title']);?></p>
-            <p><b>Eid av: </b> <?php echo htmlspecialchars($document['username']);?></p>
+            <p><b>Eid av: </b> <?php echo htmlspecialchars($document['username']); echo <img src="$profile_picture_url">; ?></p>
             <p><b>Sist endret:</b> <span id="last-modified-display"><?php echo htmlspecialchars($document['last_modified']);?></span></p>
         </div>
 
