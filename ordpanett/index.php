@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.10"; // error melding i login og register ser nå penere ut
+$version = "v3.9.11"; // shared-text-input og shared-options har nå en lys grønn bakgrunnsfarge
 ?>
 
 <!DOCTYPE html>

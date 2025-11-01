@@ -1330,6 +1330,14 @@ input:checked + .slider:before {
     background-repeat: repeat;
     background-size: 20% auto;
 
+    #shared-text-input {
+        background-color: #F2FAF4;
+    }
+
+    #shared-options {
+        background-color: #F2FAF4;
+    }
+
     .menu-toggle {
         background-color: #7befb2;
         color: #040002;
