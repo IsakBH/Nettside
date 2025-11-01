@@ -1254,6 +1254,15 @@ input:checked + .slider:before {
 .green-theme .text-input {
   background-color: #F2FAF4;
 }
+.green-theme .options {
+  background-color: #F2FAF4;
+}
+.green-theme .options button, .green-theme .options select {
+  background-color: #E0F3E4;
+}
+.green-theme .options button:hover, .green-theme .options select:hover {
+  background-color: #CDECD5;
+}
 .green-theme .menu-toggle {
   background-color: #7befb2;
   color: #040002;
@@ -1351,7 +1360,7 @@ input:checked + .slider:before {
   background-color: #41bc9f;
 }
 .green-theme .container .active {
-  background-color: #7befb2;
+  background-color: #BBE5C5;
 }
 
 .dark-theme {

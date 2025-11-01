@@ -1342,6 +1342,16 @@ input:checked + .slider:before {
         background-color: #F2FAF4;
     }
 
+    .options {
+        background-color: #F2FAF4;
+        button, select {
+            background-color: #E0F3E4;
+            &:hover {
+                background-color:  #CDECD5;
+            }
+        }
+    }
+
     .menu-toggle {
         background-color: #7befb2;
         color: #040002;
@@ -1469,7 +1479,7 @@ input:checked + .slider:before {
 
     .container {
         .active {
-            background-color: #7befb2;
+            background-color: #BBE5C5;
         }
     }
 }

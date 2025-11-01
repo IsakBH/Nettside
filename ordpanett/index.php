@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.14"; // text-input er nå lik shared-text-input og har grønn bakgrunnsfarge i grønn modus
+$version = "v3.9.15"; // options er nå lik shared-options, og buttons inni options er nydelig i grønn modus
 ?>
 
 <!DOCTYPE html>
