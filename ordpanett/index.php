@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.12"; // scrollbar i delte dokumenter er nå mørkeblå i dark mode
+$version = "v3.9.13"; // profilbildet i delte dokumenter er nå mindre (32px)
 ?>
 
 <!DOCTYPE html>

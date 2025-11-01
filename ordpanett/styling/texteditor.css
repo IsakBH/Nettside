@@ -1369,6 +1369,10 @@ input:checked + .slider:before {
   background-color: #212830;
   border-color: #3D444D;
 }
+.dark-theme #shared-profile-picture {
+  width: 32px;
+  height: 32px;
+}
 .dark-theme #read-only-status {
   color: #ffffff;
   text-shadow: 1px 1px 2px #3D444D;

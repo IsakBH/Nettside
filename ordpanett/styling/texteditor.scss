@@ -1493,6 +1493,11 @@ input:checked + .slider:before {
         border-color: #3D444D;
     }
 
+    #shared-profile-picture {
+        width: 32px;
+        height: 32px;
+    }
+
     #read-only-status {
         color: #ffffff;
         text-shadow: 1px 1px 2px #3D444D;
