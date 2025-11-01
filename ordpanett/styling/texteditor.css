@@ -452,7 +452,8 @@ input[type=color] {
   margin-bottom: 10px;
   padding: 10px;
   background: #ffe6e6;
-  border-radius: 4px;
+  border-radius: 10px;
+  border: 1px solid red;
 }
 
 .success {

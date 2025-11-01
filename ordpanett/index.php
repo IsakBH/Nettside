@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.9"; // auto scrollingen i ord på nett delte dokumenter skal nå være smooth, men jeg er ikke helt sikker
+$version = "v3.9.10"; // error melding i login og register ser nå penere ut
 ?>
 
 <!DOCTYPE html>
