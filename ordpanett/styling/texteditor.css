@@ -118,6 +118,7 @@ button:hover {
   background-color: rgb(213.2142857143, 222.5, 231.7857142857);
   transform: translateY(-2px);
   box-shadow: 0px 2px 2px #ccc;
+  border-color: #C5D2DF;
 }
 button:active {
   transform: translateY(3px);
@@ -137,6 +138,7 @@ select:hover {
   background-color: rgb(213.2142857143, 222.5, 231.7857142857);
   transform: translateY(-2px);
   box-shadow: 0px 2px 2px #ccc;
+  border-color: #C5D2DF;
 }
 select:active {
   transform: translateY(3px);

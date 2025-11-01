@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.16"; // options er nå lik shared-options og knapper er mer uniform med resten av stylingen i vanlig light mode
+$version = "v3.9.17"; // bedre border-color on hover på knappene i options
 ?>
 
 <!DOCTYPE html>
