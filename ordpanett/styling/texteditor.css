@@ -177,6 +177,7 @@ input[type=color] {
   border-radius: 10px;
   overflow-y: auto;
   overflow-x: hidden;
+  background-color: #F6F8FA;
   scrollbar-color: #8ac8ff transparent;
   font-family: inherit;
 }
