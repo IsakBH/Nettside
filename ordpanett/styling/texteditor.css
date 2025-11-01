@@ -1412,6 +1412,22 @@ input:checked + .slider:before {
   border: 1px solid #3D444D;
   background-color: #212830;
 }
+.dark-theme .options button {
+  background-color: rgb(43.3888888889, 52.5925925926, 63.1111111111);
+  color: #ffffff;
+  border-color: #3d444d;
+}
+.dark-theme .options button:hover {
+  background-color: #151b23;
+}
+.dark-theme .options select {
+  background-color: rgb(43.3888888889, 52.5925925926, 63.1111111111);
+  color: #ffffff;
+  border-color: #3d444d;
+}
+.dark-theme .options select:hover {
+  background-color: #151b23;
+}
 .dark-theme .commit {
   filter: none;
 }
@@ -1443,24 +1459,8 @@ input:checked + .slider:before {
 .dark-theme #text-input ::-webkit-scrollbar-thumb {
   background-color: #367eed;
 }
-.dark-theme .options button {
-  background-color: rgb(43.3888888889, 52.5925925926, 63.1111111111);
-  color: #ffffff;
-  border-color: #3d444d;
-}
-.dark-theme .options button:hover {
-  background-color: #151b23;
-}
-.dark-theme select {
-  background-color: rgb(43.3888888889, 52.5925925926, 63.1111111111);
-  color: #ffffff;
-  border-color: #3d444d;
-}
-.dark-theme select:hover {
-  background-color: #151b23;
-}
 .dark-theme .document-manager {
-  background-color: rgb(43.3888888889, 52.5925925926, 63.1111111111);
+  background-color: #0D1117;
   border-color: #3d444d;
   color: #ffffff !important;
   scrollbar-color: #1F6FEB transparent;

@@ -1548,6 +1548,23 @@ input:checked + .slider:before {
     .options {
         border: 1px solid #3D444D;
         background-color: #212830;
+        button {
+            background-color: lighten(#212830, 5%);
+            color: #ffffff;
+            border-color: #3d444d;
+
+            &:hover {
+                background-color: #151b23;
+            }
+        }
+        select {
+            background-color: lighten(#212830, 5%);
+            color: #ffffff;
+            border-color: #3d444d;
+            &:hover {
+                background-color: #151b23;
+            }
+        }
     }
 
     // changelog side
@@ -1587,27 +1604,8 @@ input:checked + .slider:before {
         }
     }
 
-    .options button {
-        background-color: lighten(#212830, 5%);
-        color: #ffffff;
-        border-color: #3d444d;
-
-        &:hover {
-            background-color: #151b23;
-        }
-    }
-
-    select {
-        background-color: lighten(#212830, 5%);
-        color: #ffffff;
-        border-color: #3d444d;
-        &:hover {
-            background-color: #151b23;
-        }
-    }
-
     .document-manager {
-        background-color: lighten(#212830, 5%);
+        background-color: #0D1117;
         border-color: #3d444d;
         color: #ffffff !important;
         scrollbar-color: #1F6FEB transparent;
