@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.20"; // fikset bakgrunnsfarge på .document-manager i dark mode og flyttet button og select inn i .options i scssen
+$version = "v3.9.21"; // knapper i .options i dark mode har nå en mer passende bakgrunnsfarge og drop-shadow
 ?>
 
 <!DOCTYPE html>

@@ -1418,7 +1418,9 @@ input:checked + .slider:before {
   border-color: #3d444d;
 }
 .dark-theme .options button:hover {
-  background-color: #151b23;
+  background-color: rgb(53.3443396226, 65.75, 78.1556603774);
+  border-color: rgb(38.8622641509, 47.9, 56.9377358491);
+  box-shadow: 0px 2px 2px rgb(151.8888888889, 166.9259259259, 184.1111111111);
 }
 .dark-theme .options select {
   background-color: rgb(43.3888888889, 52.5925925926, 63.1111111111);

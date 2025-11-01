@@ -1552,9 +1552,10 @@ input:checked + .slider:before {
             background-color: lighten(#212830, 5%);
             color: #ffffff;
             border-color: #3d444d;
-
             &:hover {
-                background-color: #151b23;
+                background-color: lighten(#2B353F, 5%);
+                border-color: darken(#2B353F, 2%);
+                box-shadow: 0px 2px 2px lighten(#212830, 50%);
             }
         }
         select {
