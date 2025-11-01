@@ -1588,7 +1588,7 @@ input:checked + .slider:before {
     }
 
     .options button {
-        background-color: #212830;
+        background-color: lighten(#212830, 5%);
         color: #ffffff;
         border-color: #3d444d;
 
@@ -1598,7 +1598,7 @@ input:checked + .slider:before {
     }
 
     select {
-        background-color: #212830;
+        background-color: lighten(#212830, 5%);
         color: #ffffff;
         border-color: #3d444d;
         &:hover {
@@ -1607,7 +1607,7 @@ input:checked + .slider:before {
     }
 
     .document-manager {
-        background-color: #0d1117;
+        background-color: lighten(#212830, 5%);
         border-color: #3d444d;
         color: #ffffff !important;
         scrollbar-color: #1F6FEB transparent;

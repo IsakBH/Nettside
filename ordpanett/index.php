@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.18"; // bakgrunnsfarge på text-input og .options i dark mode
+$version = "v3.9.19"; // lysere bakbrunnsfarge på knapper i .options i dark mode
 ?>
 
 <!DOCTYPE html>
