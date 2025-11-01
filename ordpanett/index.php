@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.15"; // text-input er nå lik shared-text-input i vanlig light mode
+$version = "v3.9.16"; // options er nå lik shared-options og knapper er mer uniform med resten av stylingen i vanlig light mode
 ?>
 
 <!DOCTYPE html>
