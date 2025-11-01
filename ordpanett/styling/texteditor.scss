@@ -114,7 +114,7 @@ button {
     place-items: center;
     border-radius: 10px;
     border: 1px solid #E0E0E0;
-    background-color: #F6F8FA;
+    background-color: darken(#F6F8FA, 5%);
     outline: none;
     color: #020929;
     transition: transform 0.2s ease;
@@ -131,7 +131,7 @@ button {
 
 select {
     color: #020929;
-    background-color: #F6F8FA;
+    background-color: darken(#F6F8FA, 5%);
     padding: 7px;
     text-decoration: none;
     border: 1px solid #E0E0E0;
