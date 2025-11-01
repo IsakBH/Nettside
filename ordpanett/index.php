@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.13"; // profilbildet i delte dokumenter er nå mindre (32px)
+$version = "v3.9.14"; // text-input er nå lik shared-text-input og har grønn bakgrunnsfarge i grønn modus
 ?>
 
 <!DOCTYPE html>

@@ -1251,6 +1251,9 @@ input:checked + .slider:before {
 .green-theme #shared-options {
   background-color: #F2FAF4;
 }
+.green-theme .text-input {
+  background-color: #F2FAF4;
+}
 .green-theme .menu-toggle {
   background-color: #7befb2;
   color: #040002;
