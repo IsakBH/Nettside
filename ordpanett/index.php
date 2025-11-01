@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.11"; // shared-text-input og shared-options har nå en lys grønn bakgrunnsfarge
+$version = "v3.9.12"; // scrollbar i delte dokumenter er nå mørkeblå i dark mode
 ?>
 
 <!DOCTYPE html>

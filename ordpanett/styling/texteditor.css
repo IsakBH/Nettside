@@ -1363,6 +1363,7 @@ input:checked + .slider:before {
 .dark-theme #shared-text-input {
   border-color: #3D444D;
   background-color: #212830;
+  scrollbar-color: #1F6FEB transparent;
 }
 .dark-theme #shared-options {
   background-color: #212830;
