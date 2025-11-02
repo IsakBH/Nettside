@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.24"; // fikset at bakgrunnsfarge i delte dokumenter på shared-text-input og shared-options var for mørk
+$version = "v3.9.25"; // #documentSearch har ikke lenger en stygg blå box-shadow on ::focus. skjønner virkelig ikke hvorfor jeg la det til, kan ikke huske at jeg har gjort det heller lol
 ?>
 
 <!DOCTYPE html>

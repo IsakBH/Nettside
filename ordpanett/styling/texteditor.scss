@@ -758,6 +758,9 @@ input[type="file"]::file-selector-button {
         border-color: #9f9f9f;
         background: #EAEDF0;
     }
+    &:focus {
+        box-shadow: 0 4px 2px -4px black;
+    }
 }
 
 .document-list {
@@ -1495,6 +1498,10 @@ input:checked + .slider:before {
         .active {
             background-color: #BBE5C5;
         }
+    }
+
+    #documentSearch {
+        border-color: #DDDDDD;
     }
 }
 

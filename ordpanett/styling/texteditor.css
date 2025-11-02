@@ -719,6 +719,9 @@ input[type=file]::file-selector-button {
   border-color: #9f9f9f;
   background: #EAEDF0;
 }
+#documentSearch:focus {
+  box-shadow: 0 4px 2px -4px black;
+}
 
 .document-list {
   height: calc(100% - 60px);
@@ -1374,6 +1377,9 @@ input:checked + .slider:before {
 }
 .green-theme .container .active {
   background-color: #BBE5C5;
+}
+.green-theme #documentSearch {
+  border-color: #DDDDDD;
 }
 
 .dark-theme {
