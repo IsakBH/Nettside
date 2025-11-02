@@ -224,6 +224,12 @@ input[type="color"] {
 #shared-options {
     background-color: #F6F8FA;
     border-color: #e0e0e0;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    gap: 15px;
 }
 
 #read-only-status {

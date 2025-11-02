@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.27"; // view_shared_document.php sier nå når dokumentet ble lagd
+$version = "v3.9.28"; // shared-options auto wrapper ikke lenger og må heller scrolles i for å se informasjonen
 ?>
 
 <!DOCTYPE html>
