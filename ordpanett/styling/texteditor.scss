@@ -1335,19 +1335,21 @@ input:checked + .slider:before {
     background-size: 20% auto;
 
     #shared-text-input {
-        background-color: #F2FAF4;
+        background-color: #C9DACD;
     }
 
     #shared-options {
-        background-color: #F2FAF4;
+        background-color: #C9DACD;
     }
 
     .text-input {
         background-color: #F2FAF4;
+        border-color: #C9DACD;
     }
 
     .options {
         background-color: #F2FAF4;
+        border-color: #C9DACD;
         button, select {
             background-color: #E0F3E4;
             border-color: #C9DACD;

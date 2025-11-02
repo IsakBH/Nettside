@@ -1250,16 +1250,18 @@ input:checked + .slider:before {
   background-size: 20% auto;
 }
 .green-theme #shared-text-input {
-  background-color: #F2FAF4;
+  background-color: #C9DACD;
 }
 .green-theme #shared-options {
-  background-color: #F2FAF4;
+  background-color: #C9DACD;
 }
 .green-theme .text-input {
   background-color: #F2FAF4;
+  border-color: #C9DACD;
 }
 .green-theme .options {
   background-color: #F2FAF4;
+  border-color: #C9DACD;
 }
 .green-theme .options button, .green-theme .options select {
   background-color: #E0F3E4;

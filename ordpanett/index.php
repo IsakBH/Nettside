@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.22"; // buttons har nå en mer passende grønn border-color i green mode
+$version = "v3.9.23"; // (shared-)text-input og (shared-)options har nå lik grønn border-color som buttons i toolbaren
 ?>
 
 <!DOCTYPE html>
