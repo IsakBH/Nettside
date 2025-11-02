@@ -1351,6 +1351,7 @@ input:checked + .slider:before {
     #shared-options {
         background-color: #F2FAF4;
         border-color: #C9DACD;
+        scrollbar-color: #7BEFB2 transparent;
     }
 
     .text-input {

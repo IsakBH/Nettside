@@ -1265,6 +1265,7 @@ input:checked + .slider:before {
 .green-theme #shared-options {
   background-color: #F2FAF4;
   border-color: #C9DACD;
+  scrollbar-color: #7BEFB2 transparent;
 }
 .green-theme .text-input {
   background-color: #F2FAF4;
