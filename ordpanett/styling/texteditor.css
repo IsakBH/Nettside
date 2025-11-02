@@ -1362,6 +1362,9 @@ input:checked + .slider:before {
 .green-theme input[type=file]::file-selector-button:hover {
   background-color: #41bc9f;
 }
+.green-theme input[type=color] {
+  border-color: #C9DACD;
+}
 .green-theme #submit {
   background-color: #7befb2;
   color: #040002;

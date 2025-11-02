@@ -1479,6 +1479,10 @@ input:checked + .slider:before {
         }
     }
 
+    input[type="color"] {
+        border-color: #C9DACD;
+    }
+
     #submit {
         background-color: #7befb2;
         color: #040002;
