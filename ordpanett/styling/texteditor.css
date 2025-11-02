@@ -1296,8 +1296,15 @@ input:checked + .slider:before {
 .green-theme .new-doc-button:hover {
   background-color: #41BC9F;
 }
+.green-theme #documentsList li {
+  /*&:hover {
+      background-color: #F2FAF4;
+      border-color: #C9DACD;
+      }*/
+}
 .green-theme #documentsList li.active-document {
   border: 2px solid #7befb2;
+  background-color: #E0F3E4;
 }
 .green-theme .document-manager {
   scrollbar-color: #7befb2 transparent;

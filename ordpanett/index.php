@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.25"; // input[type="color"] har nå riktig border-color i grønn modus
+$version = "v3.9.26"; // bakgrunnsfargen på det aktive dokumentet er nå grønn i grønn modus
 ?>
 
 <!DOCTYPE html>

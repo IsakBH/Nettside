@@ -1390,8 +1390,13 @@ input:checked + .slider:before {
     }
 
     #documentsList li {
+        /*&:hover {
+            background-color: #F2FAF4;
+            border-color: #C9DACD;
+            }*/
         &.active-document {
             border: 2px solid #7befb2;
+            background-color: #E0F3E4;
             //box-shadow: 4px 0 0 0 #7befb2;
         }
     }
