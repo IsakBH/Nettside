@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.21"; // knapper i .options i dark mode har nå en mer passende bakgrunnsfarge og drop-shadow
+$version = "v3.9.22"; // buttons har nå en mer passende grønn border-color i green mode
 ?>
 
 <!DOCTYPE html>

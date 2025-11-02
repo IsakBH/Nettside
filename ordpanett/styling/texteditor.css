@@ -1263,9 +1263,14 @@ input:checked + .slider:before {
 }
 .green-theme .options button, .green-theme .options select {
   background-color: #E0F3E4;
+  border-color: #C9DACD;
 }
 .green-theme .options button:hover, .green-theme .options select:hover {
   background-color: #CDECD5;
+}
+.green-theme hr {
+  color: #E0F3E4;
+  text-decoration: none;
 }
 .green-theme .menu-toggle {
   background-color: #7befb2;

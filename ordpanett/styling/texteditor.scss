@@ -1350,10 +1350,16 @@ input:checked + .slider:before {
         background-color: #F2FAF4;
         button, select {
             background-color: #E0F3E4;
+            border-color: #C9DACD;
             &:hover {
                 background-color:  #CDECD5;
             }
         }
+    }
+
+    hr {
+        color: #E0F3E4;
+        text-decoration: none;
     }
 
     .menu-toggle {
