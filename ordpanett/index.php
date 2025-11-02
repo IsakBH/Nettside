@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.26"; // bakgrunnsfargen på det aktive dokumentet er nå grønn i grønn modus
+$version = "v3.9.27"; // view_shared_document.php sier nå når dokumentet ble lagd
 ?>
 
 <!DOCTYPE html>
