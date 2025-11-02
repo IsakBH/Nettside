@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.30"; // shared-options auto wrapper ikke lenger og må heller scrolles i for å se informasjonen
+$version = "v3.9.31"; // nisseverdi
 ?>
 
 <!DOCTYPE html>

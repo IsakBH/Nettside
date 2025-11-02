@@ -7,12 +7,14 @@ if (empty($token)) {
 }
 
 // finner dokumentet ved å se på share token :solbriller emotikon:
-$stmt = $mysqli->prepare("SELECT d.title, d.content, d.last_modified, d.created_at, u.username, u.profile_picture FROM documents d JOIN users u ON d.user_id = u.id WHERE d.share_token = ?");
+$stmt = $mysqli->prepare("SELECT d.user_id, d.title, d.content, d.last_modified, d.created_at, u.username, u.profile_picture FROM documents d JOIN users u ON d.user_id = u.id WHERE d.share_token = ?");
 
 $stmt->bind_param("s", $token);
 $stmt->execute();
 $result = $stmt->get_result();
 $document = $result->fetch_assoc();
+$nisseverdi = $document['user_id'] ** 3.14 / 6.7;
+$rounded_nisseverdi = round($nisseverdi, 1);
 
 if (!$document) {
     die("Var ingen dokument der >:(.");
@@ -56,6 +58,7 @@ $profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $docu
             <p><b>Eid av: </b> <?php echo htmlspecialchars($document['username']);?></p> <img class="profile-picture" id="shared-profile-picture" src="<?php echo $profile_picture_url; ?>">
             <p><b>Sist endret:</b> <span id="last-modified-display"><?php echo htmlspecialchars($document['last_modified']);?></span></p>
             <p><b>Lagd:</b> <?php echo htmlspecialchars($document['created_at']);?></p>
+            <p><b>Nisseverdi:</b> <?php echo $rounded_nisseverdi; ?> </p>
         </div>
 
         <div class="text-input" id="shared-text-input" contenteditable="false">
