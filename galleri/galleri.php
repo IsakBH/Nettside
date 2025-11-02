@@ -13,7 +13,8 @@
 
     <!--- Navigasjonsbar -->
     <?php
-    include("../Include/HTML/navbar.html");
+    include "../Include/HTML/navbar.html";
+    require_once "../ordpanett/database.php";
     ?>
 
     <!---- Galleri -->
@@ -21,13 +22,13 @@
 
     <div id="gallery">
         <?php
-        $db = new mysqli('localhost', 'isak', 'some_pass', 'mydb');
+        $mysqli = new mysqli($host, $username, $password, $database);
 
-        if ($db->connect_error) {
-            die("Connection failed: " . $db->connect_error);
+        if ($mysqli->connect_error) {
+            die("Connection failed: " . $mysqli->connect_error);
         }
 
-        $result = $db->query("SELECT id, name, image_data FROM images");
+        $result = $mysqli->query("SELECT id, name, image_data FROM images");
 
         while ($row = $result->fetch_assoc()) {
             $image_data = base64_encode($row['image_data']);
@@ -38,7 +39,7 @@
                        title='{$row['name']}'>";
         }
 
-        $db->close();
+        $mysqli->close();
         ?>
     </div>
 
