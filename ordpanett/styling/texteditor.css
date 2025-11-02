@@ -1416,6 +1416,7 @@ input:checked + .slider:before {
 .dark-theme #shared-options {
   background-color: #212830;
   border-color: #3D444D;
+  scrollbar-color: #1F6FEB transparent;
 }
 .dark-theme #shared-profile-picture {
   width: 32px;
