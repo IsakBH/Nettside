@@ -15,6 +15,8 @@ $result = $stmt->get_result();
 $document = $result->fetch_assoc();
 $nisseverdi = $document['user_id'] ** 3.14 / 6.7;
 $rounded_nisseverdi = round($nisseverdi, 1);
+$content = $document['content'];
+$short_content = substr(strip_tags($content), 0, 167);
 
 if (!$document) {
     die("Var ingen dokument der >:(.");
@@ -45,7 +47,7 @@ $profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $docu
     <meta property="og:site_name" content="Ord På Nett">
     <meta property="og:url" content="<?php echo $full_url; ?>">
     <meta property="og:image" content="<?php echo $profile_picture_url; ?>">
-    <meta property="og:description" content="Dette dokumentet er delt med deg via Ord På Nett. Dokumentet er skrivebeskyttet, som vil si at du ikke kan redigere noe. Du behøver ikke logge inn for å se dokumentet.">
+    <meta property="og:description" content="<?php echo $short_content; ?>">
 </head>
 <body>
     <div class="container" id="sharedContainer">

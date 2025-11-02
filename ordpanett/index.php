@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.31"; // nisseverdi
+$version = "v3.9.32"; // embedden i delte dokumenter viser nå de første 167 bokstavene i contents
 ?>
 
 <!DOCTYPE html>
