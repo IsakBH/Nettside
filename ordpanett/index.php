@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.23"; // (shared-)text-input og (shared-)options har nå lik grønn border-color som buttons i toolbaren
+$version = "v3.9.24"; // fikset at bakgrunnsfarge i delte dokumenter på shared-text-input og shared-options var for mørk
 ?>
 
 <!DOCTYPE html>
