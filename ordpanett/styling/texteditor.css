@@ -1324,6 +1324,7 @@ input:checked + .slider:before {
 }
 .green-theme .text-input {
   scrollbar-color: #7befb2 transparent;
+  color: #040002;
 }
 .green-theme .text-input ::-webkit-scrollbar-thumb {
   background-color: #41bc9f;

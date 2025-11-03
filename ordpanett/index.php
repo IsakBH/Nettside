@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.32"; // embedden i delte dokumenter viser nå de første 167 bokstavene i contents
+$version = "v3.9.33"; // text-input har nå en mer passende text farge (color) i green mode
 ?>
 
 <!DOCTYPE html>
