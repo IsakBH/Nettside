@@ -13,7 +13,7 @@ $stmt->bind_param("s", $token);
 $stmt->execute();
 $result = $stmt->get_result();
 $document = $result->fetch_assoc();
-$nisseverdi = $document['user_id'] ** 3.14 / 6.7;
+$nisseverdi = $document['user_id'] ** 3.14 / 6;
 $rounded_nisseverdi = round($nisseverdi, 1);
 $content = $document['content'];
 $short_content = substr(strip_tags($content), 0, 167);
