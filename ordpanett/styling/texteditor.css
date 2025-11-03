@@ -1313,6 +1313,10 @@ input:checked + .slider:before {
   border: 2px solid #7befb2;
   background-color: #E0F3E4;
 }
+.green-theme #documentsList li.active-document:active {
+  border-color: #41BC9F;
+  background-color: #cbf2d4;
+}
 .green-theme .document-manager {
   scrollbar-color: #7befb2 transparent;
 }
