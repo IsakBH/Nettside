@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.33"; // text-input har nå en mer passende text farge (color) i green mode
+$version = "v3.9.34"; // lagt til en splash text fra god is av mr. ye
 ?>
 
 <!DOCTYPE html>
