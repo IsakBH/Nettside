@@ -1357,6 +1357,14 @@ input:checked + .slider:before {
     .text-input {
         background-color: #F2FAF4;
         border-color: #C9DACD;
+        scrollbar-color: #41BC9F transparent;
+        color: #040002;
+        ::-webkit-scrollbar-thumb {
+            background-color: #41bc9f;
+        }
+        a {
+            color: #41BC9F;
+        }
     }
 
     .options {
@@ -1422,17 +1430,6 @@ input:checked + .slider:before {
     #shareButton {
         &:hover {
             background-color: #7befb2;
-        }
-    }
-
-    .text-input {
-        scrollbar-color: #7befb2 transparent;
-        color: #040002;
-        ::-webkit-scrollbar-thumb {
-            background-color: #41bc9f;
-        }
-        a {
-            color: #41BC9F;
         }
     }
 
