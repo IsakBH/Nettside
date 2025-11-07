@@ -44,6 +44,13 @@ let fontList = [
 ];
 // lager liste over splash text som vises over Ord på Nett tittelen.
 let splashText = [];
+fetch('/ordpanett/assets/splashtext.txt')
+    .then(response => response.text())
+    .then(data => {
+        splashText = data.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+        randomSplashText();
+    })
+    .catch(error => console.error('kunne ikke loade splash text :( ', error));
 
 // ummm... prestasjoner???
 function unlockAchievement(trigger_key) {
@@ -67,14 +74,6 @@ function unlockAchievement(trigger_key) {
             console.error('feil når du fikk achievementen :( ', error);
         });
 }
-
-fetch('/ordpanett/assets/splashtext.txt')
-    .then(response => response.text())
-    .then(data => {
-        splashText = data.split('\n').map(line => line.trim()).filter(line => line.length > 0);
-        randomSplashText();
-    })
-    .catch(error => console.error('kunne ikke loade splash text :( ', error));
 
 // dele dokumenter
 function shareDocument(documentId) {
