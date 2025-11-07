@@ -1418,6 +1418,23 @@ input:checked + .slider:before {
             }
             //box-shadow: 4px 0 0 0 #7befb2;
         }
+
+        .document-actions {
+            button {
+                &:hover {
+                    background-color: #ff4444;
+                    border-color: darken(#FF4444, 35%);
+                    color: #020929;
+                }
+            }
+
+            #shareButton {
+                &:hover {
+                    background-color: #41BC9F;
+                    border-color: darken(#41BC9F, 15%);
+                }
+            }
+        }
     }
 
     .document-manager {

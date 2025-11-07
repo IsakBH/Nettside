@@ -1325,6 +1325,15 @@ input:checked + .slider:before {
   border-color: #41BC9F;
   background-color: #cbf2d4;
 }
+.green-theme #documentsList li .document-actions button:hover {
+  background-color: #ff4444;
+  border-color: rgb(144.5, 0, 0);
+  color: #020929;
+}
+.green-theme #documentsList li .document-actions #shareButton:hover {
+  background-color: #41BC9F;
+  border-color: rgb(45.3458498024, 131.1541501976, 110.9229249012);
+}
 .green-theme .document-manager {
   scrollbar-color: #7befb2 transparent;
 }

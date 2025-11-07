@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.37"; // lagt til nye splashtexter
+$version = "v3.9.38"; // document-actions er nå stylet riktig i green-mode
 ?>
 
 <!DOCTYPE html>
