@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.36"; // opn spiller nå av en error lyd når det skjer en error
+$version = "v3.9.37"; // lagt til nye splashtexter
 ?>
 
 <!DOCTYPE html>
