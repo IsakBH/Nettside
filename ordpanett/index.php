@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.34"; // lagt til en splash text fra god is av mr. ye
+$version = "v3.9.35"; // new Audio() er nå helt i starten av javascripten, slik at de blir lastet inn før funksjonen blir kalt opp, og det føles mer responsivt ut.
 ?>
 
 <!DOCTYPE html>

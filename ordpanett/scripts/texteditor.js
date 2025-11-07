@@ -31,6 +31,11 @@ const printButton = document.getElementById("print");
 let seenEasterEgg = false;
 const title = document.getElementById('title');
 const documentSearch = document.getElementById('documentSearch');
+const menuToggle = document.querySelector('.menu-toggle');
+const documentManager = document.querySelector('.document-manager');
+const twinkle = new Audio("assets/sound/twinkle.mp3");
+const opn = new Audio("assets/sound/ordpanett.mp3");
+const mkx = new Audio("../Include/Musikk/mkx-10-20-30-40.mp3");
 
 // lager liste av fonter for font velge greien
 let fontList = [
@@ -277,10 +282,6 @@ writingArea.addEventListener('touchstart', function(e) {
     }
 });
 
-// hamburger meny
-const menuToggle = document.querySelector('.menu-toggle');
-const documentManager = document.querySelector('.document-manager');
-
 menuToggle.addEventListener('click', () => {
     documentManager.classList.toggle('active');
 });
@@ -312,8 +313,7 @@ documentSearch.addEventListener('input', function(e) {
 
 // funksjon for å lage nytt dokument
 function createNewDocument(){
-    const music = new Audio("assets/sound/twinkle.mp3");
-    music.play();
+    twinkle.play();
     const title = prompt("Skriv inn tittel på dokumentet:", "Skriv inn navnet her");
     // ajax :))))
     if (title) {
@@ -747,7 +747,6 @@ writingArea.addEventListener("input", () => {
 });
 
 function opnEasterEgg() {
-    const opn = new Audio("assets/sound/ordpanett.mp3");
     opn.play();
     console.log("ord på nett easteregg")
     unlockAchievement('opn');
@@ -772,9 +771,8 @@ function checkForMKX() {
 
     if (content.includes("mkx")) {
         if (seenEasterEgg === false) {
-            const music = new Audio("../Include/Musikk/mkx-10-20-30-40.mp3");
-            music.volume = 0.5;
-            music.play();
+            mkx.volume = 0.5;
+            mkx.play();
             seenEasterEgg = true;
             unlockAchievement('mkx');
         }
