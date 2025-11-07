@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.35"; // new Audio() er nå helt i starten av javascripten, slik at de blir lastet inn før funksjonen blir kalt opp, og det føles mer responsivt ut.
+$version = "v3.9.36"; // opn spiller nå av en error lyd når det skjer en error :()
 ?>
 
 <!DOCTYPE html>

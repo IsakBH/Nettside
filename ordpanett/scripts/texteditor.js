@@ -35,7 +35,8 @@ const menuToggle = document.querySelector('.menu-toggle');
 const documentManager = document.querySelector('.document-manager');
 const twinkle = new Audio("assets/sound/twinkle.mp3");
 const opn = new Audio("assets/sound/ordpanett.mp3");
-const mkx = new Audio("../Include/Musikk/mkx-10-20-30-40.mp3");
+const mkx = new Audio("assets/sound/mkx.mp3");
+const errorAudio = new Audio("assets/sound/error.mp3");
 
 // lager liste av fonter for font velge greien
 let fontList = [
@@ -55,7 +56,7 @@ fetch('/ordpanett/assets/splashtext.txt')
         splashText = data.split('\n').map(line => line.trim()).filter(line => line.length > 0);
         randomSplashText();
     })
-    .catch(error => console.error('kunne ikke loade splash text :( ', error));
+    .catch(error => console.error('kunne ikke loade splash text :( ', error), errorAudio.play());
 
 // ummm... prestasjoner???
 function unlockAchievement(trigger_key) {
@@ -73,10 +74,12 @@ function unlockAchievement(trigger_key) {
                 alert('Du fikk en achievement! \n\n' + data.name + "\n" + data.description);
             } else {
                 console.log(data.message || data.error);
+                errorAudio.play();
             }
         })
         .catch(error => {
             console.error('feil når du fikk achievementen :( ', error);
+            errorAudio.play();
         });
 }
 
@@ -94,6 +97,7 @@ function shareDocument(documentId) {
             prompt("Her er link til dokumentet ditt :) Hvem som helst som har linken kan se dokumentet, så ikke del linken med alle! Eller, du kan hvis du vil, men liksom, ja, du vet hva jeg mener. ", data.link);
         } else {
             alert("Det oppstod en feil under deling av dokument :( " + data.error);
+            errorAudio.play();
         }
     })
 }
@@ -112,6 +116,7 @@ printButton.addEventListener("click", () => {
 function printWritingArea() {
     if (!writingArea) {
         console.error("Ord på Nett finner ikke ID-en 'text-input', plz kontakt Isak! han har ødelagt noe!!!");
+        errorAudio.play();
         return;
     }
 
@@ -500,6 +505,7 @@ function saveTextAsFile() {
         window.URL.revokeObjectURL(url);
         console.log("Du lastet ned et dokument! Dokument ID: " + currentDocumentId);
     } catch (error) {
+        errorAudio.play();
         console.error('Error i saveTextAsFile:', error);
         alert('Det oppstod en feil ved nedlasting av filen: ' + error.message);
         console.log("Det oppstod desverre en feil ved nedlasting av filen: " + error.message);
@@ -726,6 +732,7 @@ document.getElementById("insertTable").addEventListener("click", () => {
     }
     else {
         console.log("Hey woah woah woah woah woah, den tabellen var alt for stor! Konrad slutt å crashe Ord på Nett :(");
+        errorAudio.play();
     }
 });
 
