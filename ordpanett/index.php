@@ -275,6 +275,7 @@ $version = "v3.9.34"; // lagt til en splash text fra god is av mr. ye
             data-lang="en"
             crossorigin="anonymous"
             referrerpolicy="no-referrer-when-downgrade"
+            loading="lazy"
             async>
         </script>
     </div>
