@@ -104,7 +104,7 @@ function shareDocument(documentId) {
 
 // skriver at brukeren må velge et dokument - calles når currentDocumentId er null
 function selectDocumentMessage(){
-    writingArea.innerHTML = '<p id="placeholder"><u><h1 id="title">Vennligst velg et dokument.</h1></u> <br> <br> <h2>   Credits:  </h2>  Programmering: Isak Henriksen <br> Easter egg sang: NRK <br> Dark mode inspirasjon: GitHub/Microsoft <br> <a href="https://www.youtube.com/watch?v=7lQatGnsoS8" target="_blank">Ord på Nett sangen:</a> Isak Henriksen (sangtekst) Suno AI (sanger) </p>';
+    writingArea.innerHTML = '<p id="placeholder"><u><h1>Vennligst velg et dokument.</h1></u> <br> <br> <h2>   Credits:  </h2>  Programmering: Isak Henriksen <br> Easter egg sang: NRK <br> Dark mode inspirasjon: GitHub/Microsoft <br> <a href="https://www.youtube.com/watch?v=7lQatGnsoS8" target="_blank">Ord på Nett sangen:</a> Isak Henriksen (sangtekst) Suno AI (sanger) </p>';
     console.log("Vennligst velg et dokument (skrevet via selectDocumentMessage funksjon)")
 }
 

@@ -1266,6 +1266,7 @@ input:checked + .slider:before {
 #title {
     text-align: center;
     user-select: none;
+    font-size: 40px;
     &:hover {
         cursor: pointer;
     }

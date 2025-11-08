@@ -14,6 +14,7 @@ session_start();
     <script src="../scripts/texteditor.js"></script>
     <script src="../scripts/applydarkmode.js"></script>
     <script src="../scripts/applygreenmode.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 
 <body>

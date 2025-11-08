@@ -41,7 +41,7 @@ $profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $docu
     <script src="./scripts/applyfloatmode.js"></script>
     <script src="./scripts/applygreenmode.js"></script>
     <link rel="icon" href="./assets/ordlogo.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <meta property="og:title" content="<?php echo htmlspecialchars($document['title']); ?>">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Ord På Nett">

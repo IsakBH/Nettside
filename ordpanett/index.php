@@ -14,7 +14,9 @@ $version = "v3.9.38"; // document-actions er nå stylet riktig i green-mode
 
     <!-- ikoner fra font awesome og google fonts-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
     <!-- turndown og marked javascript biblioteker - for oversetting av html til markdown og motsatt -->
     <script src="https://unpkg.com/turndown/dist/turndown.js"></script>

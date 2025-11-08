@@ -14,9 +14,10 @@ if (!isset($_SESSION['user_id'])) {
 <head>
     <title>Endringslogg - Ord på Nett</title>
     <link rel="stylesheet" href="../styling/texteditor.css">
-<script src="../scripts/applydarkmode.js"></script>
+    <script src="../scripts/applydarkmode.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" href="../assets/ordlogo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="changeLogTopBar">
