@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.40"; // gradient på tittel. det er stilig :D
+$version = "v3.9.41"; // grønn gradient på #title i grønn modus :D
 ?>
 
 <!DOCTYPE html>

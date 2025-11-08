@@ -1264,6 +1264,10 @@ input:checked + .slider:before {
   background-repeat: repeat;
   background-size: 20% auto;
 }
+.green-theme #title {
+  background: linear-gradient(to right, #7befb2, #63d89e 30%, #4fc78e, #3da878);
+  background-clip: text;
+}
 .green-theme #shared-text-input {
   background-color: #F2FAF4;
   border-color: #C9DACD;
