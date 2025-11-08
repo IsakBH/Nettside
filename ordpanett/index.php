@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.38"; // document-actions er nå stylet riktig i green-mode
+$version = "v3.9.40"; // gradient på tittel. det er stilig :D
 ?>
 
 <!DOCTYPE html>
