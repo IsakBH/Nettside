@@ -75,7 +75,7 @@ hr {
   padding: 10px;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
-  background-color: #F6F8FA;
+  background-color: #f0f6fc;
   scrollbar-color: #8ac8ff transparent;
 }
 
@@ -109,25 +109,25 @@ button {
   place-items: center;
   border-radius: 10px;
   border: 1px solid #E0E0E0;
-  background-color: rgb(229.6071428571, 235.25, 240.8928571429);
+  background-color: rgb(218.75, 233.25, 247.75);
   outline: none;
   color: #020929;
   transition: transform 0.2s ease;
 }
 button:hover {
-  background-color: rgb(213.2142857143, 222.5, 231.7857142857);
+  background-color: rgb(197.5, 220.5, 243.5);
   transform: translateY(-2px);
   box-shadow: 0px 2px 2px #ccc;
   border-color: #C5D2DF;
 }
 button:active {
   transform: translateY(3px);
-  background-color: rgb(196.8214285714, 209.75, 222.6785714286);
+  background-color: rgb(176.25, 207.75, 239.25);
 }
 
 select {
   color: #020929;
-  background-color: rgb(229.6071428571, 235.25, 240.8928571429);
+  background-color: rgb(218.75, 233.25, 247.75);
   padding: 7px;
   text-decoration: none;
   border: 1px solid #E0E0E0;
@@ -135,14 +135,14 @@ select {
   transition: transform 0.2s ease;
 }
 select:hover {
-  background-color: rgb(213.2142857143, 222.5, 231.7857142857);
+  background-color: rgb(197.5, 220.5, 243.5);
   transform: translateY(-2px);
   box-shadow: 0px 2px 2px #ccc;
   border-color: #C5D2DF;
 }
 select:active {
   transform: translateY(3px);
-  background-color: rgb(196.8214285714, 209.75, 222.6785714286);
+  background-color: rgb(176.25, 207.75, 239.25);
 }
 
 option {
@@ -180,7 +180,7 @@ input[type=color] {
   border-radius: 10px;
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: #F6F8FA;
+  background-color: #f0f6fc;
   scrollbar-color: #8ac8ff transparent;
   font-family: inherit;
 }
@@ -229,7 +229,7 @@ input[type=color] {
 }
 
 .active {
-  background-color: rgb(196.8214285714, 209.75, 222.6785714286);
+  background-color: rgb(176.25, 207.75, 239.25);
 }
 
 #text-input table {

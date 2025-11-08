@@ -77,7 +77,7 @@ hr {
     padding: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
-    background-color: #F6F8FA;
+    background-color: #f0f6fc;
     scrollbar-color: #8ac8ff transparent;
 }
 
@@ -114,39 +114,39 @@ button {
     place-items: center;
     border-radius: 10px;
     border: 1px solid #E0E0E0;
-    background-color: darken(#F6F8FA, 5%);
+    background-color: darken(#f0f6fc, 5%);
     outline: none;
     color: #020929;
     transition: transform 0.2s ease;
     &:hover {
-        background-color: darken(#F6F8FA, 10%);
+        background-color: darken(#f0f6fc, 10%);
         transform: translateY(-2px);
         box-shadow: 0px 2px 2px #ccc;
         border-color: #C5D2DF;
     }
     &:active {
         transform: translateY(3px);
-        background-color: darken(#F6F8FA, 15%);
+        background-color: darken(#f0f6fc, 15%);
     }
 }
 
 select {
     color: #020929;
-    background-color: darken(#F6F8FA, 5%);
+    background-color: darken(#f0f6fc, 5%);
     padding: 7px;
     text-decoration: none;
     border: 1px solid #E0E0E0;
     border-radius: 10px;
     transition: transform 0.2s ease;
     &:hover {
-        background-color: darken(#F6F8FA, 10%);
+        background-color: darken(#f0f6fc, 10%);
         transform: translateY(-2px);
         box-shadow: 0px 2px 2px #ccc;
         border-color: #C5D2DF;
     }
     &:active {
         transform: translateY(3px);
-        background-color: darken(#F6F8FA, 15%);
+        background-color: darken(#f0f6fc, 15%);
     }
 
 }
@@ -186,7 +186,7 @@ input[type="color"] {
     border-radius: 10px;
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: #F6F8FA;
+    background-color: #f0f6fc;
     scrollbar-color: #8ac8ff transparent;
 
     // fikser at liste punktene går utenfor tekst boksen
@@ -204,10 +204,6 @@ input[type="color"] {
         border-radius: 10px;
         border: none;
     }
-}
-
-.text-input::-webkit-scrollbar-thumb {
-
 }
 
 //////////////////////////////////////////////////
@@ -246,7 +242,7 @@ input[type="color"] {
 }
 
 .active {
-    background-color: darken(#F6F8FA, 15%);
+    background-color: darken(#f0f6fc, 15%);
 }
 
 #text-input table {

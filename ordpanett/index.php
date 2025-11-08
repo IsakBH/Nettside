@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.41"; // grønn gradient på #title i grønn modus :D
+$version = "v3.9.42"; // vanilla ord på nett er nå bedre. har blåe accent farger istedet for grå.
 ?>
 
 <!DOCTYPE html>
