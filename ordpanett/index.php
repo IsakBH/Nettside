@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.42"; // vanilla ord på nett er nå bedre. har blåe accent farger istedet for grå.
+$version = "v3.9.43"; // new-doc-button har nå flex-shrink: 0, som gjør at den ikke blir mindre nå som den er ute av .document-list
 ?>
 
 <!DOCTYPE html>
@@ -43,16 +43,16 @@ $version = "v3.9.42"; // vanilla ord på nett er nå bedre. har blåe accent far
     </button>
 
     <div class="document-manager">
+        <h3>Mine dokumenter</h3>
+        <button id="newDocument" class="new-doc-button">
+            <i class="fa-solid fa-plus"></i>
+            Nytt Ord dokument
+        </button>
+        <div class="search-container">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" id="documentSearch" placeholder="Søk i dokumenter...">
+        </div>
         <div class="document-list">
-            <h3>Mine dokumenter</h3>
-            <button id="newDocument" class="new-doc-button">
-                <i class="fa-solid fa-plus"></i>
-                Nytt Ord dokument
-            </button>
-            <div class="search-container">
-                <i class="fa-solid fa-search"></i>
-                <input type="text" id="documentSearch" placeholder="Søk i dokumenter...">
-            </div>
             <ul id="documentsList"></ul>
         </div>
         <!--<a id="changelogButton" title="Endringslogg Ord på Nett" href="pages/changelog.php">Endringslogg<i class="fa-solid fa-clock-rotate-left"></i></a>-->

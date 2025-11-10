@@ -708,6 +708,7 @@ input[type="file"]::file-selector-button {
     justify-content: center;
     gap: 8px;
     font-size: 0.9rem;
+    flex-shrink: 0;
     transition: all 0.2s ease;
 
     &:hover {
@@ -766,7 +767,8 @@ input[type="file"]::file-selector-button {
 }
 
 .document-list {
-    height: calc(100% - 60px);
+    flex-grow: 1;
+    min-height: 0;
     overflow-y: auto;
 
     &::-webkit-scrollbar {
