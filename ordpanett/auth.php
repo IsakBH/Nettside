@@ -4,7 +4,7 @@ require_once 'database.php';
 
 // hvis brukeren allerede er logget inn via session, verifiser at session er gyldig
 if (isset($_SESSION['user_id'])) {
-    // Verifiser at brukeren fortsatt eksisterer i databasen
+    // verifiser at brukeren fortsatt eksisterer i databasen
     $sql = "SELECT id, username, profile_picture FROM users WHERE id = ?";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param("i", $_SESSION['user_id']);
