@@ -764,11 +764,11 @@ input[type=file]::file-selector-button {
   align-items: center;
   padding: 8px;
   margin-bottom: 8px;
-  background: #F6F8FA;
+  background: #F0F6FC;
   border-radius: 8px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.8px);
-  -webkit-backdrop-filter: blur(5.8px);
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   transition: all 0.2s ease;
   border: 1px solid #ddd;
   animation: popin 0.3s;
@@ -777,7 +777,7 @@ input[type=file]::file-selector-button {
 #documentsList li:hover {
   box-shadow: 4px 0px 0px 0px #E2E2E2;
   border-color: #9f9f9f;
-  background: #EAEDF0;
+  background: #C6DDF4;
   width: 95%;
 }
 #documentsList li:hover .document-actions {
@@ -785,7 +785,7 @@ input[type=file]::file-selector-button {
 }
 #documentsList li.active-document {
   border: 2px solid #8ac8ff;
-  background-color: #E9ECEF;
+  background-color: #C6DDF4;
   filter: drop-shadow(0 0 2px #cccccc);
   animation: aktivt-dokument 0.5s;
   animation-fill-mode: forwards;

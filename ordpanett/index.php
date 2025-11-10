@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.44"; // document-list har nå en border-radius på 10px. gjør at det ser penere ut når dokumentene klipper ut
+$version = "v3.9.45"; // dokumenter er nå blå on hover i vanlig modus og når det er aktivt
 ?>
 
 <!DOCTYPE html>
