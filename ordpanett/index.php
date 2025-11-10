@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.43"; // new-doc-button har nå flex-shrink: 0, som gjør at den ikke blir mindre nå som den er ute av .document-list
+$version = "v3.9.44"; // document-list har nå en border-radius på 10px. gjør at det ser penere ut når dokumentene klipper ut
 ?>
 
 <!DOCTYPE html>

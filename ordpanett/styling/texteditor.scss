@@ -770,6 +770,7 @@ input[type="file"]::file-selector-button {
     flex-grow: 1;
     min-height: 0;
     overflow-y: auto;
+    border-radius: 10px;
 
     &::-webkit-scrollbar {
         width: 8px;
