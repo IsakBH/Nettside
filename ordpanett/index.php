@@ -29,7 +29,8 @@ $version = "v3.9.45"; // dokumenter er nå blå on hover i vanlig modus og når 
     require_once 'database.php';
 
     // redirect til login hvis ikke autentisert
-    if (!isset($_SESSION['user_id'])) {
+    $request_uri = $_SERVER['REQUEST_URI'];
+    if (!isset($_SESSION['user_id']) && strpos($request_uri, '/ordpanett/assets/') === false) {
         header('Location: pages/login.php');
         exit();
     }
