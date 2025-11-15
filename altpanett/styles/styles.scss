@@ -38,4 +38,8 @@ iframe {
         border: 1px solid #3D444D;
         border-radius: 10px;
     }
+    &:active {
+        transform: scale(0.8);
+        border-color: #1F6FEB;
+    }
 }
