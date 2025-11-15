@@ -26,17 +26,18 @@ iframe {
 .sidebar-application-icon {
   text-align: center;
   user-select: none;
+  transition: 0.1s ease;
 }
 .sidebar-application-icon img {
   width: 95%;
   transition: 0.1s;
 }
 .sidebar-application-icon:hover {
+  transform: scale(0.9);
   background-color: #212830;
   cursor: pointer;
-}
-.sidebar-application-icon:hover img {
-  transform: scale(0.9);
+  border: 1px solid #3D444D;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */
