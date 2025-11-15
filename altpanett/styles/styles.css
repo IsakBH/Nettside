@@ -29,10 +29,14 @@ iframe {
 }
 .sidebar-application-icon img {
   width: 95%;
+  transition: 0.1s;
 }
 .sidebar-application-icon:hover {
   background-color: #212830;
   cursor: pointer;
+}
+.sidebar-application-icon:hover img {
+  transform: scale(0.9);
 }
 
 /*# sourceMappingURL=styles.css.map */

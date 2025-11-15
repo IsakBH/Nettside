@@ -28,9 +28,13 @@ iframe {
     user-select: none;
     img {
         width: 95%;
+        transition: 0.1s;
     }
     &:hover {
         background-color: #212830;
         cursor: pointer;
+        img {
+            transform: scale(0.9);
+        }
     }
 }
