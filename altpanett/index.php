@@ -1,8 +1,22 @@
+<?php
+$protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+$host = $_SERVER['HTTP_HOST'];
+$request_uri = $_SERVER['REQUEST_URI'];
+$full_url = $protocol . "://" . $host . $request_uri;
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="icon" href="assets/icons/apnlogo.png">
+
+        <meta property="og:title" content="Alt på Nett">
+        <meta property="og:type" content="article">
+        <meta property="og:site_name" content="Alt på Nett">
+        <meta property="og:url" content="<?php echo $full_url; ?>">
+        <meta property="og:image" content="/altpanett/assets/icons/apnlogo.png">
+        <meta property="og:description" content="Alt på Nett er en portal for alle 'på nett' programmene.">
     </head>
 
     <body>
