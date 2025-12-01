@@ -113,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
 
             <label for="remember_me">
-                <input type="checkbox" id="remember_me" name="remember_me"> Husk meg
+                <input type="checkbox" id="remember_me" name="remember_me"> Glem meg (ikke husk meg)
             </label> <br> <br>
 
             <button id="submit" type="submit">Logg inn</button>
