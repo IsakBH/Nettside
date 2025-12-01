@@ -42,6 +42,7 @@ $profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $docu
     <script src="./scripts/applygreenmode.js"></script>
     <link rel="icon" href="./assets/ordlogo.png" />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
     <meta property="og:title" content="<?php echo htmlspecialchars($document['title']); ?>">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Ord På Nett">
@@ -51,7 +52,10 @@ $profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $docu
 </head>
 <body>
     <div class="container" id="sharedContainer">
-        <p id="read-only-status">Skrivebeskyttet (Read-only)</p>
+        <div id="top-container">
+            <p id="read-only-status">Skrivebeskyttet (Read-only)</p>
+            <!--<button id="copy-to-clipboard"><i class="fa-solid fa-copy"></i></button>-->
+        </div>
         <h1 id="title">Ord På Nett | Delt dokument</h1>
 
         <div class="options" id="shared-options">
@@ -69,6 +73,13 @@ $profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $docu
     </div>
 
     <script>
+    /*
+    let copy_button = document.getElementById('copy-to-clipboard');
+    copy_button.addEventListener("click", () => {
+
+    })
+    */
+
     document.addEventListener('DOMContentLoaded', () => {
         console.log("poller for oppdateringer hvert 10. sekund")
         const sharedTextInput = document.getElementById('shared-text-input');
