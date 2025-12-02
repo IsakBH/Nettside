@@ -58,7 +58,7 @@ $profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $docu
         <h1 id="title">Ord På Nett | Delt dokument</h1>
 
         <div class="options" id="shared-options">
-            <button id="copy-to-clipboard"><i class="fa-solid fa-copy"></i></button>
+            <button title="Kopier til clipboard" id="copy-to-clipboard"><i class="fa-solid fa-copy"></i></button>
             <h2>Dokumentinfo:</h2>
             <p><b>Navn:</b> <?php echo htmlspecialchars($document['title']); ?></p>
             <p><b>Eid av: </b> <?php echo htmlspecialchars($document['username']); ?></p> <img class="profile-picture" id="shared-profile-picture" src="<?php echo $profile_picture_url; ?>">
