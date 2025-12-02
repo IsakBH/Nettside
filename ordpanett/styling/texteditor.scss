@@ -210,6 +210,12 @@ input[type="color"] {
 ///              delte dokumenter              ///
 /////////////////////////////////////////////////
 
+#copy-to-clipboard {
+    height: 35px !important;
+    width: 35px !important;
+    padding: 10px;
+}
+
 #shared-text-input {
     height: 90%;
     background-color: #F6F8FA;
