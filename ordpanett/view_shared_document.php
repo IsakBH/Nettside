@@ -32,6 +32,7 @@ $profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $docu
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Ord På Nett | Delt dokument: <?php echo htmlspecialchars($document['title']); ?></title>
     <link rel="stylesheet" href="styling/texteditor.css" />
@@ -50,20 +51,21 @@ $profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $docu
     <meta property="og:image" content="<?php echo $profile_picture_url; ?>">
     <meta property="og:description" content="<?php echo $short_content; ?>">
 </head>
+
 <body>
     <div class="container" id="sharedContainer">
         <div id="top-container">
             <p id="read-only-status">Skrivebeskyttet (Read-only)</p>
-            <!--<button id="copy-to-clipboard"><i class="fa-solid fa-copy"></i></button>-->
+            <button id="copy-to-clipboard"><i class="fa-solid fa-copy"></i></button>
         </div>
         <h1 id="title">Ord På Nett | Delt dokument</h1>
 
         <div class="options" id="shared-options">
             <h2>Dokumentinfo:</h2>
-            <p><b>Navn:</b> <?php echo htmlspecialchars($document['title']);?></p>
-            <p><b>Eid av: </b> <?php echo htmlspecialchars($document['username']);?></p> <img class="profile-picture" id="shared-profile-picture" src="<?php echo $profile_picture_url; ?>">
-            <p><b>Sist endret:</b> <span id="last-modified-display"><?php echo htmlspecialchars($document['last_modified']);?></span></p>
-            <p><b>Lagd:</b> <?php echo htmlspecialchars($document['created_at']);?></p>
+            <p><b>Navn:</b> <?php echo htmlspecialchars($document['title']); ?></p>
+            <p><b>Eid av: </b> <?php echo htmlspecialchars($document['username']); ?></p> <img class="profile-picture" id="shared-profile-picture" src="<?php echo $profile_picture_url; ?>">
+            <p><b>Sist endret:</b> <span id="last-modified-display"><?php echo htmlspecialchars($document['last_modified']); ?></span></p>
+            <p><b>Lagd:</b> <?php echo htmlspecialchars($document['created_at']); ?></p>
             <p title="Bruker ID ^ 3.14 / 6"><b>Nisseverdi:</b> <?php echo $rounded_nisseverdi; ?> </p>
         </div>
 
@@ -73,51 +75,60 @@ $profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $docu
     </div>
 
     <script>
-    /*
-    let copy_button = document.getElementById('copy-to-clipboard');
-    copy_button.addEventListener("click", () => {
+        let shared_text_input = document.getElementById('shared-text-input')
+        let contents = shared_text_input.textContent;
+        let copy_button = document.getElementById('copy-to-clipboard');
+        copy_button.addEventListener('click', () => writeToClipboard(contents));
 
-    })
-    */
-
-    document.addEventListener('DOMContentLoaded', () => {
-        console.log("poller for oppdateringer hvert 10. sekund")
-        const sharedTextInput = document.getElementById('shared-text-input');
-        const lastModifiedDisplay = document.getElementById('last-modified-display');
-
-        let currentTimestamp = '<?php echo $document['last_modified']; ?>';
-        const token = '<?php echo $token; ?>';
-
-        if (!token) {
-            console.error('du har ikke noe token lil bro');
-            return;
+        async function writeToClipboard(contents) {
+            try {
+                console.log(contents)
+                await navigator.clipboard.writeText(contents);
+                console.log("kopiert til clipboard!")
+            } catch (error) {
+                console.error("Oisann! Skjedde visst en feil her", error.message);
+            }
         }
 
-        // poll
-        setInterval(() => {
-            const url = `/ordpanett/scripts/check_for_updates.php?token=${encodeURIComponent(token)}&timestamp=${encodeURIComponent(currentTimestamp)}`;
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("poller for oppdateringer hvert 10. sekund")
+            const sharedTextInput = document.getElementById('shared-text-input');
+            const lastModifiedDisplay = document.getElementById('last-modified-display');
 
-            fetch(url)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`http error >:( status: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    if (data.status === 'updated') {
-                        console.log('dokument er oppdatert, fetcher content');
-                        sharedTextInput.innerHTML = data.content;
-                        lastModifiedDisplay.textContent = data.last_modified;
-                        currentTimestamp = data.last_modified;
-                        sharedTextInput.scrollTop = sharedTextInput.scrollHeight;
-                    }
-                })
-                .catch(error => {
-                    console.error('tror det oppstod en liten feil her :( ', error);
-                });
-        }, 3000);
-    });
+            let currentTimestamp = '<?php echo $document['last_modified']; ?>';
+            const token = '<?php echo $token; ?>';
+
+            if (!token) {
+                console.error('du har ikke noe token lil bro');
+                return;
+            }
+
+            // poll
+            setInterval(() => {
+                const url = `/ordpanett/scripts/check_for_updates.php?token=${encodeURIComponent(token)}&timestamp=${encodeURIComponent(currentTimestamp)}`;
+
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`http error >:( status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        if (data.status === 'updated') {
+                            console.log('dokument er oppdatert, fetcher content');
+                            sharedTextInput.innerHTML = data.content;
+                            lastModifiedDisplay.textContent = data.last_modified;
+                            currentTimestamp = data.last_modified;
+                            sharedTextInput.scrollTop = sharedTextInput.scrollHeight;
+                        }
+                    })
+                    .catch(error => {
+                        console.error('tror det oppstod en liten feil her :( ', error);
+                    });
+            }, 3000);
+        });
     </script>
 </body>
+
 </html>
