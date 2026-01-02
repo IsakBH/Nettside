@@ -1,14 +1,22 @@
 <div id="biography">
         <div id="bio">
             <p id="bio2">
-                Informasjonsteknologi og Medieproduksjon elev på Amalieskram VGs, Linux bruker.
+                IT elev på Amalie Skram vgs. og stolt linux bruker (veldig viktig å dele)
             </p>
         </div>
     </div>
 
     <div id="isak">
         <p>
-            Jeg er interresert i alt som handler om data/IT, og har drevet med det på fritiden ganske lenge. Jeg har laget et par små prosjekter, som for eksempel en <a href="https://www.github.com/isakbh/Ord-text-editor">offline tekst editor</a>, og en <a href="https://isak.brunhenriksen.no/ordpanett">online tekst editor</a>. Akkurat nå holder jeg på å lære meg programmeringsspråket <a href="https://rust-lang.org" target="_blank">Rust</a>. Grunnen til at jeg valgte IM-linjen er at jeg har vært veldig interessert i IT hele livet. Språkene jeg har erfaring i er Javascript, PHP, Rust, Python, og litt C++, men jeg foretrekker PHP og Rust. Jeg kommer fra Bergen, og har bodd her hele livet mitt.
+            Jeg er glad i data/IT, og har drevet med det på fritiden veldig lenge. Jeg har et par små fritidsprosjekter, som for eksempel den nydelige tekst editoren min <a href="https://isak.brunhenriksen.no/ordpanett">Ord På Nett</a>, input verktøyet mitt <a href="https://github.com/IsakBH/RustMouse">RustMouse</a>, og skrivetesten min <a href="https://github.com/IsakBH/rust-skrivetest">rust-skrivetest</a> (veldig kreativt navn)
+
+            <br> <br>
+
+            Akkurat nå jobber jeg for det meste med tekst editoren min <a href="https://isak.brunhenriksen.no/ordpanett">Ord På Nett</a>.
+
+            <br> <br>
+
+            Grunnen til at jeg valgte IT-linjen er at jeg har vært veldig interessert i IT hele livet, og har alltid synes at det har vært gøyt. <br> Jeg har erfaring i PHP, Javascript, Rust, Python og litt C++ (minimalt).
         </p>
     </div>
 
