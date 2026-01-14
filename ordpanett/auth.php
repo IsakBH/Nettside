@@ -1,4 +1,8 @@
 <?php
+
+
+/* test
+
 session_start();
 require_once 'database.php';
 
@@ -22,6 +26,9 @@ if (isset($_SESSION['user_id'])) {
     $_SESSION['username'] = $user['username'];
     $_SESSION['profile_picture'] = $user['profile_picture'];
 }
+*/
+
+
 // hvis en remember me cookie finnes, sjekk om den er gyldig
 /*else if (isset($_COOKIE['remember_me'])) {
     $token = $_COOKIE['remember_me'];
