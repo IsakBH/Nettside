@@ -221,6 +221,9 @@ input[type="color"] {
     background-color: #F6F8FA;
     border-color: #e0e0e0;
     scroll-behaviour: smooth;
+    table {
+        pointer-events: none;
+    }
 }
 
 #shared-options {

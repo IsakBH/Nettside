@@ -209,6 +209,9 @@ input[type=color] {
   border-color: #e0e0e0;
   scroll-behaviour: smooth;
 }
+#shared-text-input table {
+  pointer-events: none;
+}
 
 #shared-options {
   background-color: #F6F8FA;
