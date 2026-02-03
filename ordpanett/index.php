@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.45"; // dokumenter er nå blå on hover i vanlig modus og når det er aktivt
+$version = "v3.9.46"; // images now have a max width of 100%
 ?>
 
 <!DOCTYPE html>
