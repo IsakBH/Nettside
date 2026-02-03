@@ -195,6 +195,7 @@ input[type=color] {
 .text-input img {
   border-radius: 10px;
   border: none;
+  max-width: 100%;
 }
 
 #copy-to-clipboard {
