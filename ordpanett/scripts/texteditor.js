@@ -58,6 +58,13 @@ fetch('/ordpanett/assets/splashtext.txt')
     })
     .catch(error => console.error('kunne ikke loade splash text :( ', error), errorAudio.play());
 
+document.addEventListener("selectionchange", () => {
+    const selection = window.getSelection();
+    const selectiontext = selection.toString();
+    updateWordAndCharCount(selectiontext);
+});
+
+
 // ummm... prestasjoner???
 function unlockAchievement(trigger_key) {
     // achievement
@@ -252,22 +259,35 @@ function applyDarkMode() {
 }
 
 // funksjon for å telle antall bokstaver og tegn
-function updateWordAndCharCount() {
-    const text = writingArea.innerText || "";
+function updateWordAndCharCount(selection) {
+    if (selection) {
+        const text = selection;
+        const charCount = selection.length;
+        const wordCount = text
+            .trim()
+            .split(/\s+/)
+            .filter(word => word.length > 0)
+            .length;
+        document.getElementById('wordCount').textContent = `${wordCount} ord`;
+        document.getElementById('charCount').textContent = `${charCount} tegn`;
 
-    // antall tegn (med mellomrom)
-    const charCount = text.length;
+    } else {
+        const text = writingArea.innerText || "";
 
-    // telle ord (splitter på mellomrom)
-    const wordCount = text
-        .trim()
-        .split(/\s+/)
-        .filter(word => word.length > 0)
-        .length;
+        // antall tegn (med mellomrom)
+        const charCount = text.length;
 
-    // oppdaterer visningen under tekstboksen
-    document.getElementById('wordCount').textContent = `${wordCount} ord`;
-    document.getElementById('charCount').textContent = `${charCount} tegn`;
+        // telle ord (splitter på mellomrom)
+        const wordCount = text
+            .trim()
+            .split(/\s+/)
+            .filter(word => word.length > 0)
+            .length;
+
+        // oppdaterer visningen under tekstboksen
+        document.getElementById('wordCount').textContent = `${wordCount} ord`;
+        document.getElementById('charCount').textContent = `${charCount} tegn`;
+    }
 }
 
 // eventlisteners som hører etter input for å oppdatere ord og bokstav telleren
