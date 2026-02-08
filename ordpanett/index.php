@@ -1,6 +1,6 @@
 <?php
 // variabel for versjonsnummer
-$version = "v3.9.46"; // images now have a max width of 100%
+$version = "v3.9.47"; // word and character count update on selection
 ?>
 
 <!DOCTYPE html>
