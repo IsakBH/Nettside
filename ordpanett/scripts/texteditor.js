@@ -56,8 +56,10 @@ fetch('/ordpanett/assets/splashtext.txt')
         splashText = data.split('\n').map(line => line.trim()).filter(line => line.length > 0);
         randomSplashText();
     })
-    .catch(error => console.error('kunne ikke loade splash text :( ', error), errorAudio.play());
-
+    .catch(error => {
+        console.error('kunne ikke loade splash text :( ', error);
+        errorAudio.play();
+    })
 document.addEventListener("selectionchange", () => {
     const selection = window.getSelection();
     const selectiontext = selection.toString();
