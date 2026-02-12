@@ -73,6 +73,7 @@ $version = "v3.9.47"; // word and character count update on selection
                     <hr id="splitter">
                     <a href="pages/profile.php">Din profil</a>
                     <a href="pages/settings.php">Instillinger</a>
+                    <a href="pages/shareddocuments.php">Delte dokumenter</a>
 
                     <?php
 
