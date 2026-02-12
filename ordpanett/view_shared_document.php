@@ -118,7 +118,7 @@ $profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $docu
                             sharedTextInput.innerHTML = data.content;
                             lastModifiedDisplay.textContent = data.last_modified;
                             currentTimestamp = data.last_modified;
-                            sharedTextInput.scrollTop = sharedTextInput.scrollHeight;
+                            //sharedTextInput.scrollTop = sharedTextInput.scrollHeight; kommentert ut midlertidig. skal teste om det er noe bra å ha det sånn. det forstyrrer egentlig bare leseren og gjør at han/hun ikke kan lese noe
                         }
                     })
                     .catch(error => {
