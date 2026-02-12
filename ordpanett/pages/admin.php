@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+// sjekker om brukeren er logget inn, hvis ikke, redirect til innloggings siden
+if (!isset($_SESSION["user_id"])) {
+    header("Location: login.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
