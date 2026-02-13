@@ -24,6 +24,8 @@ $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
 $user_storage = $result->fetch_assoc();
+$total_size = $user_storage['total_size'];
+$rounded_size = round($total_size, 2);
 ?>
 
 <!DOCTYPE html>
@@ -51,14 +53,14 @@ $user_storage = $result->fetch_assoc();
             ); ?>" alt="Profilbilde">
         </div>
 
+        <p><b>Arkivstørrelse: </b><?php echo "{$rounded_size} MB"; ?></p>
+
         <?php
         /*foreach ($achievements as $achievement) {
             echo $achievement . "<br>";
             }*/
-
-        echo "{$user_storage['total_size']} MB";
         ?>
-        <br> <br>
+        <br>
         <a id="backButton" href="../index.php">Tilbake til Ord på Nett</a>
     </div>
 </body>
