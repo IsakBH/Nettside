@@ -7,7 +7,7 @@ if (empty($token)) {
 }
 
 // finner dokumentet ved å se på share token :solbriller emotikon:
-$stmt = $mysqli->prepare("SELECT d.user_id, d.title, d.content, d.last_modified, d.created_at, u.username, u.profile_picture FROM documents d JOIN users u ON d.user_id = u.id WHERE d.share_token = ?");
+$stmt = $mysqli->prepare("SELECT d.user_id, d.title, d.content, d.last_modified, d.created_at, d.contents_size_megabytes, u.username, u.profile_picture FROM documents d JOIN users u ON d.user_id = u.id WHERE d.share_token = ?");
 
 $stmt->bind_param("s", $token);
 $stmt->execute();
@@ -65,6 +65,7 @@ $profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $docu
             <p><b>Sist endret:</b> <span id="last-modified-display"><?php echo htmlspecialchars($document['last_modified']); ?></span></p>
             <p><b>Lagd:</b> <?php echo htmlspecialchars($document['created_at']); ?></p>
             <p title="Bruker ID ^ 3.14 / 6"><b>Nisseverdi:</b> <?php echo $rounded_nisseverdi; ?> </p>
+            <p><b>Størrelse:</b> <span><?php echo $document['contents_size_megabytes'] . " MB";?></span></p>
         </div>
 
         <div class="text-input" id="shared-text-input" contenteditable="false">
