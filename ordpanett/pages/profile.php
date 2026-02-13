@@ -17,6 +17,13 @@ $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
 $achievements = $result->fetch_assoc();
+
+$sql = "select total_size from user_storage_stats where id = ? order by total_size desc;";
+$stmt = $mysqli->prepare($sql);
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
+$user_storage = $result->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
@@ -45,11 +52,13 @@ $achievements = $result->fetch_assoc();
         </div>
 
         <?php
-        foreach ($achievements as $achievement) {
+        /*foreach ($achievements as $achievement) {
             echo $achievement . "<br>";
-        }
-        ?>
+            }*/
 
+        echo "{$user_storage['total_size']} MB";
+        ?>
+        <br> <br>
         <a id="backButton" href="../index.php">Tilbake til Ord på Nett</a>
     </div>
 </body>
