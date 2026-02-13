@@ -26,6 +26,14 @@ $result = $stmt->get_result();
 $user_storage = $result->fetch_assoc();
 $total_size = $user_storage['total_size'];
 $rounded_size = round($total_size, 2);
+
+$sql = "select count(title) from documents where user_id = ?;";
+$stmt = $mysqli->prepare($sql);
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
+$docs = $result->fetch_assoc();
+$amount_of_docs = $docs['count(title)'];
 ?>
 
 <!DOCTYPE html>
@@ -54,6 +62,7 @@ $rounded_size = round($total_size, 2);
         </div>
 
         <p><b>Arkivstørrelse: </b><?php echo "{$rounded_size} MB"; ?></p>
+        <p><b>Antall dokumenter: </b><?php echo $amount_of_docs; ?></p>
 
         <?php
         /*foreach ($achievements as $achievement) {
