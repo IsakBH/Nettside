@@ -27,13 +27,13 @@ $user_storage = $result->fetch_assoc();
 $total_size = $user_storage['total_size'];
 $rounded_size = round($total_size, 2);
 
-$sql = "select count(title) from documents where user_id = ?;";
+$sql = "select count(title) as document_count from documents where user_id = ?;";
 $stmt = $mysqli->prepare($sql);
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
 $docs = $result->fetch_assoc();
-$amount_of_docs = $docs['count(title)'];
+$amount_of_docs = $docs['document_count'];
 ?>
 
 <!DOCTYPE html>
