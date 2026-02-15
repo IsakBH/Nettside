@@ -65,7 +65,7 @@ $version = "v3.9.47"; // word and character count update on selection
         <div id="topRightContainer">
             <!-- menyen for konto instillinger og sånn -->
             <div class="profile-menu">
-                <img src="uploads/<?php echo htmlspecialchars($_SESSION['profile_picture']); ?>" alt="Profile" class="profile-picture">
+                <img src="uploads/<?php echo htmlspecialchars($_SESSION['profile_picture']); ?>" alt="Profile" onerror="this.src='uploads/default.png'" class="profile-picture">
                 <div class="profile-dropdown">
                     <div class="profile-info">
                         <p><?php echo htmlspecialchars($_SESSION['username']) . " (" . htmlspecialchars($user_id) . ")"; ?></p>
