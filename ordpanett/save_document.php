@@ -5,6 +5,8 @@ require_once 'database.php';
 // sjekker om brukeren er kul og authenticated, vel, alle som bruker ord på nett er kul så den sjekker egentlig bare om du er authenticated
 if (!isset($_SESSION['user_id'])) {
     die(json_encode(['success' => false, 'error' => 'Ikke autentisert']));
+    header('Location: pages/login.php');
+    exit();
 }
 
 // ajax :))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) det er kult
