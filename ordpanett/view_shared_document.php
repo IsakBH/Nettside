@@ -50,6 +50,7 @@ $profile_picture_url = $protocol . "://" . $host . "/ordpanett/uploads/" . $docu
     <meta property="og:url" content="<?php echo $full_url; ?>">
     <meta property="og:image" content="<?php echo $profile_picture_url; ?>">
     <meta property="og:description" content="<?php echo $short_content; ?>">
+    <meta name="theme-color" content="#4380e4">
 </head>
 
 <body>
