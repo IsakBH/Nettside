@@ -22,6 +22,10 @@
                 <p><i class="fa-brands fa-square-linkedin"></i> <a href="https://linkedin.com/in/isakbh">in/isakbh</a></p>
                 <p><i class="fa-brands fa-square-github"></i> <a href="https://github.com/isakbh">isakbh</a></p>
             </div>
+
+            <p id="status">
+                Dette er Henriksen speaking. Jeg skriver kode som forhåpentligvis er bra.
+            </p>
         </div>
     </body>
 </html>
