@@ -17,8 +17,8 @@
 
                 <hr>
 
-                <p><i class="fa-solid fa-envelope"></i> isak@brunheriksen.no</p>
-                <p><i class="fa-solid fa-compass"></i> Bergen, Norge</p>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:isak@brunhenriksen.no">isak@brunheriksen.no</a></p>
+                <p><i class="fa-solid fa-compass"></i> <a href="https://www.google.com/maps/place/Bergen/@60.352914,5.2593206,21668m/data=!3m1!1e3!4m6!3m5!1s0x46390d4966767d77:0x9e42a03eb4de0a08!8m2!3d60.3912628!4d5.3220544!16zL20vMGZtN3M?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D">Bergen</a></p>
                 <p><i class="fa-brands fa-square-linkedin"></i> <a href="https://linkedin.com/in/isakbh">in/isakbh</a></p>
                 <p><i class="fa-brands fa-square-github"></i> <a href="https://github.com/isakbh">isakbh</a></p>
             </div>
