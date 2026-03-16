@@ -34,4 +34,8 @@ body {
 #info {
     width: 90%;
     margin: 40px auto 0px auto;
+    a {
+        text-decoration: none;
+        color: black;
+    }
 }
