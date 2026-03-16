@@ -1,6 +1,37 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
 #bilde-av-meg {
     border-radius: 50%;
     object-fit: cover;
     height: 340px;
     width: 340px;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    border: 10px solid #ffffff;
+}
+
+#sidebar {
+    width: 33%;
+    height: 100%;
+    background-color:  #E5E5E5;
+    margin: 0;
+    padding: 10px;
+    hr {
+        width: 100%;
+    }
+}
+
+#info {
+    width: 90%;
+    margin: 40px auto 0px auto;
 }
