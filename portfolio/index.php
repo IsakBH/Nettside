@@ -7,7 +7,13 @@
 
     <body>
         <div id="sidebar">
-            <img src="assets/PXL_20260314_135251334.jpg">
+            <div id="bilde">
+                <img src="assets/PXL_20260314_135251334.jpg">
+            </div>
+
+            <div id="info">
+                <h2>INFO</h2>
+            </div>
         </div>
     </body>
 </html>
