@@ -14,11 +14,13 @@
 
             <div id="info">
                 <h2>INFO</h2>
+
                 <hr>
+
                 <p><i class="fa-solid fa-envelope"></i> isak@brunheriksen.no</p>
                 <p><i class="fa-solid fa-compass"></i> Bergen, Norge</p>
                 <p><i class="fa-brands fa-square-linkedin"></i> <a href="https://linkedin.com/in/isakbh">in/isakbh</a></p>
-                <p><i class="fa-brands fa-square-github"></i> isakbh</p>
+                <p><i class="fa-brands fa-square-github"></i> <a href="https://github.com/isakbh">isakbh</a></p>
             </div>
         </div>
     </body>
