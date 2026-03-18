@@ -26,6 +26,9 @@ body {
     background-color:  #E5E5E5;
     margin: 0;
     padding: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
     hr {
         width: 100%;
     }
