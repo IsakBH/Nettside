@@ -5,5 +5,3 @@ function calculate_isak_age() {
     $interval = $start_date->diff($current_date);
     return $interval->format('%y');
 }
-
-echo calculate_isak_age();

@@ -1,3 +1,7 @@
+<?php
+include "scripts/calculateage.php";
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,6 +32,9 @@
             </p>
         </div>
 
-
+        <div id="resten-av-siden">
+            <h1>Om meg</h1>
+            <p>Hei. Mitt navn er Isak Brun Henriksen, og jeg er en person på jorden. Mer spesifikt, er jeg en norsk <?php echo calculate_isak_age(); ?> år gammel IT elev på Amalie Skram Vgs.</p>
+        </div>
     </body>
 </html>
