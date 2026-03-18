@@ -25,13 +25,21 @@ body {
     height: 100%;
     background-color:  #E5E5E5;
     margin: 0;
-    padding: 10px;
+    padding: 0px;
     position: fixed;
     left: 0;
     top: 0;
     hr {
         width: 100%;
     }
+}
+
+#resten-av-siden {
+    width: 67%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
 }
 
 #info {
